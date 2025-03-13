@@ -1,5 +1,6 @@
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=header&text={Hi I am rainbow_yu}&fontSize=90&fontAlign=50&fontAlignY=30&desc={Welcome to my profile!}&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" />
+    <!-- https://github.com/kyechan99/capsule-render -->
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&&section=header&text=HI%20THERE&fontSize=90&fontAlign=50&fontAlignY=30&desc=I%20am%20Xiaokang2022&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" alt="Hi There" title="Hi There"/>
 </p>
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=rainbowyuyu)](https://git.io/streak-stats)
