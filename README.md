@@ -22,3 +22,9 @@
     <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
     <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true&custom_title=Activity%20Graph" alt="Activity Graph" title="Activity Graph" />
 </p>
+
+<p align="center">
+    <!-- https://github.com/ryo-ma/github-profile-trophy -->
+    <!-- rules: https://github.com/ryo-ma/github-profile-trophy/blob/master/src/trophy.ts -->
+    <img width="800" src="https://github-profile-trophy.vercel.app/?username=rainbowyuyu&no-bg=true&no-frame=true&theme=algolia&title=-MultiLanguage" alt="Profile Trophy" title="Profile Trophy" />
+</p>
