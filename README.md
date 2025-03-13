@@ -16,13 +16,13 @@
 </p>
 
 <p align="center">
-    <!-- https://github.com/LelouchFR/skill-icons -->
-    <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill Icons" title="Skill Icons">
+    <img width="500" src="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&theme=transparent&hide_border=true&layout=compact&langs_count=22" />
+    <img width="300" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowyuyu&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
 </p>
 
 <p align="center">
-    <img width="500" src="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&theme=transparent&hide_border=true&layout=compact&langs_count=22" />
-    <img width="300" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowyuyu&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
+    <!-- https://github.com/LelouchFR/skill-icons -->
+    <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill Icons" title="Skill Icons">
 </p>
 
 <p align="center">
