@@ -19,9 +19,9 @@
 
 <p align="center">
         <!-- self-host in Vercel -->
-    <img width="400" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
+    <img width="300" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
     <!-- https://github.com/LelouchFR/skill-icons -->
-    <img width="400" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill Icons" title="Skill Icons">
+    <img width="500" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill Icons" title="Skill Icons">
 </p>
 
 <p align="center">
