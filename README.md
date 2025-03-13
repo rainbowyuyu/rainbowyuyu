@@ -15,8 +15,8 @@
 
 <p align="center">
     <!-- self-host in Vercel -->
-    <img width="500" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
-    <img width="300" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowyuyu&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
+    <img width="600" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
+    <img width="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowyuyu&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
 </p>
 
 <p align="center">
