@@ -9,8 +9,6 @@
 </p>
 
 <p align="center">
-    <!-- https://github.com/DenverCoder1/github-readme-streak-stats -->
-    <!-- <img width="800" src="https://streak-stats.demolab.com?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" /> -->
     <!-- self-host in Vercel -->
     <img width="800" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
 </p>
