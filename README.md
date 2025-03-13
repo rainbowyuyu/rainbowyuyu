@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-    <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username={YOUR_USERNAME}&theme=github-compact&hide_border=true&area=true" />
+    <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" />
 </p>
 
 <p align="center">
