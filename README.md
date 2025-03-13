@@ -28,3 +28,8 @@
     <!-- rules: https://github.com/ryo-ma/github-profile-trophy/blob/master/src/trophy.ts -->
     <img width="800" src="https://github-profile-trophy.vercel.app/?username=rainbowyuyu&no-bg=true&no-frame=true&theme=algolia&title=-MultiLanguage" alt="Profile Trophy" title="Profile Trophy" />
 </p>
+
+<p align="center">
+    <!-- https://github.com/LelouchFR/skill-icons -->
+    <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,c,cpp,md,latex,matlab,photoshop,premiere,aftereffects&titles=true" alt="Skill Icons" title="Skill Icons">
+</p>
