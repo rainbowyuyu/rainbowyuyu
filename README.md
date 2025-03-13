@@ -20,9 +20,7 @@
     <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill Icons" title="Skill Icons">
 </p>
 
-<p align="center">
-<img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&theme=transparent&hide_border=true&layout=compact&langs_count=22" />
-</p>
+<img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username={YOUR_USERNAME}&theme=transparent&hide_border=true&layout=compact&langs_count=22" />
 
 <p align="center">
     <!-- https://github.com/kyechan99/capsule-render -->
