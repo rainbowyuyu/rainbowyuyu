@@ -18,6 +18,7 @@
 <p align="center">
     <img width="500" src="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&theme=transparent&hide_border=true&layout=compact&langs_count=22" />
     <img width="300" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowyuyu&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
+    <img src="https://wakatime.com/badge/user/e50122b3-0a21-4d7f-ab5d-323978330b21.svg" alt="Total time coded since Mar 12 2025" /></a>
 </p>
 
 <p align="center">
