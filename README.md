@@ -31,7 +31,7 @@
 
 <p align="center">
     <!-- https://github.com/LelouchFR/skill-icons -->
-    <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,manim,c,cpp,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill Icons" title="Skill Icons">
+    <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill Icons" title="Skill Icons">
 </p>
 
 <p align="center">
