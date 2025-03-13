@@ -13,11 +13,11 @@
     <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" />
 </p>
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+<p align="center">
+    <!-- self-host in Vercel -->
     <img width="550" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
     <img width="250" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowyuyu&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
-</div>
-
+</p>
 
 <p align="center">
     <!-- https://github.com/LelouchFR/skill-icons -->
