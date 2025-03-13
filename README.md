@@ -12,7 +12,7 @@
     <!-- self-host in Vercel -->
     <img width="400" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
     <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
-    <img width="400" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true&custom_title=Activity%20Graph" alt="Activity Graph" title="Activity Graph" />
+    <img width="400" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" />
 </p>
 
 <p align="center">
