@@ -66,10 +66,18 @@
     <img width="400" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/wakatime.svg" />
 </p>
 
+
+
 <!-- 技术栈 -->
-<p align="center">
-    <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill         Icons" title="Skill Icons">
-</p>
+<!-- svg -->
+<img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/cpp-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/java-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
+<img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" /> 
+<img src="https://techstack-generator.vercel.app/github-icon.svg" alt="icon" width="65" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
+<img width="400" src="https://go-skill-icons.vercel.app/api/icons?i=pytorch,c,md,latex,matlab,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill         Icons" title="Skill Icons">
+
 
 <!-- 结尾 -->
 <p align="center">
