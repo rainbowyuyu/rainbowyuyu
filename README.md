@@ -13,7 +13,7 @@
     <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake.svg" />
     <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
-  </picture>
+</picture>
 
 <!-- ########################################## 分割 ########################################## -->
 <img width="200%" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/assets/images/hr.gif" />
@@ -35,6 +35,7 @@
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-gitblock.svg" />
   <img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
 </picture>
+</div>
 
 <!-- 评分 -->
 <p align="center">
@@ -65,13 +66,12 @@
     <img width="400" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/wakatime.svg" />
 </p>
 
+<!-- 技术栈 -->
 <p align="center">
-    <!-- https://github.com/LelouchFR/skill-icons -->
     <img width="800" src="https://go-skill-icons.vercel.app/api/icons?i=py,pytorch,c,cpp,java,md,latex,matlab,docker,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill         Icons" title="Skill Icons">
 </p>
 
-<!-- 技术栈 -->
+<!-- 结尾 -->
 <p align="center">
-    <!-- https://github.com/kyechan99/capsule-render -->
     <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&&section=footer&text=THE%20END&fontSize=90&fontAlign=50&fontAlignY=70&desc=keep%20learning&descAlign=50&descSize=30&descAlignY=40&animation=twinkling" alt="The End" title="The End"/>
 </p>
