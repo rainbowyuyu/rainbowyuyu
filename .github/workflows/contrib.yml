@@ -29,7 +29,7 @@ jobs:
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
       - name: push SVGs to the output-3d branch
-      - uses: yoshi389111/github-profile-3d-contrib@latest
+        uses: yoshi389111/github-profile-3d-contrib@latest
         with:
           target_branch: output-3d-contrib
           build_dir: profile-3d-contrib
