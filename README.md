@@ -77,7 +77,7 @@
     <img src="https://techstack-generator.vercel.app/java-icon.svg" alt="icon" width="50" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
     <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="icon" width="50" style="width: 65px; height: 65px; margin-right: 50px; margin-bottom: 0px;" /> 
     <img src="https://techstack-generator.vercel.app/github-icon.svg" alt="icon" width="50" style="width: 65px; height: 65px; margin-right: 0px; margin-bottom: 0px;" />
-    <img width="400" src="https://go-skill-icons.vercel.app/api/icons?i=pytorch,c,md,latex,matlab,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill         Icons" title="Skill Icons">
+    <img width="500" src="https://go-skill-icons.vercel.app/api/icons?i=pytorch,c,md,latex,matlab,photoshop,premiere,aftereffects,audition,git&titles=true" alt="Skill         Icons" title="Skill Icons">
 </p>
 
 <!-- 结尾 -->
