@@ -60,7 +60,7 @@
 </p>
 
 <!-- metrics 基础资料 -->
-<img width="800" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/base.svg" />
+<img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/base.svg" />
 </div>
 
 <p align="center">
