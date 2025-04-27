@@ -20,7 +20,7 @@ jobs:
           # Your GitHub token
           token: ${{ secrets.GITHUB_TOKEN }}
           # Options
-          user: sun0225SUN
+          user: rainbowyuyu
           template: classic
           config_timezone: Asia/Shanghai
           base: "header, activity, community, repositories"
