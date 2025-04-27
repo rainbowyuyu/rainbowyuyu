@@ -8,6 +8,12 @@
     <img width="800" src="https://readme-typing-svg.demolab.com?font=LXGW+WenKai+TC&size=22&pause=1000&center=true&vCenter=true&random=false&width=600&lines=Welcome+to+my+GitHub+profile+page!;Mainly+in+computer+vision+and+ai+visualization!" alt="Hello World" title="Hello World"/>
 </p>
 
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake.svg" />
+    <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+  </picture>
+
 <p align="center">
     <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
     <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" />
