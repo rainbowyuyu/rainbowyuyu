@@ -15,21 +15,32 @@
     <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
   </picture>
 
+<!-- ########################################## 分割 ########################################## -->
+<img width="200%" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/assets/images/hr.gif" />
+
 <!-- introduction -->
 <div align="center">
-<img align="left" width="150" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/left.png" />
+<!-- 基本提交 -->
+<img align="left" width="150" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/assets/images/left.png" />
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=sun0225SUN&theme=dark&hide_border=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=sun0225SUN&theme=light&hide_border=true" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sun0225SUN&theme=dark&hide_border=true" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=rainbowyuyu&theme=dark&hide_border=true" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=rainbowyuyu&theme=light&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rainbowyuyu&theme=dark&hide_border=true" />
 </picture>
-<img align="right" width="150"  src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/right.png" />
+<img align="right" width="150"  src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/assets/images/right.png" />
+
+<!-- 3d 展示 -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-gitblock.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
+</picture>
 
 <!-- metrics 基础资料 -->
-<img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/base.svg" />
+<img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/base.svg" />
 </div>
 
-
+<!--wakatime 代码时长-->
 <picture>
   <source
     srcset="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&layout=compact&text_color=f0f6fc&bg_color=00000000&hide_border=true&hide_title=true"
@@ -66,10 +77,3 @@
     <!-- https://github.com/kyechan99/capsule-render -->
     <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&&section=footer&text=THE%20END&fontSize=90&fontAlign=50&fontAlignY=70&desc=keep%20learning&descAlign=50&descSize=30&descAlignY=40&animation=twinkling" alt="The End" title="The End"/>
 </p>
-
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-gitblock.svg" />
-  <img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
-</picture>
