@@ -40,7 +40,16 @@
 <img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/base.svg" />
 </div>
 
-<!--wakatime 代码时长-->
+
+<p align="center">
+    <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
+    <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" />
+</p>
+
+<!-- 评分 -->
+<p align="center">
+    <img height="137px" width="400" src="https://github-readme-stats.vercel.app/api?username=rainbowyuyu&hide_title=true&hide_border=true&show_icons=trueline_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
+    <!--wakatime 代码时长-->
 <picture>
   <source
     srcset="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&layout=compact&text_color=f0f6fc&bg_color=00000000&hide_border=true&hide_title=true"
@@ -50,23 +59,9 @@
     srcset="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&layout=compact&text_color=1f2328&bg_color=00000000&hide_border=true&hide_title=true"
     media="(prefers-color-scheme: light)"
   />
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&layout=compact&text_color=f0f6fc&bg_color=00000000&hide_border=true&hide_title=true" />
+  <img width="400" src="https://github-readme-stats.vercel.app/api/wakatime?username=rainbowyuyu&layout=compact&text_color=f0f6fc&bg_color=00000000&hide_border=true&hide_title=true" />
 </picture>
-
-<p align="center">
-    <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
-    <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" />
 </p>
-
-<p align="center">
-    <!-- self-host in Vercel -->
-    <img width="550" src="https://github-readme-streak-stats-xiaokang2022.vercel.app?user=rainbowyuyu&theme=transparent&hide_border=true" alt="Streak Stats" title="Streak Stats" />
-    <img width="250" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowyuyu&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
-</p>
-
-<div align="center"> 
-    <img height="137px" src="https://github-readme-stats.vercel.app/api?username=rainbowyuyu&hide_title=true&hide_border=true&show_icons=trueline_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /> 
-</div>
 
 <p align="center">
     <!-- https://github.com/LelouchFR/skill-icons -->
