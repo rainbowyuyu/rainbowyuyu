@@ -60,8 +60,10 @@
 </p>
 
 <!-- metrics 基础资料 -->
-<img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/base.svg" />
-</div>
+<p align="center">
+    <img width="400" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/habits.charts.svg" />
+    <img width="400" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/wakatime.svg" />
+</p>
 
 <p align="center">
     <!-- https://github.com/LelouchFR/skill-icons -->
