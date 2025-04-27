@@ -40,7 +40,6 @@
 <img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/base.svg" />
 </div>
 
-
 <p align="center">
     <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
     <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" />
