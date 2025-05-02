@@ -31,7 +31,11 @@
 <img align="right" width="150"  src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/assets/images/right.png" />
 
 <!-- 3d 展示 -->
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-gitblock.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
+</picture>
 </div>
 
 <!-- 评分 -->
