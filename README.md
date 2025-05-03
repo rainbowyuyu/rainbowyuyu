@@ -10,9 +10,9 @@
 
 <!-- snack -->
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake.svg" />
-    <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-snake-contrib/github-contribution-grid-snake.svg" />
+    <img alt="github-snake" src="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
 </picture>
 
 <!-- ########################################## 分割 ########################################## -->
@@ -31,9 +31,9 @@
 
 <!-- 3d 展示 -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-gitblock.svg" />
-  <img src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/profile-3d-contrib/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-3d-contrib/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-3d-contrib/profile-gitblock.svg" />
+  <img src="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-3d-contrib/profile-night-rainbow.svg" />
 </picture>
 </div>
 
@@ -62,8 +62,8 @@
 
 <!-- metrics 基础资料 -->
 <p align="center">
-    <img width="400" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/habits.charts.svg" />
-    <img width="400" src="https://cdn.jsdelivr.net/gh/rainbowyuyu/rainbowyuyu/github-metrics/wakatime.svg" />
+    <img width="400" src="https://github.com/rainbowyuyu/rainbowyuyu/blob/main//github-metrics/habits.charts.svg" />
+    <img width="400" src="https://github.com/rainbowyuyu/rainbowyuyu/blob/main//github-metrics/wakatime.svg" />
 </p>
 
 
