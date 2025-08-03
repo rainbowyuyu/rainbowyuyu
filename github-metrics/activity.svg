@@ -23,12 +23,12 @@
                                     </svg>
                                     <div class="content">
                                         Merged
-                                        <span class="issue">#9 Master</span>
+                                        <span class="issue">#11 Master</span>
                                     </div>
                                 </div>
                                 <div class="details">
-                                    <div> in <span class="repo">rainbowyuyu/MDDFNet</span></div>
-                                    <div>5 files changed <span class="code">++1934 --1531</span></div>
+                                    <div> in <span class="repo">rainbowyuyu/SMDDFNet</span></div>
+                                    <div>13 files changed <span class="code">++30 --167060</span></div>
                                 </div>
                             </section>
                         </div>
@@ -40,12 +40,12 @@
                                     </svg>
                                     <div class="content">
                                         Opened
-                                        <span class="issue">#9 Master</span>
+                                        <span class="issue">#11 Master</span>
                                     </div>
                                 </div>
                                 <div class="details">
-                                    <div> in <span class="repo">rainbowyuyu/MDDFNet</span></div>
-                                    <div>5 files changed <span class="code">++1934 --1531</span></div>
+                                    <div> in <span class="repo">rainbowyuyu/SMDDFNet</span></div>
+                                    <div>13 files changed <span class="code">++30 --167060</span></div>
                                 </div>
                             </section>
                         </div>
@@ -57,12 +57,12 @@
                                     </svg>
                                     <div class="content">
                                         Merged
-                                        <span class="issue">#8 assets and network picture</span>
+                                        <span class="issue">#10 compare GTSDB</span>
                                     </div>
                                 </div>
                                 <div class="details">
-                                    <div> in <span class="repo">rainbowyuyu/MDDFNet</span></div>
-                                    <div>68 files changed <span class="code">++15286 --12</span></div>
+                                    <div> in <span class="repo">rainbowyuyu/SMDDFNet</span></div>
+                                    <div>122 files changed <span class="code">++26 --17</span></div>
                                 </div>
                             </section>
                         </div>
@@ -74,12 +74,12 @@
                                     </svg>
                                     <div class="content">
                                         Opened
-                                        <span class="issue">#8 assets and network picture</span>
+                                        <span class="issue">#10 compare GTSDB</span>
                                     </div>
                                 </div>
                                 <div class="details">
-                                    <div> in <span class="repo">rainbowyuyu/MDDFNet</span></div>
-                                    <div>68 files changed <span class="code">++15286 --12</span></div>
+                                    <div> in <span class="repo">rainbowyuyu/SMDDFNet</span></div>
+                                    <div>122 files changed <span class="code">++26 --17</span></div>
                                 </div>
                             </section>
                         </div>
@@ -91,12 +91,12 @@
                                     </svg>
                                     <div class="content">
                                         Merged
-                                        <span class="issue">#6 Master</span>
+                                        <span class="issue">#9 Master</span>
                                     </div>
                                 </div>
                                 <div class="details">
                                     <div> in <span class="repo">rainbowyuyu/MDDFNet</span></div>
-                                    <div>99 files changed <span class="code">++439 --8</span></div>
+                                    <div>5 files changed <span class="code">++1934 --1531</span></div>
                                 </div>
                             </section>
                         </div>
