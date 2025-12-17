@@ -1,0 +1,132 @@
+/* 公共社交图标样式 */
+.social-icon {
+  position: relative;
+  width: 3rem; /* 48px = 3rem */
+  height: 3rem; /* 48px = 3rem */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* 浅边框 */
+  border-radius: 50%; /* 圆形 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  /* 将 Tailwind 类转化为基础的效果 */
+}
+
+/* 悬浮效果：背景色和边框颜色变化 */
+.social-icon:hover {
+  background-color: rgba(128, 0, 128, 0.2); /* 悬浮时背景色 */
+  border-color: rgba(128, 0, 128, 0.5); /* 悬浮时边框颜色 */
+}
+
+/* 悬浮窗样式 */
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  opacity: 0;
+}
+
+/* 显示悬浮窗：悬浮时显示 */
+.social-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 图标悬浮动画效果 */
+.social-icon i {
+  font-size: 1.5rem; /* 24px = 1.5rem */
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 悬浮时图标放大并变色 */
+.social-icon:hover i {
+  transform: scale(1.2); /* 放大效果 */
+  color: #8b5cf6; /* 紫色 */
+}
+
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact Form Styles */
+.bg-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.bg-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.border {
+    border: 1px solid;
+}
+.border-white {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+.rounded-xl {
+    border-radius: 1.25rem;
+}
+.p-8 {
+    padding: 2rem;
+}
+.backdrop-blur-sm {
+    backdrop-filter: blur(10px);
+}
+
+/* Input and Textarea Fields */
+.input-field {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.input-field:focus {
+    outline: none;
+    border-color: #8b5cf6;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.submit-btn:hover {
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.2);
+}
+
+/* Feedback Message */
+#form-feedback {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}

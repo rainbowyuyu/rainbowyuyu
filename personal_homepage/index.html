@@ -6,10 +6,12 @@
   <title>rainbowyuyu | Computer Vision & AI Visualization</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
 
   <!-- Tailwind 配置 -->
   <script>
@@ -30,6 +32,9 @@
       }
     }
   </script>
+
+
+
 
   <style type="text/tailwindcss">
     @layer utilities {
@@ -151,13 +156,10 @@
             <a href="https://github.com/rainbowyuyu" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
               <i class="fa fa-github"></i>
             </a>
-            <a href="#" class="text-2xl hover:text-purple-400 transition-colors">
-              <i class="fa fa-linkedin"></i>
+            <a href="https://space.bilibili.com/343585138" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+              <i class="fa fa-youtube-play"></i>
             </a>
-            <a href="#" class="text-2xl hover:text-purple-400 transition-colors">
-              <i class="fa fa-twitter"></i>
-            </a>
-            <a href="#" class="text-2xl hover:text-purple-400 transition-colors">
+            <a href="#contact" class="text-2xl hover:text-purple-400 transition-colors">
               <i class="fa fa-envelope"></i>
             </a>
           </div>
@@ -210,7 +212,7 @@
           <div class="md:col-span-1">
             <div class="relative">
               <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl transform rotate-3"></div>
-              <img src="https://picsum.photos/seed/about/600/800" alt="About me" class="relative rounded-2xl w-full h-auto shadow-xl">
+              <img src="../assets/homepage/rainbow_yu_animate.png" alt="About me" class="relative rounded-2xl w-full h-auto shadow-xl">
             </div>
           </div>
 
@@ -282,7 +284,7 @@
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16">
         <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all group">
           <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
-            <i class="fa fa-python"></i>
+            <i class="fa fa-cog"></i>
           </div>
           <h3 class="font-medium">Python</h3>
         </div>
@@ -344,7 +346,7 @@
 
               <div>
                 <div class="flex justify-between mb-2">
-                  <span>TensorFlow</span>
+                  <span>Ultralytics</span>
                   <span>75%</span>
                 </div>
                 <div class="skill-bar bg-white/10">
@@ -355,16 +357,16 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span>OpenCV</span>
-                  <span>85%</span>
+                  <span>35%</span>
                 </div>
                 <div class="skill-bar bg-white/10">
-                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="85%"></div>
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="35%"></div>
                 </div>
               </div>
 
               <div>
                 <div class="flex justify-between mb-2">
-                  <span>MATLAB</span>
+                  <span>Manim</span>
                   <span>70%</span>
                 </div>
                 <div class="skill-bar bg-white/10">
@@ -506,20 +508,21 @@
         <!-- 项目 1 -->
         <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
           <div class="relative overflow-hidden h-56">
-            <img src="https://picsum.photos/seed/project1/600/400" alt="Computer Vision Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="../assets/homepage/project/wcp.png" alt="AI Visualization Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
               <div class="flex gap-2">
                 <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>
-                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">PyTorch</span>
+                <span class="bg-yellow-500/80 text-white text-xs px-2 py-1 rounded">Manim</span>
+                <span class="bg-red-500/80 text-white text-xs px-2 py-1 rounded">Pytorch</span>
               </div>
             </div>
           </div>
 
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Image Classification Model</h3>
-            <p class="text-gray-400 mb-4">A deep learning model for accurate image classification with custom visualization tools to interpret model decisions.</p>
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+            <h3 class="text-xl font-bold mb-2">Wisdom Computing Perspective</h3>
+            <p class="text-gray-400 mb-4">WisdomComputingPerspective is an AI-powered college math tool. It recognizes handwritten matrices, then uses Manim to generate step-by-step animations for matrix operations, simplifying complex derivation logic.</p>
+            <a href="https://github.com/rainbowyuyu/animate_cal" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
               View Project <i class="fa fa-arrow-right ml-2"></i>
             </a>
           </div>
@@ -528,112 +531,113 @@
         <!-- 项目 2 -->
         <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
           <div class="relative overflow-hidden h-56">
-            <img src="https://picsum.photos/seed/project2/600/400" alt="AI Visualization Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-              <div class="flex gap-2">
-                <span class="bg-green-500/80 text-white text-xs px-2 py-1 rounded">OpenCV</span>
-                <span class="bg-yellow-500/80 text-white text-xs px-2 py-1 rounded">MATLAB</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Real-time Object Detector</h3>
-            <p class="text-gray-400 mb-4">A real-time object detection system with visualization of bounding boxes and confidence scores.</p>
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-              View Project <i class="fa fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 项目 3 -->
-        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
-          <div class="relative overflow-hidden h-56">
-            <img src="https://picsum.photos/seed/project3/600/400" alt="Visualization Tool" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-              <div class="flex gap-2">
-                <span class="bg-red-500/80 text-white text-xs px-2 py-1 rounded">C++</span>
-                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">Qt</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Neural Network Visualizer</h3>
-            <p class="text-gray-400 mb-4">An interactive tool for visualizing neural network architectures and activation patterns.</p>
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-              View Project <i class="fa fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 项目 4 -->
-        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
-          <div class="relative overflow-hidden h-56">
-            <img src="https://picsum.photos/seed/project4/600/400" alt="Video Processing Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="../assets/homepage/project/manim_e_r.png" alt="Computer Vision Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
               <div class="flex gap-2">
                 <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>
-                <span class="bg-green-500/80 text-white text-xs px-2 py-1 rounded">OpenCV</span>
+                <span class="bg-yellow-500/80 text-white text-xs px-2 py-1 rounded">Manim</span>
               </div>
             </div>
           </div>
 
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Video Analysis Pipeline</h3>
-            <p class="text-gray-400 mb-4">A complete pipeline for video analysis including tracking, classification, and activity recognition.</p>
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+            <h3 class="text-xl font-bold mb-2">manim_extend_rainbow</h3>
+            <p class="text-gray-400 mb-4">Improvements to animations based on Manim, designed to facilitate the demonstration of algorithms in data structures, operating systems, and computer organization principles.</p>
+            <a href="https://github.com/rainbowyuyu/manim_extend_rainbow" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
               View Project <i class="fa fa-arrow-right ml-2"></i>
             </a>
           </div>
         </div>
 
-        <!-- 项目 5 -->
-        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
-          <div class="relative overflow-hidden h-56">
-            <img src="https://picsum.photos/seed/project5/600/400" alt="AI Art Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-              <div class="flex gap-2">
-                <span class="bg-pink-500/80 text-white text-xs px-2 py-1 rounded">GAN</span>
-                <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Style Transfer Application</h3>
-            <p class="text-gray-400 mb-4">An application that applies artistic styles to photos using deep learning techniques with real-time previews.</p>
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-              View Project <i class="fa fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
+<!--        &lt;!&ndash; 项目 3 &ndash;&gt;-->
+<!--        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">-->
+<!--          <div class="relative overflow-hidden h-56">-->
+<!--            <img src="https://picsum.photos/seed/project3/600/400" alt="Visualization Tool" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">-->
+<!--            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>-->
+<!--            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">-->
+<!--              <div class="flex gap-2">-->
+<!--                <span class="bg-red-500/80 text-white text-xs px-2 py-1 rounded">C++</span>-->
+<!--                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">Qt</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
-        <!-- 项目 6 -->
-        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
-          <div class="relative overflow-hidden h-56">
-            <img src="https://picsum.photos/seed/project6/600/400" alt="Data Visualization Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
-              <div class="flex gap-2">
-                <span class="bg-yellow-500/80 text-white text-xs px-2 py-1 rounded">JavaScript</span>
-                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">D3.js</span>
-              </div>
-            </div>
-          </div>
+<!--          <div class="p-6">-->
+<!--            <h3 class="text-xl font-bold mb-2">Neural Network Visualizer</h3>-->
+<!--            <p class="text-gray-400 mb-4">An interactive tool for visualizing neural network architectures and activation patterns.</p>-->
+<!--            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">-->
+<!--              View Project <i class="fa fa-arrow-right ml-2"></i>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
 
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">AI Metrics Dashboard</h3>
-            <p class="text-gray-400 mb-4">An interactive dashboard for visualizing AI model performance metrics and training progress.</p>
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-              View Project <i class="fa fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
+<!--        &lt;!&ndash; 项目 4 &ndash;&gt;-->
+<!--        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">-->
+<!--          <div class="relative overflow-hidden h-56">-->
+<!--            <img src="https://picsum.photos/seed/project4/600/400" alt="Video Processing Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">-->
+<!--            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>-->
+<!--            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">-->
+<!--              <div class="flex gap-2">-->
+<!--                <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>-->
+<!--                <span class="bg-green-500/80 text-white text-xs px-2 py-1 rounded">OpenCV</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="p-6">-->
+<!--            <h3 class="text-xl font-bold mb-2">Video Analysis Pipeline</h3>-->
+<!--            <p class="text-gray-400 mb-4">A complete pipeline for video analysis including tracking, classification, and activity recognition.</p>-->
+<!--            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">-->
+<!--              View Project <i class="fa fa-arrow-right ml-2"></i>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; 项目 5 &ndash;&gt;-->
+<!--        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">-->
+<!--          <div class="relative overflow-hidden h-56">-->
+<!--            <img src="https://picsum.photos/seed/project5/600/400" alt="AI Art Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">-->
+<!--            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>-->
+<!--            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">-->
+<!--              <div class="flex gap-2">-->
+<!--                <span class="bg-pink-500/80 text-white text-xs px-2 py-1 rounded">GAN</span>-->
+<!--                <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="p-6">-->
+<!--            <h3 class="text-xl font-bold mb-2">Style Transfer Application</h3>-->
+<!--            <p class="text-gray-400 mb-4">An application that applies artistic styles to photos using deep learning techniques with real-time previews.</p>-->
+<!--            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">-->
+<!--              View Project <i class="fa fa-arrow-right ml-2"></i>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; 项目 6 &ndash;&gt;-->
+<!--        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">-->
+<!--          <div class="relative overflow-hidden h-56">-->
+<!--            <img src="https://picsum.photos/seed/project6/600/400" alt="Data Visualization Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">-->
+<!--            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>-->
+<!--            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">-->
+<!--              <div class="flex gap-2">-->
+<!--                <span class="bg-yellow-500/80 text-white text-xs px-2 py-1 rounded">JavaScript</span>-->
+<!--                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">D3.js</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="p-6">-->
+<!--            <h3 class="text-xl font-bold mb-2">AI Metrics Dashboard</h3>-->
+<!--            <p class="text-gray-400 mb-4">An interactive dashboard for visualizing AI model performance metrics and training progress.</p>-->
+<!--            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">-->
+<!--              View Project <i class="fa fa-arrow-right ml-2"></i>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
 
       <div class="text-center mt-12">
@@ -756,53 +760,57 @@
           <div class="mt-10">
             <h4 class="font-medium mb-4">Connect with me</h4>
             <div class="flex gap-4">
-              <a href="https://github.com/rainbowyuyu" target="_blank" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
+              <a href="https://github.com/rainbowyuyu" target="_blank" class="social-icon">
                 <i class="fa fa-github"></i>
               </a>
-              <a href="#" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
-                <i class="fa fa-linkedin"></i>
-              </a>
-              <a href="#" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <a href="#" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
+              <a href="https://space.bilibili.com/343585138" target="_blank" class="social-icon">
                 <i class="fa fa-youtube-play"></i>
+              </a>
+              <a href="#" class="social-icon" onclick="copyToClipboard('wechat')">
+                <div class="tooltip">WeChat number: rainbow_465936509</div>
+                <i class="fa fa-wechat"></i>
+              </a>
+              <a href="#" class="social-icon" onclick="copyToClipboard('qq')">
+                <div class="tooltip">QQ number: 465936509</div>
+                <i class="fa fa-qq"></i>
               </a>
             </div>
           </div>
         </div>
 
         <div class="bg-dark/30 border border-white/10 rounded-xl p-8 backdrop-blur-sm">
-          <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+        <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
 
-          <form>
+        <form id="contact-form">
             <div class="space-y-6">
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
-                <input type="text" id="name" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors" placeholder="John Doe">
-              </div>
+                <div>
+                    <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" class="input-field" placeholder="John Doe">
+                </div>
 
-              <div>
-                <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
-                <input type="email" id="email" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors" placeholder="john@example.com">
-              </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                    <input type="email" id="email" class="input-field" placeholder="john@example.com">
+                </div>
 
-              <div>
-                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
-                <input type="text" id="subject" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors" placeholder="Project Inquiry">
-              </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                    <input type="text" id="subject" class="input-field" placeholder="Project Inquiry">
+                </div>
 
-              <div>
-                <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
-                <textarea id="message" rows="5" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
-              </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                    <textarea id="message" rows="5" class="input-field resize-none" placeholder="Tell me about your project..."></textarea>
+                </div>
 
-              <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/20 transition-all">
-                Send Message
-              </button>
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
             </div>
-          </form>
-        </div>
+        </form>
+
+        <div id="form-feedback" class="mt-4 text-center text-sm"></div>
+    </div>
       </div>
     </div>
   </section>
@@ -830,18 +838,15 @@
             <a href="https://github.com/rainbowyuyu" target="_blank" class="text-gray-400 hover:text-purple-400 transition-colors">
               <i class="fa fa-github"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
-              <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
-              <i class="fa fa-twitter"></i>
+            <a href="https://space.bilibili.com/343585138" target="_blank" class="text-gray-400 hover:text-purple-400 transition-colors">
+              <i class="fa fa-youtube-play"></i>
             </a>
           </div>
         </div>
       </div>
 
       <div class="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-500 text-sm">© 2023 rainbow_yu. All rights reserved.</p>
+        <p class="text-gray-500 text-sm">© 2025 rainbow_yu. All rights reserved.</p>
         <p class="text-gray-500 text-sm mt-2 md:mt-0">Designed & Built with <i class="fa fa-heart text-pink-500"></i></p>
       </div>
     </div>
