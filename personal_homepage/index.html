@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rainbowyuyu | Computer Vision & AI Visualization</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#ec4899',
+            accent: '#8b5cf6',
+            dark: '#1e293b',
+            light: '#f8fafc'
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .bg-glass {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .rotate-hover {
+        transition: transform 0.3s ease;
+      }
+      .rotate-hover:hover {
+        transform: rotate(5deg) scale(1.05);
+      }
+      .float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      .skill-bar {
+        position: relative;
+        overflow: hidden;
+        height: 8px;
+        border-radius: 4px;
+      }
+      .skill-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: width 1.5s ease;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-inter bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-light min-h-screen">
+  <!-- 导航栏 -->
+  <header id="navbar" class="fixed w-full z-50 transition-all duration-300">
+    <nav class="bg-dark/70 bg-glass border-b border-white/10">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-gradient">
+          rainbow<span class="text-white">yu</span>
+        </a>
+
+        <!-- 桌面导航 -->
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+          <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+          <a href="#activity" class="hover:text-purple-400 transition-colors">Activity</a>
+          <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+          <a href="https://github.com/rainbowyuyu" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-2 rounded-full hover:opacity-90 transition-opacity">
+            GitHub
+          </a>
+        </div>
+
+        <!-- 移动端菜单按钮 -->
+        <button id="menuBtn" class="md:hidden text-2xl">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- 移动端导航菜单 -->
+      <div id="mobileMenu" class="md:hidden hidden bg-dark/95 bg-glass border-t border-white/10">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+          <a href="#about" class="py-2 hover:text-purple-400 transition-colors">About</a>
+          <a href="#skills" class="py-2 hover:text-purple-400 transition-colors">Skills</a>
+          <a href="#projects" class="py-2 hover:text-purple-400 transition-colors">Projects</a>
+          <a href="#activity" class="py-2 hover:text-purple-400 transition-colors">Activity</a>
+          <a href="#contact" class="py-2 hover:text-purple-400 transition-colors">Contact</a>
+          <a href="https://github.com/rainbowyuyu" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-2 rounded-full text-center hover:opacity-90 transition-opacity">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 英雄区域 -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 -left-40 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 space-y-6">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+            <span class="block bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 text-gradient">Hi, I'm</span>
+            <span class="block mt-2">rainbow_yu</span>
+          </h1>
+
+          <p class="text-xl text-gray-300 max-w-lg">
+            Computer Vision & AI Visualization enthusiast. Passionate about creating meaningful and beautiful AI-powered solutions.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="#projects" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+              View My Work
+            </a>
+            <a href="#contact" class="border border-white/20 px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-all">
+              Get In Touch
+            </a>
+          </div>
+
+          <div class="flex gap-6 pt-6">
+            <a href="https://github.com/rainbowyuyu" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="#" class="text-2xl hover:text-purple-400 transition-colors">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-2xl hover:text-purple-400 transition-colors">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" class="text-2xl hover:text-purple-400 transition-colors">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-64 h-64 md:w-80 md:h-80 float">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50"></div>
+            <img src="../assets/homepage/logo2.png" alt="rainbowyuyu profile" class="absolute inset-4 rounded-full border-4 border-white/10 object-cover">
+
+            <!-- 装饰性元素 -->
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center text-2xl rotate-hover">
+              <i class="fa fa-code"></i>
+            </div>
+            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center text-2xl rotate-hover">
+              <i class="fa fa-camera"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 贡献蛇形动画 -->
+      <div class="mt-20 bg-dark/50 p-4 rounded-xl border border-white/10">
+        <h3 class="text-center text-lg font-medium mb-4">GitHub Contribution Activity</h3>
+        <div class="flex justify-center">
+          <picture class="w-full max-w-3xl">
+            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/raw/main/profile-3d-contrib/profile-night-rainbow.svg" />
+            <source media="(prefers-color-scheme: light)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/raw/main/profile-3d-contrib/profile-night-rainbow.svg" />
+            <img alt="github-snake" src="https://github.com/rainbowyuyu/rainbowyuyu/raw/main/profile-3d-contrib/profile-night-rainbow.svg" class="w-full h-auto" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about" class="py-20 relative">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/3 right-1/4 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">About <span class="bg-gradient-to-r from-purple-400 to-pink-500 text-gradient">Me</span></h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="bg-dark/30 border border-white/10 rounded-2xl p-8 md:p-12 backdrop-blur-sm">
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+          <div class="md:col-span-1">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl transform rotate-3"></div>
+              <img src="https://picsum.photos/seed/about/600/800" alt="About me" class="relative rounded-2xl w-full h-auto shadow-xl">
+            </div>
+          </div>
+
+          <div class="md:col-span-2 space-y-6">
+            <h3 class="text-2xl font-bold">Passionate about Computer Vision & AI</h3>
+
+            <p class="text-gray-300">
+              Hello! I'm rainbow_yu, a developer with a strong focus on computer vision and AI visualization. I love creating
+              innovative solutions that bridge the gap between complex AI models and intuitive visual representations.
+            </p>
+
+            <p class="text-gray-300">
+              My journey in AI started with a fascination for how machines can interpret and understand visual information.
+              Over time, this curiosity evolved into a passion for building systems that not only analyze images and video
+              but also present their findings in beautiful, meaningful ways.
+            </p>
+
+            <div class="grid grid-cols-2 gap-6 pt-4">
+              <div>
+                <h4 class="font-semibold text-purple-400 mb-2">Education</h4>
+                <p class="text-gray-300">Computer Science & AI</p>
+                <p class="text-gray-400 text-sm">MSc in Computer Vision</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-purple-400 mb-2">Location</h4>
+                <p class="text-gray-300">Shanghai, China</p>
+                <p class="text-gray-400 text-sm">Timezone: Asia/Shanghai</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-purple-400 mb-2">Interests</h4>
+                <p class="text-gray-300">Computer Vision, AI Visualization</p>
+                <p class="text-gray-400 text-sm">Deep Learning, Creative Coding</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-purple-400 mb-2">Hobbies</h4>
+                <p class="text-gray-300">Photography, Video Editing</p>
+                <p class="text-gray-400 text-sm">Open Source Contribution</p>
+              </div>
+            </div>
+
+            <a href="#contact" class="inline-block mt-4 bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+              Let's Connect
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能展示 -->
+  <section id="skills" class="py-20 relative">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute bottom-0 left-1/3 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">My <span class="bg-gradient-to-r from-purple-400 to-pink-500 text-gradient">Skills</span></h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          I work with a variety of technologies to bring AI and computer vision projects to life, from research to deployment.
+        </p>
+      </div>
+
+      <!-- 技能图标 -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16">
+        <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all group">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa fa-python"></i>
+          </div>
+          <h3 class="font-medium">Python</h3>
+        </div>
+
+        <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all group">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-500 rounded-lg flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa fa-cogs"></i>
+          </div>
+          <h3 class="font-medium">C++</h3>
+        </div>
+
+        <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all group">
+          <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-400 rounded-lg flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa fa-database"></i>
+          </div>
+          <h3 class="font-medium">MySQL</h3>
+        </div>
+
+        <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all group">
+          <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-400 rounded-lg flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa fa-coffee"></i>
+          </div>
+          <h3 class="font-medium">Java</h3>
+        </div>
+
+        <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all group">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa fa-cubes"></i>
+          </div>
+          <h3 class="font-medium">Docker</h3>
+        </div>
+
+        <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all group">
+          <div class="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa fa-github"></i>
+          </div>
+          <h3 class="font-medium">Git</h3>
+        </div>
+      </div>
+
+      <!-- 深度学习框架 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold mb-8 text-center">Deep Learning & Computer Vision</h3>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-dark/30 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+            <h4 class="text-xl font-semibold mb-4 text-purple-400">Frameworks & Libraries</h4>
+
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>PyTorch</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="90%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>TensorFlow</span>
+                  <span>75%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="75%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>OpenCV</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="85%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>MATLAB</span>
+                  <span>70%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-dark/30 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+            <h4 class="text-xl font-semibold mb-4 text-purple-400">Areas of Expertise</h4>
+
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>Image Classification</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="88%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>Object Detection</span>
+                  <span>82%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="82%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>AI Visualization</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="92%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span>Video Processing</span>
+                  <span>78%</span>
+                </div>
+                <div class="skill-bar bg-white/10">
+                  <div class="skill-progress bg-gradient-to-r from-purple-500 to-pink-500" style="width: 0%" data-width="78%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 开发工具 -->
+      <div>
+        <h3 class="text-2xl font-bold mb-8 text-center">Tools & Creative Software</h3>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-code"></i>
+            </div>
+            <h4 class="font-medium">VS Code</h4>
+          </div>
+
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-pink-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-paint-brush"></i>
+            </div>
+            <h4 class="font-medium">Photoshop</h4>
+          </div>
+
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-film"></i>
+            </div>
+            <h4 class="font-medium">Premiere Pro</h4>
+          </div>
+
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-magic"></i>
+            </div>
+            <h4 class="font-medium">After Effects</h4>
+          </div>
+
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-headphones"></i>
+            </div>
+            <h4 class="font-medium">Audition</h4>
+          </div>
+
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-orange-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-terminal"></i>
+            </div>
+            <h4 class="font-medium">Shell</h4>
+          </div>
+
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-amber-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-file-text-o"></i>
+            </div>
+            <h4 class="font-medium">LaTeX</h4>
+          </div>
+
+          <div class="bg-dark/50 border border-white/10 rounded-xl p-6 flex flex-col items-center text-center hover:bg-dark/80 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-400 rounded-lg flex items-center justify-center mb-3 text-2xl">
+              <i class="fa fa-book"></i>
+            </div>
+            <h4 class="font-medium">Markdown</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目展示 -->
+  <section id="projects" class="py-20 relative">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Featured <span class="bg-gradient-to-r from-purple-400 to-pink-500 text-gradient">Projects</span></h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          A selection of my recent work in computer vision, AI visualization, and related fields.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 项目 1 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://picsum.photos/seed/project1/600/400" alt="Computer Vision Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+              <div class="flex gap-2">
+                <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>
+                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">PyTorch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Image Classification Model</h3>
+            <p class="text-gray-400 mb-4">A deep learning model for accurate image classification with custom visualization tools to interpret model decisions.</p>
+            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+              View Project <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目 2 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://picsum.photos/seed/project2/600/400" alt="AI Visualization Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+              <div class="flex gap-2">
+                <span class="bg-green-500/80 text-white text-xs px-2 py-1 rounded">OpenCV</span>
+                <span class="bg-yellow-500/80 text-white text-xs px-2 py-1 rounded">MATLAB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Real-time Object Detector</h3>
+            <p class="text-gray-400 mb-4">A real-time object detection system with visualization of bounding boxes and confidence scores.</p>
+            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+              View Project <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目 3 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://picsum.photos/seed/project3/600/400" alt="Visualization Tool" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+              <div class="flex gap-2">
+                <span class="bg-red-500/80 text-white text-xs px-2 py-1 rounded">C++</span>
+                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">Qt</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Neural Network Visualizer</h3>
+            <p class="text-gray-400 mb-4">An interactive tool for visualizing neural network architectures and activation patterns.</p>
+            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+              View Project <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目 4 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://picsum.photos/seed/project4/600/400" alt="Video Processing Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+              <div class="flex gap-2">
+                <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>
+                <span class="bg-green-500/80 text-white text-xs px-2 py-1 rounded">OpenCV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Video Analysis Pipeline</h3>
+            <p class="text-gray-400 mb-4">A complete pipeline for video analysis including tracking, classification, and activity recognition.</p>
+            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+              View Project <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目 5 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://picsum.photos/seed/project5/600/400" alt="AI Art Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+              <div class="flex gap-2">
+                <span class="bg-pink-500/80 text-white text-xs px-2 py-1 rounded">GAN</span>
+                <span class="bg-purple-500/80 text-white text-xs px-2 py-1 rounded">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Style Transfer Application</h3>
+            <p class="text-gray-400 mb-4">An application that applies artistic styles to photos using deep learning techniques with real-time previews.</p>
+            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+              View Project <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 项目 6 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl overflow-hidden group hover:border-purple-500/50 transition-all">
+          <div class="relative overflow-hidden h-56">
+            <img src="https://picsum.photos/seed/project6/600/400" alt="Data Visualization Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+              <div class="flex gap-2">
+                <span class="bg-yellow-500/80 text-white text-xs px-2 py-1 rounded">JavaScript</span>
+                <span class="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">D3.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">AI Metrics Dashboard</h3>
+            <p class="text-gray-400 mb-4">An interactive dashboard for visualizing AI model performance metrics and training progress.</p>
+            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+              View Project <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://github.com/rainbowyuyu" target="_blank" class="inline-block bg-dark/50 border border-white/10 px-8 py-3 rounded-full font-medium hover:bg-dark/80 transition-all">
+          View All Projects on GitHub <i class="fa fa-github ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 活动图表 -->
+  <section id="activity" class="py-20 relative">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Coding <span class="bg-gradient-to-r from-purple-400 to-pink-500 text-gradient">Activity</span></h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          Insights into my coding habits, language usage, and GitHub activity.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <!-- 3D 贡献图表 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <h3 class="text-xl font-bold mb-4">GitHub Contribution Visualization</h3>
+          <div class="flex justify-center">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-3d-contrib/profile-night-rainbow.svg" />
+              <source media="(prefers-color-scheme: light)" srcset="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-3d-contrib/profile-gitblock.svg" />
+              <img src="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Visualization" class="max-h-80 w-auto" />
+            </picture>
+          </div>
+        </div>
+
+        <!-- 活动图表 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <h3 class="text-xl font-bold mb-4">Recent Activity</h3>
+          <div class="h-80">
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=rainbowyuyu&theme=github-compact&hide_border=true&area=true" alt="GitHub Activity Graph" class="w-full h-full object-contain" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 代码统计 -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- 语言使用统计 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <h3 class="text-xl font-bold mb-4">Programming Languages</h3>
+          <div class="h-80">
+            <canvas id="languagesChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 编码时间统计 -->
+        <div class="bg-dark/30 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <h3 class="text-xl font-bold mb-4">Coding Time Distribution</h3>
+          <div class="h-80">
+            <img src="https://github.com/rainbowyuyu/rainbowyuyu/blob/main/github-metrics/wakatime.svg" alt="WakaTime Stats" class="w-full h-full object-contain" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系部分 -->
+  <section id="contact" class="py-20 relative">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/2 right-1/3 w-96 h-96 bg-gradient-to-r from-purple-600 to-pink-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Get In <span class="bg-gradient-to-r from-purple-400 to-pink-500 text-gradient">Touch</span></h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          Interested in working together? Fill out the form below with some info about your project, and I'll get back to you as soon as I can.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div class="bg-dark/30 border border-white/10 rounded-xl p-8 backdrop-blur-sm">
+          <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 flex-shrink-0">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Email</h4>
+                <p class="text-gray-400">contact@rainbowyuyu.dev</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 flex-shrink-0">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Location</h4>
+                <p class="text-gray-400">Shanghai, China</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 flex-shrink-0">
+                <i class="fa fa-clock-o"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Time Zone</h4>
+                <p class="text-gray-400">Asia/Shanghai (UTC+8)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h4 class="font-medium mb-4">Connect with me</h4>
+            <div class="flex gap-4">
+              <a href="https://github.com/rainbowyuyu" target="_blank" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-dark/50 border border-white/10 rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all">
+                <i class="fa fa-youtube-play"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-dark/30 border border-white/10 rounded-xl p-8 backdrop-blur-sm">
+          <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+
+          <form>
+            <div class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                <input type="text" id="name" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors" placeholder="John Doe">
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                <input type="email" id="email" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors" placeholder="john@example.com">
+              </div>
+
+              <div>
+                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                <input type="text" id="subject" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors" placeholder="Project Inquiry">
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                <textarea id="message" rows="5" class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="py-12 border-t border-white/10 relative">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <a href="#" class="text-2xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-gradient">
+            rainbow<span class="text-white">yu</span>
+          </a>
+          <p class="text-gray-400 mt-2">Computer Vision & AI Visualization</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="flex gap-6">
+            <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+            <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+            <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+            <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+          </div>
+
+          <div class="flex gap-4">
+            <a href="https://github.com/rainbowyuyu" target="_blank" class="text-gray-400 hover:text-purple-400 transition-colors">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm">© 2023 rainbow_yu. All rights reserved.</p>
+        <p class="text-gray-500 text-sm mt-2 md:mt-0">Designed & Built with <i class="fa fa-heart text-pink-500"></i></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-purple-600 to-pink-600 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg opacity-0 invisible transition-all z-50">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // 移动端菜单切换
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.innerHTML = mobileMenu.classList.contains('hidden')
+        ? '<i class="fa fa-bars"></i>'
+        : '<i class="fa fa-times"></i>';
+    });
+
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-dark/90', 'bg-glass', 'shadow-lg');
+      } else {
+        navbar.classList.remove('bg-dark/90', 'bg-glass', 'shadow-lg');
+      }
+    });
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // 关闭移动菜单（如果打开）
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          menuBtn.innerHTML = '<i class="fa fa-bars"></i>';
+        }
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // 返回顶部按钮
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('opacity-0', 'invisible');
+        backToTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'invisible');
+        backToTopBtn.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 技能条动画
+    const animateSkillBars = () => {
+      const skillBars = document.querySelectorAll('.skill-progress');
+
+      skillBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width;
+      });
+    };
+
+    // 当元素进入视口时触发动画
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateSkillBars();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+      observer.observe(skillsSection);
+    }
+
+    // 语言图表
+    const ctx = document.getElementById('languagesChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Python', 'C++', 'Java', 'MySQL', 'JavaScript', 'Others'],
+          datasets: [{
+            data: [45, 20, 15, 10, 5, 5],
+            backgroundColor: [
+              '#8b5cf6', // purple
+              '#3b82f6', // blue
+              '#f59e0b', // amber
+              '#ef4444', // red
+              '#10b981', // green
+              '#6b7280'  // gray
+            ],
+            borderWidth: 0,
+            hoverOffset: 10
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'right',
+              labels: {
+                color: '#f8fafc',
+                padding: 20,
+                font: {
+                  size: 12
+                }
+              }
+            }
+          },
+          cutout: '65%'
+        }
+      });
+    }
+  </script>
+</body>
+</html>
