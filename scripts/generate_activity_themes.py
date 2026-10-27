@@ -3,6 +3,7 @@
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
+from activity_card_renderer import FILES, render_card, snapshot_from_svg
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTES = {
@@ -48,9 +49,14 @@ def generate_metric_themes(root: Path = ROOT) -> list[str]:
         if source.stem.endswith(('-light', '-dark')):
             continue
         raw = source.read_text(encoding='utf-8')
+        saved = snapshot_from_svg(raw, source.name, source.parent) if source.name in FILES else None
+        if saved is not None:
+            # Native snapshots own both themes; a restyle retains source time/data.
+            source.write_text(render_card(saved, 'dark'), encoding='utf-8', newline='\n')
         for theme in ('light', 'dark'):
             target = source.with_name(source.stem + '-' + theme + '.svg')
-            target.write_text(themed_svg(raw, theme), encoding='utf-8', newline='\n')
+            result = render_card(saved, theme) if saved is not None else themed_svg(raw, theme)
+            target.write_text(result, encoding='utf-8', newline='\n')
             outputs.append(target.relative_to(root).as_posix())
     return outputs
 

@@ -16,10 +16,12 @@
   </title>
 <link href="assets/profile/rainbow-logo.svg" rel="icon" type="image/svg+xml"/>
 <script>
-/* Resolve the saved choice before styles paint; otherwise follow the device. */
+/* Resolve an explicit v2 choice before paint; older test values stay untouched. */
 (() => {
-  let saved; try { saved = localStorage.getItem('rainbow-theme'); } catch {}
-  const theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  let saved; try { saved = localStorage.getItem('rainbow-theme-v2'); } catch {}
+  const preference = ['system', 'light', 'dark'].includes(saved) ? saved : 'system';
+  const theme = preference === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
+  document.documentElement.dataset.themePreference = preference;
   document.documentElement.dataset.theme = theme;
   document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#151b20' : '#f6f8fa';
 })();
@@ -76,9 +78,28 @@
        ⌘ K
       </kbd>
 </button>
-<button aria-label="切换主题" class="icon-button" hidden="" id="theme-toggle" type="button">
-<svg aria-hidden="true" class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg><svg aria-hidden="true" class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.6 14.2A8.8 8.8 0 0 1 9.8 3.4 8.8 8.8 0 1 0 20.6 14.2Z"/></svg>
-     </button>
+<div class="theme-control">
+<button aria-label="外观：跟随系统" aria-haspopup="menu" aria-controls="theme-menu" aria-expanded="false" class="icon-button" hidden="" id="theme-toggle" type="button">
+<svg aria-hidden="true" class="theme-system" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+<svg aria-hidden="true" class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg>
+<svg aria-hidden="true" class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.6 14.2A8.8 8.8 0 0 1 9.8 3.4 8.8 8.8 0 1 0 20.6 14.2Z"/></svg>
+</button>
+<div class="theme-menu" hidden="" id="theme-menu" role="menu" aria-label="外观" data-label-en="Appearance" data-label-zh="外观">
+<p class="theme-menu-heading" role="presentation"><span data-en="Appearance" data-zh="外观">外观</span><span id="theme-resolved">当前浅色</span></p>
+<button type="button" class="theme-option" role="menuitemradio" aria-checked="true" tabindex="-1" data-theme-choice="system">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+<span data-en="System" data-zh="跟随系统">跟随系统</span><svg class="theme-check" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>
+</button>
+<button type="button" class="theme-option" role="menuitemradio" aria-checked="false" tabindex="-1" data-theme-choice="light">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg>
+<span data-en="Light" data-zh="浅色">浅色</span><svg class="theme-check" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>
+</button>
+<button type="button" class="theme-option" role="menuitemradio" aria-checked="false" tabindex="-1" data-theme-choice="dark">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.6 14.2A8.8 8.8 0 0 1 9.8 3.4 8.8 8.8 0 1 0 20.6 14.2Z"/></svg>
+<span data-en="Dark" data-zh="深色">深色</span><svg class="theme-check" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>
+</button>
+</div>
+</div>
 <button aria-label="Switch to English" class="language-button" hidden="" id="language-toggle" type="button">
       EN
      </button>

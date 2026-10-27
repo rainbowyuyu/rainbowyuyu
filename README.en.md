@@ -94,6 +94,12 @@ Connecting formula recognition, LaTeX, worked solutions and Manim animation in a
 
 
 
+<details>
+
+<summary><strong>More open-source & creative work</strong> · 4 projects</summary>
+
+
+
 ### The AI Engineer
 
 <p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#ai-engineer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-engineer.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/ai-engineer-light.webp"/><img src="assets/showcase/ai-engineer-light.webp" width="100%" alt="The AI Engineer — Design. Compute. Inspect. Iterate."/></picture></a></p>
@@ -156,6 +162,10 @@ Reusable Manim components for teaching data structures, operating systems and co
 
 
 
+</details>
+
+
+
 <sub>Project descriptions updated 2026-10-27. Research and development remain ongoing; functionality and validation scope follow each project’s documentation.</sub>
 
 
@@ -166,13 +176,15 @@ Reusable Manim components for teaching data structures, operating systems and co
 
 ## Built, day by day
 
-<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg"/><img src="github-metrics/streak-light.svg" width="74%" alt="Contribution streak"/></picture> &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>
+<p align="center"><img src="assets/images/left.png" width="56" alt="Original profile mascot"/> &nbsp; <img src="assets/images/right.png" width="56" alt="Original profile mascot"/></p>
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg"/><img src="github-metrics/streak-light.svg" width="720" alt="Contribution streak"/></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg"/><img src="github-metrics/base-light.svg" width="49%" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg"/><img src="github-metrics/languages.indepth-light.svg" width="49%" alt="Public source language breakdown"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg"/><img src="github-metrics/base-light.svg" width="420" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg"/><img src="github-metrics/languages.indepth-light.svg" width="420" alt="Public source language breakdown"/></picture></p>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg"/><img src="github-metrics/habits.charts-light.svg" width="49%" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg"/><img src="github-metrics/wakatime-light.svg" width="49%" alt="WakaTime recorded coding activity"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg"/><img src="github-metrics/habits.charts-light.svg" width="420" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg"/><img src="github-metrics/wakatime-light.svg" width="420" alt="WakaTime recorded coding activity"/></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>
 
@@ -184,9 +196,9 @@ Reusable Manim components for teaching data structures, operating systems and co
 
 
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg"/><img src="github-metrics/calendar.full-light.svg" width="100%" alt="Contribution calendar"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg"/><img src="github-metrics/calendar.full-light.svg" width="720" alt="Contribution calendar"/></picture></p>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg"/><img src="github-metrics/activity-light.svg" width="100%" alt="Recent public activity"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg"/><img src="github-metrics/activity-light.svg" width="720" alt="Recent public activity"/></picture></p>
 
 The following isometric calendar is an archived snapshot.
 
@@ -202,10 +214,17 @@ The following isometric calendar is an archived snapshot.
 
 
 
-[ Update status ](assets/profile/activity-status.json) &nbsp; · &nbsp; [ GitHub Actions ](https://github.com/rainbowyuyu/rainbowyuyu/actions) &nbsp; · &nbsp; [ All repositories ](https://github.com/rainbowyuyu?tab=repositories)
-
-
+<p align="center">
+<a href="assets/profile/activity-status.json"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-status-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-status-en-light.svg"/><img src="assets/readme/nav-status-en-light.svg" height="42" alt="Update status"/></picture></a>
+<a href="https://github.com/rainbowyuyu/rainbowyuyu/actions"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-actions-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-actions-en-light.svg"/><img src="assets/readme/nav-actions-en-light.svg" height="42" alt="GitHub Actions"/></picture></a>
+<a href="https://github.com/rainbowyuyu?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-repositories-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-repositories-en-light.svg"/><img src="assets/readme/nav-repositories-en-light.svg" height="42" alt="All repositories"/></picture></a>
+</p>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/footer.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/footer-light.svg"/><img src="assets/readme/footer-light.svg" width="100%" alt="Stay curious. Keep creating."/></picture></p>
 
-<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en">Portfolio</a> &nbsp; · &nbsp; <a href="https://space.bilibili.com/343585138">Bilibili</a> &nbsp; · &nbsp; <a href="https://www.wiscomper.com/">Wiscomper</a> &nbsp; · &nbsp; <a href="assets/readme/ATTRIBUTION.md">Widget credits</a></p>
+<p align="center">
+<a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-portfolio-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-portfolio-en-light.svg"/><img src="assets/readme/nav-portfolio-en-light.svg" height="42" alt="Portfolio"/></picture></a>
+<a href="https://space.bilibili.com/343585138"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-bilibili-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-bilibili-en-light.svg"/><img src="assets/readme/nav-bilibili-en-light.svg" height="42" alt="Bilibili"/></picture></a>
+<a href="https://www.wiscomper.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-wiscomper-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-wiscomper-en-light.svg"/><img src="assets/readme/nav-wiscomper-en-light.svg" height="42" alt="Wiscomper"/></picture></a>
+<a href="assets/readme/ATTRIBUTION.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-credits-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-credits-en-light.svg"/><img src="assets/readme/nav-credits-en-light.svg" height="42" alt="Widget credits"/></picture></a>
+</p>

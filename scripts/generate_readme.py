@@ -42,7 +42,7 @@ def identity_artwork():
 identity_artwork()
 
 def button(name,label,color,icon='arrow',width=166):
-    glyph={'arrow':'M13 27 27 13M14 13h13v13','grid':'M13 13h6v6h-6zM23 13h6v6h-6zM13 23h6v6h-6zM23 23h6v6h-6z','pulse':'M11 23h6l4-10 5 17 4-7h5','play':'M17 12 31 21 17 30Z','code':'m17 14-7 7 7 7m12-14 7 7-7 7M25 10l-5 22','globe':'M10 21h22M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 10c-8 8-8 14 0 22 8-8 8-14 0-22'}[icon]
+    glyph={'arrow':'M13 27 27 13M14 13h13v13','grid':'M13 13h6v6h-6zM23 13h6v6h-6zM13 23h6v6h-6zM23 23h6v6h-6z','pulse':'M11 23h6l4-10 5 17 4-7h5','play':'M17 12 31 21 17 30Z','code':'m17 14-7 7 7 7m12-14 7 7-7 7M25 10l-5 22','globe':'M10 21h22M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 10c-8 8-8 14 0 22 8-8 8-14 0-22','check':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22m-6 11 4 4 8-8','book':'M13 11h17v21H15a3 3 0 0 1-3-3V14a3 3 0 0 1 3-3m-3 17h18M18 16h7M18 20h5','info':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 20v7M21 15v1','actions':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M18 16l8 5-8 5Z'}[icon]
     for theme,c in PALETTES.items():
         accent=LIGHT_ACCENTS.get(color,c['accent']) if theme=='light' else color
         suffix='' if theme=='dark' else '-light'
@@ -52,6 +52,17 @@ def button(name,label,color,icon='arrow',width=166):
 buttons=[('portfolio','个人主页','Portfolio','#7EE5DD','globe',166),('projects','精选项目','Projects','#B5AFFE','grid',166),('activity','每日动态','Activity','#F1CF9C','pulse',166),('bilibili','科学影像','Bilibili','#EEA8CA','play',166)]
 for stem,zh,en,color,icon,w in buttons:
     button(stem+'-zh',zh,color,icon,w);button(stem+'-en',en,color,icon,w)
+footer_buttons=[
+    ('status','更新状态','Update status','#7EE5DD','check',198),
+    ('actions','GitHub Actions','GitHub Actions','#C5D1E5','actions',198),
+    ('repositories','全部仓库','All repositories','#B5AFFE','book',198),
+    ('portfolio','个人主页','Portfolio','#7EE5DD','globe',160),
+    ('bilibili','哔哩哔哩','Bilibili','#EEA8CA','play',160),
+    ('wiscomper','智算视界','Wiscomper','#B7A8FF','grid',160),
+    ('credits','组件致谢','Widget credits','#C5D1E5','info',170),
+]
+for stem,zh,en,color,icon,w in footer_buttons:
+    button('nav-'+stem+'-zh',zh,color,icon,w);button('nav-'+stem+'-en',en,color,icon,w)
 for stem,zh,en,color in [('physcast','项目介绍','EXPLORE','#8EBAD1'),('omniforge','项目介绍','EXPLORE','#DDBE87'),('wiscomper','在线体验','LIVE DEMO','#B7A8FF'),('ai-engineer','查看源码','SOURCE','#6DC8FF'),('ai-revolution','查看系列','EXPLORE','#E4C7A0'),('science-studio','观看影像','WATCH','#83E3D6'),('manim','查看源码','SOURCE','#8ED0C2')]:
     button(stem+'-zh',zh,color,'arrow',150);button(stem+'-en',en,color,'arrow',150)
 button('github-zh','GitHub 源码','#C5D1E5','code',150);button('github-en','SOURCE CODE','#C5D1E5','code',170)
@@ -87,6 +98,8 @@ for lang in ('zh','en'):
       '<p align="center"><sub>'+('Research · Simulation · Visual computing · Animation · Open source' if en else '科研计算 · 物理仿真 · 交互可视化 · 动态影像 · 开源工具')+'</sub></p>', '', '<a id="projects"></a>', '## '+('Selected work' if en else '精选项目'),
       ('Research platforms, engineering tools and visual stories. Each project keeps its own visual identity.' if en else '从研究平台到工程工具，再到科学影像。每个项目，保留自己的问题、色彩和表达。'), '']
     for i,p in enumerate(projects):
+        if i==3:
+            lines += ['<details>', '<summary><strong>'+('More open-source & creative work' if en else '更多开源与创作项目')+'</strong> · '+('4 projects' if en else '4 个项目')+'</summary>', '']
         url=(site+p['url']) if p['url'].startswith('#') else p['url']
         lines += ['### '+(p['en'] if en else p['name']),
           f'<p><a href="{site}#{p["slug"]}">'+picture(f'assets/showcase/{p["slug"]}.webp',f'assets/showcase/{p["slug"]}-light.webp',p['en']+' — '+(p['title'] if en else p['zh']),'100%')+'</a></p>',
@@ -97,20 +110,26 @@ for lang in ('zh','en'):
         if p['repo'] and not url.startswith('https://github.com/'):
             lines.append(f'<a href="https://github.com/rainbowyuyu/{p["repo"]}">'+artwork('github-'+lang,'GitHub source',height='38')+'</a>')
         lines+=['</p>','']
-    lines += ['<sub>'+('Project descriptions updated 2026-10-27. Research and development remain ongoing; functionality and validation scope follow each project’s documentation.' if en else '项目介绍更新于 2026-10-27。研究与开发持续进行，功能与验证范围以各项目文档为准。')+'</sub>',
+    lines += ['</details>', '', '<sub>'+('Project descriptions updated 2026-10-27. Research and development remain ongoing; functionality and validation scope follow each project’s documentation.' if en else '项目介绍更新于 2026-10-27。研究与开发持续进行，功能与验证范围以各项目文档为准。')+'</sub>',
       '', '<p align="center"><img src="assets/images/hr.gif" width="100%" height="2" alt=""/></p>', '<a id="activity"></a>',
       '## '+('Built, day by day' if en else '日复一日，把想法做成作品'),
-      '<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; '+metric('streak','Contribution streak','74%')+' &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>',
+      '<p align="center"><img src="assets/images/left.png" width="56" alt="Original profile mascot"/> &nbsp; <img src="assets/images/right.png" width="56" alt="Original profile mascot"/></p>',
+      '<p align="center">'+metric('streak','Contribution streak','720')+'</p>',
       '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>',
-      '<p>'+metric('base','GitHub public activity','49%')+' '+metric('languages.indepth','Public source language breakdown','49%')+'</p>',
-      '<p>'+metric('habits.charts','Activity rhythm','49%')+' '+metric('wakatime','WakaTime recorded coding activity','49%')+'</p>',
+      '<p align="center">'+metric('base','GitHub public activity','420')+' '+metric('languages.indepth','Public source language breakdown','420')+'</p>',
+      '<p align="center">'+metric('habits.charts','Activity rhythm','420')+' '+metric('wakatime','WakaTime recorded coding activity','420')+'</p>',
       '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>',
       '', '<details>', '<summary><strong>'+('More daily activity & archived cards' if en else '展开更多每日活动与历史卡片')+'</strong></summary>', '',
-      '<p>'+metric('calendar.full','Contribution calendar','100%')+'</p>', '<p>'+metric('activity','Recent public activity','100%')+'</p>',
+      '<p align="center">'+metric('calendar.full','Contribution calendar','720')+'</p>', '<p align="center">'+metric('activity','Recent public activity','720')+'</p>',
       ('The following isometric calendar is an archived snapshot.' if en else '以下等距日历保留为历史快照。'), '<p>'+metric('isocalendar.fullyear','Archived isometric calendar','100%')+'</p>', '', '</details>', '',
       '<sub>'+('The scheduled jobs refresh the stored cards daily. WakaTime reflects measured activity over the last seven days. Use each card’s timestamp and the update status to assess freshness; unavailable providers keep the last successful snapshot.' if en else '每日任务自动更新本地卡片；WakaTime 展示最近 7 天真实记录。请以卡片时间与更新状态判断时效，数据源不可用时保留上次成功快照。')+'</sub>', '',
-      '[ '+('Update status' if en else '更新状态')+' ](assets/profile/activity-status.json) &nbsp; · &nbsp; [ GitHub Actions ](https://github.com/rainbowyuyu/rainbowyuyu/actions) &nbsp; · &nbsp; [ '+('All repositories' if en else '全部仓库')+' ](https://github.com/rainbowyuyu?tab=repositories)', '',
-      '<p align="center">'+artwork('footer','Stay curious. Keep creating.','100%')+'</p>',
-      '<p align="center"><a href="'+site+'">Portfolio</a> &nbsp; · &nbsp; <a href="https://space.bilibili.com/343585138">Bilibili</a> &nbsp; · &nbsp; <a href="https://www.wiscomper.com/">Wiscomper</a> &nbsp; · &nbsp; <a href="assets/readme/ATTRIBUTION.md">Widget credits</a></p>', '']
+      '<p align="center">']
+    footer_links={'status':'assets/profile/activity-status.json','actions':'https://github.com/rainbowyuyu/rainbowyuyu/actions','repositories':'https://github.com/rainbowyuyu?tab=repositories','portfolio':site,'bilibili':'https://space.bilibili.com/343585138','wiscomper':'https://www.wiscomper.com/','credits':'assets/readme/ATTRIBUTION.md'}
+    for stem,zh_label,en_label,_,_,_ in footer_buttons[:3]:
+        lines.append(f'<a href="{footer_links[stem]}">'+artwork('nav-'+stem+'-'+lang,en_label if en else zh_label,height='42')+'</a> ')
+    lines += ['</p>', '<p align="center">'+artwork('footer','Stay curious. Keep creating.','100%')+'</p>', '<p align="center">']
+    for stem,zh_label,en_label,_,_,_ in footer_buttons[3:]:
+        lines.append(f'<a href="{footer_links[stem]}">'+artwork('nav-'+stem+'-'+lang,en_label if en else zh_label,height='42')+'</a> ')
+    lines += ['</p>', '']
     (ROOT/('README.en.md' if en else 'README.md')).write_text(re.sub(r'<p(?: [^>]+)?>.*?</p>',lambda m:m.group(0).replace('\n\n','\n'),'\n\n'.join(x.rstrip() for x in lines),flags=re.S).rstrip()+'\n',encoding='utf-8',newline='\n')
 print('Generated two README documents and navigation artwork.')

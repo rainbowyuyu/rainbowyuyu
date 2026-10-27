@@ -8,14 +8,17 @@ const save=(k,v)=>{try{localStorage.setItem(k,v)}catch{}};
 const params=new URLSearchParams(location.search);
 let lang=params.get('lang')==='en'?'en':params.get('lang')==='zh'?'zh':read('rainbow-language')==='en'?'en':'zh';
 const systemTheme=matchMedia('(prefers-color-scheme: dark)');
-let themeChoice=read('rainbow-theme');
-if(themeChoice!=='light'&&themeChoice!=='dark')themeChoice=null;
-let theme=themeChoice||(systemTheme.matches?'dark':'light');
+const THEME_KEY='rainbow-theme-v2';
+const validThemeChoice=value=>['system','light','dark'].includes(value)?value:'system';
+let themeChoice=validThemeChoice(read(THEME_KEY));
+const resolveTheme=()=>themeChoice==='system'?(systemTheme.matches?'dark':'light'):themeChoice;
+let theme=resolveTheme();
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let paused=reduced.matches||read('rainbow-motion')==='paused';
 let statusData=null;let statusLoaded=false;
 const tr=(z,e)=>lang==='en'?e:z;
 const languageButton=q('#language-toggle'),themeButton=q('#theme-toggle'),motionButton=q('#motion-toggle');
+const themeControl=q('.theme-control'),themeMenu=q('#theme-menu'),themeOptions=qa('[data-theme-choice]');
 const projects=qa('.project-details'),expandButton=q('#expand-projects');
 let savedOpen;try{savedOpen=JSON.parse(read('rainbow-projects'))}catch{}
 if(Array.isArray(savedOpen))projects.forEach(p=>p.open=savedOpen.includes(p.closest('.project-row').id));
@@ -64,7 +67,7 @@ function setLanguage(next,writeURL=false){
  q('meta[property="og:description"]').content=q('meta[name=description]').content;
  languageButton.textContent=lang==='en'?'中':'EN';languageButton.lang=lang==='en'?'zh-CN':'en';
  languageButton.setAttribute('aria-label',lang==='en'?'切换到中文':'Switch to English');
- themeButton.setAttribute('aria-label',theme==='dark'?tr('切换浅色主题','Switch to light theme'):tr('切换深色主题','Switch to dark theme'));
+ updateThemeControl();
  updateProjectButtons();updateMotionLabels();if(statusLoaded)updateStatus();
  if(writeURL){const url=new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url)}
 }
@@ -73,19 +76,50 @@ function updateThemedArtwork(){
  qa('img[data-dark-src][data-light-src]').forEach(img=>{if(!img.closest('picture')){const src=theme==='dark'?img.dataset.darkSrc:img.dataset.lightSrc;if(img.getAttribute('src')!==src)img.src=src}});
  qa('a[data-dark-href][data-light-href]').forEach(a=>{a.href=theme==='dark'?a.dataset.darkHref:a.dataset.lightHref});
 }
-function setTheme(next,persist=true){
- theme=next;root.dataset.theme=theme;
- if(persist){themeChoice=theme;save('rainbow-theme',theme)}
+function updateThemeControl(){
+ const choiceLabel=themeChoice==='system'?tr('跟随系统','System'):themeChoice==='dark'?tr('深色','Dark'):tr('浅色','Light');
+ const resolvedLabel=theme==='dark'?tr('当前深色','Currently dark'):tr('当前浅色','Currently light');
+ const label=tr('外观：','Appearance: ')+choiceLabel+(themeChoice==='system'?' · '+resolvedLabel:'');
+ themeButton.setAttribute('aria-label',label);themeButton.title=label;
+ q('#theme-resolved').textContent=resolvedLabel;
+ themeOptions.forEach(option=>option.setAttribute('aria-checked',String(option.dataset.themeChoice===themeChoice)));
+}
+function setTheme(next){
+ theme=next;root.dataset.theme=theme;root.dataset.themePreference=themeChoice;
  q('meta[name=theme-color]').content=theme==='dark'?'#151b20':'#f6f8fa';
- themeButton.setAttribute('aria-label',theme==='dark'?tr('切换浅色主题','Switch to light theme'):tr('切换深色主题','Switch to dark theme'));
- themeButton.setAttribute('aria-pressed',String(theme==='dark'));
+ updateThemeControl();
  updateThemedArtwork();updateContributionImages();window.dispatchEvent(new Event('rainbow-theme'));
 }
-systemTheme.addEventListener('change',e=>{if(!themeChoice)setTheme(e.matches?'dark':'light',false)});
+function setThemePreference(next,persist=true){
+ themeChoice=validThemeChoice(next);if(persist)save(THEME_KEY,themeChoice);setTheme(resolveTheme());
+}
+function closeThemeMenu(restoreFocus=false){
+ themeMenu.hidden=true;themeButton.setAttribute('aria-expanded','false');
+ if(restoreFocus)themeButton.focus();
+}
+function openThemeMenu(index=themeOptions.findIndex(option=>option.dataset.themeChoice===themeChoice)){
+ themeMenu.hidden=false;themeButton.setAttribute('aria-expanded','true');
+ (themeOptions[index]||themeOptions[0]).focus();
+}
+systemTheme.addEventListener('change',()=>{if(themeChoice==='system')setTheme(resolveTheme())});
+window.addEventListener('storage',event=>{if(event.key===THEME_KEY||event.key===null)setThemePreference(read(THEME_KEY),false)});
 projects.forEach(p=>p.addEventListener('toggle',()=>{updateProjectButtons();save('rainbow-projects',JSON.stringify(projects.filter(x=>x.open).map(x=>x.closest('.project-row').id)))}));
 expandButton.hidden=false;expandButton.addEventListener('click',()=>{const open=!projects.every(p=>p.open);projects.forEach(p=>{p.open=open});updateProjectButtons()});
 languageButton.hidden=false;languageButton.addEventListener('click',()=>setLanguage(lang==='en'?'zh':'en',true));
-themeButton.hidden=false;themeButton.addEventListener('click',()=>setTheme(theme==='dark'?'light':'dark'));
+themeButton.hidden=false;themeButton.addEventListener('click',()=>themeMenu.hidden?openThemeMenu():closeThemeMenu());
+themeButton.addEventListener('keydown',event=>{if(event.key==='ArrowDown'||event.key==='ArrowUp'){event.preventDefault();openThemeMenu(event.key==='ArrowDown'?0:themeOptions.length-1)}});
+themeOptions.forEach(option=>option.addEventListener('click',()=>{setThemePreference(option.dataset.themeChoice);closeThemeMenu(true)}));
+themeMenu.addEventListener('keydown',event=>{
+ if(event.key==='Tab'){closeThemeMenu();themeButton.focus();return}
+ const index=themeOptions.indexOf(document.activeElement);let next;
+ if(event.key==='ArrowDown')next=(index+1)%themeOptions.length;
+ if(event.key==='ArrowUp')next=(index-1+themeOptions.length)%themeOptions.length;
+ if(event.key==='Home')next=0;if(event.key==='End')next=themeOptions.length-1;
+ if(next!==undefined){event.preventDefault();themeOptions[next].focus()}
+});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!themeMenu.hidden){event.preventDefault();closeThemeMenu(true)}});
+document.addEventListener('pointerdown',event=>{if(!themeMenu.hidden&&!themeControl.contains(event.target))closeThemeMenu()});
+themeControl.addEventListener('focusout',event=>{if(!themeControl.contains(event.relatedTarget))closeThemeMenu()});
 function openHash(){let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{return}const target=document.getElementById(id);if(target&&target.classList.contains('project-row')){target.querySelector('.project-details').open=true;updateProjectButtons()}}
 window.addEventListener('hashchange',openHash);qa('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const el=document.getElementById(a.hash.slice(1));if(el&&el.classList.contains('project-row'))el.querySelector('.project-details').open=true}));
 q('#copyright-year').textContent=String(new Date().getFullYear());
@@ -113,7 +147,7 @@ function changeMotion(value,persist=true){paused=value;if(persist)save('rainbow-
 motionButton.hidden=false;motionButton.addEventListener('click',()=>changeMotion(!paused));
 reduced.addEventListener('change',e=>changeMotion(e.matches||read('rainbow-motion')==='paused',false));
 document.addEventListener('visibilitychange',()=>{updateContributionImages();window.dispatchEvent(new Event('rainbow-motion'))});
-setTheme(theme,false);setLanguage(lang);openHash();
+setThemePreference(themeChoice,false);setLanguage(lang);openHash();
 let progressFrame=0;function updateProgress(){progressFrame=0;const length=document.documentElement.scrollHeight-innerHeight;q('.scroll-progress').style.transform='scaleX('+(length>0?scrollY/length:0)+')'}addEventListener('scroll',()=>{if(!progressFrame)progressFrame=requestAnimationFrame(updateProgress)},{passive:true});updateProgress();
 
 /* Aurora shader adapted for this website from React Bits by David Haz.

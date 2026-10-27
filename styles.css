@@ -278,7 +278,74 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible {
   font:13px var(--mono)
 }
 #theme-toggle {
+  width:44px;
+  height:44px;
+  min-width:44px;
   font-size:21px
+}
+.theme-control {
+  position:relative;
+  display:flex;
+  align-items:center
+}
+.theme-menu {
+  position:absolute;
+  top:calc(100% + 10px);
+  right:0;
+  z-index:70;
+  width:224px;
+  max-width:calc(100vw - 36px);
+  padding:8px;
+  border-radius:16px;
+  background:var(--raised);
+  color:var(--ink);
+  box-shadow:var(--floating-shadow)
+}
+.theme-menu-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:8px 10px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5
+}
+#theme-resolved {
+  color:var(--quiet)
+}
+.theme-option {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  min-height:44px;
+  padding:10px;
+  border-radius:8px;
+  text-align:left;
+  font-size:14px;
+  line-height:1.5
+}
+.theme-option>svg {
+  flex:0 0 auto
+}
+.theme-option:hover,.theme-option:focus-visible {
+  background:var(--control)
+}
+.theme-option:focus-visible {
+  outline-offset:-2px
+}
+.theme-option[aria-checked=true] {
+  background:var(--surface);
+  color:var(--cyan);
+  font-weight:600
+}
+.theme-check {
+  margin-left:auto;
+  visibility:hidden
+}
+.theme-option[aria-checked=true] .theme-check {
+  visibility:visible
 }
 /* Aurora, typography and a small gallery share the opening frame. */
 .hero {
@@ -1297,9 +1364,10 @@ picture { display:block; }
 .command-dialog { border:0; }
 .button { border-color:transparent; }
 .button:active,.icon-button:active,.language-button:active { transform:translateY(1px); }
-.theme-moon { display:none; }
-[data-theme=light] .theme-sun { display:none; }
-[data-theme=light] .theme-moon { display:block; }
+#theme-toggle>svg { display:none; }
+[data-theme-preference=system] #theme-toggle .theme-system,
+[data-theme-preference=light] #theme-toggle .theme-sun,
+[data-theme-preference=dark] #theme-toggle .theme-moon { display:block; }
 .hero-topics,.hero-coordinate,.scroll-link,#motion-toggle,.language-button,.search-trigger kbd,
 .tags>span,.private-note,.project-kicker,.project-status,.activity-status,.text-link,.section-footnote,
 .card-data-status,.wakatime-notice,.portrait-label,.about-domains span,.toolbox,.footer-bottom,

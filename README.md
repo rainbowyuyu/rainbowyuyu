@@ -94,6 +94,12 @@
 
 
 
+<details>
+
+<summary><strong>更多开源与创作项目</strong> · 4 个项目</summary>
+
+
+
 ### The AI Engineer
 
 <p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#ai-engineer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-engineer.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/ai-engineer-light.webp"/><img src="assets/showcase/ai-engineer-light.webp" width="100%" alt="The AI Engineer — 设计之后，继续计算与验证"/></picture></a></p>
@@ -156,6 +162,10 @@
 
 
 
+</details>
+
+
+
 <sub>项目介绍更新于 2026-10-27。研究与开发持续进行，功能与验证范围以各项目文档为准。</sub>
 
 
@@ -166,13 +176,15 @@
 
 ## 日复一日，把想法做成作品
 
-<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg"/><img src="github-metrics/streak-light.svg" width="74%" alt="Contribution streak"/></picture> &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>
+<p align="center"><img src="assets/images/left.png" width="56" alt="Original profile mascot"/> &nbsp; <img src="assets/images/right.png" width="56" alt="Original profile mascot"/></p>
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg"/><img src="github-metrics/streak-light.svg" width="720" alt="Contribution streak"/></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg"/><img src="github-metrics/base-light.svg" width="49%" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg"/><img src="github-metrics/languages.indepth-light.svg" width="49%" alt="Public source language breakdown"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg"/><img src="github-metrics/base-light.svg" width="420" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg"/><img src="github-metrics/languages.indepth-light.svg" width="420" alt="Public source language breakdown"/></picture></p>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg"/><img src="github-metrics/habits.charts-light.svg" width="49%" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg"/><img src="github-metrics/wakatime-light.svg" width="49%" alt="WakaTime recorded coding activity"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg"/><img src="github-metrics/habits.charts-light.svg" width="420" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg"/><img src="github-metrics/wakatime-light.svg" width="420" alt="WakaTime recorded coding activity"/></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>
 
@@ -184,9 +196,9 @@
 
 
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg"/><img src="github-metrics/calendar.full-light.svg" width="100%" alt="Contribution calendar"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg"/><img src="github-metrics/calendar.full-light.svg" width="720" alt="Contribution calendar"/></picture></p>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg"/><img src="github-metrics/activity-light.svg" width="100%" alt="Recent public activity"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg"/><img src="github-metrics/activity-light.svg" width="720" alt="Recent public activity"/></picture></p>
 
 以下等距日历保留为历史快照。
 
@@ -202,10 +214,17 @@
 
 
 
-[ 更新状态 ](assets/profile/activity-status.json) &nbsp; · &nbsp; [ GitHub Actions ](https://github.com/rainbowyuyu/rainbowyuyu/actions) &nbsp; · &nbsp; [ 全部仓库 ](https://github.com/rainbowyuyu?tab=repositories)
-
-
+<p align="center">
+<a href="assets/profile/activity-status.json"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-status-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-status-zh-light.svg"/><img src="assets/readme/nav-status-zh-light.svg" height="42" alt="更新状态"/></picture></a>
+<a href="https://github.com/rainbowyuyu/rainbowyuyu/actions"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-actions-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-actions-zh-light.svg"/><img src="assets/readme/nav-actions-zh-light.svg" height="42" alt="GitHub Actions"/></picture></a>
+<a href="https://github.com/rainbowyuyu?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-repositories-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-repositories-zh-light.svg"/><img src="assets/readme/nav-repositories-zh-light.svg" height="42" alt="全部仓库"/></picture></a>
+</p>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/footer.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/footer-light.svg"/><img src="assets/readme/footer-light.svg" width="100%" alt="Stay curious. Keep creating."/></picture></p>
 
-<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/">Portfolio</a> &nbsp; · &nbsp; <a href="https://space.bilibili.com/343585138">Bilibili</a> &nbsp; · &nbsp; <a href="https://www.wiscomper.com/">Wiscomper</a> &nbsp; · &nbsp; <a href="assets/readme/ATTRIBUTION.md">Widget credits</a></p>
+<p align="center">
+<a href="https://rainbowyuyu.github.io/rainbowyuyu/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-portfolio-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-portfolio-zh-light.svg"/><img src="assets/readme/nav-portfolio-zh-light.svg" height="42" alt="个人主页"/></picture></a>
+<a href="https://space.bilibili.com/343585138"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-bilibili-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-bilibili-zh-light.svg"/><img src="assets/readme/nav-bilibili-zh-light.svg" height="42" alt="哔哩哔哩"/></picture></a>
+<a href="https://www.wiscomper.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-wiscomper-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-wiscomper-zh-light.svg"/><img src="assets/readme/nav-wiscomper-zh-light.svg" height="42" alt="智算视界"/></picture></a>
+<a href="assets/readme/ATTRIBUTION.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/nav-credits-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/nav-credits-zh-light.svg"/><img src="assets/readme/nav-credits-zh-light.svg" height="42" alt="组件致谢"/></picture></a>
+</p>
