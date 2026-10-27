@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-27",
+  "provider": "Qwen / DashScope Beijing",
+  "model": "qwen-image-3.0-pro",
+  "use": "Original concept illustration; not research results",
+  "records": [
+    {
+      "id": "rainbow-studio-light-r1",
+      "model": "qwen-image-3.0-pro",
+      "taskId": "51ff2040-04a6-40e0-aa97-ec6857ddb611",
+      "state": "SUCCEEDED",
+      "actualSize": [
+        1920,
+        960
+      ],
+      "prompt": "为rainbow鱼的个人主页设计高级手绘动画电影风插画，不要任何文字、字母、数字、水印或Logo。参考图仅用于保持同一个卡通角色：蓬松黑色卷发、圆形金框眼镜、棕色大眼睛、深青绿外套、奶白翻领。二维精细手绘，漂亮真实笔触、铅笔轮廓、水彩叠色、纸纹，拒绝3D塑料、霓虹、HUD、普通仪表盘。主题是好奇心、物理研究、工程与科学故事。柔和的珊瑚红、琥珀黄、青绿、湖蓝、灰紫构成自然彩虹，丰富但不俗艳。横幅2:1，底色温暖米白#f7f3e9。左侧0到48%保持纯净纸面空白留给后期身份文字，只有边缘极淡的铅笔星点，绝不能有人或物体。右侧52%到98%构成一个完整美丽小世界：角色坐在右下方的弧形纸页上，笑着用一只手举起小小透明棱镜；棱镜把一束柔和光线折成五到六条水彩丝带，流动的丝带沿右上方弯成宽阔彩虹拱门，托起一颗小球、微型小机器人和纸飞机，呈现物理、工程和创作的隐喻。所有物件属于同一个透视空间，主角半身与双手完整且合理。右侧饱满精细，留出边界，画面不杂乱，微微斜向动势，柔和落地阴影。人物占右半区高度55%，明亮眼睛，开放好奇的表情。米白纸面、青绿色主体、彩虹光线如手绘书页上的冒险，质朴而华丽，有艺术家亲手画出的温度。"
+    },
+    {
+      "id": "rainbow-studio-dark-r1",
+      "model": "qwen-image-3.0-pro",
+      "taskId": "b6ef0d79-d303-4d4c-8dcd-232459c07493",
+      "state": "SUCCEEDED",
+      "actualSize": [
+        1920,
+        960
+      ],
+      "prompt": "将参考图精确改成夜间主题的手绘动画电影插画。保持原图中同一个人物的脸、眼镜、黑色卷发、服装、双手和姿势，保持所有物件位置、彩虹拱形、棱镜、纸飞机、小机器人与纸页构图。只改变纸面和环境光：左边0至48%从米白空白改为纯净的深墨蓝灰#151b20的绘画纸面，轻微纸纹，没有任何文字或物体。右侧变为温柔的夜间科学童话世界，底部纸页为青灰石墨纸，仍有书页清晰边缘。人物用暖色柔和光照，皮肤和服装颜色自然，眼神明亮，禁止黑脸，禁止把整张图直接反色。彩虹用柔和水彩颜料在深纸上发出细腻的粉彩光，珊瑚、琥珀、青绿、湖蓝、灰紫清楚，有层次但不是霓虹。背景远处微型机械与云朵低调，人物主体突出，整个画面保持细腻墨线与手工水彩质地。没有文字、字母、Logo、水印，没有新人物，没有界面元素。左侧必须保持足够干净，供后期放浅色标题。"
+    },
+    {
+      "asset": "robot.png",
+      "source": "rainbow-studio-vignettes-r1",
+      "processing": "edge-connected paper removal; original illustration colours retained"
+    },
+    {
+      "asset": "brushes.png",
+      "source": "rainbow-studio-vignettes-r1",
+      "processing": "edge-connected paper removal; original illustration colours retained"
+    },
+    {
+      "asset": "plane.png",
+      "source": "rainbow-studio-vignettes-r1",
+      "processing": "edge-connected paper removal; original illustration colours retained"
+    },
+    {
+      "asset": "hourglass.png",
+      "source": "rainbow-studio-vignettes-r1",
+      "processing": "edge-connected paper removal; original illustration colours retained"
+    },
+    {
+      "id": "rainbow-studio-vignettes-r1",
+      "model": "qwen-image-3.0-pro",
+      "taskId": "6680dc44-d38c-4cbf-ae2f-9443055a9ec7",
+      "state": "SUCCEEDED",
+      "actualSize": [
+        1536,
+        1024
+      ],
+      "prompt": "为rainbow鱼的个人主页设计高级手绘动画电影风插画，不要任何文字、字母、数字、水印或Logo。参考图仅用于保持同一个卡通角色：蓬松黑色卷发、圆形金框眼镜、棕色大眼睛、深青绿外套、奶白翻领。二维精细手绘，漂亮真实笔触、铅笔轮廓、水彩叠色、纸纹，拒绝3D塑料、霓虹、HUD、普通仪表盘。主题是好奇心、物理研究、工程与科学故事。柔和的珊瑚红、琥珀黄、青绿、湖蓝、灰紫构成自然彩虹，丰富但不俗艳。制作四张独立的小插画在一个2列2行均匀网格画布内，画布纯净暖米白。四张之间留宽大空白，不画框，不画分隔线，四幅主体各自严格完整落在自己的象限中央，四角与象限边缘均留15%空白。左上：青绿色小机器人坐在一本打开的纸质笔记本旁，旁边两颗珊瑚色手绘星星，代表开源构建。右上：五支不同颜色的画笔和两本错落叠起的书，青绿、湖蓝、金黄、灰紫，代表多种语言。左下：轻盈纸飞机划过三条水彩弧线，旁边一粒柔和太阳，代表活动节奏。右下：小玻璃沙漏配一片青绿叶子和铅笔，代表专注时间。四幅统一高级手绘水彩插画风、精细墨线、干刷边缘、真实纸张颗粒；淡淡自然阴影，优雅可爱，不要人物，不要文字，不要数字，不要进度条。每幅主体饱满但四周留白便于后期截取为透明小图标。"
+    }
+  ],
+  "assets": {
+    "brushes.png": {
+      "bytes": 58990,
+      "sha256": "0fcaea723d207600e3247c55dfcbb97509765a0754557fe62d55e341e63369e7"
+    },
+    "hero-dark.jpg": {
+      "bytes": 158367,
+      "sha256": "e4a0378dd1fb91e8a72f1afc325acfcfcead374aedd55c597b5e988b1a0177d1"
+    },
+    "hero-dark.webp": {
+      "bytes": 151310,
+      "sha256": "1281b9b9cdf16f04bc585d13a91822dd07b34d011ff2108883d4af42a6e4686e"
+    },
+    "hero-light.jpg": {
+      "bytes": 169026,
+      "sha256": "6802e932fc4fffd873a6e4df84c5dd118dcb285353b727902ff6a07a9f2a8fcc"
+    },
+    "hero-light.webp": {
+      "bytes": 186182,
+      "sha256": "af4de8126c64a7435e19fd404d9632ce13cd2c48ef8ddde9b9a19d470a19996d"
+    },
+    "hourglass.png": {
+      "bytes": 54558,
+      "sha256": "67ee2b27c26bfc5849410d006114c753b30f61eee85d37999d1908da8b5f7cc8"
+    },
+    "logo-dark.png": {
+      "bytes": 6538,
+      "sha256": "cccbbb8c0de1d4e5ca7d9b07ba52599daf03876d5d623b67cc0a0b2fa479f0ba"
+    },
+    "logo-light.png": {
+      "bytes": 6637,
+      "sha256": "2a73951445459820de36f6a5aa9f6fa4de62f3ba5e3db24e235b36ecc95d93c2"
+    },
+    "plane.png": {
+      "bytes": 42585,
+      "sha256": "20ea0687de86e407079e2df4b02443b839163a996aedec6032ffe48cb222161f"
+    },
+    "robot.png": {
+      "bytes": 63009,
+      "sha256": "84c9cbaf025f81de143b7c2211bb5896fdc403e7a403a230591d038dcccf887a"
+    },
+    "scene-dark.webp": {
+      "bytes": 154690,
+      "sha256": "e7b3b95cb3bde3c0e1316d2eb35993d3e18b430aa2c1c61c46ce02d6c56cf304"
+    },
+    "scene-light.webp": {
+      "bytes": 190562,
+      "sha256": "b65da48fa04e476e5c5613c768ea7bef6dbc1c913bfcd37f6d6ca24a0dda3409"
+    }
+  }
+}

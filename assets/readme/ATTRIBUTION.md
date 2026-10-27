@@ -17,3 +17,6 @@ Layout references reviewed: [DenverCoder1's profile](https://github.com/DenverCo
 The paired artwork and tonal hierarchy apply the colour-role guidance from [Taste Skill](https://github.com/Leonxlnx/taste-skill), reviewed at commit `12af471f627f866411b4bd785b19646d3672784c`. This is an original adaptation within GitHub README constraints, not a copied webpage template. The owner's established project colours, covers and animated widgets take priority over generic style defaults.
 
 Run python scripts/generate_readme.py from the repository root to regenerate the synchronized Chinese and English README documents and all paired banner, footer, typing and button SVGs.
+# Hand-painted profile additions, 2026-10-27
+
+The illustrated character/prism scene and robot, brush, paper-plane and hourglass vignettes were generated specifically for this profile with Qwen Image 3.0 Pro through official DashScope Beijing. The style and character reference came from the owner's existing science-cover artwork. Daylight and night scenes were generated separately; text, numerical cards and the original owner logo were composed locally. They are decorative concept illustrations, not scientific measurements or claims. Sanitized provenance is stored in ../profile/studio/provenance.json.

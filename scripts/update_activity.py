@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse, base64, collections, concurrent.futures, datetime as dt, json, os, pathlib, re, subprocess, urllib.request, xml.etree.ElementTree as ET
 from generate_activity_themes import generate_metric_themes
 from activity_card_renderer import render_card, snapshot
+from generate_rainbow_contributions import generate_rainbow_contributions
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OWNER = 'rainbowyuyu'
@@ -120,6 +121,8 @@ def wakatime_card(status):
     mark(status,'wakatime','fresh','WakaTime last_7_days aggregate statistics',['github-metrics/wakatime.svg'])
 
 def static_variants():
+    if (ROOT/'profile-3d-contrib/profile-night-rainbow.svg').is_file():
+        generate_rainbow_contributions(ROOT)
     pairs=[('profile-snake-contrib/github-contribution-grid-snake-dark.svg','profile-snake-contrib/github-contribution-grid-snake-static.svg'),('profile-snake-contrib/github-contribution-grid-snake.svg','profile-snake-contrib/github-contribution-grid-snake-static-light.svg'),('profile-3d-contrib/profile-night-view.svg','profile-3d-contrib/profile-night-static.svg'),('profile-3d-contrib/profile-green.svg','profile-3d-contrib/profile-day-static.svg')]
     for source,destination in pairs:
         path=ROOT/source

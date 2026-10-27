@@ -2,7 +2,7 @@
 
 <p align="right"><a href="README.md">简体中文</a> &nbsp; / &nbsp; <strong>English</strong></p>
 
-<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/profile-banner.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/profile-banner-light.svg"/><img src="assets/readme/profile-banner-light.svg" width="100%" alt="rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University"/></picture></a></p>
+<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/profile-banner.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/profile-banner-light.svg?v=studio-v6"/><img src="assets/readme/profile-banner-light.svg?v=studio-v6" width="100%" alt="rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University"/></picture></a></p>
 
 <p align="center"><strong>AI for the physical world. Knowledge you can see.</strong></p>
 
@@ -96,7 +96,7 @@ Connecting formula recognition, LaTeX, worked solutions and Manim animation in a
 
 <details>
 
-<summary><strong>More open-source & creative work</strong> · 4 projects</summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/disclosure-projects-en.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/disclosure-projects-en-light.svg?v=studio-v6"/><img src="assets/readme/disclosure-projects-en-light.svg?v=studio-v6" width="720" alt="4 more projects"/></picture><br/><sub>Click to expand or collapse</sub></summary>
 
 
 
@@ -178,27 +178,27 @@ Reusable Manim components for teaching data structures, operating systems and co
 
 <p align="center"><img src="assets/images/left.png" width="56" alt="Original profile mascot"/> &nbsp; <img src="assets/images/right.png" width="56" alt="Original profile mascot"/></p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg?v=cards-v4"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg?v=cards-v4"/><img src="github-metrics/streak-light.svg?v=cards-v4" width="720" alt="Contribution streak"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg?v=studio-v6"/><img src="github-metrics/streak-light.svg?v=studio-v6" width="720" alt="Contribution streak"/></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg?v=cards-v4"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg?v=cards-v4"/><img src="github-metrics/base-light.svg?v=cards-v4" width="420" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg?v=cards-v4"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg?v=cards-v4"/><img src="github-metrics/languages.indepth-light.svg?v=cards-v4" width="420" alt="Public source language breakdown"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg?v=studio-v6"/><img src="github-metrics/base-light.svg?v=studio-v6" width="420" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg?v=studio-v6"/><img src="github-metrics/languages.indepth-light.svg?v=studio-v6" width="420" alt="Public source language breakdown"/></picture></p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg?v=cards-v4"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg?v=cards-v4"/><img src="github-metrics/habits.charts-light.svg?v=cards-v4" width="420" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg?v=cards-v4"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg?v=cards-v4"/><img src="github-metrics/wakatime-light.svg?v=cards-v4" width="420" alt="WakaTime recorded coding activity"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg?v=studio-v6"/><img src="github-metrics/habits.charts-light.svg?v=studio-v6" width="420" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg?v=studio-v6"/><img src="github-metrics/wakatime-light.svg?v=studio-v6" width="420" alt="WakaTime recorded coding activity"/></picture></p>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>
+<picture><source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-rainbow-dark-static.svg?v=studio-v6"/><source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-rainbow-light-static.svg?v=studio-v6"/><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-rainbow-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-rainbow-light.svg?v=studio-v6"/><img src="profile-3d-contrib/profile-rainbow-light.svg?v=studio-v6" width="100%" alt="Rainbow three-dimensional contribution landscape"/></picture>
 
 
 
 <details>
 
-<summary><strong>More daily activity & archived cards</strong></summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/disclosure-activity-en.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/disclosure-activity-en-light.svg?v=studio-v6"/><img src="assets/readme/disclosure-activity-en-light.svg?v=studio-v6" width="720" alt="More daily activity and archive"/></picture><br/><sub>Click to expand or collapse</sub></summary>
 
 
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg?v=cards-v4"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg?v=cards-v4"/><img src="github-metrics/calendar.full-light.svg?v=cards-v4" width="720" alt="Contribution calendar"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg?v=studio-v6"/><img src="github-metrics/calendar.full-light.svg?v=studio-v6" width="720" alt="Contribution calendar"/></picture></p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg?v=cards-v4"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg?v=cards-v4"/><img src="github-metrics/activity-light.svg?v=cards-v4" width="720" alt="Recent public activity"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg?v=studio-v6"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg?v=studio-v6"/><img src="github-metrics/activity-light.svg?v=studio-v6" width="720" alt="Recent public activity"/></picture></p>
 
 The following isometric calendar is an archived snapshot.
 

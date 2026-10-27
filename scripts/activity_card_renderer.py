@@ -14,6 +14,8 @@ import math
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from rainbow_visuals import spectral_defs, spectrum_rule
+from studio_art import illustration
 
 NS = {'svg': 'http://www.w3.org/2000/svg'}
 SCHEMA = 'rainbow.activity-card/v1'
@@ -34,14 +36,14 @@ TITLES = {
 }
 PALETTES = {
     'light': {
-        'surface': '#edf1f4', 'panel': '#e1e8ec', 'ink': '#202b33',
+        'surface': '#faf7ef', 'panel': '#f0ece2', 'ink': '#203744',
         'muted': '#465967', 'quiet': '#526775', 'accent': '#137962',
-        'track': '#d3dfe3', 'blue': '#286da5', 'purple': '#72559d',
+        'track': '#dfdfd4', 'blue': '#286da5', 'purple': '#72559d',
         'gold': '#8a641d', 'pink': '#a14772', 'area': '#d4e6e1',
         'heat': ['#d9e2e6', '#b0d4c7', '#74b298', '#3d9274', '#16664e'],
     },
     'dark': {
-        'surface': '#1c242c', 'panel': '#28343e', 'ink': '#eef2f4',
+        'surface': '#1b2228', 'panel': '#273139', 'ink': '#eef2f4',
         'muted': '#b8c4ce', 'quiet': '#9eafbd', 'accent': '#7dddc1',
         'track': '#34444f', 'blue': '#88bce6', 'purple': '#b9a2dc',
         'gold': '#d9bb7c', 'pink': '#dc9cbb', 'area': '#263e3c',
@@ -173,7 +175,7 @@ def _base(data, p):
         x = 28 + (i % 2) * 224
         y = 111 + (i // 2) * 118
         body += text(x, y, zh, 17, 'muted')
-        body += text(x, y + 48, f"{data[key]:,}", 49, 'accent' if key == 'stars' else 'ink', 650)
+        body += text(x, y + 48, f"{data[key]:,}", 49, ['blue','accent','purple','gold'][i], 650)
         body += text(x, y + 73, en, 15, 'muted')
     return body
 
@@ -225,10 +227,10 @@ def _habits(data, p):
 def _wakatime(data, p):
     body = text(28, 66, 'WakaTime · 仅计入记录 / Recorded activity only', 14, 'muted')
     value = f"{data['hours']:.1f}"
-    body += text(28, 165, value, 76, 'accent', 650)
+    body += text(28, 165, value, 76, 'purple', 650)
     body += text(28 + len(value) * 43 + 7, 164, 'h', 26, 'muted', 500)
     body += text(28, 198, '最近 7 天 / Last 7 days', 19, 'ink', 500)
-    body += rect(28, 222, 424, 69, p['panel'], 10)
+    body += rect(28, 222, 424, 69, p['panel'], 14)
     body += text(46, 267, f"{data['daily_average_hours']:.1f} h", 31, 'ink', 600)
     body += text(192, 253, '日均记录', 17, 'muted') + text(192, 276, 'Daily average', 15, 'muted')
     body += text(28, 311, '仅聚合时长 / Aggregate hours, no project names', 13, 'muted')
@@ -239,7 +241,7 @@ def _streak(data, p):
     body = text(28, 71, '基于 GitHub 贡献日历 / GitHub contribution days', 17, 'muted')
     for x, key, zh, en in ((28, 'current', '当前连续天数', 'Current streak'),
                           (238, 'longest', '年度最长记录', 'Longest in returned year')):
-        body += text(x, 151, str(data[key]), 70, 'accent' if key == 'current' else 'ink', 650)
+        body += text(x, 151, str(data[key]), 70, 'accent' if key == 'current' else 'purple', 650)
         body += text(x, 184, zh, 20, 'ink', 500) + text(x, 209, en, 15, 'muted')
     recent = data.get('recent_days', [])
     if recent:
@@ -313,7 +315,7 @@ def render_card(saved, theme='dark'):
     kind = saved['kind']
     data = saved['data']
     p = PALETTES[theme]
-    width, height = (720, 280) if kind == 'streak' else (720, 330) if kind in ('calendar', 'activity') else (480, 360)
+    width, height = (720, 310) if kind == 'streak' else (720, 350) if kind in ('calendar', 'activity') else (480, 400)
     # GitHub's inline README images can wrap without a vertical CSS gap.
     # Keep the card and content unchanged; reserve transparent space below it.
     canvas_height = height + 12 if width == 480 else height
@@ -321,8 +323,22 @@ def render_card(saved, theme='dark'):
                 'wakatime': _wakatime, 'streak': _streak, 'calendar': _calendar,
                 'activity': _activity}[kind]
     title = TITLES[kind]
+    zh, en = title.split(' / ', 1)
+    en = {'base':'Public profile totals', 'languages':'Languages · public non-fork',
+          'habits':'Activity rhythm · UTC+8', 'wakatime':'Coding time · WakaTime',
+          'streak':'Contribution days'}.get(kind, en)
+    motif = {'base':'robot', 'languages':'brushes', 'habits':'plane', 'wakatime':'hourglass',
+             'streak':'plane', 'calendar':'robot', 'activity':'brushes'}[kind]
+    content = renderer(data, p)
+    if kind not in ('calendar',):
+        # The title is split into two readable lines; its old subtitle is redundant.
+        content = re.sub(r'^<text\b[^>]*>.*?</text>', '', content, count=1)
+    offset = 20 if kind not in ('calendar', 'activity') else 10
+    # Keep every datum and tooltip, moving the existing coordinates as a unit.
+    content = re.sub(r'\by="(-?[\d.]+)"', lambda m:f'y="{float(m.group(1))+offset:g}"', content)
+    content = re.sub(r'\bcy="(-?[\d.]+)"', lambda m:f'cy="{float(m.group(1))+offset:g}"', content)
     style = ("text{font-family:'Segoe UI','Microsoft YaHei',Arial,sans-serif;font-variant-numeric:tabular-nums}"
-             + ''.join(f'.{name}' + '{fill:' + p[name] + '}' for name in ('ink', 'muted', 'quiet', 'accent')))
+             + ''.join(f'.{name}' + '{fill:' + p[name] + '}' for name in ('ink', 'muted', 'quiet', 'accent','blue','purple','gold','pink')))
     metadata = json.dumps(saved, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
     description = saved['description']
     if saved['updated_at'] not in description:
@@ -331,8 +347,14 @@ def render_card(saved, theme='dark'):
               f'viewBox="0 0 {width} {canvas_height}" role="img" aria-label="{esc(title)}">'
               f'<title>{esc(title)}</title><desc>{esc(description)}</desc>'
               f'<metadata id="activity-snapshot">{esc(metadata)}</metadata><style>{style}</style>'
-              f'<rect width="{width}" height="{height}" rx="16" fill="{p["surface"]}"/>'
-              + text(28, 41 if width == 480 else 44, title, 22 if width == 480 else 25, 'ink', 600)
-              + renderer(data, p) + _footer(saved, width, height) + '</svg>\n')
+              + spectral_defs()
+              + f'<rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="22" fill="{p["surface"]}" stroke="{p["track"]}" stroke-opacity=".5"/>'
+              + f'<path d="M25 83q110 -8 {width-150} 0" fill="none" stroke="{p["track"]}" stroke-width=".8" stroke-dasharray="2 5"/>'
+              + illustration(motif+'.png', width-133, 7, 113, 94)
+              + text(28, 42, zh, 26, 'ink', 650)
+              + text(29, 65, en, 14, 'muted', 400)
+              + content
+              + (spectrum_rule(28, height-51, 45, opacity=.65, height=2) if width == 480 else '')
+              + _footer(saved, width, height) + '</svg>\n')
     ET.fromstring(result)
     return result

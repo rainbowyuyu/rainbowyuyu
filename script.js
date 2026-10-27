@@ -23,6 +23,7 @@ const projects=qa('.project-details'),expandButton=q('#expand-projects');
 let savedOpen;try{savedOpen=JSON.parse(read('rainbow-projects'))}catch{}
 if(Array.isArray(savedOpen))projects.forEach(p=>p.open=savedOpen.includes(p.closest('.project-row').id));
 function updateProjectButtons(){
+ qa('details').forEach(p=>{const label=p.querySelector('.disclosure-label');if(label)label.textContent=p.open?tr('收起','Collapse'):tr('展开','Expand')});
  projects.forEach(p=>{const label=p.querySelector('.expand-label');if(label)label.textContent=p.open?tr('收起','Collapse'):tr('展开','Explore')});
  const all=projects.every(p=>p.open);
  expandButton.textContent=(all?tr('收起全部介绍','Collapse all details'):tr('展开全部介绍','Expand all details'))+(all?' −':' ＋');
@@ -104,6 +105,7 @@ function openThemeMenu(index=themeOptions.findIndex(option=>option.dataset.theme
 systemTheme.addEventListener('change',()=>{if(themeChoice==='system')setTheme(resolveTheme())});
 window.addEventListener('storage',event=>{if(event.key===THEME_KEY||event.key===null)setThemePreference(read(THEME_KEY),false)});
 projects.forEach(p=>p.addEventListener('toggle',()=>{updateProjectButtons();save('rainbow-projects',JSON.stringify(projects.filter(x=>x.open).map(x=>x.closest('.project-row').id)))}));
+qa('.activity-more').forEach(p=>p.addEventListener('toggle',updateProjectButtons));
 expandButton.hidden=false;expandButton.addEventListener('click',()=>{const open=!projects.every(p=>p.open);projects.forEach(p=>{p.open=open});updateProjectButtons()});
 languageButton.hidden=false;languageButton.addEventListener('click',()=>setLanguage(lang==='en'?'zh':'en',true));
 themeButton.hidden=false;themeButton.addEventListener('click',()=>themeMenu.hidden?openThemeMenu():closeThemeMenu());

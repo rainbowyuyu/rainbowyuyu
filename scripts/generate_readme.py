@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape
 import json, re
+from studio_banner import banner as illustrated_banner, disclosure_banner
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'assets/readme'
@@ -21,20 +22,24 @@ def picture(dark,light,alt,width=None,height=None):
     return f'<picture><source media="(prefers-color-scheme: dark)" srcset="{dark}"/><source media="(prefers-color-scheme: light)" srcset="{light}"/><img src="{light}"{attrs} alt="{escape(alt,quote=True)}"/></picture>'
 
 def artwork(stem,alt,width=None,height=None):
-    return picture(f'assets/readme/{stem}.svg',f'assets/readme/{stem}-light.svg',alt,width,height)
+    version='?v=studio-v6' if stem=='profile-banner' or stem.startswith('disclosure-') else ''
+    return picture(f'assets/readme/{stem}.svg{version}',f'assets/readme/{stem}-light.svg{version}',alt,width,height)
 
 def metric(stem,alt,width):
     # Bump only for a design migration; daily data keeps its existing asset paths.
-    version='?v=cards-v4' if stem in {'base','languages.indepth','habits.charts','wakatime','streak','calendar.full','activity'} else ''
+    version='?v=studio-v6' if stem in {'base','languages.indepth','habits.charts','wakatime','streak','calendar.full','activity'} else ''
     return picture(f'github-metrics/{stem}-dark.svg{version}',f'github-metrics/{stem}-light.svg{version}',alt,width)
 
+def contribution_picture():
+    prefix='profile-3d-contrib/profile-rainbow-'
+    sources=''.join(f'<source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: {theme})" srcset="{prefix}{theme}-static.svg?v=studio-v6"/>' for theme in ('dark','light'))
+    regular=picture(prefix+'dark.svg?v=studio-v6',prefix+'light.svg?v=studio-v6','Rainbow three-dimensional contribution landscape','100%')
+    return regular.replace('<picture>','<picture>'+sources,1)
+
 def identity_artwork():
-    source=(ROOT/'assets/profile/rainbow-logo.svg').read_text(encoding='utf-8')
-    source=re.sub(r'<\?xml[^>]*>','',source).strip()
     for theme,c in PALETTES.items():
         suffix='' if theme=='dark' else '-light'
-        logo=source.replace('<svg ', '<svg x="1065" y="68" width="248" height="280" ',1).replace('#231815',c['ink']).replace('#fff',c['bg'])
-        banner=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="440" viewBox="0 0 1440 440" role="img" aria-labelledby="title desc"><title id="title">rainbow鱼 · 浙江大学博士</title><desc id="desc">PhD researcher at Zhejiang University. Physical AI, engineering agents and scientific visualization. The original rainbow鱼 logo is retained.</desc><rect width="1440" height="440" rx="24" fill="{c['bg']}"/>{logo}<g font-family="{FONT}"><text x="62" y="183" fill="{c['ink']}" font-size="128" font-weight="700" letter-spacing="-5">rainbow鱼</text><text x="69" y="252" fill="{c['ink']}" font-size="32" font-weight="500">浙江大学博士</text><text x="69" y="294" fill="{c['muted']}" font-size="24">PhD researcher at Zhejiang University</text><text x="69" y="368" fill="{c['muted']}" font-size="22">Physical AI · Engineering agents · Visual stories</text></g></svg>'''
+        banner=illustrated_banner(theme)
         save_svg('profile-banner'+suffix+'.svg',banner)
         footer=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" aria-label="rainbow鱼. Stay curious. Keep creating."><g font-family="{FONT}"><text x="600" y="90" text-anchor="middle" fill="{c['ink']}" font-size="42" font-weight="600" letter-spacing="-1">Stay curious. Keep creating.</text><text x="600" y="134" text-anchor="middle" fill="{c['muted']}" font-size="22">rainbow鱼 · Research, build, explain.</text></g></svg>'''
         save_svg('footer'+suffix+'.svg',footer)
@@ -42,6 +47,21 @@ def identity_artwork():
         save_svg('typing'+suffix+'.svg',typing)
 
 identity_artwork()
+
+def disclosure_artwork():
+    for name in ('projects','activity'):
+        for lang in ('zh','en'):
+            for theme,c in PALETTES.items():
+                suffix='' if theme=='dark' else '-light'
+                svg=disclosure_banner(name,lang,theme)
+                save_svg(f'disclosure-{name}-{lang}'+suffix+'.svg',svg)
+
+disclosure_artwork()
+
+def disclosure(name,lang):
+    label=('Click to expand or collapse' if lang=='en' else '点击展开 / 收起')
+    alt=('4 more projects' if name=='projects' else 'More daily activity and archive') if lang=='en' else ('更多项目 · 4 项' if name=='projects' else '每日活动与历史卡片')
+    return '<summary>'+artwork('disclosure-'+name+'-'+lang,alt,'720')+'<br/><sub>'+label+'</sub></summary>'
 
 def button(name,label,color,icon='arrow',width=166):
     glyph={'arrow':'M13 27 27 13M14 13h13v13','grid':'M13 13h6v6h-6zM23 13h6v6h-6zM13 23h6v6h-6zM23 23h6v6h-6z','pulse':'M11 23h6l4-10 5 17 4-7h5','play':'M17 12 31 21 17 30Z','code':'m17 14-7 7 7 7m12-14 7 7-7 7M25 10l-5 22','globe':'M10 21h22M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 10c-8 8-8 14 0 22 8-8 8-14 0-22','check':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22m-6 11 4 4 8-8','book':'M13 11h17v21H15a3 3 0 0 1-3-3V14a3 3 0 0 1 3-3m-3 17h18M18 16h7M18 20h5','info':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 20v7M21 15v1','actions':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M18 16l8 5-8 5Z'}[icon]
@@ -101,7 +121,7 @@ for lang in ('zh','en'):
       ('Research platforms, engineering tools and visual stories. Each project keeps its own visual identity.' if en else '从研究平台到工程工具，再到科学影像。每个项目，保留自己的问题、色彩和表达。'), '']
     for i,p in enumerate(projects):
         if i==3:
-            lines += ['<details>', '<summary><strong>'+('More open-source & creative work' if en else '更多开源与创作项目')+'</strong> · '+('4 projects' if en else '4 个项目')+'</summary>', '']
+            lines += ['<details>', disclosure('projects',lang), '']
         url=(site+p['url']) if p['url'].startswith('#') else p['url']
         lines += ['### '+(p['en'] if en else p['name']),
           f'<p><a href="{site}#{p["slug"]}">'+picture(f'assets/showcase/{p["slug"]}.webp',f'assets/showcase/{p["slug"]}-light.webp',p['en']+' — '+(p['title'] if en else p['zh']),'100%')+'</a></p>',
@@ -120,8 +140,8 @@ for lang in ('zh','en'):
       '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>',
       '<p align="center">'+metric('base','GitHub public activity','420')+' '+metric('languages.indepth','Public source language breakdown','420')+'</p>',
       '<p align="center">'+metric('habits.charts','Activity rhythm','420')+' '+metric('wakatime','WakaTime recorded coding activity','420')+'</p>',
-      '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>',
-      '', '<details>', '<summary><strong>'+('More daily activity & archived cards' if en else '展开更多每日活动与历史卡片')+'</strong></summary>', '',
+      contribution_picture(),
+      '', '<details>', disclosure('activity',lang), '',
       '<p align="center">'+metric('calendar.full','Contribution calendar','720')+'</p>', '<p align="center">'+metric('activity','Recent public activity','720')+'</p>',
       ('The following isometric calendar is an archived snapshot.' if en else '以下等距日历保留为历史快照。'), '<p>'+metric('isocalendar.fullyear','Archived isometric calendar','100%')+'</p>', '', '</details>', '',
       '<sub>'+('The scheduled jobs refresh the stored cards daily. WakaTime reflects measured activity over the last seven days. Use each card’s timestamp and the update status to assess freshness; unavailable providers keep the last successful snapshot.' if en else '每日任务自动更新本地卡片；WakaTime 展示最近 7 天真实记录。请以卡片时间与更新状态判断时效，数据源不可用时保留上次成功快照。')+'</sub>', '',
