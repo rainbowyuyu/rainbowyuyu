@@ -1,6 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="500" viewBox="0 0 1440 500" role="img" aria-labelledby="title desc">
-<title id="title">rainbow鱼 · 浙江大学博士</title><desc id="desc">Research, build, explain. Physical AI, engineering agents and scientific visualization. Original illustrative artwork.</desc>
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10172B"/><stop offset=".6" stop-color="#111324"/><stop offset="1" stop-color="#172136"/></linearGradient><linearGradient id="spectrum"><stop stop-color="#57DCCE"/><stop offset=".47" stop-color="#88B8FF"/><stop offset="1" stop-color="#CB9DFA"/></linearGradient><radialGradient id="glow"><stop stop-color="#829EF9" stop-opacity=".23"/><stop offset="1" stop-color="#829EF9" stop-opacity="0"/></radialGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#B4C5F1" stroke-opacity=".045"/></pattern><clipPath id="clip"><rect width="1440" height="500" rx="26"/></clipPath></defs>
-<g clip-path="url(#clip)"><rect width="1440" height="500" fill="url(#bg)"/><rect width="1440" height="500" fill="url(#grid)"/><ellipse cx="1100" cy="230" rx="470" ry="370" fill="url(#glow)"/><path d="M0 498H1440" stroke="url(#spectrum)" stroke-width="4"/>
-<g transform="translate(1072 245) rotate(-24)" fill="none"><ellipse rx="242" ry="174" stroke="#93A6F7" stroke-opacity=".32"/><ellipse rx="270" ry="64" stroke="#D9B5FF" stroke-opacity=".6"/><ellipse rx="270" ry="64" transform="rotate(63)" stroke="#66DACE" stroke-opacity=".6"/><ellipse rx="270" ry="64" transform="rotate(121)" stroke="#84BCF9" stroke-opacity=".6"/><ellipse rx="155" ry="178" stroke="#99BFE9" stroke-opacity=".25"/><ellipse rx="85" ry="178" stroke="#99BFE9" stroke-opacity=".25"/><ellipse rx="242" ry="119" stroke="#99BFE9" stroke-opacity=".25"/><ellipse rx="242" ry="50" stroke="#99BFE9" stroke-opacity=".25"/><circle r="7" fill="#F7E1B8" stroke="none"/><circle cx="263" cy="14" r="6" fill="#D0B7FF" stroke="none"/><circle cx="-129" cy="-142" r="5" fill="#74EBE2" stroke="none"/><circle cx="74" cy="161" r="5" fill="#8ABFFF" stroke="none"/></g>
-<g font-family="Segoe UI,Arial,Microsoft YaHei,sans-serif"><rect x="64" y="54" width="249" height="38" rx="19" fill="#142A39" stroke="#2E5966"/><circle cx="85" cy="73" r="4" fill="#76E6D5"/><text x="102" y="80" fill="#B8E9E4" font-size="16" letter-spacing="1.5">ZHEJIANG UNIVERSITY</text><text x="64" y="142" font-size="13" letter-spacing="6" fill="#A4B2CE">RESEARCH · BUILD · EXPLAIN</text><text x="57" y="256" font-size="112" font-weight="700" letter-spacing="-5" fill="#F7F5F0">rainbow<tspan fill="url(#spectrum)">鱼</tspan><tspan fill="#84B9F8">.</tspan></text><text x="64" y="309" font-size="27" fill="#D0D8EB">浙江大学博士</text><text x="64" y="348" font-size="20" fill="#9AAAC7">PhD researcher at Zhejiang University</text><path d="M64 387H580" stroke="#344058"/><text x="64" y="426" font-size="15" letter-spacing="1.6" fill="#AAB8D3">PHYSICAL AI</text><text x="223" y="426" font-size="15" fill="#5C6C8D">/</text><text x="252" y="426" font-size="15" letter-spacing="1.6" fill="#AAB8D3">ENGINEERING AGENTS</text><text x="484" y="426" font-size="15" fill="#5C6C8D">/</text><text x="512" y="426" font-size="15" letter-spacing="1.6" fill="#AAB8D3">VISUAL STORIES</text><text x="1358" y="462" text-anchor="end" font-family="Consolas,monospace" font-size="12" letter-spacing="2" fill="#7D8DAF">CURIOSITY → CREATION</text></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="440" viewBox="0 0 1440 440" role="img" aria-labelledby="title desc"><title id="title">rainbow鱼 · 浙江大学博士</title><desc id="desc">PhD researcher at Zhejiang University. Physical AI, engineering agents and scientific visualization. The original rainbow鱼 logo is retained.</desc><rect width="1440" height="440" rx="24" fill="#151B20"/><svg x="1065" y="68" width="248" height="280" id="_图层_2" data-name="图层 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406.18 442.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #151B20;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #ECF1F4;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g>
+    <g>
+      <path class="cls-2" d="M290.81,416.84c-52-9.71-49.71-102.29-49.71-102.29-6.29,68-52.57,74.86-78.29,66.29-25.71-8.57-17.71-129.71-17.71-129.71,97.14,4.57,125.14-80.57,125.14-80.57-6.33-20.98-16.99-35.9-29.65-46.43-42.14-35.09-106.35-21.57-106.35-21.57V15.13s207.43-17.14,225.71,126.29c0,0,11.43,64-64.57,126.86l82.86,148.57h-209.25s-18.37-1.15-30.36-5.64c-26.4-9.89-71.25-35.96-88-101.57-24.37-95.43,6.09-153.81,47.72-189.34l-.51-53.81"/>
+      <line class="cls-1" x1="97.85" y1="68.27" x2="133.18" y2="14.49"/>
+    </g>
+    <path class="cls-1" d="M133.18,102.68s-28.14,11.59-34.84,17.61"/>
+  </g>
+  <circle class="cls-2" cx="231.97" cy="166.61" r="11.29"/>
+  <path class="cls-2" d="M204.55,105.47v-34.21s46.85-1.24,65.31,31.43.37,67.88.37,67.88"/>
+</svg><g font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif"><text x="62" y="183" fill="#ECF1F4" font-size="128" font-weight="700" letter-spacing="-5">rainbow鱼</text><text x="69" y="252" fill="#ECF1F4" font-size="32" font-weight="500">浙江大学博士</text><text x="69" y="294" fill="#AAB9C3" font-size="24">PhD researcher at Zhejiang University</text><text x="69" y="368" fill="#AAB9C3" font-size="22">Physical AI · Engineering agents · Visual stories</text></g></svg>

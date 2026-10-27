@@ -6,6 +6,8 @@ parser=argparse.ArgumentParser();parser.add_argument('--kind',required=True,choi
 def git(*args):return subprocess.run(['git',*args],cwd=ROOT,capture_output=True,check=True).stdout.decode().strip()
 if git('diff','--cached','--name-only'):raise RuntimeError('Unexpected staged work')
 paths={'metrics':['github-metrics/base.svg','github-metrics/calendar.full.svg','github-metrics/streak.svg','github-metrics/languages.indepth.svg','github-metrics/habits.charts.svg','github-metrics/activity.svg','github-metrics/wakatime.svg'],'snake':[p.relative_to(ROOT).as_posix() for p in (ROOT/'profile-snake-contrib').glob('*.svg')],'contributions3d':[p.relative_to(ROOT).as_posix() for p in (ROOT/'profile-3d-contrib').glob('*.svg')]}[a.kind]
+if a.kind=='metrics':
+    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/'github-metrics').glob('*.svg') if p.stem.endswith(('-light','-dark'))]
 paths=[p for p in paths if (ROOT/p).is_file()]+['assets/profile/activity-status.json']
 git('add','--',*paths)
 changed=git('diff','--cached','--name-only').splitlines()

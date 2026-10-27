@@ -15,7 +15,30 @@
       "source": "Original unified cover based on owner-selected OmniForge brand layout",
       "svg_source": "assets/showcase/wiscomper-cover.svg",
       "sha256": "991a26dc4bc7496e021f64aebed11915c3bcd2ee42e8d5077e9334e78650c1d1",
-      "bytes": 56328
+      "bytes": 56328,
+      "theme_variants": {
+        "dark": {
+          "asset": "assets/showcase/wiscomper.webp",
+          "svg_source": "assets/showcase/wiscomper-cover.svg",
+          "bytes": 56328,
+          "sha256": "991a26dc4bc7496e021f64aebed11915c3bcd2ee42e8d5077e9334e78650c1d1",
+          "accent": "#aaa1ef"
+        },
+        "light": {
+          "asset": "assets/showcase/wiscomper-light.webp",
+          "svg_source": "assets/showcase/wiscomper-cover-light.svg",
+          "width": 1600,
+          "height": 800,
+          "bytes": 55768,
+          "sha256": "8f0fc8b5752300e729bda112a8714827febab213861dff9a4e509829a1427b87",
+          "svg_sha256": "d0de27479728f57d31ef00b5d4bba758ad24bddfff6b818bd8555a64db30ab27",
+          "accent": "#6553a6",
+          "ground": "#f6f8fa",
+          "ink": "#202b33",
+          "corner_transparency": true
+        }
+      },
+      "theme_notes": "Matching light and dark compositions retain the original logo and project hue. Light cover uses explicit neutral surfaces and contrast-adjusted ink; no image inversion or filter. Pale original OmniForge and Science Studio marks sit on compact slate mounting tiles."
     },
     {
       "id": "manim",
@@ -30,7 +53,30 @@
       "source": "Original unified cover based on owner-selected OmniForge brand layout",
       "svg_source": "assets/showcase/manim-cover.svg",
       "sha256": "363bebfb900f4d51756f05d264bc1ef71ac169d0ec5dd76952e41557f2618d7b",
-      "bytes": 56068
+      "bytes": 56068,
+      "theme_variants": {
+        "dark": {
+          "asset": "assets/showcase/manim.webp",
+          "svg_source": "assets/showcase/manim-cover.svg",
+          "bytes": 56068,
+          "sha256": "363bebfb900f4d51756f05d264bc1ef71ac169d0ec5dd76952e41557f2618d7b",
+          "accent": "#7bc7b8"
+        },
+        "light": {
+          "asset": "assets/showcase/manim-light.webp",
+          "svg_source": "assets/showcase/manim-cover-light.svg",
+          "width": 1600,
+          "height": 800,
+          "bytes": 55206,
+          "sha256": "b1ca55b36680ef37fab6ac04b3a86c60593ab051e0b1f0080f7b0ce79eddd7dc",
+          "svg_sha256": "3814df739d55b30caade08165264c5b5ff1454ed679bd4a090b353326cc8ee33",
+          "accent": "#256f60",
+          "ground": "#f6f8fa",
+          "ink": "#202b33",
+          "corner_transparency": true
+        }
+      },
+      "theme_notes": "Matching light and dark compositions retain the original logo and project hue. Light cover uses explicit neutral surfaces and contrast-adjusted ink; no image inversion or filter. Pale original OmniForge and Science Studio marks sit on compact slate mounting tiles."
     },
     {
       "id": "ai-revolution",
@@ -45,7 +91,30 @@
       "source": "Original unified cover based on owner-selected OmniForge brand layout",
       "svg_source": "assets/showcase/ai-revolution-cover.svg",
       "sha256": "5c324c00bb7825b0437eb50f0960cd0ebdad7d3d6e8d481ebf5a579d33f9f335",
-      "bytes": 63006
+      "bytes": 63006,
+      "theme_variants": {
+        "dark": {
+          "asset": "assets/showcase/ai-revolution.webp",
+          "svg_source": "assets/showcase/ai-revolution-cover.svg",
+          "bytes": 63006,
+          "sha256": "5c324c00bb7825b0437eb50f0960cd0ebdad7d3d6e8d481ebf5a579d33f9f335",
+          "accent": "#dcc08c"
+        },
+        "light": {
+          "asset": "assets/showcase/ai-revolution-light.webp",
+          "svg_source": "assets/showcase/ai-revolution-cover-light.svg",
+          "width": 1600,
+          "height": 800,
+          "bytes": 61818,
+          "sha256": "01f86d86a3f5d460d34187bb88ba4ba0df7a8893951abad33ce9c5efb5836ece",
+          "svg_sha256": "e4c506f45be8323f2b6a51eb618cfa4abf7bc6ba7de1e08dac0665fd6300292e",
+          "accent": "#84641f",
+          "ground": "#f6f8fa",
+          "ink": "#202b33",
+          "corner_transparency": true
+        }
+      },
+      "theme_notes": "Matching light and dark compositions retain the original logo and project hue. Light cover uses explicit neutral surfaces and contrast-adjusted ink; no image inversion or filter. Pale original OmniForge and Science Studio marks sit on compact slate mounting tiles."
     },
     {
       "id": "ai-engineer",
@@ -60,7 +129,30 @@
       "source": "Original unified cover based on owner-selected OmniForge brand layout",
       "svg_source": "assets/showcase/ai-engineer-cover.svg",
       "sha256": "133cb80d2b4a51beef299c86ed616e930dbb9debb2e8b904d146f6dad7c192e9",
-      "bytes": 64484
+      "bytes": 64484,
+      "theme_variants": {
+        "dark": {
+          "asset": "assets/showcase/ai-engineer.webp",
+          "svg_source": "assets/showcase/ai-engineer-cover.svg",
+          "bytes": 64484,
+          "sha256": "133cb80d2b4a51beef299c86ed616e930dbb9debb2e8b904d146f6dad7c192e9",
+          "accent": "#6ebaf0"
+        },
+        "light": {
+          "asset": "assets/showcase/ai-engineer-light.webp",
+          "svg_source": "assets/showcase/ai-engineer-cover-light.svg",
+          "width": 1600,
+          "height": 800,
+          "bytes": 64286,
+          "sha256": "ed94b6386e762f7f4d66cffa13218dda80df7213e93196826b3e3c1066ee60cd",
+          "svg_sha256": "83a69888eadabbfa679358ef8574e50ca7b002a782d37aa4e2ff2d955ba81dbb",
+          "accent": "#236e9d",
+          "ground": "#f6f8fa",
+          "ink": "#202b33",
+          "corner_transparency": true
+        }
+      },
+      "theme_notes": "Matching light and dark compositions retain the original logo and project hue. Light cover uses explicit neutral surfaces and contrast-adjusted ink; no image inversion or filter. Pale original OmniForge and Science Studio marks sit on compact slate mounting tiles."
     },
     {
       "id": "science-studio",
@@ -75,7 +167,30 @@
       "source": "Original unified cover based on owner-selected OmniForge brand layout",
       "svg_source": "assets/showcase/science-studio-cover.svg",
       "sha256": "b2efbdcc5600bd96cf827f07d5cd52be6ee185f0258d96e08d006f7721619893",
-      "bytes": 58048
+      "bytes": 58048,
+      "theme_variants": {
+        "dark": {
+          "asset": "assets/showcase/science-studio.webp",
+          "svg_source": "assets/showcase/science-studio-cover.svg",
+          "bytes": 58048,
+          "sha256": "b2efbdcc5600bd96cf827f07d5cd52be6ee185f0258d96e08d006f7721619893",
+          "accent": "#74d5c7"
+        },
+        "light": {
+          "asset": "assets/showcase/science-studio-light.webp",
+          "svg_source": "assets/showcase/science-studio-cover-light.svg",
+          "width": 1600,
+          "height": 800,
+          "bytes": 57358,
+          "sha256": "729ac83996a56900b5a16d0c7ba8e2f073e1d2c87808ee83104565f519a27614",
+          "svg_sha256": "98941b8cdd0ef9a5e230d0888ea64113286ba45b6bcbc264d4cb9f0751b58fbe",
+          "accent": "#14786b",
+          "ground": "#f6f8fa",
+          "ink": "#202b33",
+          "corner_transparency": true
+        }
+      },
+      "theme_notes": "Matching light and dark compositions retain the original logo and project hue. Light cover uses explicit neutral surfaces and contrast-adjusted ink; no image inversion or filter. Pale original OmniForge and Science Studio marks sit on compact slate mounting tiles."
     },
     {
       "id": "physcast",
@@ -90,7 +205,30 @@
       "source": "Original unified cover based on owner-selected OmniForge brand layout",
       "svg_source": "assets/showcase/physcast-cover.svg",
       "sha256": "8aa09112129563243bbbcf7717254e8e84e3c15664cbc0f7b80aa22ba2254fc6",
-      "bytes": 62082
+      "bytes": 62082,
+      "theme_variants": {
+        "dark": {
+          "asset": "assets/showcase/physcast.webp",
+          "svg_source": "assets/showcase/physcast-cover.svg",
+          "bytes": 62082,
+          "sha256": "8aa09112129563243bbbcf7717254e8e84e3c15664cbc0f7b80aa22ba2254fc6",
+          "accent": "#7eb2c9"
+        },
+        "light": {
+          "asset": "assets/showcase/physcast-light.webp",
+          "svg_source": "assets/showcase/physcast-cover-light.svg",
+          "width": 1600,
+          "height": 800,
+          "bytes": 63416,
+          "sha256": "36824442c8d50f3dc2711d3c4c722d3f1cb644c3d39786773b979bb4be61ea89",
+          "svg_sha256": "5ef4bbee5b673ac4dd996be15d4cafafbe4ed8bf8dc7930b6f22e31c1004c633",
+          "accent": "#2f6b85",
+          "ground": "#f6f8fa",
+          "ink": "#202b33",
+          "corner_transparency": true
+        }
+      },
+      "theme_notes": "Matching light and dark compositions retain the original logo and project hue. Light cover uses explicit neutral surfaces and contrast-adjusted ink; no image inversion or filter. Pale original OmniForge and Science Studio marks sit on compact slate mounting tiles."
     },
     {
       "id": "omniforge",
@@ -105,7 +243,30 @@
       "source": "Original unified cover based on owner-selected OmniForge brand layout",
       "svg_source": "assets/showcase/omniforge-cover.svg",
       "sha256": "b24397e1634f80dc510f4cabfd7532416510d578ef4a77c55f80054d95404614",
-      "bytes": 59688
+      "bytes": 59688,
+      "theme_variants": {
+        "dark": {
+          "asset": "assets/showcase/omniforge.webp",
+          "svg_source": "assets/showcase/omniforge-cover.svg",
+          "bytes": 59688,
+          "sha256": "b24397e1634f80dc510f4cabfd7532416510d578ef4a77c55f80054d95404614",
+          "accent": "#dbaf6c"
+        },
+        "light": {
+          "asset": "assets/showcase/omniforge-light.webp",
+          "svg_source": "assets/showcase/omniforge-cover-light.svg",
+          "width": 1600,
+          "height": 800,
+          "bytes": 58952,
+          "sha256": "ecc4084da459fc96fd97ef9a911da6dc63c9035a04934954ec9695c7770be5ec",
+          "svg_sha256": "46015801af4e913949e13f56495dc2b00e5f7a545c14a118032597754622661f",
+          "accent": "#856019",
+          "ground": "#f6f8fa",
+          "ink": "#202b33",
+          "corner_transparency": true
+        }
+      },
+      "theme_notes": "Matching light and dark compositions retain the original logo and project hue. Light cover uses explicit neutral surfaces and contrast-adjusted ink; no image inversion or filter. Pale original OmniForge and Science Studio marks sit on compact slate mounting tiles."
     }
   ],
   "social_preview": {
@@ -118,5 +279,6 @@
     "notes": "Public identity only; no personal names or experiment claims.",
     "bytes": 53118,
     "sha256": "37c1d65722f762c5de19ff4e8a89187609bd31ee64a01c978c2766059368d2b0"
-  }
+  },
+  "theme_generator": "scripts/generate_cover_themes.py"
 }

@@ -27,3 +27,12 @@ README widget sources and local copies are recorded separately in their asset ma
 - LelouchFR/skill-icons: locally mirrored skill-icon strip, under MIT. Full notice: `assets/catalog/skill-icons-LICENSE.txt`.
 - Exact source URLs, local modifications and integrity hashes: `assets/catalog/widgets.json`.
 - Original profile artwork, buttons and the independent local text animation: `assets/readme/ATTRIBUTION.md`.
+
+## Taste Skill design guidance
+
+The 2026-10-27 paired-theme restyle applies colour-role, contrast and visual-review guidance from Leonxlnx/taste-skill, reviewed at commit `12af471f627f866411b4bd785b19646d3672784c`:
+
+- https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/skills/taste-skill/SKILL.md
+- https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/skills/taste-skill/references/colour.md
+
+This is design guidance, not a copied component or template. No Taste Skill runtime code is shipped. The theme-aware artwork and generators are original adaptations for this profile; original project logos, supplied project compositions and credited widgets retain their respective provenance.

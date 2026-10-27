@@ -2,6 +2,7 @@
 """Render public GitHub cards and optional aggregate WakaTime stats; never expose private repositories."""
 from __future__ import annotations
 import argparse, base64, collections, concurrent.futures, datetime as dt, html, json, os, pathlib, re, subprocess, urllib.request, xml.etree.ElementTree as ET
+from generate_activity_themes import generate_metric_themes
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OWNER = 'rainbowyuyu'
@@ -137,7 +138,7 @@ def wakatime_card(status):
     mark(status,'wakatime','fresh','WakaTime last_7_days aggregate statistics',['github-metrics/wakatime.svg'])
 
 def static_variants():
-    pairs=[('profile-snake-contrib/github-contribution-grid-snake-dark.svg','profile-snake-contrib/github-contribution-grid-snake-static.svg'),('profile-3d-contrib/profile-night-view.svg','profile-3d-contrib/profile-night-static.svg')]
+    pairs=[('profile-snake-contrib/github-contribution-grid-snake-dark.svg','profile-snake-contrib/github-contribution-grid-snake-static.svg'),('profile-snake-contrib/github-contribution-grid-snake.svg','profile-snake-contrib/github-contribution-grid-snake-static-light.svg'),('profile-3d-contrib/profile-night-view.svg','profile-3d-contrib/profile-night-static.svg'),('profile-3d-contrib/profile-green.svg','profile-3d-contrib/profile-day-static.svg')]
     for source,destination in pairs:
         path=ROOT/source
         if not path.exists():continue
@@ -165,6 +166,8 @@ def main():
         paths=['profile-snake-contrib/github-contribution-grid-snake.svg','profile-snake-contrib/github-contribution-grid-snake-dark.svg'] if args.kind=='snake' else [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'profile-3d-contrib').glob('*.svg'))]
         success=args.result=='success' and bool(paths) and all((ROOT/p).is_file() for p in paths)
         mark(status,args.kind,'fresh' if success else 'stale','Platane/snk' if args.kind=='snake' else 'yoshi389111/github-profile-3d-contrib',paths,None if success else 'Generation failed; last stored artwork retained.')
+    if args.kind=='metrics':
+        generate_metric_themes(ROOT)
     static_variants()
     status['updated_at']=NOW;status['timezone']='Asia/Shanghai';status['schema_version']=1
     originals={'snake':('Platane/snk',['profile-snake-contrib/github-contribution-grid-snake.svg','profile-snake-contrib/github-contribution-grid-snake-dark.svg']),'contributions3d':('yoshi389111/github-profile-3d-contrib',['profile-3d-contrib/profile-night-view.svg'])}

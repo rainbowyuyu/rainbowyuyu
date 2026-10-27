@@ -8,7 +8,16 @@ for folder in ('github-metrics','profile-3d-contrib','profile-snake-contrib'):
         try:ET.fromstring(s)
         except ET.ParseError:errors.append(str(p.relative_to(ROOT))+': invalid SVG')
         if re.search(r'<script\b|onload\s*=',s,re.I):errors.append(str(p.relative_to(ROOT))+': active script')
-        if p.stem.endswith('-static') and (re.search(r'<(?:animate|animateTransform|animateMotion|set)\b',s) or 'animation:none!important' not in s):errors.append(str(p.relative_to(ROOT))+': static alternative still animates')
+        if '-static' in p.stem and (re.search(r'<(?:animate|animateTransform|animateMotion|set)\b',s) or 'animation:none!important' not in s):errors.append(str(p.relative_to(ROOT))+': static alternative still animates')
+for p in (ROOT/'github-metrics').glob('*.svg'):
+    if p.stem.endswith(('-light','-dark')):continue
+    original=ET.fromstring(p.read_text(encoding='utf-8'))
+    def content_text(tree):
+        return [((e.tag.rsplit('}',1)[-1]),(e.text or '').strip(),(e.tail or '').strip()) for e in tree.iter() if e.tag.rsplit('}',1)[-1] not in ('style','rect') and ((e.text or '').strip() or (e.tail or '').strip())]
+    for theme in ('light','dark'):
+        variant=p.with_name(p.stem+'-'+theme+'.svg')
+        if not variant.exists():errors.append(str(variant.relative_to(ROOT))+': missing paired theme')
+        elif content_text(ET.fromstring(variant.read_text(encoding='utf-8'))) != content_text(original):errors.append(str(variant.relative_to(ROOT))+': themed copy changed source text or timestamps')
 status=json.loads((ROOT/'assets/profile/activity-status.json').read_text(encoding='utf-8'))
 for key,item in status['cards'].items():
     if item['status'] not in ('fresh','stale','unavailable'):errors.append(key+': invalid freshness')

@@ -2,22 +2,22 @@
 
 <p align="right"><a href="README.md">简体中文</a> &nbsp; / &nbsp; <strong>English</strong></p>
 
-<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en"><img src="assets/readme/profile-banner.svg" width="100%" alt="rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University"/></a></p>
+<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/profile-banner.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/profile-banner-light.svg"/><img src="assets/readme/profile-banner-light.svg" width="100%" alt="rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University"/></picture></a></p>
 
 <p align="center"><strong>AI for the physical world. Knowledge you can see.</strong></p>
 
 <p align="center">I am <strong>rainbow鱼</strong>, a <strong>PhD researcher at Zhejiang University</strong>.<br/>I build at the intersection of physical AI, engineering agents and scientific storytelling.</p>
 
 <p align="center">
-<a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en"><img src="assets/readme/portfolio-en.svg" height="42" alt="portfolio"/></a>
-<a href="#projects"><img src="assets/readme/projects-en.svg" height="42" alt="projects"/></a>
-<a href="#activity"><img src="assets/readme/activity-en.svg" height="42" alt="activity"/></a>
-<a href="https://space.bilibili.com/343585138"><img src="assets/readme/bilibili-en.svg" height="42" alt="bilibili"/></a>
+<a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/portfolio-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/portfolio-en-light.svg"/><img src="assets/readme/portfolio-en-light.svg" height="42" alt="portfolio"/></picture></a>
+<a href="#projects"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/projects-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/projects-en-light.svg"/><img src="assets/readme/projects-en-light.svg" height="42" alt="projects"/></picture></a>
+<a href="#activity"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/activity-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/activity-en-light.svg"/><img src="assets/readme/activity-en-light.svg" height="42" alt="activity"/></picture></a>
+<a href="https://space.bilibili.com/343585138"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/bilibili-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/bilibili-en-light.svg"/><img src="assets/readme/bilibili-en-light.svg" height="42" alt="bilibili"/></picture></a>
 </p>
 
 
 
-<p align="center"><a href="assets/readme/ATTRIBUTION.md"><img src="assets/readme/typing.svg" width="720" alt="Research in physics. Build with agents. Explain through motion."/></a></p>
+<p align="center"><a href="assets/readme/ATTRIBUTION.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/typing.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/typing-light.svg"/><img src="assets/readme/typing-light.svg" width="720" alt="Research in physics. Build with agents. Explain through motion."/></picture></a></p>
 
 <p align="center"><img src="assets/images/hr.gif" width="100%" height="2" alt=""/></p>
 
@@ -48,9 +48,9 @@ Research platforms, engineering tools and visual stories. Each project keeps its
 
 
 
-### 01 / PhysCast
+### PhysCast
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#physcast"><img src="assets/showcase/physcast.webp" width="100%" alt="PhysCast — Generative wind forecasting, grounded in physics"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#physcast"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/physcast.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/physcast-light.webp"/><img src="assets/showcase/physcast-light.webp" width="100%" alt="PhysCast — Generative wind forecasting, grounded in physics"/></picture></a></p>
 
 **Generative wind forecasting, grounded in physics**
 
@@ -58,14 +58,14 @@ Connecting OpenFAST / FAST.Farm, conditional diffusion and independent validatio
 
 <p><sub>RESEARCH IN PROGRESS · PRIVATE SOURCE</sub></p>
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#physcast"><img src="assets/readme/physcast-en.svg" height="38" alt="Explore project"/></a>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#physcast"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/physcast-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/physcast-en-light.svg"/><img src="assets/readme/physcast-en-light.svg" height="38" alt="Explore project"/></picture></a>
 </p>
 
 
 
-### 02 / OmniForge
+### OmniForge
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#omniforge"><img src="assets/showcase/omniforge.webp" width="100%" alt="OmniForge — From engineering intent to an inspectable workflow"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#omniforge"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/omniforge.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/omniforge-light.webp"/><img src="assets/showcase/omniforge-light.webp" width="100%" alt="OmniForge — From engineering intent to an inspectable workflow"/></picture></a></p>
 
 **From engineering intent to an inspectable workflow**
 
@@ -73,14 +73,14 @@ A workspace for planning, tool orchestration, modeling, finite elements and topo
 
 <p><sub>IN DEVELOPMENT · PRIVATE SOURCE</sub></p>
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#omniforge"><img src="assets/readme/omniforge-en.svg" height="38" alt="Explore project"/></a>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#omniforge"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/omniforge-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/omniforge-en-light.svg"/><img src="assets/readme/omniforge-en-light.svg" height="38" alt="Explore project"/></picture></a>
 </p>
 
 
 
-### 03 / Wiscomper
+### Wiscomper
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#wiscomper"><img src="assets/showcase/wiscomper.webp" width="100%" alt="Wiscomper — From a formula to mathematics you can see"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#wiscomper"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/wiscomper.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/wiscomper-light.webp"/><img src="assets/showcase/wiscomper-light.webp" width="100%" alt="Wiscomper — From a formula to mathematics you can see"/></picture></a></p>
 
 **From a formula to mathematics you can see**
 
@@ -88,15 +88,15 @@ Connecting formula recognition, LaTeX, worked solutions and Manim animation in a
 
 <p><sub>OPEN SOURCE · LIVE DEMO</sub></p>
 
-<p><a href="https://www.wiscomper.com/"><img src="assets/readme/wiscomper-en.svg" height="38" alt="Explore project"/></a>
-<a href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective"><img src="assets/readme/github-en.svg" height="38" alt="GitHub source"/></a>
+<p><a href="https://www.wiscomper.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/wiscomper-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/wiscomper-en-light.svg"/><img src="assets/readme/wiscomper-en-light.svg" height="38" alt="Explore project"/></picture></a>
+<a href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/github-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/github-en-light.svg"/><img src="assets/readme/github-en-light.svg" height="38" alt="GitHub source"/></picture></a>
 </p>
 
 
 
-### 04 / The AI Engineer
+### The AI Engineer
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#ai-engineer"><img src="assets/showcase/ai-engineer.webp" width="100%" alt="The AI Engineer — Design. Compute. Inspect. Iterate."/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#ai-engineer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-engineer.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/ai-engineer-light.webp"/><img src="assets/showcase/ai-engineer-light.webp" width="100%" alt="The AI Engineer — Design. Compute. Inspect. Iterate."/></picture></a></p>
 
 **Design. Compute. Inspect. Iterate.**
 
@@ -104,14 +104,14 @@ Connecting language models with deterministic engineering backends, from geometr
 
 <p><sub>RESEARCH CODE · OPEN SOURCE</sub></p>
 
-<p><a href="https://github.com/rainbowyuyu/ai_engineer"><img src="assets/readme/ai-engineer-en.svg" height="38" alt="Explore project"/></a>
+<p><a href="https://github.com/rainbowyuyu/ai_engineer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/ai-engineer-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/ai-engineer-en-light.svg"/><img src="assets/readme/ai-engineer-en-light.svg" height="38" alt="Explore project"/></picture></a>
 </p>
 
 
 
-### 05 / The Evolution of AI
+### The Evolution of AI
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#ai-revolution"><img src="assets/showcase/ai-revolution.webp" width="100%" alt="The Evolution of AI — A visual journey through the evolution of AI"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#ai-revolution"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-revolution.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/ai-revolution-light.webp"/><img src="assets/showcase/ai-revolution-light.webp" width="100%" alt="The Evolution of AI — A visual journey through the evolution of AI"/></picture></a></p>
 
 **A visual journey through the evolution of AI**
 
@@ -119,15 +119,15 @@ Exploring vision, generative models, language, multimodality and spatial reconst
 
 <p><sub>ONGOING SERIES · OPEN SOURCE</sub></p>
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#ai-revolution"><img src="assets/readme/ai-revolution-en.svg" height="38" alt="Explore project"/></a>
-<a href="https://github.com/rainbowyuyu/AI_revolution"><img src="assets/readme/github-en.svg" height="38" alt="GitHub source"/></a>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#ai-revolution"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/ai-revolution-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/ai-revolution-en-light.svg"/><img src="assets/readme/ai-revolution-en-light.svg" height="38" alt="Explore project"/></picture></a>
+<a href="https://github.com/rainbowyuyu/AI_revolution"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/github-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/github-en-light.svg"/><img src="assets/readme/github-en-light.svg" height="38" alt="GitHub source"/></picture></a>
 </p>
 
 
 
-### 06 / rainbow鱼 · Science Studio
+### rainbow鱼 · Science Studio
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#science-studio"><img src="assets/showcase/science-studio.webp" width="100%" alt="rainbow鱼 · Science Studio — Turning science questions into stories worth exploring"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#science-studio"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/science-studio.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/science-studio-light.webp"/><img src="assets/showcase/science-studio-light.webp" width="100%" alt="rainbow鱼 · Science Studio — Turning science questions into stories worth exploring"/></picture></a></p>
 
 **Turning science questions into stories worth exploring**
 
@@ -135,15 +135,15 @@ A production workflow for stories, mechanism visualization, camera motion, capti
 
 <p><sub>ONGOING CREATION · OPEN SOURCE</sub></p>
 
-<p><a href="https://space.bilibili.com/343585138"><img src="assets/readme/science-studio-en.svg" height="38" alt="Explore project"/></a>
-<a href="https://github.com/rainbowyuyu/Popula_science_video"><img src="assets/readme/github-en.svg" height="38" alt="GitHub source"/></a>
+<p><a href="https://space.bilibili.com/343585138"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/science-studio-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/science-studio-en-light.svg"/><img src="assets/readme/science-studio-en-light.svg" height="38" alt="Explore project"/></picture></a>
+<a href="https://github.com/rainbowyuyu/Popula_science_video"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/github-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/github-en-light.svg"/><img src="assets/readme/github-en-light.svg" height="38" alt="GitHub source"/></picture></a>
 </p>
 
 
 
-### 07 / Manim Extend Rainbow
+### Manim Extend Rainbow
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#manim"><img src="assets/showcase/manim.webp" width="100%" alt="Manim Extend Rainbow — Giving algorithms and structures a visual language"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en#manim"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/manim.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/manim-light.webp"/><img src="assets/showcase/manim-light.webp" width="100%" alt="Manim Extend Rainbow — Giving algorithms and structures a visual language"/></picture></a></p>
 
 **Giving algorithms and structures a visual language**
 
@@ -151,7 +151,7 @@ Reusable Manim components for teaching data structures, operating systems and co
 
 <p><sub>ANIMATION COMPONENTS · OPEN SOURCE</sub></p>
 
-<p><a href="https://github.com/rainbowyuyu/manim_extend_rainbow"><img src="assets/readme/manim-en.svg" height="38" alt="Explore project"/></a>
+<p><a href="https://github.com/rainbowyuyu/manim_extend_rainbow"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/manim-en.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/manim-en-light.svg"/><img src="assets/readme/manim-en-light.svg" height="38" alt="Explore project"/></picture></a>
 </p>
 
 
@@ -166,13 +166,13 @@ Reusable Manim components for teaching data structures, operating systems and co
 
 ## Built, day by day
 
-<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; <img src="github-metrics/streak.svg" width="74%" alt="Contribution streak"/> &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>
+<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg"/><img src="github-metrics/streak-light.svg" width="74%" alt="Contribution streak"/></picture> &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>
 
-<p><img src="github-metrics/base.svg" width="49%" alt="GitHub public activity"/> <img src="github-metrics/languages.indepth.svg" width="49%" alt="Public source language breakdown"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg"/><img src="github-metrics/base-light.svg" width="49%" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg"/><img src="github-metrics/languages.indepth-light.svg" width="49%" alt="Public source language breakdown"/></picture></p>
 
-<p><img src="github-metrics/habits.charts.svg" width="49%" alt="Activity rhythm"/> <img src="github-metrics/wakatime.svg" width="49%" alt="WakaTime recorded coding activity"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg"/><img src="github-metrics/habits.charts-light.svg" width="49%" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg"/><img src="github-metrics/wakatime-light.svg" width="49%" alt="WakaTime recorded coding activity"/></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>
 
@@ -184,13 +184,13 @@ Reusable Manim components for teaching data structures, operating systems and co
 
 
 
-<p><img src="github-metrics/calendar.full.svg" width="100%" alt="Contribution calendar"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg"/><img src="github-metrics/calendar.full-light.svg" width="100%" alt="Contribution calendar"/></picture></p>
 
-<p><img src="github-metrics/activity.svg" width="100%" alt="Recent public activity"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg"/><img src="github-metrics/activity-light.svg" width="100%" alt="Recent public activity"/></picture></p>
 
 The following isometric calendar is an archived snapshot.
 
-<p><img src="github-metrics/isocalendar.fullyear.svg" width="100%" alt="Archived isometric calendar"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/isocalendar.fullyear-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/isocalendar.fullyear-light.svg"/><img src="github-metrics/isocalendar.fullyear-light.svg" width="100%" alt="Archived isometric calendar"/></picture></p>
 
 
 
@@ -206,6 +206,6 @@ The following isometric calendar is an archived snapshot.
 
 
 
-<p align="center"><img src="assets/readme/footer.svg" width="100%" alt="Stay curious. Keep creating."/></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/footer.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/footer-light.svg"/><img src="assets/readme/footer-light.svg" width="100%" alt="Stay curious. Keep creating."/></picture></p>
 
 <p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/?lang=en">Portfolio</a> &nbsp; · &nbsp; <a href="https://space.bilibili.com/343585138">Bilibili</a> &nbsp; · &nbsp; <a href="https://www.wiscomper.com/">Wiscomper</a> &nbsp; · &nbsp; <a href="assets/readme/ATTRIBUTION.md">Widget credits</a></p>

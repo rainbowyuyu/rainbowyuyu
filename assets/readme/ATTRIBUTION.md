@@ -2,7 +2,8 @@
 
 The profile uses original artwork, the owner's project covers, and credited open-source widgets. Project imagery is illustrative unless its source explicitly identifies it as a measured result. Do not infer validation claims from a cover.
 
-- profile-banner.svg, footer.svg, and navigation buttons: original artwork for rainbow鱼, 2026-10-27. The profile's palette uses ink, cyan, periwinkle and warm ivory; project buttons retain each project's accent color.
+- profile-banner.svg, footer.svg, and navigation buttons: original artwork for rainbow鱼, 2026-10-27. Each has an explicit `-light.svg` counterpart. Deep graphite and cool paper-white surfaces share the same geometry; project accents retain their identity with darker, readable light-mode variants. The banner reuses the owner's original rainbow鱼 logo paths in theme-appropriate ink.
+- Theme-aware README markup uses GitHub's supported `picture` and `prefers-color-scheme` source selection for the banner, buttons, text animation, project covers and statistics. Light artwork is the fallback. The design changes the source artwork rather than applying an inversion filter.
 - typing.svg: original local CSS/SVG text animation with continuously visible text and a moving accent, inspired by the profile typing-line pattern documented by [DenverCoder1/readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg). Its public service returned HTTP 403 during preparation, so the profile uses independently written local artwork, not a broken remote request or copied implementation.
 - GitHub animated technology icon: locally added a light rounded backplate for contrast on dark backgrounds. Original paths, masks and animation keyframes are unchanged; source and before/after hashes are recorded in assets/catalog/widgets.json.
 - Animated technology icons, skill strip and project cover provenance: see the asset catalog under assets/catalog/ and corresponding widget notes under assets/widgets/.
@@ -13,4 +14,6 @@ The profile uses original artwork, the owner's project covers, and credited open
 
 Layout references reviewed: [DenverCoder1's profile](https://github.com/DenverCoder1/DenverCoder1) for compact social/navigation components and section rhythm; [abhisheknaiidu's profile](https://github.com/abhisheknaiidu/abhisheknaiidu) for concise activity blocks. No third-party biography, project claims, or personal statistics are reused.
 
-Run python scripts/generate_readme.py from the repository root to regenerate the synchronized Chinese and English README documents and button SVGs.
+The paired artwork and tonal hierarchy apply the colour-role guidance from [Taste Skill](https://github.com/Leonxlnx/taste-skill), reviewed at commit `12af471f627f866411b4bd785b19646d3672784c`. This is an original adaptation within GitHub README constraints, not a copied webpage template. The owner's established project colours, covers and animated widgets take priority over generic style defaults.
+
+Run python scripts/generate_readme.py from the repository root to regenerate the synchronized Chinese and English README documents and all paired banner, footer, typing and button SVGs.

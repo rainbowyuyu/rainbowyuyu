@@ -5,13 +5,51 @@ import json, re
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'assets/readme'
+OUT.mkdir(parents=True,exist_ok=True)
+PALETTES={
+    'dark':dict(bg='#151B20',surface='#212A31',ink='#ECF1F4',muted='#AAB9C3',accent='#8FD5C7'),
+    'light':dict(bg='#F6F8FA',surface='#EDF1F4',ink='#202B33',muted='#536570',accent='#17695D'),
+}
+LIGHT_ACCENTS={'#7EE5DD':'#17695D','#B5AFFE':'#4C5570','#F1CF9C':'#765820','#EEA8CA':'#8A3D61','#8EBAD1':'#356C88','#DDBE87':'#805C1B','#B7A8FF':'#61509C','#6DC8FF':'#226D95','#E4C7A0':'#805C30','#83E3D6':'#17695D','#8ED0C2':'#286C5D','#C5D1E5':'#405261'}
+FONT='Segoe UI,Microsoft YaHei,Arial,sans-serif'
+
+def save_svg(name,svg):
+    (OUT/name).write_text(svg+'\n',encoding='utf-8',newline='\n')
+
+def picture(dark,light,alt,width=None,height=None):
+    attrs=(f' width="{width}"' if width else '')+(f' height="{height}"' if height else '')
+    return f'<picture><source media="(prefers-color-scheme: dark)" srcset="{dark}"/><source media="(prefers-color-scheme: light)" srcset="{light}"/><img src="{light}"{attrs} alt="{escape(alt,quote=True)}"/></picture>'
+
+def artwork(stem,alt,width=None,height=None):
+    return picture(f'assets/readme/{stem}.svg',f'assets/readme/{stem}-light.svg',alt,width,height)
+
+def metric(stem,alt,width):
+    return picture(f'github-metrics/{stem}-dark.svg',f'github-metrics/{stem}-light.svg',alt,width)
+
+def identity_artwork():
+    source=(ROOT/'assets/profile/rainbow-logo.svg').read_text(encoding='utf-8')
+    source=re.sub(r'<\?xml[^>]*>','',source).strip()
+    for theme,c in PALETTES.items():
+        suffix='' if theme=='dark' else '-light'
+        logo=source.replace('<svg ', '<svg x="1065" y="68" width="248" height="280" ',1).replace('#231815',c['ink']).replace('#fff',c['bg'])
+        banner=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="440" viewBox="0 0 1440 440" role="img" aria-labelledby="title desc"><title id="title">rainbow鱼 · 浙江大学博士</title><desc id="desc">PhD researcher at Zhejiang University. Physical AI, engineering agents and scientific visualization. The original rainbow鱼 logo is retained.</desc><rect width="1440" height="440" rx="24" fill="{c['bg']}"/>{logo}<g font-family="{FONT}"><text x="62" y="183" fill="{c['ink']}" font-size="128" font-weight="700" letter-spacing="-5">rainbow鱼</text><text x="69" y="252" fill="{c['ink']}" font-size="32" font-weight="500">浙江大学博士</text><text x="69" y="294" fill="{c['muted']}" font-size="24">PhD researcher at Zhejiang University</text><text x="69" y="368" fill="{c['muted']}" font-size="22">Physical AI · Engineering agents · Visual stories</text></g></svg>'''
+        save_svg('profile-banner'+suffix+'.svg',banner)
+        footer=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" aria-label="rainbow鱼. Stay curious. Keep creating."><g font-family="{FONT}"><text x="600" y="90" text-anchor="middle" fill="{c['ink']}" font-size="42" font-weight="600" letter-spacing="-1">Stay curious. Keep creating.</text><text x="600" y="134" text-anchor="middle" fill="{c['muted']}" font-size="22">rainbow鱼 · Research, build, explain.</text></g></svg>'''
+        save_svg('footer'+suffix+'.svg',footer)
+        typing=f'''<svg xmlns="http://www.w3.org/2000/svg" width="900" height="64" viewBox="0 0 900 64" role="img" aria-labelledby="title"><title id="title">Research in physics. Build with agents. Explain through motion.</title><style>.words{{font:21px {FONT};text-anchor:middle;fill:{c['muted']}}}.cursor{{fill:{c['accent']};animation:pulse 1.4s ease-in-out infinite}}.line{{stroke:{c['accent']};stroke-width:2;stroke-dasharray:36 384;animation:travel 6s linear infinite}}@keyframes pulse{{50%{{opacity:.4}}}}@keyframes travel{{to{{stroke-dashoffset:-420}}}}@media(prefers-reduced-motion:reduce){{.cursor,.line{{animation:none}}}}</style><text class="words" x="440" y="37">Research in physics · Build with agents · Explain through motion</text><rect class="cursor" x="772" y="21" width="2" height="21" rx="1"/><path class="line" d="M240 53H660" fill="none"/></svg>'''
+        save_svg('typing'+suffix+'.svg',typing)
+
+identity_artwork()
 
 def button(name,label,color,icon='arrow',width=166):
     glyph={'arrow':'M13 27 27 13M14 13h13v13','grid':'M13 13h6v6h-6zM23 13h6v6h-6zM13 23h6v6h-6zM23 23h6v6h-6z','pulse':'M11 23h6l4-10 5 17 4-7h5','play':'M17 12 31 21 17 30Z','code':'m17 14-7 7 7 7m12-14 7 7-7 7M25 10l-5 22','globe':'M10 21h22M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 10c-8 8-8 14 0 22 8-8 8-14 0-22'}[icon]
-    svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="44" viewBox="0 0 {width} 44" role="img" aria-label="{escape(label)}"><rect x=".5" y=".5" width="{width-1}" height="43" rx="10" fill="#111A2D" stroke="#34465F"/><path d="{glyph}" transform="translate(3 1)" stroke="{color}" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><text x="49" y="27.5" font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif" font-weight="600" font-size="13" fill="{color}">{escape(label)}</text><path d="M{width-20} 17l5 5-5 5" stroke="{color}" fill="none" stroke-width="1.5"/></svg>'''
-    (OUT/(name+'.svg')).write_text(svg,encoding='utf-8')
+    for theme,c in PALETTES.items():
+        accent=LIGHT_ACCENTS.get(color,c['accent']) if theme=='light' else color
+        suffix='' if theme=='dark' else '-light'
+        svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="44" viewBox="0 0 {width} 44" role="img" aria-label="{escape(label)}"><rect width="{width}" height="44" rx="22" fill="{c['surface']}"/><path d="{glyph}" transform="translate(3 1)" stroke="{accent}" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><text x="49" y="27.5" font-family="{FONT}" font-weight="600" font-size="13" fill="{c['ink']}">{escape(label)}</text><path d="M{width-20} 17l5 5-5 5" stroke="{accent}" fill="none" stroke-width="1.5"/></svg>'''
+        save_svg(name+suffix+'.svg',svg)
 
-buttons=[('portfolio','个人主页','PORTFOLIO','#7EE5DD','globe',166),('projects','精选项目','PROJECTS','#B5AFFE','grid',166),('activity','每日动态','ACTIVITY','#F1CF9C','pulse',166),('bilibili','科学影像','BILIBILI','#EEA8CA','play',166)]
+buttons=[('portfolio','个人主页','Portfolio','#7EE5DD','globe',166),('projects','精选项目','Projects','#B5AFFE','grid',166),('activity','每日动态','Activity','#F1CF9C','pulse',166),('bilibili','科学影像','Bilibili','#EEA8CA','play',166)]
 for stem,zh,en,color,icon,w in buttons:
     button(stem+'-zh',zh,color,icon,w);button(stem+'-en',en,color,icon,w)
 for stem,zh,en,color in [('physcast','项目介绍','EXPLORE','#8EBAD1'),('omniforge','项目介绍','EXPLORE','#DDBE87'),('wiscomper','在线体验','LIVE DEMO','#B7A8FF'),('ai-engineer','查看源码','SOURCE','#6DC8FF'),('ai-revolution','查看系列','EXPLORE','#E4C7A0'),('science-studio','观看影像','WATCH','#83E3D6'),('manim','查看源码','SOURCE','#8ED0C2')]:
@@ -32,14 +70,14 @@ for lang in ('zh','en'):
     en=lang=='en';site=SITE+('?lang=en' if en else '')
     lines=['<!-- Generated by scripts/generate_readme.py. Edit the source copy and run Python to synchronize both languages. -->',
       '<p align="right">'+('<a href="README.md">简体中文</a> &nbsp; / &nbsp; <strong>English</strong>' if en else '<strong>简体中文</strong> &nbsp; / &nbsp; <a href="README.en.md">English</a>')+'</p>',
-      f'<p align="center"><a href="{site}"><img src="assets/readme/profile-banner.svg" width="100%" alt="rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University"/></a></p>',
+      f'<p align="center"><a href="{site}">'+artwork('profile-banner','rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University','100%')+'</a></p>',
       '<p align="center"><strong>'+('AI for the physical world. Knowledge you can see.' if en else '让 AI 理解物理，让知识看得见。')+'</strong></p>',
       '<p align="center">'+('I am <strong>rainbow鱼</strong>, a <strong>PhD researcher at Zhejiang University</strong>.<br/>I build at the intersection of physical AI, engineering agents and scientific storytelling.' if en else '我是 <strong>rainbow鱼</strong>，<strong>浙江大学博士</strong>。<br/>在物理 AI、工程智能体与科学叙事之间，持续研究，也持续创造。')+'</p>',
       '<p align="center">']
     for stem,_,_,_,_,_ in buttons:
         url={'portfolio':site,'projects':'#projects','activity':'#activity','bilibili':'https://space.bilibili.com/343585138'}[stem]
-        lines.append(f'<a href="{url}"><img src="assets/readme/{stem}-{lang}.svg" height="42" alt="{stem}"/></a> ')
-    lines+=['</p>','', '<p align="center"><a href="assets/readme/ATTRIBUTION.md"><img src="assets/readme/typing.svg" width="720" alt="Research in physics. Build with agents. Explain through motion."/></a></p>',
+        lines.append(f'<a href="{url}">'+artwork(stem+'-'+lang,stem,height='42')+'</a> ')
+    lines+=['</p>','', '<p align="center"><a href="assets/readme/ATTRIBUTION.md">'+artwork('typing','Research in physics. Build with agents. Explain through motion.','720')+'</a></p>',
       '<p align="center"><img src="assets/images/hr.gif" width="100%" height="2" alt=""/></p>',
       '<a id="toolbox"></a>', '## '+('A small toolbox, many possibilities' if en else '研究与创作工具箱'),
       '<p align="center">']
@@ -50,29 +88,29 @@ for lang in ('zh','en'):
       ('Research platforms, engineering tools and visual stories. Each project keeps its own visual identity.' if en else '从研究平台到工程工具，再到科学影像。每个项目，保留自己的问题、色彩和表达。'), '']
     for i,p in enumerate(projects):
         url=(site+p['url']) if p['url'].startswith('#') else p['url']
-        lines += [f'### {i+1:02} / '+(p['en'] if en else p['name']),
-          f'<p><a href="{site}#{p["slug"]}"><img src="assets/showcase/{p["slug"]}.webp" width="100%" alt="{escape(p["en"])} — {escape(p["title"] if en else p["zh"])}"/></a></p>',
+        lines += ['### '+(p['en'] if en else p['name']),
+          f'<p><a href="{site}#{p["slug"]}">'+picture(f'assets/showcase/{p["slug"]}.webp',f'assets/showcase/{p["slug"]}-light.webp',p['en']+' — '+(p['title'] if en else p['zh']),'100%')+'</a></p>',
           '**'+(p['title'] if en else p['zh'])+'**',
           p['en_desc'] if en else p['desc'],
           '<p><sub>'+(p['en_status'] if en else p['status'])+'</sub></p>',
-          f'<p><a href="{url}"><img src="assets/readme/{p["slug"]}-{lang}.svg" height="38" alt="'+('Explore project' if en else '项目入口')+'"/></a>']
+          f'<p><a href="{url}">'+artwork(p['slug']+'-'+lang,'Explore project' if en else '项目入口',height='38')+'</a>']
         if p['repo'] and not url.startswith('https://github.com/'):
-            lines.append(f'<a href="https://github.com/rainbowyuyu/{p["repo"]}"><img src="assets/readme/github-{lang}.svg" height="38" alt="GitHub source"/></a>')
+            lines.append(f'<a href="https://github.com/rainbowyuyu/{p["repo"]}">'+artwork('github-'+lang,'GitHub source',height='38')+'</a>')
         lines+=['</p>','']
     lines += ['<sub>'+('Project descriptions updated 2026-10-27. Research and development remain ongoing; functionality and validation scope follow each project’s documentation.' if en else '项目介绍更新于 2026-10-27。研究与开发持续进行，功能与验证范围以各项目文档为准。')+'</sub>',
       '', '<p align="center"><img src="assets/images/hr.gif" width="100%" height="2" alt=""/></p>', '<a id="activity"></a>',
       '## '+('Built, day by day' if en else '日复一日，把想法做成作品'),
-      '<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; <img src="github-metrics/streak.svg" width="74%" alt="Contribution streak"/> &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>',
+      '<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; '+metric('streak','Contribution streak','74%')+' &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>',
       '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>',
-      '<p><img src="github-metrics/base.svg" width="49%" alt="GitHub public activity"/> <img src="github-metrics/languages.indepth.svg" width="49%" alt="Public source language breakdown"/></p>',
-      '<p><img src="github-metrics/habits.charts.svg" width="49%" alt="Activity rhythm"/> <img src="github-metrics/wakatime.svg" width="49%" alt="WakaTime recorded coding activity"/></p>',
+      '<p>'+metric('base','GitHub public activity','49%')+' '+metric('languages.indepth','Public source language breakdown','49%')+'</p>',
+      '<p>'+metric('habits.charts','Activity rhythm','49%')+' '+metric('wakatime','WakaTime recorded coding activity','49%')+'</p>',
       '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>',
       '', '<details>', '<summary><strong>'+('More daily activity & archived cards' if en else '展开更多每日活动与历史卡片')+'</strong></summary>', '',
-      '<p><img src="github-metrics/calendar.full.svg" width="100%" alt="Contribution calendar"/></p>', '<p><img src="github-metrics/activity.svg" width="100%" alt="Recent public activity"/></p>',
-      ('The following isometric calendar is an archived snapshot.' if en else '以下等距日历保留为历史快照。'), '<p><img src="github-metrics/isocalendar.fullyear.svg" width="100%" alt="Archived isometric calendar"/></p>', '', '</details>', '',
+      '<p>'+metric('calendar.full','Contribution calendar','100%')+'</p>', '<p>'+metric('activity','Recent public activity','100%')+'</p>',
+      ('The following isometric calendar is an archived snapshot.' if en else '以下等距日历保留为历史快照。'), '<p>'+metric('isocalendar.fullyear','Archived isometric calendar','100%')+'</p>', '', '</details>', '',
       '<sub>'+('The scheduled jobs refresh the stored cards daily. WakaTime reflects measured activity over the last seven days. Use each card’s timestamp and the update status to assess freshness; unavailable providers keep the last successful snapshot.' if en else '每日任务自动更新本地卡片；WakaTime 展示最近 7 天真实记录。请以卡片时间与更新状态判断时效，数据源不可用时保留上次成功快照。')+'</sub>', '',
       '[ '+('Update status' if en else '更新状态')+' ](assets/profile/activity-status.json) &nbsp; · &nbsp; [ GitHub Actions ](https://github.com/rainbowyuyu/rainbowyuyu/actions) &nbsp; · &nbsp; [ '+('All repositories' if en else '全部仓库')+' ](https://github.com/rainbowyuyu?tab=repositories)', '',
-      '<p align="center"><img src="assets/readme/footer.svg" width="100%" alt="Stay curious. Keep creating."/></p>',
+      '<p align="center">'+artwork('footer','Stay curious. Keep creating.','100%')+'</p>',
       '<p align="center"><a href="'+site+'">Portfolio</a> &nbsp; · &nbsp; <a href="https://space.bilibili.com/343585138">Bilibili</a> &nbsp; · &nbsp; <a href="https://www.wiscomper.com/">Wiscomper</a> &nbsp; · &nbsp; <a href="assets/readme/ATTRIBUTION.md">Widget credits</a></p>', '']
     (ROOT/('README.en.md' if en else 'README.md')).write_text(re.sub(r'<p(?: [^>]+)?>.*?</p>',lambda m:m.group(0).replace('\n\n','\n'),'\n\n'.join(x.rstrip() for x in lines),flags=re.S).rstrip()+'\n',encoding='utf-8',newline='\n')
 print('Generated two README documents and navigation artwork.')

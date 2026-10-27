@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#090e13" name="theme-color"/>
+<meta content="#151b20" name="theme-color"/>
 <meta content="dark light" name="color-scheme"/>
 <meta content="rainbow鱼，浙江大学博士。探索物理 AI、工程智能体与科学可视化。" name="description"/>
 <meta content="rainbow鱼 · 浙江大学博士" property="og:title"/>
@@ -15,6 +15,15 @@
    rainbow鱼 · 浙江大学博士 | Research. Build. Create.
   </title>
 <link href="assets/profile/rainbow-logo.svg" rel="icon" type="image/svg+xml"/>
+<script>
+/* Resolve the saved choice before styles paint; otherwise follow the device. */
+(() => {
+  let saved; try { saved = localStorage.getItem('rainbow-theme'); } catch {}
+  const theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.dataset.theme = theme;
+  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#151b20' : '#f6f8fa';
+})();
+</script>
 <link href="styles.css" rel="stylesheet"/>
 <script defer="" src="script.js">
 </script>
@@ -68,7 +77,7 @@
       </kbd>
 </button>
 <button aria-label="切换主题" class="icon-button" hidden="" id="theme-toggle" type="button">
-      ☼
+<svg aria-hidden="true" class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg><svg aria-hidden="true" class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.6 14.2A8.8 8.8 0 0 1 9.8 3.4 8.8 8.8 0 1 0 20.6 14.2Z"/></svg>
      </button>
 <button aria-label="Switch to English" class="language-button" hidden="" id="language-toggle" type="button">
       EN
@@ -106,9 +115,6 @@
 </p>
 </div>
 <div class="hero-heading">
-<p class="eyebrow">
-       RESEARCH. BUILD. CREATE.
-      </p>
 <h1 id="hero-title">rainbow<span class="hero-fish">鱼</span><span class="title-dot">.</span></h1>
 </div>
 <div class="hero-lower">
@@ -148,36 +154,27 @@
 </div>
 <div aria-label="精选项目预览" class="hero-showcase" data-label-en="Selected project previews" data-label-zh="精选项目预览">
 <a class="hero-tile tile-physics" href="#physcast">
-<img alt="PhysCast" fetchpriority="high" height="800" src="assets/showcase/physcast.webp" width="1600"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/physcast.webp"/><img alt="PhysCast" fetchpriority="high" height="800" src="assets/showcase/physcast-light.webp" data-dark-src="assets/showcase/physcast.webp" data-light-src="assets/showcase/physcast-light.webp" width="1600"/></picture>
 <span>
-<b>
-          01
-         </b>
-         PhysCast
+PhysCast
          <i>
           ↗
          </i>
 </span>
 </a>
 <a class="hero-tile tile-agent" href="#omniforge">
-<img alt="OmniForge" height="800" src="assets/showcase/omniforge.webp" width="1600"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/omniforge.webp"/><img alt="OmniForge" height="800" src="assets/showcase/omniforge-light.webp" data-dark-src="assets/showcase/omniforge.webp" data-light-src="assets/showcase/omniforge-light.webp" width="1600"/></picture>
 <span>
-<b>
-          02
-         </b>
-         OmniForge
+OmniForge
          <i>
           ↗
          </i>
 </span>
 </a>
 <a class="hero-tile tile-visual" href="#wiscomper">
-<img alt="Wiscomper" height="800" src="assets/showcase/wiscomper.webp" width="1600"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/wiscomper.webp"/><img alt="Wiscomper" height="800" src="assets/showcase/wiscomper-light.webp" data-dark-src="assets/showcase/wiscomper.webp" data-light-src="assets/showcase/wiscomper-light.webp" width="1600"/></picture>
 <span>
-<b>
-          03
-         </b>
-         Wiscomper
+Wiscomper
          <i>
           ↗
          </i>
@@ -200,15 +197,9 @@
 <a href="#physcast">
         PHYSICAL AI
        </a>
-<span>
-        ✳
-       </span>
 <a href="#omniforge">
         ENGINEERING AGENTS
        </a>
-<span>
-        ✳
-       </span>
 <a href="#wiscomper">
         VISUAL LEARNING
        </a>
@@ -229,9 +220,6 @@
 <section aria-labelledby="projects-title" class="section projects-section wrap" id="projects">
 <div class="section-heading">
 <div>
-<p class="eyebrow">
-       01 / SELECTED WORK
-      </p>
 <h2 id="projects-title">
 <span data-en="From an idea&lt;br&gt;to something real." data-zh="从想法，到作品。">
         从想法，到作品。
@@ -247,9 +235,7 @@
        </span>
 </p>
 <div class="project-toolbar">
-<span class="mono">
-        07 PROJECTS
-       </span>
+<span class="project-count" data-en="7 selected projects" data-zh="7 个精选项目">7 个精选项目</span>
 <button aria-controls="project-list" hidden="" id="expand-projects" type="button">
 <span data-en="Expand all details" data-zh="展开全部介绍">
          展开全部介绍
@@ -262,10 +248,7 @@
 <div class="project-list" id="project-list">
 <article aria-labelledby="title-physcast" class="project-row project-physcast" id="physcast">
 <div class="project-visual">
-<a aria-label="查看 physcast 完整封面" class="artwork-link" data-label-en="View full physcast artwork" data-label-zh="查看 physcast 完整封面" href="assets/showcase/physcast.webp" rel="noopener noreferrer" target="_blank"><img alt="physcast project artwork" class="project-cover" data-alt-en="physcast project artwork" data-alt-zh="physcast 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/physcast.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span aria-hidden="true" class="cover-number">
-        01
-       </span>
+<a aria-label="查看 physcast 完整封面" class="artwork-link" data-label-en="View full physcast artwork" data-label-zh="查看 physcast 完整封面" data-dark-href="assets/showcase/physcast.webp" data-light-href="assets/showcase/physcast-light.webp" href="assets/showcase/physcast-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/physcast.webp"/><img alt="physcast project artwork" class="project-cover" data-alt-en="physcast project artwork" data-alt-zh="physcast 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/physcast-light.webp" data-dark-src="assets/showcase/physcast.webp" data-light-src="assets/showcase/physcast-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
 <span class="cover-label">
 <span data-en="PHYSICAL AI · RESEARCH" data-zh="物理 AI · 研究平台">
          物理 AI · 研究平台
@@ -273,6 +256,11 @@
 </span>
 </div>
 <div class="project-copy">
+<h3 id="title-physcast">
+<span data-en="PhysCast" data-zh="PhysCast">
+         PhysCast
+        </span>
+</h3>
 <div class="project-kicker">
 <img alt="" height="40" loading="lazy" src="assets/projects/physcast.svg" width="40"/>
 <span>
@@ -281,11 +269,6 @@
          </span>
 </span>
 </div>
-<h3 id="title-physcast">
-<span data-en="PhysCast" data-zh="PhysCast">
-         PhysCast
-        </span>
-</h3>
 <p class="project-oneline">
 <span data-en="Exploring physics-grounded wind forecasting from sparse observations." data-zh="从稀疏观测出发，探索有物理依据的风场预测。">
          从稀疏观测出发，探索有物理依据的风场预测。
@@ -330,33 +313,21 @@
 </p>
 <ol class="project-steps">
 <li>
-<span class="step-no">
-            01
-           </span>
 <span data-en="Observe" data-zh="观测">
             观测
            </span>
 </li>
 <li>
-<span class="step-no">
-            02
-           </span>
 <span data-en="Constrain" data-zh="约束">
             约束
            </span>
 </li>
 <li>
-<span class="step-no">
-            03
-           </span>
 <span data-en="Forecast" data-zh="预测">
             预测
            </span>
 </li>
 <li>
-<span class="step-no">
-            04
-           </span>
 <span data-en="Validate" data-zh="验证">
             验证
            </span>
@@ -368,10 +339,7 @@
 </article>
 <article aria-labelledby="title-omniforge" class="project-row project-omniforge" id="omniforge">
 <div class="project-visual">
-<a aria-label="查看 omniforge 完整封面" class="artwork-link" data-label-en="View full omniforge artwork" data-label-zh="查看 omniforge 完整封面" href="assets/showcase/omniforge.webp" rel="noopener noreferrer" target="_blank"><img alt="omniforge project artwork" class="project-cover" data-alt-en="omniforge project artwork" data-alt-zh="omniforge 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/omniforge.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span aria-hidden="true" class="cover-number">
-        02
-       </span>
+<a aria-label="查看 omniforge 完整封面" class="artwork-link" data-label-en="View full omniforge artwork" data-label-zh="查看 omniforge 完整封面" data-dark-href="assets/showcase/omniforge.webp" data-light-href="assets/showcase/omniforge-light.webp" href="assets/showcase/omniforge-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/omniforge.webp"/><img alt="omniforge project artwork" class="project-cover" data-alt-en="omniforge project artwork" data-alt-zh="omniforge 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/omniforge-light.webp" data-dark-src="assets/showcase/omniforge.webp" data-light-src="assets/showcase/omniforge-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
 <span class="cover-label">
 <span data-en="ENGINEERING AGENTS · TOOLS" data-zh="工程智能体 · 工具构建">
          工程智能体 · 工具构建
@@ -379,6 +347,11 @@
 </span>
 </div>
 <div class="project-copy">
+<h3 id="title-omniforge">
+<span data-en="OmniForge" data-zh="OmniForge · 万象工坊">
+         OmniForge · 万象工坊
+        </span>
+</h3>
 <div class="project-kicker">
 <img alt="" height="40" loading="lazy" src="assets/projects/omniforge.svg" width="40"/>
 <span>
@@ -387,11 +360,6 @@
          </span>
 </span>
 </div>
-<h3 id="title-omniforge">
-<span data-en="OmniForge" data-zh="OmniForge · 万象工坊">
-         OmniForge · 万象工坊
-        </span>
-</h3>
 <p class="project-oneline">
 <span data-en="Turning engineering intent into work that can be inspected, iterated and delivered." data-zh="把工程意图转化为可以检查、迭代和交付的工作。">
          把工程意图转化为可以检查、迭代和交付的工作。
@@ -436,33 +404,21 @@
 </p>
 <ol class="project-steps">
 <li>
-<span class="step-no">
-            01
-           </span>
 <span data-en="Intent" data-zh="需求">
             需求
            </span>
 </li>
 <li>
-<span class="step-no">
-            02
-           </span>
 <span data-en="Model" data-zh="建模">
             建模
            </span>
 </li>
 <li>
-<span class="step-no">
-            03
-           </span>
 <span data-en="Solve" data-zh="求解">
             求解
            </span>
 </li>
 <li>
-<span class="step-no">
-            04
-           </span>
 <span data-en="Deliver" data-zh="交付">
             交付
            </span>
@@ -474,10 +430,7 @@
 </article>
 <article aria-labelledby="title-wiscomper" class="project-row project-wiscomper" id="wiscomper">
 <div class="project-visual">
-<a aria-label="查看 wiscomper 完整封面" class="artwork-link" data-label-en="View full wiscomper artwork" data-label-zh="查看 wiscomper 完整封面" href="assets/showcase/wiscomper.webp" rel="noopener noreferrer" target="_blank"><img alt="wiscomper project artwork" class="project-cover" data-alt-en="wiscomper project artwork" data-alt-zh="wiscomper 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/wiscomper.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span aria-hidden="true" class="cover-number">
-        03
-       </span>
+<a aria-label="查看 wiscomper 完整封面" class="artwork-link" data-label-en="View full wiscomper artwork" data-label-zh="查看 wiscomper 完整封面" data-dark-href="assets/showcase/wiscomper.webp" data-light-href="assets/showcase/wiscomper-light.webp" href="assets/showcase/wiscomper-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/wiscomper.webp"/><img alt="wiscomper project artwork" class="project-cover" data-alt-en="wiscomper project artwork" data-alt-zh="wiscomper 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/wiscomper-light.webp" data-dark-src="assets/showcase/wiscomper.webp" data-light-src="assets/showcase/wiscomper-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
 <span class="cover-label">
 <span data-en="MULTIMODAL AI · VISUAL MATH" data-zh="多模态 AI · 数学可视化">
          多模态 AI · 数学可视化
@@ -485,6 +438,11 @@
 </span>
 </div>
 <div class="project-copy">
+<h3 id="title-wiscomper">
+<span data-en="Wiscomper" data-zh="Wiscomper · 智算视界">
+         Wiscomper · 智算视界
+        </span>
+</h3>
 <div class="project-kicker">
 <img alt="" height="40" loading="lazy" src="assets/projects/wiscomper.png" width="40"/>
 <span>
@@ -493,11 +451,6 @@
          </span>
 </span>
 </div>
-<h3 id="title-wiscomper">
-<span data-en="Wiscomper" data-zh="Wiscomper · 智算视界">
-         Wiscomper · 智算视界
-        </span>
-</h3>
 <p class="project-oneline">
 <span data-en="From a formula to a mathematical explanation you can see." data-zh="从一道公式，到一段看得懂的数学动画。">
          从一道公式，到一段看得懂的数学动画。
@@ -549,33 +502,21 @@
 </p>
 <ol class="project-steps">
 <li>
-<span class="step-no">
-            01
-           </span>
 <span data-en="Formula" data-zh="公式">
             公式
            </span>
 </li>
 <li>
-<span class="step-no">
-            02
-           </span>
 <span data-en="Recognize" data-zh="识别">
             识别
            </span>
 </li>
 <li>
-<span class="step-no">
-            03
-           </span>
 <span data-en="Reason" data-zh="推导">
             推导
            </span>
 </li>
 <li>
-<span class="step-no">
-            04
-           </span>
 <span data-en="Animate" data-zh="动画">
             动画
            </span>
@@ -587,10 +528,7 @@
 </article>
 <article aria-labelledby="title-ai-engineer" class="project-row project-ai-engineer" id="ai-engineer">
 <div class="project-visual">
-<a aria-label="查看 ai-engineer 完整封面" class="artwork-link" data-label-en="View full ai-engineer artwork" data-label-zh="查看 ai-engineer 完整封面" href="assets/showcase/ai-engineer.webp" rel="noopener noreferrer" target="_blank"><img alt="ai-engineer project artwork" class="project-cover" data-alt-en="ai-engineer project artwork" data-alt-zh="ai-engineer 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-engineer.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span aria-hidden="true" class="cover-number">
-        04
-       </span>
+<a aria-label="查看 ai-engineer 完整封面" class="artwork-link" data-label-en="View full ai-engineer artwork" data-label-zh="查看 ai-engineer 完整封面" data-dark-href="assets/showcase/ai-engineer.webp" data-light-href="assets/showcase/ai-engineer-light.webp" href="assets/showcase/ai-engineer-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-engineer.webp"/><img alt="ai-engineer project artwork" class="project-cover" data-alt-en="ai-engineer project artwork" data-alt-zh="ai-engineer 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-engineer-light.webp" data-dark-src="assets/showcase/ai-engineer.webp" data-light-src="assets/showcase/ai-engineer-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
 <span class="cover-label">
 <span data-en="INTELLIGENT DESIGN · COMPUTATION" data-zh="智能设计 · 工程计算">
          智能设计 · 工程计算
@@ -598,6 +536,11 @@
 </span>
 </div>
 <div class="project-copy">
+<h3 id="title-ai-engineer">
+<span data-en="The AI Engineer" data-zh="The AI Engineer">
+         The AI Engineer
+        </span>
+</h3>
 <div class="project-kicker">
 <img alt="" height="40" loading="lazy" src="assets/projects/ai-engineer.svg" width="40"/>
 <span>
@@ -606,11 +549,6 @@
          </span>
 </span>
 </div>
-<h3 id="title-ai-engineer">
-<span data-en="The AI Engineer" data-zh="The AI Engineer">
-         The AI Engineer
-        </span>
-</h3>
 <p class="project-oneline">
 <span data-en="Connecting geometry, meshes, topology optimization and physics." data-zh="连接几何、网格、拓扑优化与物理计算。">
          连接几何、网格、拓扑优化与物理计算。
@@ -656,33 +594,21 @@
 </p>
 <ol class="project-steps">
 <li>
-<span class="step-no">
-            01
-           </span>
 <span data-en="Intent" data-zh="意图">
             意图
            </span>
 </li>
 <li>
-<span class="step-no">
-            02
-           </span>
 <span data-en="Geometry" data-zh="几何">
             几何
            </span>
 </li>
 <li>
-<span class="step-no">
-            03
-           </span>
 <span data-en="Compute" data-zh="计算">
             计算
            </span>
 </li>
 <li>
-<span class="step-no">
-            04
-           </span>
 <span data-en="Optimize" data-zh="优化">
             优化
            </span>
@@ -694,10 +620,7 @@
 </article>
 <article aria-labelledby="title-ai-revolution" class="project-row project-ai-revolution" id="ai-revolution">
 <div class="project-visual">
-<a aria-label="查看 ai-revolution 完整封面" class="artwork-link" data-label-en="View full ai-revolution artwork" data-label-zh="查看 ai-revolution 完整封面" href="assets/showcase/ai-revolution.webp" rel="noopener noreferrer" target="_blank"><img alt="ai-revolution project artwork" class="project-cover" data-alt-en="ai-revolution project artwork" data-alt-zh="ai-revolution 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-revolution.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span aria-hidden="true" class="cover-number">
-        05
-       </span>
+<a aria-label="查看 ai-revolution 完整封面" class="artwork-link" data-label-en="View full ai-revolution artwork" data-label-zh="查看 ai-revolution 完整封面" data-dark-href="assets/showcase/ai-revolution.webp" data-light-href="assets/showcase/ai-revolution-light.webp" href="assets/showcase/ai-revolution-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-revolution.webp"/><img alt="ai-revolution project artwork" class="project-cover" data-alt-en="ai-revolution project artwork" data-alt-zh="ai-revolution 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-revolution-light.webp" data-dark-src="assets/showcase/ai-revolution.webp" data-light-src="assets/showcase/ai-revolution-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
 <span class="cover-label">
 <span data-en="KNOWLEDGE · MOTION" data-zh="知识创作 · 动态演示">
          知识创作 · 动态演示
@@ -705,6 +628,11 @@
 </span>
 </div>
 <div class="project-copy">
+<h3 id="title-ai-revolution">
+<span data-en="The Evolution of AI" data-zh="AI 进化史">
+         AI 进化史
+        </span>
+</h3>
 <div class="project-kicker">
 <img alt="" height="40" loading="lazy" src="assets/projects/ai-revolution.svg" width="40"/>
 <span>
@@ -713,11 +641,6 @@
          </span>
 </span>
 </div>
-<h3 id="title-ai-revolution">
-<span data-en="The Evolution of AI" data-zh="AI 进化史">
-         AI 进化史
-        </span>
-</h3>
 <p class="project-oneline">
 <span data-en="Following vision, generative models and agents through the evolution of AI." data-zh="沿着视觉、生成模型与智能体，理解 AI 如何演进。">
          沿着视觉、生成模型与智能体，理解 AI 如何演进。
@@ -763,33 +686,21 @@
 </p>
 <ol class="project-steps">
 <li>
-<span class="step-no">
-            01
-           </span>
 <span data-en="Question" data-zh="问题">
             问题
            </span>
 </li>
 <li>
-<span class="step-no">
-            02
-           </span>
 <span data-en="Mechanism" data-zh="机制">
             机制
            </span>
 </li>
 <li>
-<span class="step-no">
-            03
-           </span>
 <span data-en="Experiment" data-zh="实验">
             实验
            </span>
 </li>
 <li>
-<span class="step-no">
-            04
-           </span>
 <span data-en="Explain" data-zh="表达">
             表达
            </span>
@@ -801,10 +712,7 @@
 </article>
 <article aria-labelledby="title-science-studio" class="project-row project-science-studio" id="science-studio">
 <div class="project-visual">
-<a aria-label="查看 science-studio 完整封面" class="artwork-link" data-label-en="View full science-studio artwork" data-label-zh="查看 science-studio 完整封面" href="assets/showcase/science-studio.webp" rel="noopener noreferrer" target="_blank"><img alt="science-studio project artwork" class="project-cover" data-alt-en="science-studio project artwork" data-alt-zh="science-studio 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/science-studio.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span aria-hidden="true" class="cover-number">
-        06
-       </span>
+<a aria-label="查看 science-studio 完整封面" class="artwork-link" data-label-en="View full science-studio artwork" data-label-zh="查看 science-studio 完整封面" data-dark-href="assets/showcase/science-studio.webp" data-light-href="assets/showcase/science-studio-light.webp" href="assets/showcase/science-studio-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/science-studio.webp"/><img alt="science-studio project artwork" class="project-cover" data-alt-en="science-studio project artwork" data-alt-zh="science-studio 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/science-studio-light.webp" data-dark-src="assets/showcase/science-studio.webp" data-light-src="assets/showcase/science-studio-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
 <span class="cover-label">
 <span data-en="SCIENCE STORIES · CREATIVE TOOLS" data-zh="科学叙事 · 创作工具">
          科学叙事 · 创作工具
@@ -812,6 +720,11 @@
 </span>
 </div>
 <div class="project-copy">
+<h3 id="title-science-studio">
+<span data-en="rainbow鱼 Science Studio" data-zh="rainbow鱼科普工作台">
+         rainbow鱼科普工作台
+        </span>
+</h3>
 <div class="project-kicker">
 <img alt="" height="40" loading="lazy" src="assets/projects/science-studio.svg" width="40"/>
 <span>
@@ -820,11 +733,6 @@
          </span>
 </span>
 </div>
-<h3 id="title-science-studio">
-<span data-en="rainbow鱼 Science Studio" data-zh="rainbow鱼科普工作台">
-         rainbow鱼科普工作台
-        </span>
-</h3>
 <p class="project-oneline">
 <span data-en="Turning questions into stories and scientific mechanisms into images." data-zh="把问题变成故事，把科学机制变成画面。">
          把问题变成故事，把科学机制变成画面。
@@ -870,33 +778,21 @@
 </p>
 <ol class="project-steps">
 <li>
-<span class="step-no">
-            01
-           </span>
 <span data-en="Question" data-zh="选题">
             选题
            </span>
 </li>
 <li>
-<span class="step-no">
-            02
-           </span>
 <span data-en="Script" data-zh="脚本">
             脚本
            </span>
 </li>
 <li>
-<span class="step-no">
-            03
-           </span>
 <span data-en="Visuals" data-zh="画面">
             画面
            </span>
 </li>
 <li>
-<span class="step-no">
-            04
-           </span>
 <span data-en="Produce" data-zh="制作">
             制作
            </span>
@@ -908,10 +804,7 @@
 </article>
 <article aria-labelledby="title-manim" class="project-row project-manim" id="manim">
 <div class="project-visual">
-<a aria-label="查看 manim 完整封面" class="artwork-link" data-label-en="View full manim artwork" data-label-zh="查看 manim 完整封面" href="assets/showcase/manim.webp" rel="noopener noreferrer" target="_blank"><img alt="manim project artwork" class="project-cover" data-alt-en="manim project artwork" data-alt-zh="manim 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/manim.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span aria-hidden="true" class="cover-number">
-        07
-       </span>
+<a aria-label="查看 manim 完整封面" class="artwork-link" data-label-en="View full manim artwork" data-label-zh="查看 manim 完整封面" data-dark-href="assets/showcase/manim.webp" data-light-href="assets/showcase/manim-light.webp" href="assets/showcase/manim-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/manim.webp"/><img alt="manim project artwork" class="project-cover" data-alt-en="manim project artwork" data-alt-zh="manim 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/manim-light.webp" data-dark-src="assets/showcase/manim.webp" data-light-src="assets/showcase/manim-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
 <span class="cover-label">
 <span data-en="MATH ANIMATION · COMPONENTS" data-zh="数学动画 · 可复用组件">
          数学动画 · 可复用组件
@@ -919,6 +812,11 @@
 </span>
 </div>
 <div class="project-copy">
+<h3 id="title-manim">
+<span data-en="Manim Extend Rainbow" data-zh="Manim Extend Rainbow">
+         Manim Extend Rainbow
+        </span>
+</h3>
 <div class="project-kicker">
 <img alt="" height="40" loading="lazy" src="assets/projects/manim.svg" width="40"/>
 <span>
@@ -927,11 +825,6 @@
          </span>
 </span>
 </div>
-<h3 id="title-manim">
-<span data-en="Manim Extend Rainbow" data-zh="Manim Extend Rainbow">
-         Manim Extend Rainbow
-        </span>
-</h3>
 <p class="project-oneline">
 <span data-en="Turning carefully crafted mathematical animation into reusable tools." data-zh="把反复打磨的数学动画，沉淀为可复用工具。">
          把反复打磨的数学动画，沉淀为可复用工具。
@@ -977,33 +870,21 @@
 </p>
 <ol class="project-steps">
 <li>
-<span class="step-no">
-            01
-           </span>
 <span data-en="Abstract" data-zh="抽象">
             抽象
            </span>
 </li>
 <li>
-<span class="step-no">
-            02
-           </span>
 <span data-en="Compose" data-zh="构图">
             构图
            </span>
 </li>
 <li>
-<span class="step-no">
-            03
-           </span>
 <span data-en="Animate" data-zh="运动">
             运动
            </span>
 </li>
 <li>
-<span class="step-no">
-            04
-           </span>
 <span data-en="Reuse" data-zh="复用">
             复用
            </span>
@@ -1019,9 +900,6 @@
 <div class="wrap">
 <div class="section-heading">
 <div>
-<p class="eyebrow">
-        02 / IN THE MAKING
-       </p>
 <h2 id="activity-title">
 <span data-en="A little further.&lt;br&gt;Every day." data-zh="每一天，都算数。">
          每一天，都算数。
@@ -1029,10 +907,10 @@
 </h2>
 </div>
 <p class="section-description">
-<span data-en="A record of code, craft and curiosity.&lt;br&gt;The original animations and daily cards live on." data-zh="代码、创作与持续探索的轨迹。&lt;br&gt;原有动图和每日更新卡，仍然都在。">
+<span data-en="A record of code, craft and curiosity.&lt;br&gt;Contributions and public activity, updated daily." data-zh="代码、创作与持续探索的轨迹。&lt;br&gt;贡献、公开活动与每日更新的记录。">
         代码、创作与持续探索的轨迹。
         <br/>
-        原有动图和每日更新卡，仍然都在。
+        贡献、公开活动与每日更新的记录。
        </span>
 </p>
 </div>
@@ -1056,7 +934,7 @@
          三维贡献图景
         </span>
 </figcaption>
-<img alt="三维贡献图景" class="animated-contribution" data-alt-en="Contributions in three dimensions" data-alt-zh="三维贡献图景" data-animated-src="profile-3d-contrib/profile-night-rainbow.svg" data-light-src="profile-3d-contrib/profile-season-animate.svg" data-light-static-src="profile-3d-contrib/profile-night-static.svg" data-static-src="profile-3d-contrib/profile-night-static.svg" decoding="async" loading="lazy" src="profile-3d-contrib/profile-night-rainbow.svg"/>
+<picture><source data-motion-source="" media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img alt="三维贡献图景" class="animated-contribution" data-alt-en="Contributions in three dimensions" data-alt-zh="三维贡献图景" data-animated-src="profile-3d-contrib/profile-night-rainbow.svg" data-light-src="profile-3d-contrib/profile-season-animate.svg" data-light-static-src="profile-3d-contrib/profile-day-static.svg" data-static-src="profile-3d-contrib/profile-night-static.svg" decoding="async" loading="lazy" src="profile-3d-contrib/profile-season-animate.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
          卡片暂不可用，等待下一次更新。
@@ -1071,7 +949,7 @@
          贡献贪吃蛇
         </span>
 </figcaption>
-<img alt="贡献贪吃蛇" class="animated-contribution" data-alt-en="Contribution snake" data-alt-zh="贡献贪吃蛇" data-animated-src="profile-snake-contrib/github-contribution-grid-snake-dark.svg" data-light-src="profile-snake-contrib/github-contribution-grid-snake.svg" data-light-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" data-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" decoding="async" loading="lazy" src="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/>
+<picture><source data-motion-source="" media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img alt="贡献贪吃蛇" class="animated-contribution" data-alt-en="Contribution snake" data-alt-zh="贡献贪吃蛇" data-animated-src="profile-snake-contrib/github-contribution-grid-snake-dark.svg" data-light-src="profile-snake-contrib/github-contribution-grid-snake.svg" data-light-static-src="profile-snake-contrib/github-contribution-grid-snake-static-light.svg" data-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" decoding="async" loading="lazy" src="profile-snake-contrib/github-contribution-grid-snake.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
          卡片暂不可用，等待下一次更新。
@@ -1086,7 +964,7 @@
          GitHub 数据概览
         </span>
 </figcaption>
-<img alt="GitHub 数据概览" data-alt-en="GitHub at a glance" data-alt-zh="GitHub 数据概览" decoding="async" loading="lazy" src="github-metrics/base.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg"/><img alt="GitHub 数据概览" data-alt-en="GitHub at a glance" data-alt-zh="GitHub 数据概览" decoding="async" loading="lazy" src="github-metrics/base-light.svg" data-dark-src="github-metrics/base-dark.svg" data-light-src="github-metrics/base-light.svg" data-activity-source="github-metrics/base.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
          卡片暂不可用，等待下一次更新。
@@ -1099,7 +977,7 @@
          代码中的语言
         </span>
 </figcaption>
-<img alt="代码中的语言" data-alt-en="Languages in the code" data-alt-zh="代码中的语言" decoding="async" loading="lazy" src="github-metrics/languages.indepth.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg"/><img alt="代码中的语言" data-alt-en="Languages in the code" data-alt-zh="代码中的语言" decoding="async" loading="lazy" src="github-metrics/languages.indepth-light.svg" data-dark-src="github-metrics/languages.indepth-dark.svg" data-light-src="github-metrics/languages.indepth-light.svg" data-activity-source="github-metrics/languages.indepth.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
          卡片暂不可用，等待下一次更新。
@@ -1122,7 +1000,7 @@
           贡献连续记录
          </span>
 </figcaption>
-<img alt="贡献连续记录" data-alt-en="Contribution streak" data-alt-zh="贡献连续记录" decoding="async" loading="lazy" src="github-metrics/streak.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg"/><img alt="贡献连续记录" data-alt-en="Contribution streak" data-alt-zh="贡献连续记录" decoding="async" loading="lazy" src="github-metrics/streak-light.svg" data-dark-src="github-metrics/streak-dark.svg" data-light-src="github-metrics/streak-light.svg" data-activity-source="github-metrics/streak.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1135,7 +1013,7 @@
           全年贡献日历
          </span>
 </figcaption>
-<img alt="全年贡献日历" data-alt-en="Full-year calendar" data-alt-zh="全年贡献日历" decoding="async" loading="lazy" src="github-metrics/calendar.full.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg"/><img alt="全年贡献日历" data-alt-en="Full-year calendar" data-alt-zh="全年贡献日历" decoding="async" loading="lazy" src="github-metrics/calendar.full-light.svg" data-dark-src="github-metrics/calendar.full-dark.svg" data-light-src="github-metrics/calendar.full-light.svg" data-activity-source="github-metrics/calendar.full.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1148,7 +1026,7 @@
           编码习惯
          </span>
 </figcaption>
-<img alt="编码习惯" data-alt-en="Coding habits" data-alt-zh="编码习惯" decoding="async" loading="lazy" src="github-metrics/habits.charts.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg"/><img alt="编码习惯" data-alt-en="Coding habits" data-alt-zh="编码习惯" decoding="async" loading="lazy" src="github-metrics/habits.charts-light.svg" data-dark-src="github-metrics/habits.charts-dark.svg" data-light-src="github-metrics/habits.charts-light.svg" data-activity-source="github-metrics/habits.charts.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1161,7 +1039,7 @@
           近 30 天公开活动
          </span>
 </figcaption>
-<img alt="近 30 天公开活动" data-alt-en="Public activity · Last 30 days" data-alt-zh="近 30 天公开活动" decoding="async" loading="lazy" src="github-metrics/activity.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg"/><img alt="近 30 天公开活动" data-alt-en="Public activity · Last 30 days" data-alt-zh="近 30 天公开活动" decoding="async" loading="lazy" src="github-metrics/activity-light.svg" data-dark-src="github-metrics/activity-dark.svg" data-light-src="github-metrics/activity-light.svg" data-activity-source="github-metrics/activity.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1174,7 +1052,7 @@
           编码时间 · WakaTime
          </span>
 </figcaption>
-<img alt="编码时间 · WakaTime" data-alt-en="Coding time · WakaTime" data-alt-zh="编码时间 · WakaTime" decoding="async" loading="lazy" src="github-metrics/wakatime.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg"/><img alt="编码时间 · WakaTime" data-alt-en="Coding time · WakaTime" data-alt-zh="编码时间 · WakaTime" decoding="async" loading="lazy" src="github-metrics/wakatime-light.svg" data-dark-src="github-metrics/wakatime-dark.svg" data-light-src="github-metrics/wakatime-light.svg" data-activity-source="github-metrics/wakatime.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1213,7 +1091,7 @@
           社区讨论
          </span>
 </figcaption>
-<img alt="社区讨论" data-alt-en="Discussions" data-alt-zh="社区讨论" decoding="async" loading="lazy" src="github-metrics/discussions.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/discussions-dark.svg"/><img alt="社区讨论" data-alt-en="Discussions" data-alt-zh="社区讨论" decoding="async" loading="lazy" src="github-metrics/discussions-light.svg" data-dark-src="github-metrics/discussions-dark.svg" data-light-src="github-metrics/discussions-light.svg" data-activity-source="github-metrics/discussions.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1226,7 +1104,7 @@
           议题与贡献跟进
          </span>
 </figcaption>
-<img alt="议题与贡献跟进" data-alt-en="Issues &amp; contributions" data-alt-zh="议题与贡献跟进" decoding="async" loading="lazy" src="github-metrics/followup.indepth.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/followup.indepth-dark.svg"/><img alt="议题与贡献跟进" data-alt-en="Issues &amp; contributions" data-alt-zh="议题与贡献跟进" decoding="async" loading="lazy" src="github-metrics/followup.indepth-light.svg" data-dark-src="github-metrics/followup.indepth-dark.svg" data-light-src="github-metrics/followup.indepth-light.svg" data-activity-source="github-metrics/followup.indepth.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1239,7 +1117,7 @@
           立体全年日历
          </span>
 </figcaption>
-<img alt="立体全年日历" data-alt-en="Isometric calendar" data-alt-zh="立体全年日历" decoding="async" loading="lazy" src="github-metrics/isocalendar.fullyear.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/isocalendar.fullyear-dark.svg"/><img alt="立体全年日历" data-alt-en="Isometric calendar" data-alt-zh="立体全年日历" decoding="async" loading="lazy" src="github-metrics/isocalendar.fullyear-light.svg" data-dark-src="github-metrics/isocalendar.fullyear-dark.svg" data-light-src="github-metrics/isocalendar.fullyear-light.svg" data-activity-source="github-metrics/isocalendar.fullyear.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1252,7 +1130,7 @@
           社区连接
          </span>
 </figcaption>
-<img alt="社区连接" data-alt-en="Community connections" data-alt-zh="社区连接" decoding="async" loading="lazy" src="github-metrics/people.followers.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/people.followers-dark.svg"/><img alt="社区连接" data-alt-en="Community connections" data-alt-zh="社区连接" decoding="async" loading="lazy" src="github-metrics/people.followers-light.svg" data-dark-src="github-metrics/people.followers-dark.svg" data-light-src="github-metrics/people.followers-light.svg" data-activity-source="github-metrics/people.followers.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1265,7 +1143,7 @@
           社区反馈
          </span>
 </figcaption>
-<img alt="社区反馈" data-alt-en="Reactions" data-alt-zh="社区反馈" decoding="async" loading="lazy" src="github-metrics/reactions.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/reactions-dark.svg"/><img alt="社区反馈" data-alt-en="Reactions" data-alt-zh="社区反馈" decoding="async" loading="lazy" src="github-metrics/reactions-light.svg" data-dark-src="github-metrics/reactions-dark.svg" data-light-src="github-metrics/reactions-light.svg" data-activity-source="github-metrics/reactions.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1278,7 +1156,7 @@
           置顶项目
          </span>
 </figcaption>
-<img alt="置顶项目" data-alt-en="Pinned repositories" data-alt-zh="置顶项目" decoding="async" loading="lazy" src="github-metrics/repositories.pinned.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/repositories.pinned-dark.svg"/><img alt="置顶项目" data-alt-en="Pinned repositories" data-alt-zh="置顶项目" decoding="async" loading="lazy" src="github-metrics/repositories.pinned-light.svg" data-dark-src="github-metrics/repositories.pinned-dark.svg" data-light-src="github-metrics/repositories.pinned-light.svg" data-activity-source="github-metrics/repositories.pinned.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1291,7 +1169,7 @@
           星标趋势
          </span>
 </figcaption>
-<img alt="星标趋势" data-alt-en="Stargazer trends" data-alt-zh="星标趋势" decoding="async" loading="lazy" src="github-metrics/stargazers.chartist.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/stargazers.chartist-dark.svg"/><img alt="星标趋势" data-alt-en="Stargazer trends" data-alt-zh="星标趋势" decoding="async" loading="lazy" src="github-metrics/stargazers.chartist-light.svg" data-dark-src="github-metrics/stargazers.chartist-dark.svg" data-light-src="github-metrics/stargazers.chartist-light.svg" data-activity-source="github-metrics/stargazers.chartist.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1304,7 +1182,7 @@
           星标收藏
          </span>
 </figcaption>
-<img alt="星标收藏" data-alt-en="Starred repositories" data-alt-zh="星标收藏" decoding="async" loading="lazy" src="github-metrics/stars.svg"/>
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/stars-dark.svg"/><img alt="星标收藏" data-alt-en="Starred repositories" data-alt-zh="星标收藏" decoding="async" loading="lazy" src="github-metrics/stars-light.svg" data-dark-src="github-metrics/stars-dark.svg" data-light-src="github-metrics/stars-light.svg" data-activity-source="github-metrics/stars.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
@@ -1332,9 +1210,6 @@
      </span>
 </div>
 <div class="about-copy">
-<p class="eyebrow">
-      03 / ABOUT
-     </p>
 <h2 id="about-title">
 <span data-en="Between science&lt;br&gt;and imagination." data-zh="连接科学与想象。">
        连接科学与想象。
@@ -1385,9 +1260,6 @@
 </section>
 <section aria-labelledby="contact-title" class="contact-section" id="contact">
 <div class="wrap">
-<p class="eyebrow">
-      04 / SAY HELLO
-     </p>
 <div class="contact-top">
 <h2 id="contact-title">
 <span data-en="Let curiosity&lt;br&gt;take us further." data-zh="让好奇心&lt;br&gt;有下一站。">

@@ -2,22 +2,22 @@
 
 <p align="right"><strong>简体中文</strong> &nbsp; / &nbsp; <a href="README.en.md">English</a></p>
 
-<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/"><img src="assets/readme/profile-banner.svg" width="100%" alt="rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University"/></a></p>
+<p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/profile-banner.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/profile-banner-light.svg"/><img src="assets/readme/profile-banner-light.svg" width="100%" alt="rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University"/></picture></a></p>
 
 <p align="center"><strong>让 AI 理解物理，让知识看得见。</strong></p>
 
 <p align="center">我是 <strong>rainbow鱼</strong>，<strong>浙江大学博士</strong>。<br/>在物理 AI、工程智能体与科学叙事之间，持续研究，也持续创造。</p>
 
 <p align="center">
-<a href="https://rainbowyuyu.github.io/rainbowyuyu/"><img src="assets/readme/portfolio-zh.svg" height="42" alt="portfolio"/></a>
-<a href="#projects"><img src="assets/readme/projects-zh.svg" height="42" alt="projects"/></a>
-<a href="#activity"><img src="assets/readme/activity-zh.svg" height="42" alt="activity"/></a>
-<a href="https://space.bilibili.com/343585138"><img src="assets/readme/bilibili-zh.svg" height="42" alt="bilibili"/></a>
+<a href="https://rainbowyuyu.github.io/rainbowyuyu/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/portfolio-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/portfolio-zh-light.svg"/><img src="assets/readme/portfolio-zh-light.svg" height="42" alt="portfolio"/></picture></a>
+<a href="#projects"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/projects-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/projects-zh-light.svg"/><img src="assets/readme/projects-zh-light.svg" height="42" alt="projects"/></picture></a>
+<a href="#activity"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/activity-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/activity-zh-light.svg"/><img src="assets/readme/activity-zh-light.svg" height="42" alt="activity"/></picture></a>
+<a href="https://space.bilibili.com/343585138"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/bilibili-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/bilibili-zh-light.svg"/><img src="assets/readme/bilibili-zh-light.svg" height="42" alt="bilibili"/></picture></a>
 </p>
 
 
 
-<p align="center"><a href="assets/readme/ATTRIBUTION.md"><img src="assets/readme/typing.svg" width="720" alt="Research in physics. Build with agents. Explain through motion."/></a></p>
+<p align="center"><a href="assets/readme/ATTRIBUTION.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/typing.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/typing-light.svg"/><img src="assets/readme/typing-light.svg" width="720" alt="Research in physics. Build with agents. Explain through motion."/></picture></a></p>
 
 <p align="center"><img src="assets/images/hr.gif" width="100%" height="2" alt=""/></p>
 
@@ -48,9 +48,9 @@
 
 
 
-### 01 / PhysCast
+### PhysCast
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#physcast"><img src="assets/showcase/physcast.webp" width="100%" alt="PhysCast — 物理约束的生成式风场预测"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#physcast"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/physcast.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/physcast-light.webp"/><img src="assets/showcase/physcast-light.webp" width="100%" alt="PhysCast — 物理约束的生成式风场预测"/></picture></a></p>
 
 **物理约束的生成式风场预测**
 
@@ -58,14 +58,14 @@
 
 <p><sub>研究中 · 源码私有</sub></p>
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#physcast"><img src="assets/readme/physcast-zh.svg" height="38" alt="项目入口"/></a>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#physcast"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/physcast-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/physcast-zh-light.svg"/><img src="assets/readme/physcast-zh-light.svg" height="38" alt="项目入口"/></picture></a>
 </p>
 
 
 
-### 02 / OmniForge · 万象工坊
+### OmniForge · 万象工坊
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#omniforge"><img src="assets/showcase/omniforge.webp" width="100%" alt="OmniForge — 让工程意图，走向可检查的设计过程"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#omniforge"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/omniforge.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/omniforge-light.webp"/><img src="assets/showcase/omniforge-light.webp" width="100%" alt="OmniForge — 让工程意图，走向可检查的设计过程"/></picture></a></p>
 
 **让工程意图，走向可检查的设计过程**
 
@@ -73,14 +73,14 @@
 
 <p><sub>持续开发 · 源码私有</sub></p>
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#omniforge"><img src="assets/readme/omniforge-zh.svg" height="38" alt="项目入口"/></a>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#omniforge"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/omniforge-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/omniforge-zh-light.svg"/><img src="assets/readme/omniforge-zh-light.svg" height="38" alt="项目入口"/></picture></a>
 </p>
 
 
 
-### 03 / Wiscomper · 智算视界
+### Wiscomper · 智算视界
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#wiscomper"><img src="assets/showcase/wiscomper.webp" width="100%" alt="Wiscomper — 从一道公式，到一段看得懂的数学动画"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#wiscomper"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/wiscomper.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/wiscomper-light.webp"/><img src="assets/showcase/wiscomper-light.webp" width="100%" alt="Wiscomper — 从一道公式，到一段看得懂的数学动画"/></picture></a></p>
 
 **从一道公式，到一段看得懂的数学动画**
 
@@ -88,15 +88,15 @@
 
 <p><sub>开源 · 在线体验</sub></p>
 
-<p><a href="https://www.wiscomper.com/"><img src="assets/readme/wiscomper-zh.svg" height="38" alt="项目入口"/></a>
-<a href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective"><img src="assets/readme/github-zh.svg" height="38" alt="GitHub source"/></a>
+<p><a href="https://www.wiscomper.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/wiscomper-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/wiscomper-zh-light.svg"/><img src="assets/readme/wiscomper-zh-light.svg" height="38" alt="项目入口"/></picture></a>
+<a href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/github-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/github-zh-light.svg"/><img src="assets/readme/github-zh-light.svg" height="38" alt="GitHub source"/></picture></a>
 </p>
 
 
 
-### 04 / The AI Engineer
+### The AI Engineer
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#ai-engineer"><img src="assets/showcase/ai-engineer.webp" width="100%" alt="The AI Engineer — 设计之后，继续计算与验证"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#ai-engineer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-engineer.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/ai-engineer-light.webp"/><img src="assets/showcase/ai-engineer-light.webp" width="100%" alt="The AI Engineer — 设计之后，继续计算与验证"/></picture></a></p>
 
 **设计之后，继续计算与验证**
 
@@ -104,14 +104,14 @@
 
 <p><sub>研究代码 · 开源</sub></p>
 
-<p><a href="https://github.com/rainbowyuyu/ai_engineer"><img src="assets/readme/ai-engineer-zh.svg" height="38" alt="项目入口"/></a>
+<p><a href="https://github.com/rainbowyuyu/ai_engineer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/ai-engineer-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/ai-engineer-zh-light.svg"/><img src="assets/readme/ai-engineer-zh-light.svg" height="38" alt="项目入口"/></picture></a>
 </p>
 
 
 
-### 05 / AI 进化史
+### AI 进化史
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#ai-revolution"><img src="assets/showcase/ai-revolution.webp" width="100%" alt="The Evolution of AI — 把 AI 的演进，讲成可以看见的故事"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#ai-revolution"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-revolution.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/ai-revolution-light.webp"/><img src="assets/showcase/ai-revolution-light.webp" width="100%" alt="The Evolution of AI — 把 AI 的演进，讲成可以看见的故事"/></picture></a></p>
 
 **把 AI 的演进，讲成可以看见的故事**
 
@@ -119,15 +119,15 @@
 
 <p><sub>系列创作 · 开源</sub></p>
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#ai-revolution"><img src="assets/readme/ai-revolution-zh.svg" height="38" alt="项目入口"/></a>
-<a href="https://github.com/rainbowyuyu/AI_revolution"><img src="assets/readme/github-zh.svg" height="38" alt="GitHub source"/></a>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#ai-revolution"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/ai-revolution-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/ai-revolution-zh-light.svg"/><img src="assets/readme/ai-revolution-zh-light.svg" height="38" alt="项目入口"/></picture></a>
+<a href="https://github.com/rainbowyuyu/AI_revolution"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/github-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/github-zh-light.svg"/><img src="assets/readme/github-zh-light.svg" height="38" alt="GitHub source"/></picture></a>
 </p>
 
 
 
-### 06 / rainbow鱼 · 科普工作台
+### rainbow鱼 · 科普工作台
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#science-studio"><img src="assets/showcase/science-studio.webp" width="100%" alt="rainbow鱼 · Science Studio — 把科学问题，变成值得追问的画面"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#science-studio"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/science-studio.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/science-studio-light.webp"/><img src="assets/showcase/science-studio-light.webp" width="100%" alt="rainbow鱼 · Science Studio — 把科学问题，变成值得追问的画面"/></picture></a></p>
 
 **把科学问题，变成值得追问的画面**
 
@@ -135,15 +135,15 @@
 
 <p><sub>持续创作 · 开源</sub></p>
 
-<p><a href="https://space.bilibili.com/343585138"><img src="assets/readme/science-studio-zh.svg" height="38" alt="项目入口"/></a>
-<a href="https://github.com/rainbowyuyu/Popula_science_video"><img src="assets/readme/github-zh.svg" height="38" alt="GitHub source"/></a>
+<p><a href="https://space.bilibili.com/343585138"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/science-studio-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/science-studio-zh-light.svg"/><img src="assets/readme/science-studio-zh-light.svg" height="38" alt="项目入口"/></picture></a>
+<a href="https://github.com/rainbowyuyu/Popula_science_video"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/github-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/github-zh-light.svg"/><img src="assets/readme/github-zh-light.svg" height="38" alt="GitHub source"/></picture></a>
 </p>
 
 
 
-### 07 / Manim Extend Rainbow
+### Manim Extend Rainbow
 
-<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#manim"><img src="assets/showcase/manim.webp" width="100%" alt="Manim Extend Rainbow — 让算法和结构，有直观的表达"/></a></p>
+<p><a href="https://rainbowyuyu.github.io/rainbowyuyu/#manim"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/showcase/manim.webp"/><source media="(prefers-color-scheme: light)" srcset="assets/showcase/manim-light.webp"/><img src="assets/showcase/manim-light.webp" width="100%" alt="Manim Extend Rainbow — 让算法和结构，有直观的表达"/></picture></a></p>
 
 **让算法和结构，有直观的表达**
 
@@ -151,7 +151,7 @@
 
 <p><sub>动画组件 · 开源</sub></p>
 
-<p><a href="https://github.com/rainbowyuyu/manim_extend_rainbow"><img src="assets/readme/manim-zh.svg" height="38" alt="项目入口"/></a>
+<p><a href="https://github.com/rainbowyuyu/manim_extend_rainbow"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/manim-zh.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/manim-zh-light.svg"/><img src="assets/readme/manim-zh-light.svg" height="38" alt="项目入口"/></picture></a>
 </p>
 
 
@@ -166,13 +166,13 @@
 
 ## 日复一日，把想法做成作品
 
-<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; <img src="github-metrics/streak.svg" width="74%" alt="Contribution streak"/> &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>
+<p align="center"><img src="assets/images/left.png" width="10%" alt="Original profile mascot"/> &nbsp; <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/streak-light.svg"/><img src="github-metrics/streak-light.svg" width="74%" alt="Contribution streak"/></picture> &nbsp; <img src="assets/images/right.png" width="10%" alt="Original profile mascot"/></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>
 
-<p><img src="github-metrics/base.svg" width="49%" alt="GitHub public activity"/> <img src="github-metrics/languages.indepth.svg" width="49%" alt="Public source language breakdown"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/base-light.svg"/><img src="github-metrics/base-light.svg" width="49%" alt="GitHub public activity"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/languages.indepth-light.svg"/><img src="github-metrics/languages.indepth-light.svg" width="49%" alt="Public source language breakdown"/></picture></p>
 
-<p><img src="github-metrics/habits.charts.svg" width="49%" alt="Activity rhythm"/> <img src="github-metrics/wakatime.svg" width="49%" alt="WakaTime recorded coding activity"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/habits.charts-light.svg"/><img src="github-metrics/habits.charts-light.svg" width="49%" alt="Activity rhythm"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/wakatime-light.svg"/><img src="github-metrics/wakatime-light.svg" width="49%" alt="WakaTime recorded coding activity"/></picture></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg"/><img src="profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional contribution landscape"/></picture>
 
@@ -184,13 +184,13 @@
 
 
 
-<p><img src="github-metrics/calendar.full.svg" width="100%" alt="Contribution calendar"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/calendar.full-light.svg"/><img src="github-metrics/calendar.full-light.svg" width="100%" alt="Contribution calendar"/></picture></p>
 
-<p><img src="github-metrics/activity.svg" width="100%" alt="Recent public activity"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/activity-light.svg"/><img src="github-metrics/activity-light.svg" width="100%" alt="Recent public activity"/></picture></p>
 
 以下等距日历保留为历史快照。
 
-<p><img src="github-metrics/isocalendar.fullyear.svg" width="100%" alt="Archived isometric calendar"/></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="github-metrics/isocalendar.fullyear-dark.svg"/><source media="(prefers-color-scheme: light)" srcset="github-metrics/isocalendar.fullyear-light.svg"/><img src="github-metrics/isocalendar.fullyear-light.svg" width="100%" alt="Archived isometric calendar"/></picture></p>
 
 
 
@@ -206,6 +206,6 @@
 
 
 
-<p align="center"><img src="assets/readme/footer.svg" width="100%" alt="Stay curious. Keep creating."/></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/footer.svg"/><source media="(prefers-color-scheme: light)" srcset="assets/readme/footer-light.svg"/><img src="assets/readme/footer-light.svg" width="100%" alt="Stay curious. Keep creating."/></picture></p>
 
 <p align="center"><a href="https://rainbowyuyu.github.io/rainbowyuyu/">Portfolio</a> &nbsp; · &nbsp; <a href="https://space.bilibili.com/343585138">Bilibili</a> &nbsp; · &nbsp; <a href="https://www.wiscomper.com/">Wiscomper</a> &nbsp; · &nbsp; <a href="assets/readme/ATTRIBUTION.md">Widget credits</a></p>
