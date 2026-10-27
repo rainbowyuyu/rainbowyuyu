@@ -17,7 +17,15 @@ FONT='Segoe UI,Microsoft YaHei,Arial,sans-serif'
 def save_svg(name,svg):
     (OUT/name).write_text(svg+'\n',encoding='utf-8',newline='\n')
 
+def image_source(path):
+    # GitHub's relative /raw/ redirect strips query strings. Keep migration
+    # versions on the raw host while still allowing the daily main-branch data.
+    if '?v=studio-v6' in path:
+        return 'https://raw.githubusercontent.com/rainbowyuyu/rainbowyuyu/main/'+path
+    return path
+
 def picture(dark,light,alt,width=None,height=None):
+    dark,light=image_source(dark),image_source(light)
     attrs=(f' width="{width}"' if width else '')+(f' height="{height}"' if height else '')
     return f'<picture><source media="(prefers-color-scheme: dark)" srcset="{dark}"/><source media="(prefers-color-scheme: light)" srcset="{light}"/><img src="{light}"{attrs} alt="{escape(alt,quote=True)}"/></picture>'
 
@@ -32,7 +40,7 @@ def metric(stem,alt,width):
 
 def contribution_picture():
     prefix='profile-3d-contrib/profile-rainbow-'
-    sources=''.join(f'<source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: {theme})" srcset="{prefix}{theme}-static.svg?v=studio-v6"/>' for theme in ('dark','light'))
+    sources=''.join(f'<source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: {theme})" srcset="{image_source(prefix+theme+"-static.svg?v=studio-v6")}"/>' for theme in ('dark','light'))
     regular=picture(prefix+'dark.svg?v=studio-v6',prefix+'light.svg?v=studio-v6','Rainbow three-dimensional contribution landscape','100%')
     return regular.replace('<picture>','<picture>'+sources,1)
 
