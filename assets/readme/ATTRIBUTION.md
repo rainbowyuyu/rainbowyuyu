@@ -28,3 +28,9 @@ The active website and bilingual GitHub profile now share an original hand-paint
 Project cards preserve original project logos and distinct brand colours. Desktop and mobile layouts, tool shelves, disclosure controls and link buttons are generated locally by scripts/profile_components.py and scripts/generate_readme.py. See COMPONENTS.md for the component contract. Existing statistics, timestamps, daily workflows, project source covers and original icon files remain available. Redundant typing/separator decorations and duplicate navigation are no longer part of the active layout.
 
 The previous React Bits Aurora shader is no longer executed by the current site. Its existing license and historical attribution remain in the repository. GitHub's native details and picture elements provide folding and theme-responsive artwork; no third-party JavaScript widget is added by this component update.
+
+## Painted icon family — 2026-10-28
+
+36 watercolor tool and navigation illustrations were created with Qwen Image 3.0 Pro on official DashScope using the public Fieldnotes illustrations as references. The images are artistic reinterpretations, not official product artwork or endorsements; product names and marks belong to their owners. After Effects lettering was corrected locally. Four small control glyphs and two brush dividers were derived locally from the painted pigment. The original rainbow鱼 identity logo and project logos remain intact.
+
+Transparent PNGs are embedded in GitHub SVG components; compact WebP files serve the website. The same illustrations and dividers are used by the daily metric renderer without changing saved numbers, provenance or timestamps. Sanitized generation task IDs, prompts and hashes are stored in assets/components/icons/provenance.json. Historical widget artwork remains in assets/widgets/.

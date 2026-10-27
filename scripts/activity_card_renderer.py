@@ -15,7 +15,7 @@ import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from rainbow_visuals import spectral_defs, spectrum_rule
-from studio_art import illustration
+from handpainted_icons import painted_icon, brush_divider
 
 NS = {'svg': 'http://www.w3.org/2000/svg'}
 SCHEMA = 'rainbow.activity-card/v1'
@@ -327,8 +327,8 @@ def render_card(saved, theme='dark'):
     en = {'base':'Public profile totals', 'languages':'Languages · public non-fork',
           'habits':'Activity rhythm · UTC+8', 'wakatime':'Coding time · WakaTime',
           'streak':'Contribution days'}.get(kind, en)
-    motif = {'base':'robot', 'languages':'brushes', 'habits':'plane', 'wakatime':'hourglass',
-             'streak':'plane', 'calendar':'robot', 'activity':'brushes'}[kind]
+    motif = {'base':'github', 'languages':'toolbox', 'habits':'sun', 'wakatime':'system',
+             'streak':'activity', 'calendar':'calendar', 'activity':'notebook'}[kind]
     content = renderer(data, p)
     if kind not in ('calendar',):
         # The title is split into two readable lines; its old subtitle is redundant.
@@ -349,12 +349,12 @@ def render_card(saved, theme='dark'):
               f'<metadata id="activity-snapshot">{esc(metadata)}</metadata><style>{style}</style>'
               + spectral_defs()
               + f'<rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="22" fill="{p["surface"]}" stroke="{p["track"]}" stroke-opacity=".5"/>'
-              + f'<path d="M25 83q110 -8 {width-150} 0" fill="none" stroke="{p["track"]}" stroke-width=".8" stroke-dasharray="2 5"/>'
-              + illustration(motif+'.png', width-133, 7, 113, 94)
+              + brush_divider(22, 78, width-44, 12)
+              + painted_icon(motif, width-100, 4, 84)
               + text(28, 42, zh, 26, 'ink', 650)
               + text(29, 65, en, 14, 'muted', 400)
               + content
-              + (spectrum_rule(28, height-51, 45, opacity=.65, height=2) if width == 480 else '')
+              + (brush_divider(26, height-61, 88, 16) if width == 480 else '')
               + _footer(saved, width, height) + '</svg>\n')
     ET.fromstring(result)
     return result

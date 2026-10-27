@@ -26,7 +26,7 @@ function updateProjectButtons(){
  qa('details').forEach(p=>{const label=p.querySelector('.disclosure-label');if(label)label.textContent=p.open?tr('收起','Collapse'):tr('展开','Expand')});
  projects.forEach(p=>{const label=p.querySelector('.expand-label');if(label)label.textContent=p.open?tr('收起','Collapse'):tr('展开','Explore')});
  const all=projects.every(p=>p.open);
- expandButton.textContent=(all?tr('收起全部介绍','Collapse all details'):tr('展开全部介绍','Expand all details'))+(all?' −':' ＋');
+ expandButton.textContent=all?tr('收起全部介绍','Collapse all details'):tr('展开全部介绍','Expand all details');
  expandButton.setAttribute('aria-expanded',String(all));
 }
 function updateStatus(){
@@ -52,7 +52,7 @@ function updateStatus(){
 function updateMotionLabels(){
  root.dataset.motion=paused?'paused':'running';
  motionButton.setAttribute('aria-pressed',String(paused));
- motionButton.querySelector('.motion-icon').textContent=paused?'▶':'Ⅱ';
+ motionButton.querySelector('.motion-icon').textContent='';
  motionButton.querySelector('.motion-label').textContent=paused?tr('开启动效','Enable motion'):tr('暂停动效','Pause motion');
  motionButton.setAttribute('aria-label',paused?tr('开启首页与贡献动画','Enable hero and contribution animation'):tr('暂停首页与贡献动画','Pause hero and contribution animation'));
 }

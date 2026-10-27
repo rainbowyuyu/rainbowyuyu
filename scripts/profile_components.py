@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape
 import base64,json,re
+from handpainted_icons import TOOL_ICONS, painted_icon, brush_divider
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'assets/components'
@@ -58,11 +59,11 @@ def project_card(p,lang,theme,mobile=False):
   y=463 if len(lines(title,26 if lang=='en' else 19))==1 else 495
   for i,line in enumerate(lines(subtitle,35 if lang=='en' else 19)):body+=text(36,y+i*36,line,28,muted)
   body+=f'<rect x="36" y="600" width="264" height="54" rx="27" fill="{accent}"/>'+text(58,636,'Explore / fold' if lang=='en' else '展开项目介绍',26,db if dark else '#ffffff',600)
-  body+=f'<path d="M269 618l8 9-8 9" stroke="{db if dark else "#fff"}" stroke-width="2" fill="none"/>'
+  body+=painted_icon("expand",263,611,34)
   body+=text(328,635,('Private source' if not p['repo'] else 'Open source') if lang=='en' else ('源码私有' if not p['repo'] else '开源项目'),24,muted)
   return svg(640,690,title+' — '+subtitle,body)
  body=f'<rect x="1" y="1" width="1198" height="478" rx="30" fill="{db if dark else bg}"/>'
- body+=f'<path d="M35 50Q115 39 188 48" fill="none" stroke="{accent}" stroke-width="6" stroke-linecap="round" opacity=".5"/>'
+ body+=brush_divider(35,35,170,23)
  body+=f'<rect x="46" y="80" width="56" height="56" rx="15" fill="{("#39434a" if dark else "#ffffff")}"/>'+logo(p['slug'],52,86,44)
  body+=text(120,118,p['tag'].replace(' × ',' / ').title(),20,muted,500)
  for i,line in enumerate(lines(title,30 if lang=='en' else 22)):
@@ -71,40 +72,33 @@ def project_card(p,lang,theme,mobile=False):
  for i,line in enumerate(lines(subtitle,43 if lang=='en' else 23)):body+=text(48,y+i*33,line,25,muted)
  label='Explore / fold' if lang=='en' else '展开项目介绍'
  body+=f'<rect x="46" y="382" width="212" height="54" rx="27" fill="{accent}"/>'+text(68,416,label,20,db if dark else '#ffffff',600)
- body+=f'<path d="m224 401 7 8-7 8" fill="none" stroke="{db if dark else "#fff"}" stroke-width="2"/>'
+ body+=painted_icon("expand",220,396,29)
  body+=text(284,415,('Private source' if not p['repo'] else 'Open source') if lang=='en' else ('源码私有' if not p['repo'] else '开源项目'),18,muted)
  body+=art(p['slug'],665,32,510,408)
  return svg(1200,480,title+' — '+subtitle,body)
 
 def skill_card(s,lang,theme,mobile=False):
  dark=theme=='dark';ink='#edf2ed' if dark else '#243a42';muted='#b9c6c7' if dark else '#52666c';bg='#202b30' if dark else '#f4f0e5'
- if mobile:
-  body=f'<rect width="640" height="510" rx="28" fill="{bg}"/>'+art(s['art'],195,18,250,180)
-  body+=text(34,246,s['en'] if lang=='en' else s['zh'],36,ink,650)
-  for i,line in enumerate(lines(s['en_desc'] if lang=='en' else s['desc'],41 if lang=='en' else 21)):body+=text(34,287+i*33,line,25,muted)
-  x=34;y=358
-  for tool in s['tools']:
-   width=len(tool)*13+34
-   if x+width>610:x=34;y+=59
-   body+=f'<rect x="{x}" y="{y}" width="{width}" height="46" rx="23" fill="{("#31413f" if dark else "#e4eadf")}"/>'+text(x+17,y+31,tool,24,ink,500)
-   x+=width+12
-  return svg(640,510,s['en'] if lang=='en' else s['zh'],body)
- body=f'<rect width="1120" height="238" rx="26" fill="{bg}"/>'+art(s['art'],24,24,200,184)
- body+=text(248,62,s['en'] if lang=='en' else s['zh'],32,ink,650)
- body+=text(250,99,s['en_desc'] if lang=='en' else s['desc'],21,muted)
- x=248;y=126
- for tool in s['tools']:
-  width=len(tool)*11+32
-  if x+width>1090:x=248;y+=47
-  body+=f'<rect x="{x}" y="{y}" width="{width}" height="36" rx="18" fill="{("#31413f" if dark else "#e4eadf")}"/>'+text(x+16,y+25,tool,19,ink,500)
-  x+=width+10
- return svg(1120,238,s['en'] if lang=='en' else s['zh'],body)
+ w,h=(640,688) if mobile else (1120,352);cols=3 if mobile else len(s['tools']);step=(w-56)/cols
+ body=f'<rect width="{w}" height="{h}" rx="28" fill="{bg}"/>'
+ body+=text(32,55,s['en'] if lang=='en' else s['zh'],34 if mobile else 32,ink,650)
+ for i,line in enumerate(lines(s['en_desc'] if lang=='en' else s['desc'],42 if mobile and lang=='en' else 23 if mobile else 90)):
+  body+=text(32,96+i*30,line,25 if mobile else 22,muted)
+ body+=brush_divider(30,134 if mobile else 109,w-60,24)
+ for i,tool in enumerate(s['tools']):
+  x=28+(i%cols)*step;y=(170 if mobile else 145)+(i//cols)*235;size=144 if mobile else 124;cx=x+step/2
+  body+=painted_icon(TOOL_ICONS[tool],cx-size/2,y,size)
+  names=tool.split(' / ') if ' / ' in tool else tool.split(' ') if mobile and tool=='After Effects' else [tool]
+  for j,name in enumerate(names):
+   body+=text(cx,y+size+32+j*31,name,28 if mobile else 23,ink,550).replace('<text ','<text text-anchor="middle" ',1)
+ return svg(w,h,(s['en'] if lang=='en' else s['zh'])+' · '+', '.join(s['tools']),body)
 
 def button(label,theme,accent='#287b70',width=198,icon='arrow'):
- dark=theme=='dark';bg='#293a37' if dark else '#e7eee6';ink='#dcebe2' if dark else '#285e52';line='#9bd5c1' if dark else accent
- glyph={'arrow':'M19 34 34 19M20 19h14v14','code':'m23 20-9 9 9 9m12-18 9 9-9 9','book':'M16 18h22v23H19q-5-1-3-6V18m0 17h22','play':'m20 17 18 12-18 12Z','leaf':'M18 39Q12 15 40 16Q42 39 18 39Zm0 0 17-17'}.get(icon,'M19 34 34 19M20 19h14v14')
- body=f'<rect x="1" y="1" width="{width-2}" height="56" rx="28" fill="{bg}"/><circle cx="29" cy="29" r="23" fill="{("#3d514a" if dark else "#d7e5d8")}"/><path d="{glyph}" fill="none" stroke="{line}" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>'+text(61,35,label,17,ink,600)
- return svg(width,58,label,body)
+ dark=theme=='dark';bg='#24332f' if dark else '#edf0e7';ink='#dcebe2' if dark else '#285e52'
+ name={'arrow':'compass','code':'github','book':'notebook','play':'film','leaf':'fish','tools':'toolbox','archive':'archive','status':'activity'}.get(icon,icon)
+ body=f'<rect x="4" y="3" width="{width-8}" height="130" rx="23" fill="{bg}"/>'+painted_icon(name,width/2-36,10,72)
+ body+=text(width/2,110,label,20,ink,600).replace('<text ','<text text-anchor="middle" ',1)
+ return svg(width,140,label,body)
 
 def generate():
  OUT.mkdir(exist_ok=True)
