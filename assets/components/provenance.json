@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-28",
+  "purpose": "Original conceptual illustrations for project and skill components, not screenshots or research results.",
+  "records": [
+    {
+      "model": "qwen-image-3.0-pro",
+      "taskId": "28e2cee7-98d4-4db0-a0de-cddd46a0aabe",
+      "state": "SUCCEEDED",
+      "prompt": "为rainbow鱼的科研与创作个人网站绘制一套精美的手绘水彩动画电影风小场景，参考图的纸质笔触、柔和颜料和温暖氛围。只绘制物品与场景，不画文字、字母、数字、Logo、水印，不画人物，不画UI面板。2列2行四个独立插画，严格分别居中于各自象限，四周至少15%留白，中间宽大空隙，所有主体完整不裁切。背景均匀纯白#ffffff，图中可有淡淡局部落地阴影，不要背景大色块，不要边框，方便后期抠成透明插画。精细铅笔轮廓，丰富柔和水彩，童话书页上的真实物件，非3D塑料图标。左上：一个微型海上风电场，三台优雅风机置于卷起的淡蓝水流波纹上，蓝青色，象征物理风场预测。右上：金黄铜色的小机器人和齿轮围绕精细的折纸机械构件，用细线连接成一个工作台，暖金棕色，象征工程智能体工坊。左下：一本翻开的数学书，书页升起一个紫罗兰色透明几何球、正弦曲线和几何尺，淡紫蓝色，象征数学可视化。右下：一座蓝色轻量网格拱桥模型旁放着卡尺与铅笔，精致工程草图质感，湖蓝色，象征计算设计与结构优化。"
+    },
+    {
+      "model": "qwen-image-3.0-pro",
+      "taskId": "837da079-5f39-4947-929c-1b77b138fd20",
+      "state": "SUCCEEDED",
+      "prompt": "为rainbow鱼的科研与创作个人网站绘制一套精美的手绘水彩动画电影风小场景，参考图的纸质笔触、柔和颜料和温暖氛围。只绘制物品与场景，不画文字、字母、数字、Logo、水印，不画人物，不画UI面板。2列2行四个独立插画，严格分别居中于各自象限，四周至少15%留白，中间宽大空隙，所有主体完整不裁切。背景均匀纯白#ffffff，图中可有淡淡局部落地阴影，不要背景大色块，不要边框，方便后期抠成透明插画。精细铅笔轮廓，丰富柔和水彩，童话书页上的真实物件，非3D塑料图标。左上：一卷柔软的电影胶片从古老的黄铜小脑袋机器人穿过，转变为纸折的小卫星，暖橘金色，象征AI进化的影像故事。右上：小型老式电影摄影机旁是望远镜、棱镜与小星球，带一小道柔和彩虹，青绿珊瑚配色，象征科学电影工作台。左下：翡翠绿的积木式树结构与轨道上的几何小球从打开的书中升起，三维透视但手绘纸张质地，绿色，象征算法教学动画组件。右下：一本奶白的随身手记，夹着彩色书签，旁放三支青绿金黄紫色画笔和一片叶子，温暖彩虹色，象征个人技能与持续学习。"
+    }
+  ],
+  "files": {
+    "ai-engineer.png": "739f57dcbb5373f8900c10acdc2603e3a650c367fd2a860fcdb608825ddd15a3",
+    "ai-engineer.webp": "d764fa492665c0f7f8827d24dde25cef5e509763897e10b61e6d011335707ff3",
+    "ai-revolution.png": "3f69a1552d6e125804d52ef70a96facb981075f5bf4ffd4fa4f3258de0022019",
+    "ai-revolution.webp": "23a44e0dbf64dcaa0a00aa50cc6a2360171f887656ae428cba12d3d4f2f20248",
+    "manim.png": "8999c2683a317b627cfc5eaa27204c91646b9d913bac95b530715b85367c5b72",
+    "manim.webp": "c0e5e03e806af004b7620edd9c5f6fe64603ba0f92327da05c2437c3400a31fc",
+    "notebook.png": "72beb94a68ef26931c002ce63e3f20f647250428780371c1c03d82927bd1e163",
+    "notebook.webp": "c0799a64614e6756d4f995b9fb386ac9d9914acfa1076407dd82ce7072f93b5e",
+    "omniforge.png": "3974225aeb0a05dc848e0bc29d1a1256909fe850596a4744b2f35bd11cee0319",
+    "omniforge.webp": "26e9557ea442442360832cb7f4e5673b02df214d344d7c779282f30b2ad54198",
+    "physcast.png": "6866b0b9e1112b7670457e007fb886a98dc72a4012b55826b0ef7da2e12bd4fb",
+    "physcast.webp": "cc9d56d5eb36540ff6421ee368e770d3f15ae8116b247deca65d6815024e0c2e",
+    "science-studio.png": "ac825435eb4a702d75c71f6dade978c04565d7fbcf7ceaf2019bf0bd68162dc7",
+    "science-studio.webp": "435969603af92f36c325eb931051bbd9b11df8052876d157bcfc3f4784aa2181",
+    "wiscomper.png": "f52460c17aff41511b48a1e27b1356a37723fa540baee6305c871bd3e61a5c67",
+    "wiscomper.webp": "36e170b420315ceb2add5a4e3ba33bc11dcf06484c7ea17343307b5c61c388bf"
+  }
+}

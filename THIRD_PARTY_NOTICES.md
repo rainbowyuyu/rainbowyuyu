@@ -36,3 +36,11 @@ The 2026-10-27 paired-theme restyle applies colour-role, contrast and visual-rev
 - https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/skills/taste-skill/references/colour.md
 
 This is design guidance, not a copied component or template. No Taste Skill runtime code is shipped. The theme-aware artwork and generators are original adaptations for this profile; original project logos, supplied project compositions and credited widgets retain their respective provenance.
+
+## Rainbow Fieldnotes components — 2026-10-28
+
+The active website and bilingual GitHub profile now share an original hand-painted component system. Eight new conceptual illustrations were made with Qwen Image 3.0 Pro through official DashScope, using only the approved public hero illustration as a style reference. They depict the user's research and creative themes, not measurements or project outcomes. Sanitized task IDs, prompts and file hashes are recorded in assets/components/provenance.json.
+
+Project cards preserve original project logos and distinct brand colours. Desktop and mobile layouts, tool shelves, disclosure controls and link buttons are generated locally by scripts/profile_components.py and scripts/generate_readme.py. See COMPONENTS.md for the component contract. Existing statistics, timestamps, daily workflows, project source covers and original icon files remain available. Redundant typing/separator decorations and duplicate navigation are no longer part of the active layout.
+
+The previous React Bits Aurora shader is no longer executed by the current site. Its existing license and historical attribution remain in the repository. GitHub's native details and picture elements provide folding and theme-responsive artwork; no third-party JavaScript widget is added by this component update.

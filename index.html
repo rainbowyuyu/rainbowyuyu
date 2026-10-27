@@ -4,13 +4,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#151b20" name="theme-color"/>
+<meta content="#182126" name="theme-color"/>
 <meta content="dark light" name="color-scheme"/>
 <meta content="rainbow鱼，浙江大学博士。探索物理 AI、工程智能体与科学可视化。" name="description"/>
 <meta content="rainbow鱼 · 浙江大学博士" property="og:title"/>
 <meta content="把好奇心，做成看得见的作品。" property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://rainbowyuyu.github.io/rainbowyuyu/assets/showcase/hero-atlas.webp" property="og:image"/>
+<meta content="https://rainbowyuyu.github.io/rainbowyuyu/assets/profile/studio/hero-light.jpg" property="og:image"/>
 <title>
    rainbow鱼 · 浙江大学博士 | Research. Build. Create.
   </title>
@@ -23,11 +23,11 @@
   const theme = preference === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
   document.documentElement.dataset.themePreference = preference;
   document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#151b20' : '#f6f8fa';
+  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#182126' : '#faf8f2';
 })();
 </script>
-<link href="styles.css" rel="stylesheet"/>
-<script defer="" src="script.js">
+<link href="styles.css?v=fieldnotes-v7" rel="stylesheet"/>
+<script defer="" src="script.js?v=fieldnotes-v7">
 </script>
 </head>
 <body>
@@ -44,29 +44,8 @@
 <img alt="" height="34" src="assets/profile/rainbow-logo.svg" width="34"/>
 <span>rainbow<span class="brand-fish">鱼</span></span>
 </a>
-<nav aria-label="主导航" class="site-nav" data-label-en="Main navigation" data-label-zh="主导航">
-<a href="#projects">
-<span data-en="Work" data-zh="作品">
-       作品
-      </span>
-</a>
-<a href="#activity">
-<span data-en="Activity" data-zh="动态">
-       动态
-      </span>
-</a>
-<a href="#about">
-<span data-en="About" data-zh="关于">
-       关于
-      </span>
-</a>
-<a href="#contact">
-<span data-en="Connect" data-zh="联系">
-       联系
-      </span>
-</a>
-</nav>
-<div class="header-controls">
+<nav aria-label="主导航" class="site-nav" data-label-en="Main navigation" data-label-zh="主导航"><a href="#projects"><span data-en="Projects" data-zh="作品">作品</span></a><a href="#toolbox"><span data-en="Toolkit" data-zh="技能">技能</span></a><a href="#activity"><span data-en="Activity" data-zh="日常">日常</span></a><a href="#about"><span data-en="About" data-zh="关于">关于</span></a></nav>
+<div class="header-actions">
 <button aria-label="快捷导航" class="icon-button search-trigger" data-label-en="Quick navigation" data-label-zh="快捷导航" hidden="" type="button">
 <svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24" width="18">
 <circle cx="10.5" cy="10.5" r="6.5">
@@ -100,22 +79,13 @@
 </button>
 </div>
 </div>
-<button aria-label="Switch to English" class="language-button" hidden="" id="language-toggle" type="button">
+<button aria-label="Switch to English" class="icon-button language-button" hidden="" id="language-toggle" type="button">
       EN
      </button>
 </div>
 </div>
 </header>
-<main id="main">
-<section aria-labelledby="hero-title" class="hero" id="top">
-<div aria-hidden="true" class="aurora-stage">
-<div class="aurora-fallback">
-</div>
-<canvas id="aurora-canvas">
-</canvas>
-<div class="hero-grain">
-</div>
-</div>
+<main id="main"><section aria-labelledby="hero-title" class="hero" id="top">
 <div class="hero-content wrap">
 <div class="hero-topline">
 <p class="university-badge">
@@ -128,14 +98,8 @@
         浙江大学博士
        </span>
 </p>
-<p class="hero-coordinate">
-       CHINA ·
-       <span class="local-clock">
-        UTC +08:00
-       </span>
-</p>
 </div><div class="studio-hero"><div class="studio-copy"><div class="hero-heading">
-<h1 id="hero-title">rainbow<span class="hero-fish">鱼</span><span class="title-dot">.</span></h1>
+<h1 aria-label="rainbow鱼" id="hero-title">rainbow<span class="hero-fish">鱼</span><span class="title-dot">.</span></h1>
 </div><div class="hero-story">
 <h2>
 <span data-en="AI for the physical world." data-zh="让 AI 理解物理，">
@@ -156,7 +120,7 @@
 <span data-en="Explore my work" data-zh="探索我的作品">
           探索我的作品
          </span>
-<span aria-hidden="true" class="arrow">
+<span aria-hidden="true" class="button-arrow">
           ↗
          </span>
 </a>
@@ -164,7 +128,7 @@
 <span data-en="GitHub" data-zh="GitHub">
           GitHub
          </span>
-<span aria-hidden="true" class="arrow">
+<span aria-hidden="true" class="button-arrow">
           ↗
          </span>
 </a>
@@ -172,38 +136,6 @@
 </div></div><figure class="studio-scene">
 <picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/profile/studio/scene-dark.webp"/><img alt="彩虹、棱镜和科学故事中的手绘小世界" data-alt-en="An illustrated world of rainbows, prisms and scientific curiosity" data-alt-zh="彩虹、棱镜和科学故事中的手绘小世界" data-dark-src="assets/profile/studio/scene-dark.webp" data-light-src="assets/profile/studio/scene-light.webp" decoding="async" fetchpriority="high" height="960" src="assets/profile/studio/scene-light.webp" width="1140"/></picture>
 <svg aria-hidden="true" class="studio-sparkles" viewbox="0 0 600 500"><path class="spark one" d="M38 95q2 10 12 12q-10 2-12 12q-2-10-12-12q10-2 12-12Z"></path><path class="spark two" d="M520 185q2 8 10 10q-8 2-10 10q-2-8-10-10q8-2 10-10Z"></path><path class="spark three" d="M412 22q2 7 9 9q-7 2-9 9q-2-7-9-9q7-2 9-9Z"></path></svg></figure></div>
-
-<div aria-label="精选项目预览" class="hero-showcase" data-label-en="Selected project previews" data-label-zh="精选项目预览">
-<a class="hero-tile tile-physics" href="#physcast">
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/physcast.webp"/><img alt="PhysCast" data-dark-src="assets/showcase/physcast.webp" data-light-src="assets/showcase/physcast-light.webp" height="800" loading="lazy" src="assets/showcase/physcast-light.webp" width="1600"/></picture>
-<span>
-PhysCast
-         <i>
-          ↗
-         </i>
-</span>
-</a>
-<a class="hero-tile tile-agent" href="#omniforge">
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/omniforge.webp"/><img alt="OmniForge" data-dark-src="assets/showcase/omniforge.webp" data-light-src="assets/showcase/omniforge-light.webp" height="800" loading="lazy" src="assets/showcase/omniforge-light.webp" width="1600"/></picture>
-<span>
-OmniForge
-         <i>
-          ↗
-         </i>
-</span>
-</a>
-<a class="hero-tile tile-visual" href="#wiscomper">
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/wiscomper.webp"/><img alt="Wiscomper" data-dark-src="assets/showcase/wiscomper.webp" data-light-src="assets/showcase/wiscomper-light.webp" height="800" loading="lazy" src="assets/showcase/wiscomper-light.webp" width="1600"/></picture>
-<span>
-Wiscomper
-         <i>
-          ↗
-         </i>
-</span>
-</a>
-<div aria-hidden="true" class="hero-orbit">
-</div>
-</div>
 <div class="hero-bottom">
 <a class="scroll-link" href="#projects">
 <span class="scroll-disc">
@@ -213,18 +145,7 @@ Wiscomper
         向下发现更多
        </span>
 </a>
-<div class="hero-topics">
-<a href="#physcast">
-        PHYSICAL AI
-       </a>
-<a href="#omniforge">
-        ENGINEERING AGENTS
-       </a>
-<a href="#wiscomper">
-        VISUAL LEARNING
-       </a>
-</div>
-<button aria-pressed="false" hidden="" id="motion-toggle" type="button">
+<button aria-pressed="false" class="motion-toggle" hidden="" id="motion-toggle" type="button">
 <span class="motion-icon">
         Ⅱ
        </span>
@@ -236,95 +157,7 @@ Wiscomper
 </button>
 </div>
 </div>
-</section>
-<section aria-labelledby="projects-title" class="section projects-section wrap" id="projects">
-<div class="section-heading">
-<div>
-<h2 id="projects-title">
-<span data-en="From an idea&lt;br&gt;to something real." data-zh="从想法，到作品。">
-        从想法，到作品。
-       </span>
-</h2>
-</div>
-<div class="section-aside">
-<p>
-<span data-en="Distinct projects. Connected questions.&lt;br&gt;Physics, engineering, and ways of understanding." data-zh="各自独立，又彼此连接。&lt;br&gt;关于物理、工程，以及知识的表达。">
-        各自独立，又彼此连接。
-        <br/>
-        关于物理、工程，以及知识的表达。
-       </span>
-</p>
-<div class="project-toolbar">
-<span class="project-count" data-en="7 selected projects" data-zh="7 个精选项目">7 个精选项目</span>
-<button aria-controls="project-list" hidden="" id="expand-projects" type="button">
-<span data-en="Expand all details" data-zh="展开全部介绍">
-         展开全部介绍
-        </span>
-        ＋
-       </button>
-</div>
-</div>
-</div>
-<div class="project-list" id="project-list">
-<article aria-labelledby="title-physcast" class="project-row project-physcast" id="physcast">
-<div class="project-visual">
-<a aria-label="查看 physcast 完整封面" class="artwork-link" data-dark-href="assets/showcase/physcast.webp" data-label-en="View full physcast artwork" data-label-zh="查看 physcast 完整封面" data-light-href="assets/showcase/physcast-light.webp" href="assets/showcase/physcast-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/physcast.webp"/><img alt="physcast project artwork" class="project-cover" data-alt-en="physcast project artwork" data-alt-zh="physcast 项目封面" data-dark-src="assets/showcase/physcast.webp" data-light-src="assets/showcase/physcast-light.webp" decoding="async" height="800" loading="lazy" src="assets/showcase/physcast-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span class="cover-label">
-<span data-en="PHYSICAL AI · RESEARCH" data-zh="物理 AI · 研究平台">
-         物理 AI · 研究平台
-        </span>
-</span>
-</div>
-<div class="project-copy">
-<h3 id="title-physcast">
-<span data-en="PhysCast" data-zh="PhysCast">
-         PhysCast
-        </span>
-</h3>
-<div class="project-kicker">
-<img alt="" height="40" loading="lazy" src="assets/projects/physcast.svg" width="40"/>
-<span>
-<span data-en="PHYSICAL AI · RESEARCH" data-zh="物理 AI · 研究平台">
-          物理 AI · 研究平台
-         </span>
-</span>
-</div>
-<p class="project-oneline">
-<span data-en="Exploring physics-grounded wind forecasting from sparse observations." data-zh="从稀疏观测出发，探索有物理依据的风场预测。">
-         从稀疏观测出发，探索有物理依据的风场预测。
-        </span>
-</p>
-<div class="tags">
-<span>
-         Python
-        </span>
-<span>
-         PyTorch
-        </span>
-<span>
-         OpenFAST / FAST.Farm
-        </span>
-</div>
-<div class="project-actions">
-<span class="private-note">
-<span data-en="Private source" data-zh="源码私有">
-          源码私有
-         </span>
-</span>
-</div>
-<details class="project-details">
-<summary>
-<span data-en="Behind the project" data-zh="项目介绍">
-          项目介绍
-         </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="project-detail-body">
-<p class="project-status">
-<span data-en="Research in progress · Private source" data-zh="持续研究 · 源码私有">
-           持续研究 · 源码私有
-          </span>
-</p>
+</section><section aria-labelledby="projects-title" class="section wrap" id="projects"><div class="section-heading"><h2 id="projects-title"><span data-en="Ideas, made tangible." data-zh="在好奇心里，动手。">在好奇心里，动手。</span></h2><p data-en="From physics research to visual stories, each project has a colour of its own." data-zh="从物理研究到科学影像，每一页都有自己的颜色。">从物理研究到科学影像，每一页都有自己的颜色。</p></div><div class="collection-actions"><p data-en="Seven research &amp; creative projects" data-zh="7 个研究与创作项目">7 个研究与创作项目</p><button class="text-button" hidden="" id="expand-projects" type="button">展开全部介绍 ＋</button></div><div class="project-list"><article aria-labelledby="title-physcast" class="project-row project-physcast" id="physcast"><details class="project-details"><summary class="folio-summary"><div class="folio-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/physcast.webp" width="580"/></div><div class="folio-copy"><div class="folio-brand"><img alt="" height="42" src="assets/projects/physcast.svg" width="42"/><span class="project-state" data-en="Research in progress · private source" data-zh="研究中 · 源码私有">研究中 · 源码私有</span></div><h3 id="title-physcast"><span data-en="PhysCast" data-zh="PhysCast">PhysCast</span></h3><p class="folio-subtitle" data-en="Generative wind forecasting, grounded in physics" data-zh="物理约束的生成式风场预测">物理约束的生成式风场预测</p><span class="folio-opener"><span data-en="Explore this project" data-zh="打开这一页">打开这一页</span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></span></div></summary><div class="folio-expanded"><div class="project-detail-body">
 <p>
 <span data-en="Connecting physical simulation, generative forecasting and independent validation to study wind-field responses to control interventions. Reliability and uncertainty matter as much as the prediction." data-zh="围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。">
            围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。
@@ -352,69 +185,7 @@ Wiscomper
            </span>
 </li>
 </ol>
-</div>
-</details>
-</div>
-</article>
-<article aria-labelledby="title-omniforge" class="project-row project-omniforge" id="omniforge">
-<div class="project-visual">
-<a aria-label="查看 omniforge 完整封面" class="artwork-link" data-dark-href="assets/showcase/omniforge.webp" data-label-en="View full omniforge artwork" data-label-zh="查看 omniforge 完整封面" data-light-href="assets/showcase/omniforge-light.webp" href="assets/showcase/omniforge-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/omniforge.webp"/><img alt="omniforge project artwork" class="project-cover" data-alt-en="omniforge project artwork" data-alt-zh="omniforge 项目封面" data-dark-src="assets/showcase/omniforge.webp" data-light-src="assets/showcase/omniforge-light.webp" decoding="async" height="800" loading="lazy" src="assets/showcase/omniforge-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span class="cover-label">
-<span data-en="ENGINEERING AGENTS · TOOLS" data-zh="工程智能体 · 工具构建">
-         工程智能体 · 工具构建
-        </span>
-</span>
-</div>
-<div class="project-copy">
-<h3 id="title-omniforge">
-<span data-en="OmniForge" data-zh="OmniForge · 万象工坊">
-         OmniForge · 万象工坊
-        </span>
-</h3>
-<div class="project-kicker">
-<img alt="" height="40" loading="lazy" src="assets/projects/omniforge.svg" width="40"/>
-<span>
-<span data-en="ENGINEERING AGENTS · TOOLS" data-zh="工程智能体 · 工具构建">
-          工程智能体 · 工具构建
-         </span>
-</span>
-</div>
-<p class="project-oneline">
-<span data-en="Turning engineering intent into work that can be inspected, iterated and delivered." data-zh="把工程意图转化为可以检查、迭代和交付的工作。">
-         把工程意图转化为可以检查、迭代和交付的工作。
-        </span>
-</p>
-<div class="tags">
-<span>
-         Adaptive Agents
-        </span>
-<span>
-         FEM
-        </span>
-<span>
-         Topology Optimization
-        </span>
-</div>
-<div class="project-actions">
-<span class="private-note">
-<span data-en="Private source" data-zh="源码私有">
-          源码私有
-         </span>
-</span>
-</div>
-<details class="project-details">
-<summary>
-<span data-en="Behind the project" data-zh="项目介绍">
-          项目介绍
-         </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="project-detail-body">
-<p class="project-status">
-<span data-en="In development · Private source" data-zh="开发中 · 源码私有">
-           开发中 · 源码私有
-          </span>
-</p>
+</div><div class="folio-meta"><div class="tool-chips"><span>Python</span><span>PyTorch</span><span>OpenFAST / FAST.Farm</span></div><div class="project-actions"><a class="text-button" data-dark-href="assets/showcase/physcast.webp" data-light-href="assets/showcase/physcast-light.webp" href="assets/showcase/physcast-light.webp" rel="noopener" target="_blank"><span data-en="Original project artwork" data-zh="原始项目封面">原始项目封面</span> ↗</a></div></div></div></details></article><article aria-labelledby="title-omniforge" class="project-row project-omniforge" id="omniforge"><details class="project-details"><summary class="folio-summary"><div class="folio-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/omniforge.webp" width="580"/></div><div class="folio-copy"><div class="folio-brand"><img alt="" height="42" src="assets/projects/omniforge.svg" width="42"/><span class="project-state" data-en="In development · private source" data-zh="持续开发 · 源码私有">持续开发 · 源码私有</span></div><h3 id="title-omniforge"><span data-en="OmniForge" data-zh="OmniForge">OmniForge</span></h3><p class="folio-subtitle" data-en="From engineering intent to an inspectable workflow" data-zh="让工程意图，走向可检查的设计过程">让工程意图，走向可检查的设计过程</p><span class="folio-opener"><span data-en="Explore this project" data-zh="打开这一页">打开这一页</span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></span></div></summary><div class="folio-expanded"><div class="project-detail-body">
 <p>
 <span data-en="An adaptive agent and tool workbench for modeling, computation and validation. Inputs, execution traces, results and reports remain connected, making the engineering process inspectable and reusable." data-zh="围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。">
            围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。
@@ -442,76 +213,7 @@ Wiscomper
            </span>
 </li>
 </ol>
-</div>
-</details>
-</div>
-</article>
-<article aria-labelledby="title-wiscomper" class="project-row project-wiscomper" id="wiscomper">
-<div class="project-visual">
-<a aria-label="查看 wiscomper 完整封面" class="artwork-link" data-dark-href="assets/showcase/wiscomper.webp" data-label-en="View full wiscomper artwork" data-label-zh="查看 wiscomper 完整封面" data-light-href="assets/showcase/wiscomper-light.webp" href="assets/showcase/wiscomper-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/wiscomper.webp"/><img alt="wiscomper project artwork" class="project-cover" data-alt-en="wiscomper project artwork" data-alt-zh="wiscomper 项目封面" data-dark-src="assets/showcase/wiscomper.webp" data-light-src="assets/showcase/wiscomper-light.webp" decoding="async" height="800" loading="lazy" src="assets/showcase/wiscomper-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span class="cover-label">
-<span data-en="MULTIMODAL AI · VISUAL MATH" data-zh="多模态 AI · 数学可视化">
-         多模态 AI · 数学可视化
-        </span>
-</span>
-</div>
-<div class="project-copy">
-<h3 id="title-wiscomper">
-<span data-en="Wiscomper" data-zh="Wiscomper · 智算视界">
-         Wiscomper · 智算视界
-        </span>
-</h3>
-<div class="project-kicker">
-<img alt="" height="40" loading="lazy" src="assets/projects/wiscomper.png" width="40"/>
-<span>
-<span data-en="MULTIMODAL AI · VISUAL MATH" data-zh="多模态 AI · 数学可视化">
-          多模态 AI · 数学可视化
-         </span>
-</span>
-</div>
-<p class="project-oneline">
-<span data-en="From a formula to a mathematical explanation you can see." data-zh="从一道公式，到一段看得懂的数学动画。">
-         从一道公式，到一段看得懂的数学动画。
-        </span>
-</p>
-<div class="tags">
-<span>
-         Multimodal AI
-        </span>
-<span>
-         LaTeX
-        </span>
-<span>
-         Manim
-        </span>
-</div>
-<div class="project-actions">
-<a class="button button-small button-brand" href="https://www.wiscomper.com/" rel="noopener noreferrer" target="_blank">
-<span data-en="Visit Wiscomper" data-zh="打开智算视界">
-          打开智算视界
-         </span>
-         ↗
-        </a>
-<a class="button button-small" href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective" rel="noopener noreferrer" target="_blank">
-<span data-en="View source" data-zh="查看源码">
-          查看源码
-         </span>
-         ↗
-        </a>
-</div>
-<details class="project-details">
-<summary>
-<span data-en="Behind the project" data-zh="项目介绍">
-          项目介绍
-         </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="project-detail-body">
-<p class="project-status">
-<span data-en="Open source · Live website" data-zh="开源 · 在线体验">
-           开源 · 在线体验
-          </span>
-</p>
+</div><div class="folio-meta"><div class="tool-chips"><span>Adaptive Agents</span><span>FEM</span><span>Topology Optimization</span></div><div class="project-actions"><a class="text-button" data-dark-href="assets/showcase/omniforge.webp" data-light-href="assets/showcase/omniforge-light.webp" href="assets/showcase/omniforge-light.webp" rel="noopener" target="_blank"><span data-en="Original project artwork" data-zh="原始项目封面">原始项目封面</span> ↗</a></div></div></div></details></article><article aria-labelledby="title-wiscomper" class="project-row project-wiscomper" id="wiscomper"><details class="project-details"><summary class="folio-summary"><div class="folio-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/wiscomper.webp" width="580"/></div><div class="folio-copy"><div class="folio-brand"><img alt="" height="42" src="assets/projects/wiscomper.png" width="42"/><span class="project-state" data-en="Open source · live demo" data-zh="开源 · 在线体验">开源 · 在线体验</span></div><h3 id="title-wiscomper"><span data-en="Wiscomper" data-zh="Wiscomper">Wiscomper</span></h3><p class="folio-subtitle" data-en="From a formula to mathematics you can see" data-zh="从一道公式，到一段看得懂的数学动画">从一道公式，到一段看得懂的数学动画</p><span class="folio-opener"><span data-en="Explore this project" data-zh="打开这一页">打开这一页</span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></span></div></summary><div class="folio-expanded"><div class="project-detail-body">
 <p>
 <span data-en="Connecting handwritten formula recognition, LaTeX, step-by-step reasoning and Manim animation. Multimodal recognition and tool orchestration make abstract mathematical processes visible and explorable." data-zh="连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。">
            连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。
@@ -539,70 +241,7 @@ Wiscomper
            </span>
 </li>
 </ol>
-</div>
-</details>
-</div>
-</article>
-<article aria-labelledby="title-ai-engineer" class="project-row project-ai-engineer" id="ai-engineer">
-<div class="project-visual">
-<a aria-label="查看 ai-engineer 完整封面" class="artwork-link" data-dark-href="assets/showcase/ai-engineer.webp" data-label-en="View full ai-engineer artwork" data-label-zh="查看 ai-engineer 完整封面" data-light-href="assets/showcase/ai-engineer-light.webp" href="assets/showcase/ai-engineer-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-engineer.webp"/><img alt="ai-engineer project artwork" class="project-cover" data-alt-en="ai-engineer project artwork" data-alt-zh="ai-engineer 项目封面" data-dark-src="assets/showcase/ai-engineer.webp" data-light-src="assets/showcase/ai-engineer-light.webp" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-engineer-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span class="cover-label">
-<span data-en="INTELLIGENT DESIGN · COMPUTATION" data-zh="智能设计 · 工程计算">
-         智能设计 · 工程计算
-        </span>
-</span>
-</div>
-<div class="project-copy">
-<h3 id="title-ai-engineer">
-<span data-en="The AI Engineer" data-zh="The AI Engineer">
-         The AI Engineer
-        </span>
-</h3>
-<div class="project-kicker">
-<img alt="" height="40" loading="lazy" src="assets/projects/ai-engineer.svg" width="40"/>
-<span>
-<span data-en="INTELLIGENT DESIGN · COMPUTATION" data-zh="智能设计 · 工程计算">
-          智能设计 · 工程计算
-         </span>
-</span>
-</div>
-<p class="project-oneline">
-<span data-en="Connecting geometry, meshes, topology optimization and physics." data-zh="连接几何、网格、拓扑优化与物理计算。">
-         连接几何、网格、拓扑优化与物理计算。
-        </span>
-</p>
-<div class="tags">
-<span>
-         Geometry
-        </span>
-<span>
-         FEM
-        </span>
-<span>
-         Optimization
-        </span>
-</div>
-<div class="project-actions">
-<a class="button button-small" href="https://github.com/rainbowyuyu/ai_engineer" rel="noopener noreferrer" target="_blank">
-<span data-en="View source" data-zh="查看源码">
-          查看源码
-         </span>
-         ↗
-        </a>
-</div>
-<details class="project-details">
-<summary>
-<span data-en="Behind the project" data-zh="项目介绍">
-          项目介绍
-         </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="project-detail-body">
-<p class="project-status">
-<span data-en="Research code · Open source" data-zh="研究代码 · 开源">
-           研究代码 · 开源
-          </span>
-</p>
+</div><div class="folio-meta"><div class="tool-chips"><span>Multimodal AI</span><span>LaTeX</span><span>Manim</span></div><div class="project-actions"><a class="button button-primary" href="https://www.wiscomper.com/"><span data-en="Live demo" data-zh="在线体验">在线体验</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="button button-secondary" href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective"><span data-en="Source code" data-zh="查看源码">查看源码</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="text-button" data-dark-href="assets/showcase/wiscomper.webp" data-light-href="assets/showcase/wiscomper-light.webp" href="assets/showcase/wiscomper-light.webp" rel="noopener" target="_blank"><span data-en="Original project artwork" data-zh="原始项目封面">原始项目封面</span> ↗</a></div></div></div></details></article><article aria-labelledby="title-ai-engineer" class="project-row project-ai-engineer" id="ai-engineer"><details class="project-details"><summary class="folio-summary"><div class="folio-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/ai-engineer.webp" width="580"/></div><div class="folio-copy"><div class="folio-brand"><img alt="" height="42" src="assets/projects/ai-engineer.svg" width="42"/><span class="project-state" data-en="Research code · open source" data-zh="研究代码 · 开源">研究代码 · 开源</span></div><h3 id="title-ai-engineer"><span data-en="The AI Engineer" data-zh="The AI Engineer">The AI Engineer</span></h3><p class="folio-subtitle" data-en="Design. Compute. Inspect. Iterate." data-zh="设计之后，继续计算与验证">设计之后，继续计算与验证</p><span class="folio-opener"><span data-en="Explore this project" data-zh="打开这一页">打开这一页</span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></span></div></summary><div class="folio-expanded"><div class="project-detail-body">
 <p>
 <span data-en="Exploring an engineering workflow from natural-language requirements to design deliverables. Geometry processing, finite-element computation and optimization are organized around traceable evidence." data-zh="探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。">
            探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。
@@ -630,70 +269,7 @@ Wiscomper
            </span>
 </li>
 </ol>
-</div>
-</details>
-</div>
-</article>
-<article aria-labelledby="title-ai-revolution" class="project-row project-ai-revolution" id="ai-revolution">
-<div class="project-visual">
-<a aria-label="查看 ai-revolution 完整封面" class="artwork-link" data-dark-href="assets/showcase/ai-revolution.webp" data-label-en="View full ai-revolution artwork" data-label-zh="查看 ai-revolution 完整封面" data-light-href="assets/showcase/ai-revolution-light.webp" href="assets/showcase/ai-revolution-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/ai-revolution.webp"/><img alt="ai-revolution project artwork" class="project-cover" data-alt-en="ai-revolution project artwork" data-alt-zh="ai-revolution 项目封面" data-dark-src="assets/showcase/ai-revolution.webp" data-light-src="assets/showcase/ai-revolution-light.webp" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-revolution-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span class="cover-label">
-<span data-en="KNOWLEDGE · MOTION" data-zh="知识创作 · 动态演示">
-         知识创作 · 动态演示
-        </span>
-</span>
-</div>
-<div class="project-copy">
-<h3 id="title-ai-revolution">
-<span data-en="The Evolution of AI" data-zh="AI 进化史">
-         AI 进化史
-        </span>
-</h3>
-<div class="project-kicker">
-<img alt="" height="40" loading="lazy" src="assets/projects/ai-revolution.svg" width="40"/>
-<span>
-<span data-en="KNOWLEDGE · MOTION" data-zh="知识创作 · 动态演示">
-          知识创作 · 动态演示
-         </span>
-</span>
-</div>
-<p class="project-oneline">
-<span data-en="Following vision, generative models and agents through the evolution of AI." data-zh="沿着视觉、生成模型与智能体，理解 AI 如何演进。">
-         沿着视觉、生成模型与智能体，理解 AI 如何演进。
-        </span>
-</p>
-<div class="tags">
-<span>
-         AI Education
-        </span>
-<span>
-         Visual Narratives
-        </span>
-<span>
-         Experiments
-        </span>
-</div>
-<div class="project-actions">
-<a class="button button-small" href="https://github.com/rainbowyuyu/AI_revolution" rel="noopener noreferrer" target="_blank">
-<span data-en="View source" data-zh="查看源码">
-          查看源码
-         </span>
-         ↗
-        </a>
-</div>
-<details class="project-details">
-<summary>
-<span data-en="Behind the project" data-zh="项目介绍">
-          项目介绍
-         </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="project-detail-body">
-<p class="project-status">
-<span data-en="Ongoing series · Open source" data-zh="系列创作 · 开源">
-           系列创作 · 开源
-          </span>
-</p>
+</div><div class="folio-meta"><div class="tool-chips"><span>Geometry</span><span>FEM</span><span>Optimization</span></div><div class="project-actions"><a class="button button-primary" href="https://github.com/rainbowyuyu/ai_engineer"><span data-en="Open project" data-zh="查看项目">查看项目</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="text-button" data-dark-href="assets/showcase/ai-engineer.webp" data-light-href="assets/showcase/ai-engineer-light.webp" href="assets/showcase/ai-engineer-light.webp" rel="noopener" target="_blank"><span data-en="Original project artwork" data-zh="原始项目封面">原始项目封面</span> ↗</a></div></div></div></details></article><article aria-labelledby="title-ai-revolution" class="project-row project-ai-revolution" id="ai-revolution"><details class="project-details"><summary class="folio-summary"><div class="folio-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/ai-revolution.webp" width="580"/></div><div class="folio-copy"><div class="folio-brand"><img alt="" height="42" src="assets/projects/ai-revolution.svg" width="42"/><span class="project-state" data-en="Ongoing series · open source" data-zh="系列创作 · 开源">系列创作 · 开源</span></div><h3 id="title-ai-revolution"><span data-en="The Evolution of AI" data-zh="AI 进化史">AI 进化史</span></h3><p class="folio-subtitle" data-en="A visual journey through the evolution of AI" data-zh="把 AI 的演进，讲成可以看见的故事">把 AI 的演进，讲成可以看见的故事</p><span class="folio-opener"><span data-en="Explore this project" data-zh="打开这一页">打开这一页</span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></span></div></summary><div class="folio-expanded"><div class="project-detail-body">
 <p>
 <span data-en="A six-chapter route through animated explanations, visual narratives and reproducible experiments. Materials for the first five chapters are organized; further work is ongoing." data-zh="以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。">
            以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。
@@ -721,70 +297,7 @@ Wiscomper
            </span>
 </li>
 </ol>
-</div>
-</details>
-</div>
-</article>
-<article aria-labelledby="title-science-studio" class="project-row project-science-studio" id="science-studio">
-<div class="project-visual">
-<a aria-label="查看 science-studio 完整封面" class="artwork-link" data-dark-href="assets/showcase/science-studio.webp" data-label-en="View full science-studio artwork" data-label-zh="查看 science-studio 完整封面" data-light-href="assets/showcase/science-studio-light.webp" href="assets/showcase/science-studio-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/science-studio.webp"/><img alt="science-studio project artwork" class="project-cover" data-alt-en="science-studio project artwork" data-alt-zh="science-studio 项目封面" data-dark-src="assets/showcase/science-studio.webp" data-light-src="assets/showcase/science-studio-light.webp" decoding="async" height="800" loading="lazy" src="assets/showcase/science-studio-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span class="cover-label">
-<span data-en="SCIENCE STORIES · CREATIVE TOOLS" data-zh="科学叙事 · 创作工具">
-         科学叙事 · 创作工具
-        </span>
-</span>
-</div>
-<div class="project-copy">
-<h3 id="title-science-studio">
-<span data-en="rainbow鱼 Science Studio" data-zh="rainbow鱼科普工作台">
-         rainbow鱼科普工作台
-        </span>
-</h3>
-<div class="project-kicker">
-<img alt="" height="40" loading="lazy" src="assets/projects/science-studio.svg" width="40"/>
-<span>
-<span data-en="SCIENCE STORIES · CREATIVE TOOLS" data-zh="科学叙事 · 创作工具">
-          科学叙事 · 创作工具
-         </span>
-</span>
-</div>
-<p class="project-oneline">
-<span data-en="Turning questions into stories and scientific mechanisms into images." data-zh="把问题变成故事，把科学机制变成画面。">
-         把问题变成故事，把科学机制变成画面。
-        </span>
-</p>
-<div class="tags">
-<span>
-         Science Communication
-        </span>
-<span>
-         Video Tools
-        </span>
-<span>
-         Motion
-        </span>
-</div>
-<div class="project-actions">
-<a class="button button-small" href="https://github.com/rainbowyuyu/Popula_science_video" rel="noopener noreferrer" target="_blank">
-<span data-en="View source" data-zh="查看源码">
-          查看源码
-         </span>
-         ↗
-        </a>
-</div>
-<details class="project-details">
-<summary>
-<span data-en="Behind the project" data-zh="项目介绍">
-          项目介绍
-         </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="project-detail-body">
-<p class="project-status">
-<span data-en="Actively built · Open source" data-zh="持续构建 · 开源">
-           持续构建 · 开源
-          </span>
-</p>
+</div><div class="folio-meta"><div class="tool-chips"><span>AI Education</span><span>Visual Narratives</span><span>Experiments</span></div><div class="project-actions"><a class="button button-secondary" href="https://github.com/rainbowyuyu/AI_revolution"><span data-en="Source code" data-zh="查看源码">查看源码</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="text-button" data-dark-href="assets/showcase/ai-revolution.webp" data-light-href="assets/showcase/ai-revolution-light.webp" href="assets/showcase/ai-revolution-light.webp" rel="noopener" target="_blank"><span data-en="Original project artwork" data-zh="原始项目封面">原始项目封面</span> ↗</a></div></div></div></details></article><article aria-labelledby="title-science-studio" class="project-row project-science-studio" id="science-studio"><details class="project-details"><summary class="folio-summary"><div class="folio-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/science-studio.webp" width="580"/></div><div class="folio-copy"><div class="folio-brand"><img alt="" height="42" src="assets/projects/science-studio.svg" width="42"/><span class="project-state" data-en="Ongoing creation · open source" data-zh="持续创作 · 开源">持续创作 · 开源</span></div><h3 id="title-science-studio"><span data-en="rainbow鱼 · Science Studio" data-zh="rainbow鱼 · 科普工作台">rainbow鱼 · 科普工作台</span></h3><p class="folio-subtitle" data-en="Turning science questions into stories worth exploring" data-zh="把科学问题，变成值得追问的画面">把科学问题，变成值得追问的画面</p><span class="folio-opener"><span data-en="Explore this project" data-zh="打开这一页">打开这一页</span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></span></div></summary><div class="folio-expanded"><div class="project-detail-body">
 <p>
 <span data-en="A workspace for scientific imagery, AI video editing, storyboards and animation components. It brings research material and production together to explain complex knowledge clearly." data-zh="组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。">
            组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。
@@ -812,70 +325,7 @@ Wiscomper
            </span>
 </li>
 </ol>
-</div>
-</details>
-</div>
-</article>
-<article aria-labelledby="title-manim" class="project-row project-manim" id="manim">
-<div class="project-visual">
-<a aria-label="查看 manim 完整封面" class="artwork-link" data-dark-href="assets/showcase/manim.webp" data-label-en="View full manim artwork" data-label-zh="查看 manim 完整封面" data-light-href="assets/showcase/manim-light.webp" href="assets/showcase/manim-light.webp" rel="noopener noreferrer" target="_blank"><picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="assets/showcase/manim.webp"/><img alt="manim project artwork" class="project-cover" data-alt-en="manim project artwork" data-alt-zh="manim 项目封面" data-dark-src="assets/showcase/manim.webp" data-light-src="assets/showcase/manim-light.webp" decoding="async" height="800" loading="lazy" src="assets/showcase/manim-light.webp" width="1600"/></picture><span aria-hidden="true" class="artwork-expand">↗</span></a>
-<span class="cover-label">
-<span data-en="MATH ANIMATION · COMPONENTS" data-zh="数学动画 · 可复用组件">
-         数学动画 · 可复用组件
-        </span>
-</span>
-</div>
-<div class="project-copy">
-<h3 id="title-manim">
-<span data-en="Manim Extend Rainbow" data-zh="Manim Extend Rainbow">
-         Manim Extend Rainbow
-        </span>
-</h3>
-<div class="project-kicker">
-<img alt="" height="40" loading="lazy" src="assets/projects/manim.svg" width="40"/>
-<span>
-<span data-en="MATH ANIMATION · COMPONENTS" data-zh="数学动画 · 可复用组件">
-          数学动画 · 可复用组件
-         </span>
-</span>
-</div>
-<p class="project-oneline">
-<span data-en="Turning carefully crafted mathematical animation into reusable tools." data-zh="把反复打磨的数学动画，沉淀为可复用工具。">
-         把反复打磨的数学动画，沉淀为可复用工具。
-        </span>
-</p>
-<div class="tags">
-<span>
-         Python
-        </span>
-<span>
-         Manim
-        </span>
-<span>
-         Creative Coding
-        </span>
-</div>
-<div class="project-actions">
-<a class="button button-small" href="https://github.com/rainbowyuyu/manim_extend_rainbow" rel="noopener noreferrer" target="_blank">
-<span data-en="View source" data-zh="查看源码">
-          查看源码
-         </span>
-         ↗
-        </a>
-</div>
-<details class="project-details">
-<summary>
-<span data-en="Behind the project" data-zh="项目介绍">
-          项目介绍
-         </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="project-detail-body">
-<p class="project-status">
-<span data-en="Animation extensions · Open source" data-zh="动画扩展 · 开源">
-           动画扩展 · 开源
-          </span>
-</p>
+</div><div class="folio-meta"><div class="tool-chips"><span>Science Communication</span><span>Video Tools</span><span>Motion</span></div><div class="project-actions"><a class="button button-primary" href="https://space.bilibili.com/343585138"><span data-en="Open project" data-zh="查看项目">查看项目</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="button button-secondary" href="https://github.com/rainbowyuyu/Popula_science_video"><span data-en="Source code" data-zh="查看源码">查看源码</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="text-button" data-dark-href="assets/showcase/science-studio.webp" data-light-href="assets/showcase/science-studio-light.webp" href="assets/showcase/science-studio-light.webp" rel="noopener" target="_blank"><span data-en="Original project artwork" data-zh="原始项目封面">原始项目封面</span> ↗</a></div></div></div></details></article><article aria-labelledby="title-manim" class="project-row project-manim" id="manim"><details class="project-details"><summary class="folio-summary"><div class="folio-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/manim.webp" width="580"/></div><div class="folio-copy"><div class="folio-brand"><img alt="" height="42" src="assets/projects/manim.svg" width="42"/><span class="project-state" data-en="Animation components · open source" data-zh="动画组件 · 开源">动画组件 · 开源</span></div><h3 id="title-manim"><span data-en="Manim Extend Rainbow" data-zh="Manim Extend Rainbow">Manim Extend Rainbow</span></h3><p class="folio-subtitle" data-en="Giving algorithms and structures a visual language" data-zh="让算法和结构，有直观的表达">让算法和结构，有直观的表达</p><span class="folio-opener"><span data-en="Explore this project" data-zh="打开这一页">打开这一页</span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></span></div></summary><div class="folio-expanded"><div class="project-detail-body">
 <p>
 <span data-en="Manim extensions, animation components and examples for mathematics and science communication. Abstract relationships become visible motion, and each production informs the next." data-zh="为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。">
            为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。
@@ -903,167 +353,28 @@ Wiscomper
            </span>
 </li>
 </ol>
-</div>
-</details>
-</div>
-</article>
-</div>
-</section>
-<section aria-labelledby="activity-title" class="section activity-section" id="activity">
-<div class="wrap">
-<div class="section-heading">
-<div>
-<h2 id="activity-title">
-<span data-en="A little further.&lt;br&gt;Every day." data-zh="每一天，都算数。">
-         每一天，都算数。
-        </span>
-</h2>
-</div>
-<p class="section-description">
-<span data-en="A record of code, craft and curiosity.&lt;br&gt;Contributions and public activity, updated daily." data-zh="代码、创作与持续探索的轨迹。&lt;br&gt;贡献、公开活动与每日更新的记录。">
-        代码、创作与持续探索的轨迹。
-        <br/>
-        贡献、公开活动与每日更新的记录。
-       </span>
-</p>
-</div>
-<div class="activity-toolbar">
-<span class="activity-status" id="activity-status" role="status">
-<span data-en="Loading card update status…" data-zh="正在读取卡片更新时间…">
-        正在读取卡片更新时间…
-       </span>
-</span>
-<a class="text-link" href="https://github.com/rainbowyuyu?tab=overview" rel="noopener noreferrer" target="_blank">
-<span data-en="Open GitHub activity" data-zh="前往 GitHub 动态">
-        前往 GitHub 动态
-       </span>
-       ↗
-      </a>
-</div>
-<div class="contribution-scene">
-<figure class="metric-card">
-<figcaption>
-<span data-en="Contributions in three dimensions" data-zh="三维贡献图景">
-         三维贡献图景
-        </span>
-</figcaption>
-<picture><source data-motion-source="" media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-rainbow-dark.svg?v=studio-v6"/><img alt="三维贡献图景" class="animated-contribution" data-alt-en="Contributions in three dimensions" data-alt-zh="三维贡献图景" data-animated-src="profile-3d-contrib/profile-rainbow-dark.svg?v=studio-v6" data-light-src="profile-3d-contrib/profile-rainbow-light.svg?v=studio-v6" data-light-static-src="profile-3d-contrib/profile-rainbow-light-static.svg?v=studio-v6" data-static-src="profile-3d-contrib/profile-rainbow-dark-static.svg?v=studio-v6" decoding="async" loading="lazy" src="profile-3d-contrib/profile-rainbow-light.svg?v=studio-v6"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-         卡片暂不可用，等待下一次更新。
-        </span>
-</p>
-</figure>
-</div>
-<div class="snake-card">
-<figure class="metric-card">
-<figcaption>
-<span data-en="Contribution snake" data-zh="贡献贪吃蛇">
-         贡献贪吃蛇
-        </span>
-</figcaption>
-<picture><source data-motion-source="" media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img alt="贡献贪吃蛇" class="animated-contribution" data-alt-en="Contribution snake" data-alt-zh="贡献贪吃蛇" data-animated-src="profile-snake-contrib/github-contribution-grid-snake-dark.svg" data-light-src="profile-snake-contrib/github-contribution-grid-snake.svg" data-light-static-src="profile-snake-contrib/github-contribution-grid-snake-static-light.svg" data-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" decoding="async" loading="lazy" src="profile-snake-contrib/github-contribution-grid-snake.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-         卡片暂不可用，等待下一次更新。
-        </span>
-</p>
-</figure>
-</div>
-<div class="metrics-grid primary-metrics">
-<figure class="metric-card">
-<figcaption>
-<span data-en="GitHub at a glance" data-zh="GitHub 数据概览">
-         GitHub 数据概览
-        </span>
-</figcaption>
+</div><div class="folio-meta"><div class="tool-chips"><span>Python</span><span>Manim</span><span>Creative Coding</span></div><div class="project-actions"><a class="button button-primary" href="https://github.com/rainbowyuyu/manim_extend_rainbow"><span data-en="Open project" data-zh="查看项目">查看项目</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="text-button" data-dark-href="assets/showcase/manim.webp" data-light-href="assets/showcase/manim-light.webp" href="assets/showcase/manim-light.webp" rel="noopener" target="_blank"><span data-en="Original project artwork" data-zh="原始项目封面">原始项目封面</span> ↗</a></div></div></div></details></article></div></section><section aria-labelledby="toolkit-title" class="section toolkit-section wrap" id="toolbox"><div class="section-heading"><h2 id="toolkit-title"><span data-en="A toolkit for curiosity." data-zh="我的随身工具箱">我的随身工具箱</span></h2><p data-en="Tools for solving problems. Work that shows what they can do." data-zh="用工具解决问题，用作品说明能力。">用工具解决问题，用作品说明能力。</p></div><div class="tool-shelves"><article class="tool-shelf"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/physcast.webp" width="580"/><div class="tool-shelf-copy"><h3><span data-en="Research &amp; computing" data-zh="研究与计算">研究与计算</span></h3><p data-en="From observations and models to inspectable evidence." data-zh="从观测与模型，到可以检查的证据。">从观测与模型，到可以检查的证据。</p><ul class="tool-chips"><li>Python</li><li>PyTorch</li><li>MATLAB</li><li>OpenFAST / FAST.Farm</li><li>LaTeX</li></ul></div></article><article class="tool-shelf"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/omniforge.webp" width="580"/><div class="tool-shelf-copy"><h3><span data-en="Engineering &amp; building" data-zh="工程与构建">工程与构建</span></h3><p data-en="Bringing tools together to make ideas run." data-zh="让工具协作，让想法成为可运行的作品。">让工具协作，让想法成为可运行的作品。</p><ul class="tool-chips"><li>TypeScript</li><li>Three.js</li><li>Docker</li><li>Git</li><li>MySQL</li></ul></div></article><article class="tool-shelf"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/science-studio.webp" width="580"/><div class="tool-shelf-copy"><h3><span data-en="Motion &amp; storytelling" data-zh="影像与表达">影像与表达</span></h3><p data-en="Explaining complex ideas through images and motion." data-zh="用图像、动画和故事解释复杂问题。">用图像、动画和故事解释复杂问题。</p><ul class="tool-chips"><li>Manim</li><li>Blender</li><li>Photoshop</li><li>Premiere</li><li>After Effects</li></ul></div></article></div><details class="toolbox-more activity-more"><summary><span class="summary-title"><span data-en="More tools I use" data-zh="还有一些熟悉的工具">还有一些熟悉的工具</span></span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></summary><div class="drawer-content"><div class="tool-chips"><span>C</span><span>C++</span><span>Java</span><span>GitHub</span><span>Markdown</span><span>Audition</span></div><div class="legacy-tools"><img alt="Python" height="42" loading="lazy" src="assets/widgets/python.svg" width="42"/><img alt="C++" height="42" loading="lazy" src="assets/widgets/cpp.svg" width="42"/><img alt="MySQL" height="42" loading="lazy" src="assets/widgets/mysql.svg" width="42"/><img alt="Java" height="42" loading="lazy" src="assets/widgets/java.svg" width="42"/><img alt="Docker" height="42" loading="lazy" src="assets/widgets/docker.svg" width="42"/><img alt="GitHub" height="42" loading="lazy" src="assets/widgets/github.svg" width="42"/><img alt="PyTorch, C, Markdown, LaTeX, MATLAB, Photoshop, Premiere, After Effects, Audition, Git" loading="lazy" src="assets/widgets/skills.svg" width="430"/></div></div></details></section><section aria-labelledby="activity-title" class="section activity-section" id="activity"><div class="wrap"><div class="section-heading"><h2 id="activity-title"><span data-en="Small steps, every day." data-zh="让每一天，留下痕迹。">让每一天，留下痕迹。</span></h2><p data-en="Research, building and creating—one small step at a time." data-zh="研究、构建、创作，慢慢长成自己的风景。">研究、构建、创作，慢慢长成自己的风景。</p></div><p class="activity-status" id="activity-status"></p><div class="activity-dashboard"><div class="metrics-grid"><figure class="metric-card">
 <picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/base-dark.svg?v=studio-v6"/><img alt="GitHub 数据概览" data-activity-source="github-metrics/base.svg" data-alt-en="GitHub at a glance" data-alt-zh="GitHub 数据概览" data-dark-src="github-metrics/base-dark.svg?v=studio-v6" data-light-src="github-metrics/base-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/base-light.svg?v=studio-v6"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
          卡片暂不可用，等待下一次更新。
         </span>
 </p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Languages in the code" data-zh="代码中的语言">
-         代码中的语言
-        </span>
-</figcaption>
+</figure><figure class="metric-card">
 <picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/languages.indepth-dark.svg?v=studio-v6"/><img alt="代码中的语言" data-activity-source="github-metrics/languages.indepth.svg" data-alt-en="Languages in the code" data-alt-zh="代码中的语言" data-dark-src="github-metrics/languages.indepth-dark.svg?v=studio-v6" data-light-src="github-metrics/languages.indepth-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/languages.indepth-light.svg?v=studio-v6"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
          卡片暂不可用，等待下一次更新。
         </span>
 </p>
-</figure>
-</div>
-<details class="activity-more">
-<summary>
-<span data-en="More daily cards" data-zh="更多每日卡片">
-        更多每日卡片
-       </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<div class="metrics-grid">
-<figure class="metric-card">
-<figcaption>
-<span data-en="Contribution streak" data-zh="贡献连续记录">
-          贡献连续记录
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg?v=studio-v6"/><img alt="贡献连续记录" data-activity-source="github-metrics/streak.svg" data-alt-en="Contribution streak" data-alt-zh="贡献连续记录" data-dark-src="github-metrics/streak-dark.svg?v=studio-v6" data-light-src="github-metrics/streak-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/streak-light.svg?v=studio-v6"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Full-year calendar" data-zh="全年贡献日历">
-          全年贡献日历
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg?v=studio-v6"/><img alt="全年贡献日历" data-activity-source="github-metrics/calendar.full.svg" data-alt-en="Full-year calendar" data-alt-zh="全年贡献日历" data-dark-src="github-metrics/calendar.full-dark.svg?v=studio-v6" data-light-src="github-metrics/calendar.full-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/calendar.full-light.svg?v=studio-v6"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Coding habits" data-zh="编码习惯">
-          编码习惯
-         </span>
-</figcaption>
+</figure><figure class="metric-card">
 <picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/habits.charts-dark.svg?v=studio-v6"/><img alt="编码习惯" data-activity-source="github-metrics/habits.charts.svg" data-alt-en="Coding habits" data-alt-zh="编码习惯" data-dark-src="github-metrics/habits.charts-dark.svg?v=studio-v6" data-light-src="github-metrics/habits.charts-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/habits.charts-light.svg?v=studio-v6"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
           卡片暂不可用，等待下一次更新。
          </span>
 </p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Public activity · Last 30 days" data-zh="近 30 天公开活动">
-          近 30 天公开活动
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg?v=studio-v6"/><img alt="近 30 天公开活动" data-activity-source="github-metrics/activity.svg" data-alt-en="Public activity · Last 30 days" data-alt-zh="近 30 天公开活动" data-dark-src="github-metrics/activity-dark.svg?v=studio-v6" data-light-src="github-metrics/activity-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/activity-light.svg?v=studio-v6"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Coding time · WakaTime" data-zh="编码时间 · WakaTime">
-          编码时间 · WakaTime
-         </span>
-</figcaption>
+</figure><figure class="metric-card">
 <picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/wakatime-dark.svg?v=studio-v6"/><img alt="编码时间 · WakaTime" data-activity-source="github-metrics/wakatime.svg" data-alt-en="Coding time · WakaTime" data-alt-zh="编码时间 · WakaTime" data-dark-src="github-metrics/wakatime-dark.svg?v=studio-v6" data-light-src="github-metrics/wakatime-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/wakatime-light.svg?v=studio-v6"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
@@ -1075,287 +386,46 @@ Wiscomper
           基于最近 7 天的真实编码记录，具体时间以卡片及更新状态为准；更新失败时保留最近一次快照。
          </span>
 </p>
-</figure>
-</div>
-</details>
-<details class="activity-more archive-cards">
-<summary>
-<span data-en="Archived card snapshots" data-zh="历史卡片档案">
-        历史卡片档案
-       </span>
-<span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span>
-</summary>
-<p class="activity-disclaimer">
-<span data-en="These older cards are preserved as archived snapshots. They may be outdated or show past data-source errors; they do not represent live status." data-zh="保留旧版卡片作为历史快照。它们可能较旧，或显示当时的数据源错误；不代表实时状态。">
-        保留旧版卡片作为历史快照。它们可能较旧，或显示当时的数据源错误；不代表实时状态。
-       </span>
+</figure></div><div class="activity-streak"><figure class="metric-card">
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/streak-dark.svg?v=studio-v6"/><img alt="贡献连续记录" data-activity-source="github-metrics/streak.svg" data-alt-en="Contribution streak" data-alt-zh="贡献连续记录" data-dark-src="github-metrics/streak-dark.svg?v=studio-v6" data-light-src="github-metrics/streak-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/streak-light.svg?v=studio-v6"/></picture>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
 </p>
-<div class="metrics-grid">
-<p class="archive-explanation">
-<span data-en="The old achievements source returned an error; the original file remains in the repository archive." data-zh="旧里程碑卡片的数据源曾报错，原文件留存于仓库档案。">
-         旧里程碑卡片的数据源曾报错，原文件留存于仓库档案。
+</figure></div></div><div class="contribution-scene"><figure class="metric-card">
+<picture><source data-motion-source="" media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-rainbow-dark.svg?v=studio-v6"/><img alt="三维贡献图景" class="animated-contribution" data-alt-en="Contributions in three dimensions" data-alt-zh="三维贡献图景" data-animated-src="profile-3d-contrib/profile-rainbow-dark.svg?v=studio-v6" data-light-src="profile-3d-contrib/profile-rainbow-light.svg?v=studio-v6" data-light-static-src="profile-3d-contrib/profile-rainbow-light-static.svg?v=studio-v6" data-static-src="profile-3d-contrib/profile-rainbow-dark-static.svg?v=studio-v6" decoding="async" loading="lazy" src="profile-3d-contrib/profile-rainbow-light.svg?v=studio-v6"/></picture>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+         卡片暂不可用，等待下一次更新。
         </span>
 </p>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Discussions" data-zh="社区讨论">
-          社区讨论
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/discussions-dark.svg"/><img alt="社区讨论" data-activity-source="github-metrics/discussions.svg" data-alt-en="Discussions" data-alt-zh="社区讨论" data-dark-src="github-metrics/discussions-dark.svg" data-light-src="github-metrics/discussions-light.svg" decoding="async" loading="lazy" src="github-metrics/discussions-light.svg"/></picture>
+</figure></div><details class="activity-more"><summary><span class="summary-title"><span data-en="Contribution animation &amp; full calendar" data-zh="打开贡献动画与完整日历">打开贡献动画与完整日历</span></span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></summary><div class="drawer-content"><figure class="metric-card">
+<picture><source data-motion-source="" media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img alt="贡献贪吃蛇" class="animated-contribution" data-alt-en="Contribution snake" data-alt-zh="贡献贪吃蛇" data-animated-src="profile-snake-contrib/github-contribution-grid-snake-dark.svg" data-light-src="profile-snake-contrib/github-contribution-grid-snake.svg" data-light-static-src="profile-snake-contrib/github-contribution-grid-snake-static-light.svg" data-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" decoding="async" loading="lazy" src="profile-snake-contrib/github-contribution-grid-snake.svg"/></picture>
 <p class="image-unavailable" hidden="">
 <span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Issues &amp; contributions" data-zh="议题与贡献跟进">
-          议题与贡献跟进
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/followup.indepth-dark.svg"/><img alt="议题与贡献跟进" data-activity-source="github-metrics/followup.indepth.svg" data-alt-en="Issues &amp; contributions" data-alt-zh="议题与贡献跟进" data-dark-src="github-metrics/followup.indepth-dark.svg" data-light-src="github-metrics/followup.indepth-light.svg" decoding="async" loading="lazy" src="github-metrics/followup.indepth-light.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Isometric calendar" data-zh="立体全年日历">
-          立体全年日历
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/isocalendar.fullyear-dark.svg"/><img alt="立体全年日历" data-activity-source="github-metrics/isocalendar.fullyear.svg" data-alt-en="Isometric calendar" data-alt-zh="立体全年日历" data-dark-src="github-metrics/isocalendar.fullyear-dark.svg" data-light-src="github-metrics/isocalendar.fullyear-light.svg" decoding="async" loading="lazy" src="github-metrics/isocalendar.fullyear-light.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Community connections" data-zh="社区连接">
-          社区连接
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/people.followers-dark.svg"/><img alt="社区连接" data-activity-source="github-metrics/people.followers.svg" data-alt-en="Community connections" data-alt-zh="社区连接" data-dark-src="github-metrics/people.followers-dark.svg" data-light-src="github-metrics/people.followers-light.svg" decoding="async" loading="lazy" src="github-metrics/people.followers-light.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Reactions" data-zh="社区反馈">
-          社区反馈
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/reactions-dark.svg"/><img alt="社区反馈" data-activity-source="github-metrics/reactions.svg" data-alt-en="Reactions" data-alt-zh="社区反馈" data-dark-src="github-metrics/reactions-dark.svg" data-light-src="github-metrics/reactions-light.svg" decoding="async" loading="lazy" src="github-metrics/reactions-light.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Pinned repositories" data-zh="置顶项目">
-          置顶项目
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/repositories.pinned-dark.svg"/><img alt="置顶项目" data-activity-source="github-metrics/repositories.pinned.svg" data-alt-en="Pinned repositories" data-alt-zh="置顶项目" data-dark-src="github-metrics/repositories.pinned-dark.svg" data-light-src="github-metrics/repositories.pinned-light.svg" decoding="async" loading="lazy" src="github-metrics/repositories.pinned-light.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Stargazer trends" data-zh="星标趋势">
-          星标趋势
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/stargazers.chartist-dark.svg"/><img alt="星标趋势" data-activity-source="github-metrics/stargazers.chartist.svg" data-alt-en="Stargazer trends" data-alt-zh="星标趋势" data-dark-src="github-metrics/stargazers.chartist-dark.svg" data-light-src="github-metrics/stargazers.chartist-light.svg" decoding="async" loading="lazy" src="github-metrics/stargazers.chartist-light.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-<figure class="metric-card">
-<figcaption>
-<span data-en="Starred repositories" data-zh="星标收藏">
-          星标收藏
-         </span>
-</figcaption>
-<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/stars-dark.svg"/><img alt="星标收藏" data-activity-source="github-metrics/stars.svg" data-alt-en="Starred repositories" data-alt-zh="星标收藏" data-dark-src="github-metrics/stars-dark.svg" data-light-src="github-metrics/stars-light.svg" decoding="async" loading="lazy" src="github-metrics/stars-light.svg"/></picture>
-<p class="image-unavailable" hidden="">
-<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
-          卡片暂不可用，等待下一次更新。
-         </span>
-</p>
-</figure>
-</div>
-</details>
-<p class="section-footnote">
-<span data-en="The motion control covers the hero visual and contribution animations. Your reduced-motion preference is respected." data-zh="动效开关同时控制首页视觉、贡献动画；系统减少动态效果偏好会自动生效。">
-       动效开关同时控制首页视觉、贡献动画；系统减少动态效果偏好会自动生效。
-      </span>
-</p>
-</div>
-</section>
-<section aria-labelledby="about-title" class="section about-section wrap" id="about">
-<div class="about-portrait">
-<img alt="rainbow鱼 logo" height="180" src="assets/profile/rainbow-logo.svg" width="180"/>
-<div class="orbit orbit-one">
-</div>
-<div class="orbit orbit-two">
-</div>
-<span class="portrait-label">
-      RESEARCHER / BUILDER / STORYTELLER
-     </span>
-</div>
-<div class="about-copy">
-<h2 id="about-title">
-<span data-en="Between science&lt;br&gt;and imagination." data-zh="连接科学与想象。">
-       连接科学与想象。
-      </span>
-</h2>
-<p class="about-lead">
-<span data-en="I’m rainbow鱼, a PhD researcher at Zhejiang University." data-zh="我是 rainbow鱼，浙江大学博士。">
-       我是 rainbow鱼，浙江大学博士。
-      </span>
-</p>
-<p>
-<span data-en="I work across AI, physical simulation and engineering, and turn complex ideas into visual, interactive experiences. From a research question to something you can run, inspect and share." data-zh="我在 AI、物理仿真与工程之间探索，也把复杂的知识做成可视、可交互的作品。从一个研究问题出发，一直走到可以运行、可以验证、可以分享的东西。">
-       我在 AI、物理仿真与工程之间探索，也把复杂的知识做成可视、可交互的作品。从一个研究问题出发，一直走到可以运行、可以验证、可以分享的东西。
-      </span>
-</p>
-<div class="about-domains">
-<span>
-       Physical AI
-      </span>
-<span>
-       Engineering Agents
-      </span>
-<span>
-       Scientific Visualization
-      </span>
-</div>
-<div class="toolbox">
-<span>
-       Python
-      </span>
-<span>
-       PyTorch
-      </span>
-<span>
-       Three.js
-      </span>
-<span>
-       Manim
-      </span>
-<span>
-       Blender
-      </span>
-<span>
-       TypeScript
-      </span>
-</div>
-</div>
-</section>
-<section aria-labelledby="contact-title" class="contact-section" id="contact">
-<div class="wrap">
-<div class="contact-top">
-<h2 id="contact-title">
-<span data-en="Let curiosity&lt;br&gt;take us further." data-zh="让好奇心&lt;br&gt;有下一站。">
-        让好奇心
-        <br/>
-        有下一站。
-       </span>
-</h2>
-<div class="contact-copy">
-<p>
-<span data-en="For research, engineering tools, scientific visualization — or an idea worth building." data-zh="关于研究、工程工具、科学可视化，或一个值得动手的想法。">
-         关于研究、工程工具、科学可视化，或一个值得动手的想法。
+         卡片暂不可用，等待下一次更新。
         </span>
 </p>
-<a class="button button-primary" href="https://github.com/rainbowyuyu" rel="noopener noreferrer" target="_blank">
-<span data-en="Find me on GitHub" data-zh="在 GitHub 找到我">
-         在 GitHub 找到我
-        </span>
-<span aria-hidden="true" class="arrow">
-         ↗
-        </span>
-</a>
-</div>
-</div>
-<div class="contact-socials">
-<a class="social-link" href="https://github.com/rainbowyuyu" rel="noopener noreferrer" target="_blank">
-<span data-en="GitHub" data-zh="GitHub">
-        GitHub
-       </span>
-<span aria-hidden="true" class="arrow">
-        ↗
-       </span>
-</a>
-<a class="social-link" href="https://space.bilibili.com/343585138" rel="noopener noreferrer" target="_blank">
-<span data-en="Bilibili" data-zh="Bilibili">
-        Bilibili
-       </span>
-<span aria-hidden="true" class="arrow">
-        ↗
-       </span>
-</a>
-<a class="social-link" href="https://www.wiscomper.com/" rel="noopener noreferrer" target="_blank">
-<span data-en="Wiscomper" data-zh="Wiscomper">
-        Wiscomper
-       </span>
-<span aria-hidden="true" class="arrow">
-        ↗
-       </span>
-</a>
-</div>
-</div>
-</section>
-</main>
-<footer class="site-footer wrap">
-<a class="footer-brand" href="#top">
-    rainbow鱼
-    <span>
-     ↗
-    </span>
-</a>
-<div class="footer-bottom">
-<p>
-     ©
-     <span id="copyright-year">
-      2026
-     </span>
-     rainbow鱼 ·
-     <span data-en="PhD researcher at Zhejiang University" data-zh="浙江大学博士">
-      浙江大学博士
-     </span>
+</figure><div class="metrics-grid"><figure class="metric-card">
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/calendar.full-dark.svg?v=studio-v6"/><img alt="全年贡献日历" data-activity-source="github-metrics/calendar.full.svg" data-alt-en="Full-year calendar" data-alt-zh="全年贡献日历" data-dark-src="github-metrics/calendar.full-dark.svg?v=studio-v6" data-light-src="github-metrics/calendar.full-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/calendar.full-light.svg?v=studio-v6"/></picture>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
 </p>
-<p>
-     RESEARCH. BUILD. CREATE.
-    </p>
-<a href="#top">
-<span data-en="Back to top" data-zh="回到顶部">
-      回到顶部
-     </span>
-     ↑
-    </a>
-</div>
-</footer>
+</figure><figure class="metric-card">
+<picture><source data-theme-source="" media="(prefers-color-scheme: dark)" srcset="github-metrics/activity-dark.svg?v=studio-v6"/><img alt="近 30 天公开活动" data-activity-source="github-metrics/activity.svg" data-alt-en="Public activity · Last 30 days" data-alt-zh="近 30 天公开活动" data-dark-src="github-metrics/activity-dark.svg?v=studio-v6" data-light-src="github-metrics/activity-light.svg?v=studio-v6" decoding="async" loading="lazy" src="github-metrics/activity-light.svg?v=studio-v6"/></picture>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure></div></div></details><details class="activity-more archive-cards"><summary><span class="summary-title"><span data-en="Archives &amp; update records" data-zh="历史快照与更新记录">历史快照与更新记录</span></span><span class="disclosure-action"><span class="disclosure-label">展开</span><span aria-hidden="true" class="plus"></span></span></summary><div class="drawer-content"><p data-en="Older cards remain in the repository archive with their original dates and data." data-zh="旧卡片保留在仓库档案中，时间与数据以原文件为准。">旧卡片保留在仓库档案中，时间与数据以原文件为准。</p><div class="project-actions"><a class="button button-secondary" href="https://github.com/rainbowyuyu/rainbowyuyu/tree/main/github-metrics"><span data-en="Browse archived cards" data-zh="浏览历史卡片">浏览历史卡片</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="button button-secondary" href="https://github.com/rainbowyuyu/rainbowyuyu/actions"><span data-en="Update history" data-zh="自动更新记录">自动更新记录</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="button button-secondary" href="assets/profile/activity-status.json"><span data-en="Data status" data-zh="数据状态">数据状态</span><span aria-hidden="true" class="button-arrow">↗</span></a></div></div></details><p class="section-footnote" data-en="Daily jobs refresh measured activity. Check card timestamps; unavailable sources retain the last successful snapshot." data-zh="每日任务更新真实记录；以卡片时间判断时效，来源暂不可用时保留上次成功快照。">每日任务更新真实记录；以卡片时间判断时效，来源暂不可用时保留上次成功快照。</p></div></section><section aria-labelledby="about-title" class="section about-section wrap" id="about"><div class="about-art"><img alt="" class="" decoding="async" height="440" loading="lazy" src="assets/components/illustrations/notebook.webp" width="580"/></div><div class="about-copy"><h2 id="about-title"><span data-en="Science meets imagination." data-zh="连接科学与想象。">连接科学与想象。</span></h2><p class="about-lead" data-en="I’m rainbow鱼, a PhD researcher at Zhejiang University." data-zh="我是 rainbow鱼，浙江大学博士。">我是 rainbow鱼，浙江大学博士。</p><p data-en="I explore AI, physical simulation and engineering, and turn complex ideas into visual, interactive work. Rigour in research; imagination in expression." data-zh="在 AI、物理仿真与工程之间探索，也把复杂知识做成可视、可交互的作品。研究需要严谨，表达可以有想象力。">在 AI、物理仿真与工程之间探索，也把复杂知识做成可视、可交互的作品。研究需要严谨，表达可以有想象力。</p></div></section><section aria-labelledby="contact-title" class="contact-section" id="contact"><div class="wrap contact-inner"><div><h2 id="contact-title"><span data-en="Let’s write the next page." data-zh="下一页，一起写。">下一页，一起写。</span></h2><p data-en="For research, engineering tools, or an idea worth building." data-zh="关于研究、工程工具，或一个值得动手的想法。">关于研究、工程工具，或一个值得动手的想法。</p></div><div class="contact-actions"><a class="button button-primary" href="https://github.com/rainbowyuyu"><span data-en="GitHub" data-zh="GitHub">GitHub</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="button button-secondary" href="https://space.bilibili.com/343585138"><span data-en="Science films" data-zh="科学影像">科学影像</span><span aria-hidden="true" class="button-arrow">↗</span></a><a class="button button-secondary" href="https://www.wiscomper.com/"><span data-en="Wiscomper" data-zh="智算视界">智算视界</span><span aria-hidden="true" class="button-arrow">↗</span></a></div></div></section></main>
+<footer class="site-footer wrap"><a class="footer-brand" href="#top"><img alt="" data-dark-src="assets/profile/studio/logo-dark.png" data-light-src="assets/profile/studio/logo-light.png" height="36" src="assets/profile/studio/logo-light.png" width="30"/>rainbow鱼</a><p>© <span id="copyright-year">2026</span> · <span data-en="Stay curious. Keep creating." data-zh="保持好奇，持续创造。">保持好奇，持续创造。</span></p><a class="text-button" href="THIRD_PARTY_NOTICES.md"><span data-en="Credits" data-zh="素材与组件">素材与组件</span> ↗</a></footer>
 <dialog aria-labelledby="command-title" class="command-dialog" id="command-dialog">
 <div class="command-header">
-<h2 id="command-title">
+<h2 class="command-heading" id="command-title">
 <span data-en="Jump to" data-zh="快速前往">
       快速前往
      </span>
@@ -1371,7 +441,7 @@ Wiscomper
 </label>
 <input autocomplete="off" data-placeholder-en="Search projects or pages…" data-placeholder-zh="搜索项目或页面…" id="command-search" placeholder="搜索项目或页面…" type="search"/>
 <div class="command-list" id="command-list">
-<a data-search="projects 作品 Work" href="#projects">
+<a data-search="toolkit skills 技能 工具箱 Python Manim Blender" href="#toolbox"><span><span data-en="My toolkit" data-zh="我的工具箱">我的工具箱</span></span><small>Toolkit</small></a><a data-search="projects 作品 Work" href="#projects">
 <span data-en="Work" data-zh="作品">
       作品
      </span>

@@ -1,165 +1,106 @@
-"""Rebuild the two GitHub profile documents and their original navigation artwork."""
+"""Generate synchronized GitHub profiles from the shared Fieldnotes catalog."""
 from pathlib import Path
 from html import escape
-import json, re
-from studio_banner import banner as illustrated_banner, disclosure_banner
-
+import json
+from profile_components import SKILLS, button, generate, svg, text, lines
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'assets/readme'
-OUT.mkdir(parents=True,exist_ok=True)
-PALETTES={
-    'dark':dict(bg='#151B20',surface='#212A31',ink='#ECF1F4',muted='#AAB9C3',accent='#8FD5C7'),
-    'light':dict(bg='#F6F8FA',surface='#EDF1F4',ink='#202B33',muted='#536570',accent='#17695D'),
-}
-LIGHT_ACCENTS={'#7EE5DD':'#17695D','#B5AFFE':'#4C5570','#F1CF9C':'#765820','#EEA8CA':'#8A3D61','#8EBAD1':'#356C88','#DDBE87':'#805C1B','#B7A8FF':'#61509C','#6DC8FF':'#226D95','#E4C7A0':'#805C30','#83E3D6':'#17695D','#8ED0C2':'#286C5D','#C5D1E5':'#405261'}
-FONT='Segoe UI,Microsoft YaHei,Arial,sans-serif'
+OUT=ROOT/'assets/components'
+SITE='https://rainbowyuyu.github.io/rainbowyuyu/'
+RAW='https://raw.githubusercontent.com/rainbowyuyu/rainbowyuyu/main/'
+PROJECTS=json.loads((ROOT/'assets/catalog/projects.json').read_text(encoding='utf-8'))
 
-def save_svg(name,svg):
-    (OUT/name).write_text(svg+'\n',encoding='utf-8',newline='\n')
-
-def image_source(path):
-    # GitHub's relative /raw/ redirect strips query strings. Keep migration
-    # versions on the raw host while still allowing the daily main-branch data.
-    if '?v=studio-v6' in path:
-        return 'https://raw.githubusercontent.com/rainbowyuyu/rainbowyuyu/main/'+path
-    return path
+def source(path):
+    # Relative GitHub /raw redirects discard version query parameters.
+    return RAW+path if '?v=' in path else path
 
 def picture(dark,light,alt,width=None,height=None):
-    dark,light=image_source(dark),image_source(light)
-    attrs=(f' width="{width}"' if width else '')+(f' height="{height}"' if height else '')
-    return f'<picture><source media="(prefers-color-scheme: dark)" srcset="{dark}"/><source media="(prefers-color-scheme: light)" srcset="{light}"/><img src="{light}"{attrs} alt="{escape(alt,quote=True)}"/></picture>'
+    size=(f' width="{width}"' if width else '')+(f' height="{height}"' if height else '')
+    return f'<picture><source media="(prefers-color-scheme: dark)" srcset="{source(dark)}"/><source media="(prefers-color-scheme: light)" srcset="{source(light)}"/><img src="{source(light)}"{size} alt="{escape(alt,quote=True)}"/></picture>'
 
-def artwork(stem,alt,width=None,height=None):
-    version='?v=studio-v6' if stem=='profile-banner' or stem.startswith('disclosure-') else ''
-    return picture(f'assets/readme/{stem}.svg{version}',f'assets/readme/{stem}-light.svg{version}',alt,width,height)
+def component(stem,alt,width=None,height=None):
+    result=picture(f'assets/components/{stem}-dark.svg?v=fieldnotes-v7',f'assets/components/{stem}-light.svg?v=fieldnotes-v7',alt,width,height)
+    if stem.startswith(('project-','skills-','drawer-')):
+        narrow=''.join(f'<source media="(max-width: 600px) and (prefers-color-scheme: {theme})" srcset="{source(f"assets/components/{stem}-mobile-{theme}.svg?v=fieldnotes-v7")}"/>' for theme in ('dark','light'))
+        result=result.replace('<picture>','<picture>'+narrow,1)
+    return result
+
+def action(stem,zh,en,url,lang,icon='arrow',width=220):
+    label=en if lang=='en' else zh
+    for theme in ('light','dark'):
+        (OUT/f'button-{stem}-{lang}-{theme}.svg').write_text(button(label,theme,width=width,icon=icon),encoding='utf-8')
+    return f'<a href="{escape(url,quote=True)}">'+component(f'button-{stem}-{lang}',label,height='42')+'</a>'
+
+def drawer(stem,zh,en,lang):
+    label=en if lang=='en' else zh
+    hint='Click to expand / collapse' if lang=='en' else '点击展开 / 收起'
+    for theme in ('light','dark'):
+        bg,ink,muted=('#202c30','#edf1e9','#bac7c6') if theme=='dark' else ('#f1eee5','#263e43','#52666a')
+        body=f'<rect x="1" y="1" width="1198" height="126" rx="26" fill="{bg}"/>'
+        for i,color in enumerate(['#c78371','#d1ad72','#8eb79b','#83a8b8','#b4a0c4']):
+            body+=f'<path d="M{30+i*6} 38v48" stroke="{color}" stroke-width="6" stroke-linecap="round"/>'
+        body+=text(90,57,label,29,ink,600)+text(92,94,hint,19,muted)
+        body+=f'<circle cx="1139" cy="64" r="30" fill="{ink}"/><path d="M1128 64h22m-11-11v22" stroke="{bg}" stroke-width="2.5" stroke-linecap="round"/>'
+        (OUT/f'drawer-{stem}-{lang}-{theme}.svg').write_text(svg(1200,128,label+' — '+hint,body),encoding='utf-8')
+        body=f'<rect width="640" height="188" rx="26" fill="{bg}"/>'
+        for i,color in enumerate(['#c78371','#d1ad72','#8eb79b','#83a8b8','#b4a0c4']):body+=f'<path d="M{20+i*5} 40v100" stroke="{color}" stroke-width="5" stroke-linecap="round"/>'
+        for i,line in enumerate(lines(label,28 if lang=='en' else 16)):body+=text(64,57+i*38,line,30,ink,600)
+        body+=text(64,148,hint,24,muted)+f'<circle cx="584" cy="94" r="25" fill="{ink}"/><path d="M574 94h20m-10-10v20" stroke="{bg}" stroke-width="2"/>'
+        (OUT/f'drawer-{stem}-{lang}-mobile-{theme}.svg').write_text(svg(640,188,label+' — '+hint,body),encoding='utf-8')
+    return '<summary>'+component(f'drawer-{stem}-{lang}',label+' · '+hint,'100%')+'</summary>'
 
 def metric(stem,alt,width):
-    # Bump only for a design migration; daily data keeps its existing asset paths.
-    version='?v=studio-v6' if stem in {'base','languages.indepth','habits.charts','wakatime','streak','calendar.full','activity'} else ''
-    return picture(f'github-metrics/{stem}-dark.svg{version}',f'github-metrics/{stem}-light.svg{version}',alt,width)
+    return picture(f'github-metrics/{stem}-dark.svg?v=studio-v6',f'github-metrics/{stem}-light.svg?v=studio-v6',alt,width)
 
-def contribution_picture():
+def landscape():
     prefix='profile-3d-contrib/profile-rainbow-'
-    sources=''.join(f'<source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: {theme})" srcset="{image_source(prefix+theme+"-static.svg?v=studio-v6")}"/>' for theme in ('dark','light'))
-    regular=picture(prefix+'dark.svg?v=studio-v6',prefix+'light.svg?v=studio-v6','Rainbow three-dimensional contribution landscape','100%')
-    return regular.replace('<picture>','<picture>'+sources,1)
+    reduced=''.join(f'<source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: {theme})" srcset="{source(prefix+theme+"-static.svg?v=studio-v6")}"/>' for theme in ('dark','light'))
+    return picture(prefix+'dark.svg?v=studio-v6',prefix+'light.svg?v=studio-v6','Rainbow contribution landscape','100%').replace('<picture>','<picture>'+reduced,1)
 
-def identity_artwork():
-    for theme,c in PALETTES.items():
-        suffix='' if theme=='dark' else '-light'
-        banner=illustrated_banner(theme)
-        save_svg('profile-banner'+suffix+'.svg',banner)
-        footer=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" aria-label="rainbow鱼. Stay curious. Keep creating."><g font-family="{FONT}"><text x="600" y="90" text-anchor="middle" fill="{c['ink']}" font-size="42" font-weight="600" letter-spacing="-1">Stay curious. Keep creating.</text><text x="600" y="134" text-anchor="middle" fill="{c['muted']}" font-size="22">rainbow鱼 · Research, build, explain.</text></g></svg>'''
-        save_svg('footer'+suffix+'.svg',footer)
-        typing=f'''<svg xmlns="http://www.w3.org/2000/svg" width="900" height="64" viewBox="0 0 900 64" role="img" aria-labelledby="title"><title id="title">Research in physics. Build with agents. Explain through motion.</title><style>.words{{font:21px {FONT};text-anchor:middle;fill:{c['muted']}}}.cursor{{fill:{c['accent']};animation:pulse 1.4s ease-in-out infinite}}.line{{stroke:{c['accent']};stroke-width:2;stroke-dasharray:36 384;animation:travel 6s linear infinite}}@keyframes pulse{{50%{{opacity:.4}}}}@keyframes travel{{to{{stroke-dashoffset:-420}}}}@media(prefers-reduced-motion:reduce){{.cursor,.line{{animation:none}}}}</style><text class="words" x="440" y="37">Research in physics · Build with agents · Explain through motion</text><rect class="cursor" x="772" y="21" width="2" height="21" rx="1"/><path class="line" d="M240 53H660" fill="none"/></svg>'''
-        save_svg('typing'+suffix+'.svg',typing)
-
-identity_artwork()
-
-def disclosure_artwork():
-    for name in ('projects','activity'):
-        for lang in ('zh','en'):
-            for theme,c in PALETTES.items():
-                suffix='' if theme=='dark' else '-light'
-                svg=disclosure_banner(name,lang,theme)
-                save_svg(f'disclosure-{name}-{lang}'+suffix+'.svg',svg)
-
-disclosure_artwork()
-
-def disclosure(name,lang):
-    label=('Click to expand or collapse' if lang=='en' else '点击展开 / 收起')
-    alt=('4 more projects' if name=='projects' else 'More daily activity and archive') if lang=='en' else ('更多项目 · 4 项' if name=='projects' else '每日活动与历史卡片')
-    return '<summary>'+artwork('disclosure-'+name+'-'+lang,alt,'720')+'<br/><sub>'+label+'</sub></summary>'
-
-def button(name,label,color,icon='arrow',width=166):
-    glyph={'arrow':'M13 27 27 13M14 13h13v13','grid':'M13 13h6v6h-6zM23 13h6v6h-6zM13 23h6v6h-6zM23 23h6v6h-6z','pulse':'M11 23h6l4-10 5 17 4-7h5','play':'M17 12 31 21 17 30Z','code':'m17 14-7 7 7 7m12-14 7 7-7 7M25 10l-5 22','globe':'M10 21h22M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 10c-8 8-8 14 0 22 8-8 8-14 0-22','check':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22m-6 11 4 4 8-8','book':'M13 11h17v21H15a3 3 0 0 1-3-3V14a3 3 0 0 1 3-3m-3 17h18M18 16h7M18 20h5','info':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M21 20v7M21 15v1','actions':'M21 10a11 11 0 1 0 0 22 11 11 0 1 0 0-22M18 16l8 5-8 5Z'}[icon]
-    for theme,c in PALETTES.items():
-        accent=LIGHT_ACCENTS.get(color,c['accent']) if theme=='light' else color
-        suffix='' if theme=='dark' else '-light'
-        svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="44" viewBox="0 0 {width} 44" role="img" aria-label="{escape(label)}"><rect width="{width}" height="44" rx="22" fill="{c['surface']}"/><path d="{glyph}" transform="translate(3 1)" stroke="{accent}" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><text x="49" y="27.5" font-family="{FONT}" font-weight="600" font-size="13" fill="{c['ink']}">{escape(label)}</text><path d="M{width-20} 17l5 5-5 5" stroke="{accent}" fill="none" stroke-width="1.5"/></svg>'''
-        save_svg(name+suffix+'.svg',svg)
-
-buttons=[('portfolio','个人主页','Portfolio','#7EE5DD','globe',166),('projects','精选项目','Projects','#B5AFFE','grid',166),('activity','每日动态','Activity','#F1CF9C','pulse',166),('bilibili','科学影像','Bilibili','#EEA8CA','play',166)]
-for stem,zh,en,color,icon,w in buttons:
-    button(stem+'-zh',zh,color,icon,w);button(stem+'-en',en,color,icon,w)
-footer_buttons=[
-    ('status','更新状态','Update status','#7EE5DD','check',198),
-    ('actions','GitHub Actions','GitHub Actions','#C5D1E5','actions',198),
-    ('repositories','全部仓库','All repositories','#B5AFFE','book',198),
-    ('portfolio','个人主页','Portfolio','#7EE5DD','globe',160),
-    ('bilibili','哔哩哔哩','Bilibili','#EEA8CA','play',160),
-    ('wiscomper','智算视界','Wiscomper','#B7A8FF','grid',160),
-    ('credits','组件致谢','Widget credits','#C5D1E5','info',170),
-]
-for stem,zh,en,color,icon,w in footer_buttons:
-    button('nav-'+stem+'-zh',zh,color,icon,w);button('nav-'+stem+'-en',en,color,icon,w)
-for stem,zh,en,color in [('physcast','项目介绍','EXPLORE','#8EBAD1'),('omniforge','项目介绍','EXPLORE','#DDBE87'),('wiscomper','在线体验','LIVE DEMO','#B7A8FF'),('ai-engineer','查看源码','SOURCE','#6DC8FF'),('ai-revolution','查看系列','EXPLORE','#E4C7A0'),('science-studio','观看影像','WATCH','#83E3D6'),('manim','查看源码','SOURCE','#8ED0C2')]:
-    button(stem+'-zh',zh,color,'arrow',150);button(stem+'-en',en,color,'arrow',150)
-button('github-zh','GitHub 源码','#C5D1E5','code',150);button('github-en','SOURCE CODE','#C5D1E5','code',170)
-
-projects=[
-dict(slug='physcast',name='PhysCast',en='PhysCast',tag='PHYSICAL AI',zh='物理约束的生成式风场预测',title='Generative wind forecasting, grounded in physics',desc='连接 OpenFAST / FAST.Farm、条件扩散预测与独立验证，探索稀疏观测和控制干预下的风场变化。',en_desc='Connecting OpenFAST / FAST.Farm, conditional diffusion and independent validation to study wind fields under sparse observations and control interventions.',status='研究中 · 源码私有',en_status='RESEARCH IN PROGRESS · PRIVATE SOURCE',url='#physcast',repo=None),
-dict(slug='omniforge',name='OmniForge · 万象工坊',en='OmniForge',tag='AGENTIC ENGINEERING',zh='让工程意图，走向可检查的设计过程',title='From engineering intent to an inspectable workflow',desc='把任务规划、工具协作、建模、有限元与拓扑优化组织在同一工作台，保留执行过程和设计依据。',en_desc='A workspace for planning, tool orchestration, modeling, finite elements and topology optimization—with inspectable execution and design evidence.',status='持续开发 · 源码私有',en_status='IN DEVELOPMENT · PRIVATE SOURCE',url='#omniforge',repo=None),
-dict(slug='wiscomper',name='Wiscomper · 智算视界',en='Wiscomper',tag='VISUAL MATHEMATICS',zh='从一道公式，到一段看得懂的数学动画',title='From a formula to mathematics you can see',desc='连接公式识别、LaTeX、解题步骤与 Manim 动画，在交互工作台里编辑、理解和探索数学。',en_desc='Connecting formula recognition, LaTeX, worked solutions and Manim animation in an interactive mathematics workspace.',status='开源 · 在线体验',en_status='OPEN SOURCE · LIVE DEMO',url='https://www.wiscomper.com/',repo='Wisdom_Computing_Perspective'),
-dict(slug='ai-engineer',name='The AI Engineer',en='The AI Engineer',tag='COMPUTATIONAL DESIGN',zh='设计之后，继续计算与验证',title='Design. Compute. Inspect. Iterate.',desc='将大模型与确定性的工程后端连接起来，串联几何、网格、拓扑优化、尺寸优化与设计报告。',en_desc='Connecting language models with deterministic engineering backends, from geometry and meshing to topology, sizing and design reports.',status='研究代码 · 开源',en_status='RESEARCH CODE · OPEN SOURCE',url='https://github.com/rainbowyuyu/ai_engineer',repo='ai_engineer'),
-dict(slug='ai-revolution',name='AI 进化史',en='The Evolution of AI',tag='IDEAS IN MOTION',zh='把 AI 的演进，讲成可以看见的故事',title='A visual journey through the evolution of AI',desc='用可视化、动画与实验梳理视觉、生成模型、语言、多模态与空间重建；智能体与世界模型章节规划中。',en_desc='Exploring vision, generative models, language, multimodality and spatial reconstruction through animation and experiments. The agents and world-models chapter is planned.',status='系列创作 · 开源',en_status='ONGOING SERIES · OPEN SOURCE',url='#ai-revolution',repo='AI_revolution'),
-dict(slug='science-studio',name='rainbow鱼 · 科普工作台',en='rainbow鱼 · Science Studio',tag='SCIENCE × STORYTELLING',zh='把科学问题，变成值得追问的画面',title='Turning science questions into stories worth exploring',desc='将故事、机制可视化、连续运镜、字幕与 AI 视频编辑组织成创作流程，让研究与工程知识更容易理解。',en_desc='A production workflow for stories, mechanism visualization, camera motion, captions and AI video editing, making research and engineering easier to understand.',status='持续创作 · 开源',en_status='ONGOING CREATION · OPEN SOURCE',url='https://space.bilibili.com/343585138',repo='Popula_science_video'),
-dict(slug='manim',name='Manim Extend Rainbow',en='Manim Extend Rainbow',tag='VISUAL LEARNING TOOLS',zh='让算法和结构，有直观的表达',title='Giving algorithms and structures a visual language',desc='为数据结构、操作系统与计算机组成教学制作可复用的 Manim 扩展组件。',en_desc='Reusable Manim components for teaching data structures, operating systems and computer organization.',status='动画组件 · 开源',en_status='ANIMATION COMPONENTS · OPEN SOURCE',url='https://github.com/rainbowyuyu/manim_extend_rainbow',repo='manim_extend_rainbow')]
-
-SITE='https://rainbowyuyu.github.io/rainbowyuyu/'
-for lang in ('zh','en'):
+def project(p,lang):
     en=lang=='en';site=SITE+('?lang=en' if en else '')
-    lines=['<!-- Generated by scripts/generate_readme.py. Edit the source copy and run Python to synchronize both languages. -->',
-      '<p align="right">'+('<a href="README.md">简体中文</a> &nbsp; / &nbsp; <strong>English</strong>' if en else '<strong>简体中文</strong> &nbsp; / &nbsp; <a href="README.en.md">English</a>')+'</p>',
-      f'<p align="center"><a href="{site}">'+artwork('profile-banner','rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University','100%')+'</a></p>',
-      '<p align="center"><strong>'+('AI for the physical world. Knowledge you can see.' if en else '让 AI 理解物理，让知识看得见。')+'</strong></p>',
-      '<p align="center">'+('I am <strong>rainbow鱼</strong>, a <strong>PhD researcher at Zhejiang University</strong>.<br/>I build at the intersection of physical AI, engineering agents and scientific storytelling.' if en else '我是 <strong>rainbow鱼</strong>，<strong>浙江大学博士</strong>。<br/>在物理 AI、工程智能体与科学叙事之间，持续研究，也持续创造。')+'</p>',
-      '<p align="center">']
-    for stem,_,_,_,_,_ in buttons:
-        url={'portfolio':site,'projects':'#projects','activity':'#activity','bilibili':'https://space.bilibili.com/343585138'}[stem]
-        lines.append(f'<a href="{url}">'+artwork(stem+'-'+lang,stem,height='42')+'</a> ')
-    lines+=['</p>','', '<p align="center"><a href="assets/readme/ATTRIBUTION.md">'+artwork('typing','Research in physics. Build with agents. Explain through motion.','720')+'</a></p>',
-      '<p align="center"><img src="assets/images/hr.gif" width="100%" height="2" alt=""/></p>',
-      '<a id="toolbox"></a>', '## '+('A small toolbox, many possibilities' if en else '研究与创作工具箱'),
-      '<p align="center">']
-    for icon,title in [('python','Python'),('cpp','C++'),('mysql','MySQL'),('java','Java'),('docker','Docker'),('github','GitHub')]:
-        lines.append(f'<img src="assets/widgets/{icon}.svg" width="54" height="54" alt="{title}" title="{title}"/> &nbsp;')
-    lines+=['</p>', '<p align="center"><img src="assets/widgets/skills.svg" width="640" alt="PyTorch, C, Markdown, LaTeX, MATLAB, Photoshop, Premiere, After Effects, Audition, Git"/></p>',
-      '<p align="center"><sub>'+('Research · Simulation · Visual computing · Animation · Open source' if en else '科研计算 · 物理仿真 · 交互可视化 · 动态影像 · 开源工具')+'</sub></p>', '', '<a id="projects"></a>', '## '+('Selected work' if en else '精选项目'),
-      ('Research platforms, engineering tools and visual stories. Each project keeps its own visual identity.' if en else '从研究平台到工程工具，再到科学影像。每个项目，保留自己的问题、色彩和表达。'), '']
-    for i,p in enumerate(projects):
-        if i==3:
-            lines += ['<details>', disclosure('projects',lang), '']
-        url=(site+p['url']) if p['url'].startswith('#') else p['url']
-        lines += ['### '+(p['en'] if en else p['name']),
-          f'<p><a href="{site}#{p["slug"]}">'+picture(f'assets/showcase/{p["slug"]}.webp',f'assets/showcase/{p["slug"]}-light.webp',p['en']+' — '+(p['title'] if en else p['zh']),'100%')+'</a></p>',
-          '**'+(p['title'] if en else p['zh'])+'**',
-          p['en_desc'] if en else p['desc'],
-          '<p><sub>'+(p['en_status'] if en else p['status'])+'</sub></p>',
-          f'<p><a href="{url}">'+artwork(p['slug']+'-'+lang,'Explore project' if en else '项目入口',height='38')+'</a>']
-        if p['repo'] and not url.startswith('https://github.com/'):
-            lines.append(f'<a href="https://github.com/rainbowyuyu/{p["repo"]}">'+artwork('github-'+lang,'GitHub source',height='38')+'</a>')
-        lines+=['</p>','']
-    lines += ['</details>', '', '<sub>'+('Project descriptions updated 2026-10-27. Research and development remain ongoing; functionality and validation scope follow each project’s documentation.' if en else '项目介绍更新于 2026-10-27。研究与开发持续进行，功能与验证范围以各项目文档为准。')+'</sub>',
-      '', '<p align="center"><img src="assets/images/hr.gif" width="100%" height="2" alt=""/></p>', '<a id="activity"></a>',
-      '## '+('Built, day by day' if en else '日复一日，把想法做成作品'),
-      '<p align="center"><img src="assets/images/left.png" width="56" alt="Original profile mascot"/> &nbsp; <img src="assets/images/right.png" width="56" alt="Original profile mascot"/></p>',
-      '<p align="center">'+metric('streak','Contribution streak','720')+'</p>',
-      '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated GitHub contribution snake"/></picture>',
-      '<p align="center">'+metric('base','GitHub public activity','420')+' '+metric('languages.indepth','Public source language breakdown','420')+'</p>',
-      '<p align="center">'+metric('habits.charts','Activity rhythm','420')+' '+metric('wakatime','WakaTime recorded coding activity','420')+'</p>',
-      contribution_picture(),
-      '', '<details>', disclosure('activity',lang), '',
-      '<p align="center">'+metric('calendar.full','Contribution calendar','720')+'</p>', '<p align="center">'+metric('activity','Recent public activity','720')+'</p>',
-      ('The following isometric calendar is an archived snapshot.' if en else '以下等距日历保留为历史快照。'), '<p>'+metric('isocalendar.fullyear','Archived isometric calendar','100%')+'</p>', '', '</details>', '',
-      '<sub>'+('The scheduled jobs refresh the stored cards daily. WakaTime reflects measured activity over the last seven days. Use each card’s timestamp and the update status to assess freshness; unavailable providers keep the last successful snapshot.' if en else '每日任务自动更新本地卡片；WakaTime 展示最近 7 天真实记录。请以卡片时间与更新状态判断时效，数据源不可用时保留上次成功快照。')+'</sub>', '',
-      '<p align="center">']
-    footer_links={'status':'assets/profile/activity-status.json','actions':'https://github.com/rainbowyuyu/rainbowyuyu/actions','repositories':'https://github.com/rainbowyuyu?tab=repositories','portfolio':site,'bilibili':'https://space.bilibili.com/343585138','wiscomper':'https://www.wiscomper.com/','credits':'assets/readme/ATTRIBUTION.md'}
-    for stem,zh_label,en_label,_,_,_ in footer_buttons[:3]:
-        lines.append(f'<a href="{footer_links[stem]}">'+artwork('nav-'+stem+'-'+lang,en_label if en else zh_label,height='42')+'</a> ')
-    lines += ['</p>', '<p align="center">'+artwork('footer','Stay curious. Keep creating.','100%')+'</p>', '<p align="center">']
-    for stem,zh_label,en_label,_,_,_ in footer_buttons[3:]:
-        lines.append(f'<a href="{footer_links[stem]}">'+artwork('nav-'+stem+'-'+lang,en_label if en else zh_label,height='42')+'</a> ')
-    lines += ['</p>', '']
-    (ROOT/('README.en.md' if en else 'README.md')).write_text(re.sub(r'<p(?: [^>]+)?>.*?</p>',lambda m:m.group(0).replace('\n\n','\n'),'\n\n'.join(x.rstrip() for x in lines),flags=re.S).rstrip()+'\n',encoding='utf-8',newline='\n')
-print('Generated two README documents and navigation artwork.')
+    title=p['en'] if en else p['name']
+    hint='Click to explore / fold' if en else '点击展开项目介绍 / 收起'
+    url=site+p['url'] if p['url'].startswith('#') else p['url']
+    parts=['<details>','<summary>'+component('project-'+p['slug']+'-'+lang,title+' — '+hint,'100%')+'</summary>','',
+        '<p>'+escape(p['en_desc'] if en else p['desc'])+'</p>',
+        '<p><sub>'+escape(p['en_status'] if en else p['status'])+' · '+escape(' / '.join(p['tags']))+'</sub></p>',
+        '<p>'+action(p['slug'],'查看项目','Explore project',url,lang,width=224)]
+    if p['repo'] and not url.startswith('https://github.com/'):
+        parts.append(action('source','查看源码','Source code','https://github.com/rainbowyuyu/'+p['repo'],lang,'code'))
+    return '\n'.join(parts+['</p>','','</details>'])
+
+def main():
+    generate()
+    for lang in ('zh','en'):
+        en=lang=='en';site=SITE+('?lang=en' if en else '');tr=lambda z,e:e if en else z
+        blocks=['<!-- Generated by scripts/generate_readme.py from assets/catalog/projects.json. -->',
+            '<p align="right">'+('<a href="README.md">简体中文</a> / <strong>English</strong>' if en else '<strong>简体中文</strong> / <a href="README.en.md">English</a>')+'</p>',
+            '<a href="'+site+'">'+picture('assets/readme/profile-banner.svg?v=studio-v6','assets/readme/profile-banner-light.svg?v=studio-v6','rainbow鱼 · 浙江大学博士 / PhD researcher at Zhejiang University','100%')+'</a>',
+            '<p align="center">'+action('portfolio','个人主页','Portfolio',site,lang,'leaf',196)+' '+action('work','精选项目','Projects','#projects',lang,'book',196)+' '+action('toolkit','我的工具','Toolkit','#toolbox',lang,'code',196)+' '+action('films','科学影像','Science films','https://space.bilibili.com/343585138',lang,'play')+'</p>',
+            '<a id="projects"></a>','## '+tr('在好奇心里，动手。','Ideas, made tangible.'),
+            tr('物理研究、工程工具与科学影像。点击卡片，翻开每个项目。','Physics research, engineering tools and visual stories. Open a card to explore the work.')]
+        blocks.extend(project(p,lang) for p in PROJECTS[:3])
+        blocks+=['<details>',drawer('projects','还有 4 个项目','Four more projects',lang),'']
+        blocks.extend(project(p,lang) for p in PROJECTS[3:])
+        blocks+=['</details>','<sub>'+tr('研究与开发持续进行，功能与验证范围以各项目文档为准。','Research and development remain ongoing; see each project’s documentation for functionality and validation scope.')+'</sub>',
+            '<a id="toolbox"></a>','## '+tr('把想法做出来的工具。','Tools for making ideas real.')]
+        for skill in SKILLS:
+            blocks.append('<p>'+component('skills-'+skill['id']+'-'+lang,(skill['en'] if en else skill['zh'])+' · '+', '.join(skill['tools']),'100%')+'</p>')
+        icons=' '.join(f'<img src="assets/widgets/{stem}.svg" width="48" height="48" alt="{label}"/>' for stem,label in [('python','Python'),('cpp','C++'),('mysql','MySQL'),('java','Java'),('docker','Docker'),('github','GitHub')])
+        blocks+=['<details>',drawer('tools','工具架上的小图标','Icons from the toolbox',lang),'<p>'+icons+'</p>','<p><img src="assets/widgets/skills.svg" width="680" alt="PyTorch, C, Markdown, LaTeX, MATLAB, Photoshop, Premiere, After Effects, Audition, Git"/></p>','</details>',
+            '<a id="activity"></a>','## '+tr('日复一日，留下痕迹。','Small steps, day by day.'),
+            '<p>'+metric('base','GitHub public activity','400')+' '+metric('languages.indepth','Public source languages','400')+'</p>',
+            '<p>'+metric('habits.charts','Activity rhythm','400')+' '+metric('wakatime','WakaTime recorded activity','400')+'</p>',
+            '<p align="center">'+metric('streak','Contribution streak','90%')+'</p>',landscape(),
+            '<details>',drawer('activity','贡献动画与更多记录','Contribution motion & more records',lang),
+            '<picture><source media="(prefers-color-scheme: dark)" srcset="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/><img src="profile-snake-contrib/github-contribution-grid-snake.svg" width="100%" alt="Animated contribution snake"/></picture>',
+            '<p>'+metric('calendar.full','Contribution calendar','100%')+'</p>','<p>'+metric('activity','Recent public activity','100%')+'</p>','</details>',
+            '<sub>'+tr('每日任务更新卡片。WakaTime 为最近 7 天真实记录；来源不可用时保留上次快照，请以卡片时间和更新状态判断时效。','Daily jobs refresh stored cards. WakaTime shows measured activity over seven days. Unavailable sources retain their last snapshot; check timestamps and update status for freshness.')+'</sub>',
+            '<details>',drawer('archive','历史卡片与更新记录','Card archive & update records',lang),
+            '<p>'+action('archive','历史卡片','Card archive','github-metrics/',lang,'book')+' '+action('status','更新状态','Update status','assets/profile/activity-status.json',lang,'leaf')+' '+action('actions','自动更新','Automation','https://github.com/rainbowyuyu/rainbowyuyu/actions',lang,'code')+'</p>',
+            '<p><sub>'+tr('目录中的旧版卡片为历史快照，不代表当前统计。','Older cards in the directory are archived snapshots, not current statistics.')+'</sub></p>','</details>',
+            '<p align="center"><sub>'+tr('保持好奇，持续创造。','Stay curious. Keep creating.')+' · <a href="assets/readme/ATTRIBUTION.md">'+tr('素材与致谢','Artwork & credits')+'</a></sub></p>']
+        (ROOT/('README.en.md' if en else 'README.md')).write_text('\n\n'.join(blocks).rstrip()+'\n',encoding='utf-8',newline='\n')
+    print('Generated bilingual profiles, themed actions and disclosure drawers.')
+
+if __name__=='__main__':main()

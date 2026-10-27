@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "physcast",
+    "name": "PhysCast",
+    "en": "PhysCast",
+    "tag": "PHYSICAL AI",
+    "zh": "物理约束的生成式风场预测",
+    "title": "Generative wind forecasting, grounded in physics",
+    "desc": "连接 OpenFAST / FAST.Farm、条件扩散预测与独立验证，探索稀疏观测和控制干预下的风场变化。",
+    "en_desc": "Connecting OpenFAST / FAST.Farm, conditional diffusion and independent validation to study wind fields under sparse observations and control interventions.",
+    "status": "研究中 · 源码私有",
+    "en_status": "RESEARCH IN PROGRESS · PRIVATE SOURCE",
+    "url": "#physcast",
+    "repo": null,
+    "detail_html": "<div class=\"project-detail-body\">\n<p class=\"project-status\">\n<span data-en=\"Research in progress · Private source\" data-zh=\"持续研究 · 源码私有\">\n           持续研究 · 源码私有\n          </span>\n</p>\n<p>\n<span data-en=\"Connecting physical simulation, generative forecasting and independent validation to study wind-field responses to control interventions. Reliability and uncertainty matter as much as the prediction.\" data-zh=\"围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。\">\n           围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。\n          </span>\n</p>\n<ol class=\"project-steps\">\n<li>\n<span data-en=\"Observe\" data-zh=\"观测\">\n            观测\n           </span>\n</li>\n<li>\n<span data-en=\"Constrain\" data-zh=\"约束\">\n            约束\n           </span>\n</li>\n<li>\n<span data-en=\"Forecast\" data-zh=\"预测\">\n            预测\n           </span>\n</li>\n<li>\n<span data-en=\"Validate\" data-zh=\"验证\">\n            验证\n           </span>\n</li>\n</ol>\n</div>",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "OpenFAST / FAST.Farm"
+    ]
+  },
+  {
+    "slug": "omniforge",
+    "name": "OmniForge · 万象工坊",
+    "en": "OmniForge",
+    "tag": "AGENTIC ENGINEERING",
+    "zh": "让工程意图，走向可检查的设计过程",
+    "title": "From engineering intent to an inspectable workflow",
+    "desc": "把任务规划、工具协作、建模、有限元与拓扑优化组织在同一工作台，保留执行过程和设计依据。",
+    "en_desc": "A workspace for planning, tool orchestration, modeling, finite elements and topology optimization—with inspectable execution and design evidence.",
+    "status": "持续开发 · 源码私有",
+    "en_status": "IN DEVELOPMENT · PRIVATE SOURCE",
+    "url": "#omniforge",
+    "repo": null,
+    "detail_html": "<div class=\"project-detail-body\">\n<p class=\"project-status\">\n<span data-en=\"In development · Private source\" data-zh=\"开发中 · 源码私有\">\n           开发中 · 源码私有\n          </span>\n</p>\n<p>\n<span data-en=\"An adaptive agent and tool workbench for modeling, computation and validation. Inputs, execution traces, results and reports remain connected, making the engineering process inspectable and reusable.\" data-zh=\"围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。\">\n           围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。\n          </span>\n</p>\n<ol class=\"project-steps\">\n<li>\n<span data-en=\"Intent\" data-zh=\"需求\">\n            需求\n           </span>\n</li>\n<li>\n<span data-en=\"Model\" data-zh=\"建模\">\n            建模\n           </span>\n</li>\n<li>\n<span data-en=\"Solve\" data-zh=\"求解\">\n            求解\n           </span>\n</li>\n<li>\n<span data-en=\"Deliver\" data-zh=\"交付\">\n            交付\n           </span>\n</li>\n</ol>\n</div>",
+    "tags": [
+      "Adaptive Agents",
+      "FEM",
+      "Topology Optimization"
+    ]
+  },
+  {
+    "slug": "wiscomper",
+    "name": "Wiscomper · 智算视界",
+    "en": "Wiscomper",
+    "tag": "VISUAL MATHEMATICS",
+    "zh": "从一道公式，到一段看得懂的数学动画",
+    "title": "From a formula to mathematics you can see",
+    "desc": "连接公式识别、LaTeX、解题步骤与 Manim 动画，在交互工作台里编辑、理解和探索数学。",
+    "en_desc": "Connecting formula recognition, LaTeX, worked solutions and Manim animation in an interactive mathematics workspace.",
+    "status": "开源 · 在线体验",
+    "en_status": "OPEN SOURCE · LIVE DEMO",
+    "url": "https://www.wiscomper.com/",
+    "repo": "Wisdom_Computing_Perspective",
+    "detail_html": "<div class=\"project-detail-body\">\n<p class=\"project-status\">\n<span data-en=\"Open source · Live website\" data-zh=\"开源 · 在线体验\">\n           开源 · 在线体验\n          </span>\n</p>\n<p>\n<span data-en=\"Connecting handwritten formula recognition, LaTeX, step-by-step reasoning and Manim animation. Multimodal recognition and tool orchestration make abstract mathematical processes visible and explorable.\" data-zh=\"连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。\">\n           连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。\n          </span>\n</p>\n<ol class=\"project-steps\">\n<li>\n<span data-en=\"Formula\" data-zh=\"公式\">\n            公式\n           </span>\n</li>\n<li>\n<span data-en=\"Recognize\" data-zh=\"识别\">\n            识别\n           </span>\n</li>\n<li>\n<span data-en=\"Reason\" data-zh=\"推导\">\n            推导\n           </span>\n</li>\n<li>\n<span data-en=\"Animate\" data-zh=\"动画\">\n            动画\n           </span>\n</li>\n</ol>\n</div>",
+    "tags": [
+      "Multimodal AI",
+      "LaTeX",
+      "Manim"
+    ]
+  },
+  {
+    "slug": "ai-engineer",
+    "name": "The AI Engineer",
+    "en": "The AI Engineer",
+    "tag": "COMPUTATIONAL DESIGN",
+    "zh": "设计之后，继续计算与验证",
+    "title": "Design. Compute. Inspect. Iterate.",
+    "desc": "将大模型与确定性的工程后端连接起来，串联几何、网格、拓扑优化、尺寸优化与设计报告。",
+    "en_desc": "Connecting language models with deterministic engineering backends, from geometry and meshing to topology, sizing and design reports.",
+    "status": "研究代码 · 开源",
+    "en_status": "RESEARCH CODE · OPEN SOURCE",
+    "url": "https://github.com/rainbowyuyu/ai_engineer",
+    "repo": "ai_engineer",
+    "detail_html": "<div class=\"project-detail-body\">\n<p class=\"project-status\">\n<span data-en=\"Research code · Open source\" data-zh=\"研究代码 · 开源\">\n           研究代码 · 开源\n          </span>\n</p>\n<p>\n<span data-en=\"Exploring an engineering workflow from natural-language requirements to design deliverables. Geometry processing, finite-element computation and optimization are organized around traceable evidence.\" data-zh=\"探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。\">\n           探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。\n          </span>\n</p>\n<ol class=\"project-steps\">\n<li>\n<span data-en=\"Intent\" data-zh=\"意图\">\n            意图\n           </span>\n</li>\n<li>\n<span data-en=\"Geometry\" data-zh=\"几何\">\n            几何\n           </span>\n</li>\n<li>\n<span data-en=\"Compute\" data-zh=\"计算\">\n            计算\n           </span>\n</li>\n<li>\n<span data-en=\"Optimize\" data-zh=\"优化\">\n            优化\n           </span>\n</li>\n</ol>\n</div>",
+    "tags": [
+      "Geometry",
+      "FEM",
+      "Optimization"
+    ]
+  },
+  {
+    "slug": "ai-revolution",
+    "name": "AI 进化史",
+    "en": "The Evolution of AI",
+    "tag": "IDEAS IN MOTION",
+    "zh": "把 AI 的演进，讲成可以看见的故事",
+    "title": "A visual journey through the evolution of AI",
+    "desc": "用可视化、动画与实验梳理视觉、生成模型、语言、多模态与空间重建；智能体与世界模型章节规划中。",
+    "en_desc": "Exploring vision, generative models, language, multimodality and spatial reconstruction through animation and experiments. The agents and world-models chapter is planned.",
+    "status": "系列创作 · 开源",
+    "en_status": "ONGOING SERIES · OPEN SOURCE",
+    "url": "#ai-revolution",
+    "repo": "AI_revolution",
+    "detail_html": "<div class=\"project-detail-body\">\n<p class=\"project-status\">\n<span data-en=\"Ongoing series · Open source\" data-zh=\"系列创作 · 开源\">\n           系列创作 · 开源\n          </span>\n</p>\n<p>\n<span data-en=\"A six-chapter route through animated explanations, visual narratives and reproducible experiments. Materials for the first five chapters are organized; further work is ongoing.\" data-zh=\"以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。\">\n           以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。\n          </span>\n</p>\n<ol class=\"project-steps\">\n<li>\n<span data-en=\"Question\" data-zh=\"问题\">\n            问题\n           </span>\n</li>\n<li>\n<span data-en=\"Mechanism\" data-zh=\"机制\">\n            机制\n           </span>\n</li>\n<li>\n<span data-en=\"Experiment\" data-zh=\"实验\">\n            实验\n           </span>\n</li>\n<li>\n<span data-en=\"Explain\" data-zh=\"表达\">\n            表达\n           </span>\n</li>\n</ol>\n</div>",
+    "tags": [
+      "AI Education",
+      "Visual Narratives",
+      "Experiments"
+    ]
+  },
+  {
+    "slug": "science-studio",
+    "name": "rainbow鱼 · 科普工作台",
+    "en": "rainbow鱼 · Science Studio",
+    "tag": "SCIENCE × STORYTELLING",
+    "zh": "把科学问题，变成值得追问的画面",
+    "title": "Turning science questions into stories worth exploring",
+    "desc": "将故事、机制可视化、连续运镜、字幕与 AI 视频编辑组织成创作流程，让研究与工程知识更容易理解。",
+    "en_desc": "A production workflow for stories, mechanism visualization, camera motion, captions and AI video editing, making research and engineering easier to understand.",
+    "status": "持续创作 · 开源",
+    "en_status": "ONGOING CREATION · OPEN SOURCE",
+    "url": "https://space.bilibili.com/343585138",
+    "repo": "Popula_science_video",
+    "detail_html": "<div class=\"project-detail-body\">\n<p class=\"project-status\">\n<span data-en=\"Actively built · Open source\" data-zh=\"持续构建 · 开源\">\n           持续构建 · 开源\n          </span>\n</p>\n<p>\n<span data-en=\"A workspace for scientific imagery, AI video editing, storyboards and animation components. It brings research material and production together to explain complex knowledge clearly.\" data-zh=\"组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。\">\n           组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。\n          </span>\n</p>\n<ol class=\"project-steps\">\n<li>\n<span data-en=\"Question\" data-zh=\"选题\">\n            选题\n           </span>\n</li>\n<li>\n<span data-en=\"Script\" data-zh=\"脚本\">\n            脚本\n           </span>\n</li>\n<li>\n<span data-en=\"Visuals\" data-zh=\"画面\">\n            画面\n           </span>\n</li>\n<li>\n<span data-en=\"Produce\" data-zh=\"制作\">\n            制作\n           </span>\n</li>\n</ol>\n</div>",
+    "tags": [
+      "Science Communication",
+      "Video Tools",
+      "Motion"
+    ]
+  },
+  {
+    "slug": "manim",
+    "name": "Manim Extend Rainbow",
+    "en": "Manim Extend Rainbow",
+    "tag": "VISUAL LEARNING TOOLS",
+    "zh": "让算法和结构，有直观的表达",
+    "title": "Giving algorithms and structures a visual language",
+    "desc": "为数据结构、操作系统与计算机组成教学制作可复用的 Manim 扩展组件。",
+    "en_desc": "Reusable Manim components for teaching data structures, operating systems and computer organization.",
+    "status": "动画组件 · 开源",
+    "en_status": "ANIMATION COMPONENTS · OPEN SOURCE",
+    "url": "https://github.com/rainbowyuyu/manim_extend_rainbow",
+    "repo": "manim_extend_rainbow",
+    "detail_html": "<div class=\"project-detail-body\">\n<p class=\"project-status\">\n<span data-en=\"Animation extensions · Open source\" data-zh=\"动画扩展 · 开源\">\n           动画扩展 · 开源\n          </span>\n</p>\n<p>\n<span data-en=\"Manim extensions, animation components and examples for mathematics and science communication. Abstract relationships become visible motion, and each production informs the next.\" data-zh=\"为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。\">\n           为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。\n          </span>\n</p>\n<ol class=\"project-steps\">\n<li>\n<span data-en=\"Abstract\" data-zh=\"抽象\">\n            抽象\n           </span>\n</li>\n<li>\n<span data-en=\"Compose\" data-zh=\"构图\">\n            构图\n           </span>\n</li>\n<li>\n<span data-en=\"Animate\" data-zh=\"运动\">\n            运动\n           </span>\n</li>\n<li>\n<span data-en=\"Reuse\" data-zh=\"复用\">\n            复用\n           </span>\n</li>\n</ol>\n</div>",
+    "tags": [
+      "Python",
+      "Manim",
+      "Creative Coding"
+    ]
+  }
+]
