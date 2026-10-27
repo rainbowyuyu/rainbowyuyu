@@ -1,34 +1,43 @@
 name: Snake Contrib
 
 on:
+  schedule:
+    - cron: '37 0 * * *' # 08:37 Asia/Shanghai
   workflow_dispatch:
 
-jobs:
-  generate:
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+permissions:
+  contents: write
 
+concurrency:
+  group: profile-generated-assets
+  cancel-in-progress: false
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v7.0.1
         with:
           ref: main
-
-      - name: generate github-contribution-grid-snake.svg
+      - name: Generate snake contribution animation
+        id: generate
+        continue-on-error: true
         uses: Platane/snk/svg-only@v3.5.0
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             profile-snake-contrib/github-contribution-grid-snake.svg
             profile-snake-contrib/github-contribution-grid-snake-dark.svg?palette=github-dark
-
-      - name: Commit generated snake assets
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add -- profile-snake-contrib/github-contribution-grid-snake.svg profile-snake-contrib/github-contribution-grid-snake-dark.svg
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(profile): update snake contribution assets"
-            git push origin HEAD:main
-          fi
+      - name: Retain previous artwork when generation fails
+        if: steps.generate.outcome != 'success'
+        run: git restore --worktree -- profile-snake-contrib
+      - name: Update freshness and generate static alternative
+        run: python3 scripts/update_activity.py --kind snake --result ${{ steps.generate.outcome }}
+      - name: Validate generated artwork
+        run: python3 scripts/validate_activity.py
+      - name: Commit only owned generated assets
+        run: python3 scripts/commit_activity.py --kind snake
+      - name: Report unavailable upstream generator
+        if: steps.generate.outcome != 'success'
+        run: echo '::warning::Snake generator unavailable; previous artwork retained and marked stale.'

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
-  <title id="title">rainbowyuyu — Zhejiang University student</title>
+  <title id="title">rainbow鱼 — PhD researcher at Zhejiang University</title>
   <desc id="desc">A midnight blue identity banner with turquoise and violet wave fields. Ideas into tools. Science into sight.</desc>
   <defs>
     <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#11253b"/><stop offset="1" stop-color="#0b192a"/></linearGradient>
@@ -14,8 +14,8 @@
   <g font-family="Inter,Segoe UI,Arial,sans-serif">
     <rect x="58" y="48" width="342" height="34" rx="17" fill="#68e1da" fill-opacity=".09" stroke="#68e1da" stroke-opacity=".38"/>
     <circle cx="77" cy="65" r="4" fill="#68e1da"/>
-    <text x="91" y="70" font-size="14" letter-spacing="1.1" font-weight="650" fill="#c2f6f0">ZHEJIANG UNIVERSITY · STUDENT</text>
-    <text x="56" y="158" font-size="65" letter-spacing="-2.7" font-weight="750" fill="#edf2f2">rainbowyuyu<tspan fill="#68e1da">.</tspan></text>
+    <text x="91" y="70" font-size="14" letter-spacing="1.1" font-weight="650" fill="#c2f6f0">ZHEJIANG UNIVERSITY · PHD</text>
+    <text x="56" y="158" font-size="65" letter-spacing="-2.7" font-weight="750" fill="#edf2f2">rainbow鱼<tspan fill="#68e1da">.</tspan></text>
     <text x="59" y="217" font-size="28" font-weight="520" fill="#edf2f2">Ideas into tools.</text>
     <text x="59" y="255" font-size="28" font-weight="520" fill="#aabbd0">Science into sight.</text>
     <path d="M59 294H655" stroke="#edf2f2" stroke-opacity=".12"/>

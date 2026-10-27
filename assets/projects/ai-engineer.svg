@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="AI Engineer">
+  <title>AI Engineer</title>
+  <defs>
+    <linearGradient id="aeMarkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="aeMarkAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="9" fill="url(#aeMarkBg)"/>
+  <!-- 工程节点 / 连线 -->
+  <g fill="none" stroke="url(#aeMarkAccent)" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 10h6l3 4-3 4H7"/>
+    <path d="M16 10h9M16 16h7M16 22h9"/>
+    <circle cx="24" cy="10" r="2" fill="#38bdf8" stroke="none"/>
+    <circle cx="22" cy="16" r="2" fill="#38bdf8" stroke="none"/>
+    <circle cx="24" cy="22" r="2" fill="#38bdf8" stroke="none"/>
+  </g>
+</svg>

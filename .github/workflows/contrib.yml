@@ -1,28 +1,41 @@
 name: 3D Contrib
 
 on:
+  schedule:
+    - cron: '57 0 * * *' # 08:57 Asia/Shanghai
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-generated-assets
+  cancel-in-progress: false
+
 jobs:
-  build:
+  contributions3d:
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
-    permissions:
-      contents: write
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7.0.1
         with:
           ref: main
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.0
+      - name: Generate 3D contribution field
+        id: generate
+        continue-on-error: true
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-      - name: Commit & Push
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add -- ':(glob)profile-3d-contrib/**/*.svg'
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(profile): update 3D contribution assets"
-            git push origin HEAD:main
-          fi
+      - name: Retain previous artwork when generation fails
+        if: steps.generate.outcome != 'success'
+        run: git restore --worktree -- profile-3d-contrib
+      - name: Update freshness and generate static alternative
+        run: python3 scripts/update_activity.py --kind contributions3d --result ${{ steps.generate.outcome }}
+      - name: Validate generated artwork
+        run: python3 scripts/validate_activity.py
+      - name: Commit only owned generated assets
+        run: python3 scripts/commit_activity.py --kind contributions3d
+      - name: Report unavailable upstream generator
+        if: steps.generate.outcome != 'success'
+        run: echo '::warning::3D generator unavailable; previous artwork retained and marked stale.'

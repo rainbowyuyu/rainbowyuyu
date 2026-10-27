@@ -1,0 +1,59 @@
+name: Deploy Profile Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - styles.css
+      - script.js
+      - assets/**
+      - github-metrics/**
+      - profile-3d-contrib/**
+      - profile-snake-contrib/**
+      - .github/workflows/pages.yml
+  workflow_run:
+    workflows: [GitHub Metrics, Snake Contrib, 3D Contrib]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Stage only public website files
+        shell: bash
+        run: |
+          mkdir -p .pages-stage
+          cp index.html styles.css script.js .pages-stage/
+          cp -R assets github-metrics profile-3d-contrib profile-snake-contrib .pages-stage/
+          touch .pages-stage/.nojekyll
+      - uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: .pages-stage
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

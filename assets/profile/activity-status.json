@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Shanghai",
+  "cards": {
+    "metrics": {
+      "status": "fresh",
+      "source": "GitHub REST public profile and owned public repositories",
+      "assets": [
+        "github-metrics/base.svg"
+      ],
+      "checked_at": "2026-10-27T11:23:47Z",
+      "updated_at": "2026-10-27T11:23:47Z"
+    },
+    "languages": {
+      "status": "fresh",
+      "source": "GitHub REST language bytes, public non-fork repositories",
+      "assets": [
+        "github-metrics/languages.indepth.svg"
+      ],
+      "checked_at": "2026-10-27T11:23:47Z",
+      "updated_at": "2026-10-27T11:23:47Z"
+    },
+    "calendar": {
+      "status": "fresh",
+      "source": "GitHub GraphQL contribution calendar",
+      "assets": [
+        "github-metrics/calendar.full.svg"
+      ],
+      "checked_at": "2026-10-27T11:23:47Z",
+      "updated_at": "2026-10-27T11:23:47Z"
+    },
+    "streak": {
+      "status": "fresh",
+      "source": "GitHub contribution calendar, rolling-year streak calculation",
+      "assets": [
+        "github-metrics/streak.svg"
+      ],
+      "checked_at": "2026-10-27T11:23:47Z",
+      "updated_at": "2026-10-27T11:23:47Z"
+    },
+    "habits": {
+      "status": "fresh",
+      "source": "GitHub public events, max 300 events / 90 days",
+      "assets": [
+        "github-metrics/habits.charts.svg"
+      ],
+      "checked_at": "2026-10-27T11:23:47Z",
+      "updated_at": "2026-10-27T11:23:47Z"
+    },
+    "activity": {
+      "status": "fresh",
+      "source": "GitHub public events, last 30 days within available API window",
+      "assets": [
+        "github-metrics/activity.svg"
+      ],
+      "checked_at": "2026-10-27T11:23:47Z",
+      "updated_at": "2026-10-27T11:23:47Z"
+    },
+    "wakatime": {
+      "status": "stale",
+      "source": "WakaTime optional aggregate API",
+      "assets": [
+        "github-metrics/wakatime.svg"
+      ],
+      "checked_at": "2026-10-27T11:23:47Z",
+      "updated_at": null,
+      "note": "No WakaTime credential in this run. Previous snapshot retained; freshness unknown."
+    },
+    "snake": {
+      "status": "stale",
+      "updated_at": null,
+      "note": "Existing artwork retained; awaiting a verified scheduled refresh.",
+      "source": "Platane/snk",
+      "assets": [
+        "profile-snake-contrib/github-contribution-grid-snake.svg",
+        "profile-snake-contrib/github-contribution-grid-snake-dark.svg"
+      ],
+      "checked_at": "2026-10-27T11:27:29Z"
+    },
+    "contributions3d": {
+      "status": "stale",
+      "updated_at": null,
+      "note": "Existing artwork retained; awaiting a verified scheduled refresh.",
+      "source": "yoshi389111/github-profile-3d-contrib",
+      "assets": [
+        "profile-3d-contrib/profile-night-view.svg"
+      ],
+      "checked_at": "2026-10-27T11:27:29Z"
+    }
+  },
+  "updated_at": "2026-10-27T11:23:47Z"
+}
