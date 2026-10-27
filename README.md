@@ -144,7 +144,7 @@
 <details>
 <summary><strong>WakaTime · 编程时长</strong></summary>
 
-保留的 WakaTime 卡片是历史快照，尚无可核验的当前更新时间；图中的 0 小时不能代表目前编程时长。后续刷新依赖已配置的数据源，不用虚构时长补齐。
+WakaTime 卡片展示数据源实际采集的最近 7 天编程活动，以卡片时间和[更新状态](assets/profile/activity-status.json)判断数据时效。刷新失败时保留上次结果；历史卡片中的 0 小时不能直接解释为当前编程时长。
 
 <p><img src="github-metrics/wakatime.svg" width="100%" alt="Optional WakaTime coding activity"/></p>
 

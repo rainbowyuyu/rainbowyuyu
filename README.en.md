@@ -144,7 +144,7 @@ The isometric calendar is retained as a historical snapshot; its generation reco
 <details>
 <summary><strong>WakaTime · Coding time</strong></summary>
 
-The retained WakaTime card is a historical snapshot without a verified current timestamp. Its zero-hour display does not establish current coding time. Refreshing depends on the configured source; missing data is never replaced by invented hours.
+The WakaTime card shows coding activity collected from the source for the past 7 days. Check its timestamp and [update status](assets/profile/activity-status.json) for freshness. Failed refreshes preserve the previous result; a zero-hour value in an older card does not establish current coding time.
 
 <p><img src="github-metrics/wakatime.svg" width="100%" alt="Optional WakaTime coding activity"/></p>
 
