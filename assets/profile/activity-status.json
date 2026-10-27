@@ -66,15 +66,14 @@
       "updated_at": "2026-10-27T11:41:07Z"
     },
     "snake": {
-      "status": "stale",
-      "updated_at": null,
-      "note": "Existing artwork retained; awaiting a verified scheduled refresh.",
+      "status": "fresh",
       "source": "Platane/snk",
       "assets": [
         "profile-snake-contrib/github-contribution-grid-snake.svg",
         "profile-snake-contrib/github-contribution-grid-snake-dark.svg"
       ],
-      "checked_at": "2026-10-27T11:27:29Z"
+      "checked_at": "2026-10-27T11:42:19Z",
+      "updated_at": "2026-10-27T11:42:19Z"
     },
     "contributions3d": {
       "status": "stale",
@@ -87,5 +86,5 @@
       "checked_at": "2026-10-27T11:27:29Z"
     }
   },
-  "updated_at": "2026-10-27T11:41:07Z"
+  "updated_at": "2026-10-27T11:42:19Z"
 }
