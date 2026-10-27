@@ -1,0 +1,69 @@
+{
+  "retrieved": "2026-10-27",
+  "note": "Original profile widgets restored as locally cached assets. Trademarks remain with their owners. Upstream license information recorded separately.",
+  "assets": [
+    {
+      "asset": "assets/widgets/python.svg",
+      "source": "https://techstack-generator.vercel.app/python-icon.svg",
+      "status": "mirrored",
+      "bytes": 1787,
+      "sha256": "20b66c4f9ae8a334a07bae104d98c95ba2120e7d4a89a95e3376e5da12b973a9"
+    },
+    {
+      "asset": "assets/widgets/cpp.svg",
+      "source": "https://techstack-generator.vercel.app/cpp-icon.svg",
+      "status": "mirrored",
+      "bytes": 1927,
+      "sha256": "00e5e5e29bd5fd695279c380ba1dd6304230534287802e7d9223bf33f3482073"
+    },
+    {
+      "asset": "assets/widgets/mysql.svg",
+      "source": "https://techstack-generator.vercel.app/mysql-icon.svg",
+      "status": "mirrored",
+      "bytes": 5593,
+      "sha256": "839c62fb2ee75e72da7ce1e39340a2030da3e4f4d15e5355c06471650cefc5d6"
+    },
+    {
+      "asset": "assets/widgets/java.svg",
+      "source": "https://techstack-generator.vercel.app/java-icon.svg",
+      "status": "mirrored",
+      "bytes": 2128,
+      "sha256": "784cc570d3ceb0e11722f6b5bc42f78f3dc89804b500e705eb36cde09ce9e37a"
+    },
+    {
+      "asset": "assets/widgets/docker.svg",
+      "source": "https://techstack-generator.vercel.app/docker-icon.svg",
+      "status": "mirrored",
+      "bytes": 2613,
+      "sha256": "1cddfce7ee40269af96877c0d06fbb7ebbf00a8b5ea30260c9dfe21d249a5c77"
+    },
+    {
+      "asset": "assets/widgets/github.svg",
+      "source": "https://techstack-generator.vercel.app/github-icon.svg",
+      "status": "mirrored_with_contrast_backplate",
+      "bytes": 3564,
+      "sha256": "1579ce88e06096b4e8813456fd3d7ebbbfd73e267f1e66b3a0a6e46fa941a912",
+      "upstream_sha256": "a40244981dc2497d14e301ec301dcee023de0f1c951e41b9513f45a30f2dcbfd",
+      "modifications": "Added a pale rounded backplate for contrast on dark and light profile backgrounds. Original vector paths, masks and animation keyframes are unchanged."
+    },
+    {
+      "asset": "assets/widgets/skills.svg",
+      "source": "https://go-skill-icons.vercel.app/api/icons?i=pytorch,c,md,latex,matlab,photoshop,premiere,aftereffects,audition,git&titles=true",
+      "status": "mirrored",
+      "bytes": 34358,
+      "sha256": "950f408c28658294d6b3ff17a23c937d930bcbbb352537b35da60ccf03f3ecb6"
+    }
+  ],
+  "licenses": [
+    {
+      "project": "qkrdmstlr3/techstack-generator",
+      "license": "MIT",
+      "file": "assets/catalog/techstack-generator-LICENSE.txt"
+    },
+    {
+      "project": "LelouchFR/skill-icons",
+      "license": "MIT",
+      "file": "assets/catalog/skill-icons-LICENSE.txt"
+    }
+  ]
+}

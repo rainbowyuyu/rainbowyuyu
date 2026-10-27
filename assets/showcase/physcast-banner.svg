@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+<title id="title">PhysCast — Physics-informed generative wind-farm research</title><desc id="desc">PhysCast turbine-array illustration. Concept schematic, not a measured or simulated velocity field.</desc>
+<defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#f8fbfc"/><stop offset="1" stop-color="#edf4f2"/></linearGradient><linearGradient id="wake" x2="1"><stop stop-color="#779eaf" stop-opacity=".28"/><stop offset="1" stop-color="#a5c4b8" stop-opacity=".02"/></linearGradient></defs>
+<rect width="1440" height="560" rx="24" fill="url(#paper)"/><path d="M38 524H1402" stroke="#d6e3e5"/>
+<svg fill="none" x="58" y="54" width="64" height="64" viewBox="10 10 80 80"><defs>
+    <linearGradient id="physcast-icon-field" x1="10" y1="10" x2="90" y2="85" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6a99b5"/>
+      <stop offset=".48" stop-color="#447e9c"/>
+      <stop offset="1" stop-color="#275a7b"/>
+    </linearGradient>
+  </defs>
+  <path d="M20 68V32L50 14 80 32v36L50 86 20 68Z" stroke="url(#physcast-icon-field)" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="url(#physcast-icon-field)" stroke-width="3" stroke-linecap="round">
+    <path d="M25 37C40 14,60 74,77 33"/>
+    <path d="M28 44C40 22,60 70,74 40"/>
+    <path d="M31 51C40 30,60 66,71 47"/>
+    <path d="M34 58C40 38,60 62,68 54"/>
+    <path d="M37 65C40 46,60 58,65 61"/>
+  </g>
+  <circle cx="50" cy="50" r="4.5" fill="#396e8a"/>
+</svg>
+<g font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif"><text x="143" y="97" font-size="38" font-weight="600" fill="#2c5269">PhysCast</text>
+<text x="66" y="190" font-size="49" font-weight="600" letter-spacing="-1.5" fill="#254b60">From physics to foresight.</text>
+<text x="68" y="239" font-size="19" fill="#617e8a">Physics-constrained generative wind-farm research</text>
+<text x="68" y="292" font-size="17" fill="#6c838b">Scene design, model inference and traceable validation.</text>
+<g font-size="10" fill="#466b7b"><rect x="68" y="335" width="147" height="35" rx="17" fill="#e2edef"/><text x="88" y="358">SCENE &amp; CONTROL</text><rect x="230" y="335" width="147" height="35" rx="17" fill="#e4eeea"/><text x="250" y="358">DIFFUSION &amp; PHYSICS</text><rect x="392" y="335" width="147" height="35" rx="17" fill="#f1e9e2"/><text x="412" y="358">EVIDENCE &amp; VALIDATION</text></g>
+<text x="68" y="479" font-size="12" letter-spacing="1.4" fill="#83979e">RESEARCH WORKBENCH / rainbow鱼</text></g>
+<g transform="translate(760 110)"><path d="M-30 276L298 387L625 214L279 124Z" fill="#e4eeeb" stroke="#ccddda"/>
+<g fill="none" stroke="#c6d9d7" stroke-width="1"><path d="M50 300L360 151M140 331L451 180M230 362L541 208M61 233L388 340M159 181L485 289"/></g>
+<path d="M100 145C240 137 360 175 550 228L560 295C344 237 224 202 100 178Z" fill="url(#wake)"/>
+<g fill="none" stroke-linecap="round"><path d="M6 137C193 81 289 235 564 219" stroke="#82aab6" stroke-width="2.6"/><path d="M6 153C191 101 281 249 564 239" stroke="#92b5bb" stroke-width="2.3"/><path d="M6 170C188 125 292 266 564 260" stroke="#a1bebc" stroke-width="2"/><path d="M6 187C196 152 308 283 564 281" stroke="#aec9c0" stroke-width="1.8"/></g>
+<g stroke="#4c7286" stroke-linecap="round" stroke-linejoin="round" fill="#f9fcfc"><g transform="translate(103 155)"><path d="M-4 113L-2 0H2L5 113Z" stroke-width="1.5"/><path d="M0 0L-4 -71Q0 -79 4 -71L2 -4M0 0L-58 39Q-67 40 -62 34L-4 -1M0 0L62 34Q68 41 59 39L3 4" stroke-width="2.2"/><circle r="5" fill="#406b83"/></g><g transform="translate(306 206) scale(.85)"><path d="M-4 113L-2 0H2L5 113Z" stroke-width="1.5"/><path d="M0 0L-4 -71Q0 -79 4 -71L2 -4M0 0L-58 39Q-67 40 -62 34L-4 -1M0 0L62 34Q68 41 59 39L3 4" stroke-width="2.2"/><circle r="5" fill="#406b83"/></g><g transform="translate(470 183) scale(.68)"><path d="M-4 113L-2 0H2L5 113Z" stroke-width="1.5"/><path d="M0 0L-4 -71Q0 -79 4 -71L2 -4M0 0L-58 39Q-67 40 -62 34L-4 -1M0 0L62 34Q68 41 59 39L3 4" stroke-width="2.2"/><circle r="5" fill="#406b83"/></g></g><g font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif" font-size="11" fill="#7c949b"><text x="88" y="291">T1</text><text x="294" y="323">T2</text><text x="460" y="279">T3</text><text x="309" y="399">Concept illustration · not simulation output</text></g></g></svg>

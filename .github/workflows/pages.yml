@@ -7,6 +7,7 @@ on:
       - index.html
       - styles.css
       - script.js
+      - THIRD_PARTY_NOTICES.md
       - assets/**
       - github-metrics/**
       - profile-3d-contrib/**
@@ -38,7 +39,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p .pages-stage
-          cp index.html styles.css script.js .pages-stage/
+          cp index.html styles.css script.js THIRD_PARTY_NOTICES.md .pages-stage/
           cp -R assets github-metrics profile-3d-contrib profile-snake-contrib .pages-stage/
           touch .pages-stage/.nojekyll
       - uses: actions/upload-pages-artifact@v5.0.0

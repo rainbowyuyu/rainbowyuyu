@@ -1,14 +1,1592 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a0d14"><meta name="color-scheme" content="dark light"><meta name="description" content="rainbow鱼，浙江大学博士。探索物理 AI、工程智能体与科学可视化。"><meta property="og:title" content="rainbow鱼 · 浙江大学博士"><meta property="og:description" content="探索物理 AI、工程智能体与科学可视化。"><meta property="og:type" content="website"><title>rainbow鱼 · 浙江大学博士 | Research, Build, Explain</title><link rel="icon" href="assets/profile/rainbow-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head><body>
-<a class="skip-link" href="#main"><span data-zh="跳转到主要内容" data-en="Skip to main content">跳转到主要内容</span></a><header class="site-header"><div class="header-inner wrap"><a class="brand" href="#top"><img src="assets/profile/rainbow-logo.svg" alt="" width="32" height="32"><span>rainbow<span class="brand-fish">鱼</span></span></a><nav class="site-nav" aria-label="主导航" data-label-zh="主导航" data-label-en="Main navigation"><a href="#projects"><span data-zh="作品" data-en="Work">作品</span></a><a href="#activity"><span data-zh="动态" data-en="Activity">动态</span></a><a href="#about"><span data-zh="关于" data-en="About">关于</span></a><a href="#contact"><span data-zh="联系" data-en="Connect">联系</span></a></nav><div class="header-controls"><button class="icon-button search-trigger" type="button" aria-label="快捷导航" data-label-zh="快捷导航" data-label-en="Quick navigation" hidden>⌕ <kbd>⌘ K</kbd></button><button id="theme-toggle" class="icon-button" type="button" aria-label="切换主题" hidden>☼</button><button id="language-toggle" class="language-button" type="button" aria-label="Switch to English" lang="en" hidden>EN ⇄</button></div></div></header>
-<main id="main"><section id="top" class="hero wrap" aria-labelledby="hero-title"><div class="hero-copy"><p class="university-badge"><span class="university-mark" aria-hidden="true">ZJU</span><span data-zh="浙江大学博士" data-en="PhD researcher at Zhejiang University">浙江大学博士</span><span class="badge-dot" aria-hidden="true"></span></p><p class="eyebrow">RESEARCH · BUILD · EXPLAIN</p><h1 id="hero-title">rainbow<span class="hero-fish">鱼</span><span class="title-dot">.</span></h1><h2 class="hero-statement"><span data-zh="让 AI 理解物理，" data-en="AI for the physical world.">让 AI 理解物理，</span><br><span data-zh="让知识看得见。" data-en="Knowledge you can see.">让知识看得见。</span></h2><p class="hero-description"><span data-zh="我探索物理世界中的 AI，构建工程智能体，也把复杂的科学讲成可以探索的故事。" data-en="I explore AI in the physical world, build engineering agents, and turn complex science into stories you can explore.">我探索物理世界中的 AI，构建工程智能体，也把复杂的科学讲成可以探索的故事。</span></p><div class="hero-actions"><a class="button button-primary" href="#projects"><span data-zh="探索作品" data-en="Explore my work">探索作品</span><span aria-hidden="true">↘</span></a><a class="button button-quiet" href="https://github.com/rainbowyuyu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="hero-routes"><a href="#physcast"><i class="route-dot route-physics"></i>Physical AI</a><a href="#omniforge"><i class="route-dot route-agent"></i>Agentic Engineering</a><a href="#wiscomper"><i class="route-dot route-visual"></i>Visual Learning</a></div></div><figure class="hero-visual" aria-labelledby="field-caption"><div class="field-topline"><span class="mono"><i class="status-dot"></i> CURIOSITY FIELD</span><span>01 / ∞</span></div><div class="field-stage"><svg class="field-fallback" viewBox="0 0 600 540" aria-hidden="true"><g fill="none" stroke="#91acd6" stroke-width=".8" opacity=".55"><ellipse cx="300" cy="270" rx="212" ry="80" transform="rotate(-28 300 270)"/><ellipse cx="300" cy="270" rx="190" ry="135" transform="rotate(32 300 270)"/><ellipse cx="300" cy="270" rx="115" ry="200" transform="rotate(-32 300 270)"/></g></svg><canvas id="curiosity-field" aria-hidden="true"></canvas><div class="field-label label-physics"><span>01</span>PHYSICS</div><div class="field-label label-agents"><span>02</span>AGENTS</div><div class="field-label label-stories"><span>03</span>STORIES</div><div class="field-center" aria-hidden="true">+</div></div><figcaption id="field-caption"><span><span data-zh="生成式视觉 · 非研究数据" data-en="Generative visual · Not research data">生成式视觉 · 非研究数据</span></span><button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span class="motion-label"><span data-zh="暂停动效" data-en="Pause motion">暂停动效</span></span></button></figcaption></figure><div class="hero-bottom"><p><span data-zh="在真实问题与想象力之间，持续探索。" data-en="Exploring the space between real questions and imagination.">在真实问题与想象力之间，持续探索。</span></p><a href="#projects" class="scroll-link"><span data-zh="向下探索" data-en="SCROLL TO EXPLORE">向下探索</span> ↓</a></div></section>
-<section class="section wrap projects-section" id="projects" aria-labelledby="projects-title"><div class="section-heading"><div><p class="eyebrow"><span>01 /</span> SELECTED WORK</p><h2 id="projects-title"><span data-zh="把好奇心做成作品" data-en="Curiosity, made tangible">把好奇心做成作品</span><span class="title-dot">.</span></h2></div><p class="section-description"><span data-zh="从风场预测到工程设计，从公式动画到科学叙事。每一个项目，都有自己的问题与表达。" data-en="From wind forecasting to engineering design, from mathematical animation to science stories. Each project starts with its own question.">从风场预测到工程设计，从公式动画到科学叙事。每一个项目，都有自己的问题与表达。</span></p></div><div class="project-toolbar"><span class="mono">07 / <span data-zh="个精选项目" data-en="SELECTED PROJECTS">个精选项目</span></span><button class="text-button" id="expand-projects" type="button" aria-controls="project-list" hidden><span data-zh="展开全部" data-en="Expand all">展开全部</span> ＋</button></div><div class="project-list" id="project-list"><details class="project-row project-physcast" id="physcast" open><summary><span class="project-number">01</span><span class="project-logo"><img src="assets/projects/physcast.svg" alt="" width="56" height="56" loading="lazy"></span><span class="project-summary"><span class="project-category"><span data-zh="物理 AI · 研究平台" data-en="PHYSICAL AI · RESEARCH">物理 AI · 研究平台</span></span><span class="project-name"><span data-zh="PhysCast" data-en="PhysCast">PhysCast</span></span><span class="project-oneline"><span data-zh="从稀疏观测出发，探索有物理依据的风场预测。" data-en="Exploring physics-grounded wind forecasting from sparse observations.">从稀疏观测出发，探索有物理依据的风场预测。</span></span></span><span class="project-expander"><span class="expand-label"><span data-zh="收起" data-en="Collapse">收起</span></span><span class="plus" aria-hidden="true"></span></span></summary><div class="project-content"><div class="project-description"><p class="project-status"><span data-zh="持续研究 · 源码私有" data-en="Research in progress · Private source">持续研究 · 源码私有</span></p><p><span data-zh="围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。" data-en="Connecting physical simulation, generative forecasting and independent validation to study wind-field responses to control interventions. Reliability and uncertainty matter as much as the prediction.">围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。</span></p><div class="project-actions"><span class="private-note"><span data-zh="源码私有" data-en="Private source">源码私有</span></span></div></div><div class="project-system"><ol class="project-steps"><li><span class="step-no">01</span><span data-zh="观测" data-en="Observe">观测</span></li><li><span class="step-no">02</span><span data-zh="约束" data-en="Constrain">约束</span></li><li><span class="step-no">03</span><span data-zh="预测" data-en="Forecast">预测</span></li><li><span class="step-no">04</span><span data-zh="验证" data-en="Validate">验证</span></li></ol><div class="tags"><span>Python</span><span>PyTorch</span><span>OpenFAST / FAST.Farm</span></div></div></div></details>
-<details class="project-row project-omniforge" id="omniforge" ><summary><span class="project-number">02</span><span class="project-logo"><img src="assets/projects/omniforge.svg" alt="" width="56" height="56" loading="lazy"></span><span class="project-summary"><span class="project-category"><span data-zh="工程智能体 · 工具构建" data-en="ENGINEERING AGENTS · TOOLS">工程智能体 · 工具构建</span></span><span class="project-name"><span data-zh="OmniForge · 万象工坊" data-en="OmniForge">OmniForge · 万象工坊</span></span><span class="project-oneline"><span data-zh="把工程意图转化为可以检查、迭代和交付的工作。" data-en="Turning engineering intent into work that can be inspected, iterated and delivered.">把工程意图转化为可以检查、迭代和交付的工作。</span></span></span><span class="project-expander"><span class="expand-label"><span data-zh="展开" data-en="Explore">展开</span></span><span class="plus" aria-hidden="true"></span></span></summary><div class="project-content"><div class="project-description"><p class="project-status"><span data-zh="开发中 · 源码私有" data-en="In development · Private source">开发中 · 源码私有</span></p><p><span data-zh="围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。" data-en="An adaptive agent and tool workbench for modeling, computation and validation. Inputs, execution traces, results and reports remain connected, making the engineering process inspectable and reusable.">围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。</span></p><div class="project-actions"><span class="private-note"><span data-zh="源码私有" data-en="Private source">源码私有</span></span></div></div><div class="project-system"><ol class="project-steps"><li><span class="step-no">01</span><span data-zh="需求" data-en="Intent">需求</span></li><li><span class="step-no">02</span><span data-zh="建模" data-en="Model">建模</span></li><li><span class="step-no">03</span><span data-zh="求解" data-en="Solve">求解</span></li><li><span class="step-no">04</span><span data-zh="交付" data-en="Deliver">交付</span></li></ol><div class="tags"><span>Adaptive Agents</span><span>FEM</span><span>Topology Optimization</span></div></div></div></details>
-<details class="project-row project-wiscomper" id="wiscomper" ><summary><span class="project-number">03</span><span class="project-logo"><img src="assets/projects/wiscomper.png" alt="" width="56" height="56" loading="lazy"></span><span class="project-summary"><span class="project-category"><span data-zh="多模态 AI · 数学可视化" data-en="MULTIMODAL AI · VISUAL MATH">多模态 AI · 数学可视化</span></span><span class="project-name"><span data-zh="Wiscomper · 智算视界" data-en="Wiscomper">Wiscomper · 智算视界</span></span><span class="project-oneline"><span data-zh="从一道公式，到一段看得懂的数学动画。" data-en="From a formula to a mathematical explanation you can see.">从一道公式，到一段看得懂的数学动画。</span></span></span><span class="project-expander"><span class="expand-label"><span data-zh="展开" data-en="Explore">展开</span></span><span class="plus" aria-hidden="true"></span></span></summary><div class="project-content"><div class="project-description"><p class="project-status"><span data-zh="开源 · 在线体验" data-en="Open source · Live website">开源 · 在线体验</span></p><p><span data-zh="连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。" data-en="Connecting handwritten formula recognition, LaTeX, step-by-step reasoning and Manim animation. Multimodal recognition and tool orchestration make abstract mathematical processes visible and explorable.">连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。</span></p><div class="project-actions"><a class="button button-small button-brand" href="https://www.wiscomper.com/" target="_blank" rel="noopener noreferrer"><span data-zh="打开智算视界" data-en="Visit Wiscomper">打开智算视界</span> ↗</a><a class="button button-small" href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective" target="_blank" rel="noopener noreferrer"><span data-zh="查看源码" data-en="View source">查看源码</span> ↗</a></div></div><div class="project-system"><ol class="project-steps"><li><span class="step-no">01</span><span data-zh="公式" data-en="Formula">公式</span></li><li><span class="step-no">02</span><span data-zh="识别" data-en="Recognize">识别</span></li><li><span class="step-no">03</span><span data-zh="推导" data-en="Reason">推导</span></li><li><span class="step-no">04</span><span data-zh="动画" data-en="Animate">动画</span></li></ol><div class="tags"><span>Multimodal AI</span><span>LaTeX</span><span>Manim</span></div></div></div></details>
-<details class="project-row project-ai-engineer" id="ai-engineer" ><summary><span class="project-number">04</span><span class="project-logo"><img src="assets/projects/ai-engineer.svg" alt="" width="56" height="56" loading="lazy"></span><span class="project-summary"><span class="project-category"><span data-zh="智能设计 · 工程计算" data-en="INTELLIGENT DESIGN · COMPUTATION">智能设计 · 工程计算</span></span><span class="project-name"><span data-zh="The AI Engineer" data-en="The AI Engineer">The AI Engineer</span></span><span class="project-oneline"><span data-zh="连接几何、网格、拓扑优化与物理计算。" data-en="Connecting geometry, meshes, topology optimization and physics.">连接几何、网格、拓扑优化与物理计算。</span></span></span><span class="project-expander"><span class="expand-label"><span data-zh="展开" data-en="Explore">展开</span></span><span class="plus" aria-hidden="true"></span></span></summary><div class="project-content"><div class="project-description"><p class="project-status"><span data-zh="研究代码 · 开源" data-en="Research code · Open source">研究代码 · 开源</span></p><p><span data-zh="探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。" data-en="Exploring an engineering workflow from natural-language requirements to design deliverables. Geometry processing, finite-element computation and optimization are organized around traceable evidence.">探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。</span></p><div class="project-actions"><a class="button button-small" href="https://github.com/rainbowyuyu/ai_engineer" target="_blank" rel="noopener noreferrer"><span data-zh="查看源码" data-en="View source">查看源码</span> ↗</a></div></div><div class="project-system"><ol class="project-steps"><li><span class="step-no">01</span><span data-zh="意图" data-en="Intent">意图</span></li><li><span class="step-no">02</span><span data-zh="几何" data-en="Geometry">几何</span></li><li><span class="step-no">03</span><span data-zh="计算" data-en="Compute">计算</span></li><li><span class="step-no">04</span><span data-zh="优化" data-en="Optimize">优化</span></li></ol><div class="tags"><span>Geometry</span><span>FEM</span><span>Optimization</span></div></div></div></details>
-<details class="project-row project-ai-revolution" id="ai-revolution" ><summary><span class="project-number">05</span><span class="project-logo"><img src="assets/projects/ai-revolution.svg" alt="" width="56" height="56" loading="lazy"></span><span class="project-summary"><span class="project-category"><span data-zh="知识创作 · 动态演示" data-en="KNOWLEDGE · MOTION">知识创作 · 动态演示</span></span><span class="project-name"><span data-zh="AI 进化史" data-en="The Evolution of AI">AI 进化史</span></span><span class="project-oneline"><span data-zh="沿着视觉、生成模型与智能体，理解 AI 如何演进。" data-en="Following vision, generative models and agents through the evolution of AI.">沿着视觉、生成模型与智能体，理解 AI 如何演进。</span></span></span><span class="project-expander"><span class="expand-label"><span data-zh="展开" data-en="Explore">展开</span></span><span class="plus" aria-hidden="true"></span></span></summary><div class="project-content"><div class="project-description"><p class="project-status"><span data-zh="系列创作 · 开源" data-en="Ongoing series · Open source">系列创作 · 开源</span></p><p><span data-zh="以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。" data-en="A six-chapter route through animated explanations, visual narratives and reproducible experiments. Materials for the first five chapters are organized; further work is ongoing.">以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。</span></p><div class="project-actions"><a class="button button-small" href="https://github.com/rainbowyuyu/AI_revolution" target="_blank" rel="noopener noreferrer"><span data-zh="查看源码" data-en="View source">查看源码</span> ↗</a></div></div><div class="project-system"><ol class="project-steps"><li><span class="step-no">01</span><span data-zh="问题" data-en="Question">问题</span></li><li><span class="step-no">02</span><span data-zh="机制" data-en="Mechanism">机制</span></li><li><span class="step-no">03</span><span data-zh="实验" data-en="Experiment">实验</span></li><li><span class="step-no">04</span><span data-zh="表达" data-en="Explain">表达</span></li></ol><div class="tags"><span>AI Education</span><span>Visual Narratives</span><span>Experiments</span></div></div></div></details>
-<details class="project-row project-science-studio" id="science-studio" ><summary><span class="project-number">06</span><span class="project-logo"><img src="assets/projects/science-studio.svg" alt="" width="56" height="56" loading="lazy"></span><span class="project-summary"><span class="project-category"><span data-zh="科学叙事 · 创作工具" data-en="SCIENCE STORIES · CREATIVE TOOLS">科学叙事 · 创作工具</span></span><span class="project-name"><span data-zh="rainbow鱼科普工作台" data-en="rainbow鱼 Science Studio">rainbow鱼科普工作台</span></span><span class="project-oneline"><span data-zh="把问题变成故事，把科学机制变成画面。" data-en="Turning questions into stories and scientific mechanisms into images.">把问题变成故事，把科学机制变成画面。</span></span></span><span class="project-expander"><span class="expand-label"><span data-zh="展开" data-en="Explore">展开</span></span><span class="plus" aria-hidden="true"></span></span></summary><div class="project-content"><div class="project-description"><p class="project-status"><span data-zh="持续构建 · 开源" data-en="Actively built · Open source">持续构建 · 开源</span></p><p><span data-zh="组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。" data-en="A workspace for scientific imagery, AI video editing, storyboards and animation components. It brings research material and production together to explain complex knowledge clearly.">组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。</span></p><div class="project-actions"><a class="button button-small" href="https://github.com/rainbowyuyu/Popula_science_video" target="_blank" rel="noopener noreferrer"><span data-zh="查看源码" data-en="View source">查看源码</span> ↗</a></div></div><div class="project-system"><ol class="project-steps"><li><span class="step-no">01</span><span data-zh="选题" data-en="Question">选题</span></li><li><span class="step-no">02</span><span data-zh="脚本" data-en="Script">脚本</span></li><li><span class="step-no">03</span><span data-zh="画面" data-en="Visuals">画面</span></li><li><span class="step-no">04</span><span data-zh="制作" data-en="Produce">制作</span></li></ol><div class="tags"><span>Science Communication</span><span>Video Tools</span><span>Motion</span></div></div></div></details>
-<details class="project-row project-manim" id="manim" ><summary><span class="project-number">07</span><span class="project-logo"><img src="assets/projects/manim.svg" alt="" width="56" height="56" loading="lazy"></span><span class="project-summary"><span class="project-category"><span data-zh="数学动画 · 可复用组件" data-en="MATH ANIMATION · COMPONENTS">数学动画 · 可复用组件</span></span><span class="project-name"><span data-zh="Manim Extend Rainbow" data-en="Manim Extend Rainbow">Manim Extend Rainbow</span></span><span class="project-oneline"><span data-zh="把反复打磨的数学动画，沉淀为可复用工具。" data-en="Turning carefully crafted mathematical animation into reusable tools.">把反复打磨的数学动画，沉淀为可复用工具。</span></span></span><span class="project-expander"><span class="expand-label"><span data-zh="展开" data-en="Explore">展开</span></span><span class="plus" aria-hidden="true"></span></span></summary><div class="project-content"><div class="project-description"><p class="project-status"><span data-zh="动画扩展 · 开源" data-en="Animation extensions · Open source">动画扩展 · 开源</span></p><p><span data-zh="为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。" data-en="Manim extensions, animation components and examples for mathematics and science communication. Abstract relationships become visible motion, and each production informs the next.">为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。</span></p><div class="project-actions"><a class="button button-small" href="https://github.com/rainbowyuyu/manim_extend_rainbow" target="_blank" rel="noopener noreferrer"><span data-zh="查看源码" data-en="View source">查看源码</span> ↗</a></div></div><div class="project-system"><ol class="project-steps"><li><span class="step-no">01</span><span data-zh="抽象" data-en="Abstract">抽象</span></li><li><span class="step-no">02</span><span data-zh="构图" data-en="Compose">构图</span></li><li><span class="step-no">03</span><span data-zh="运动" data-en="Animate">运动</span></li><li><span class="step-no">04</span><span data-zh="复用" data-en="Reuse">复用</span></li></ol><div class="tags"><span>Python</span><span>Manim</span><span>Creative Coding</span></div></div></div></details></div><div class="section-footer"><p><span data-zh="点击项目行展开介绍；项目保留各自的品牌配色。" data-en="Open any row to explore. Each project keeps its own visual identity.">点击项目行展开介绍；项目保留各自的品牌配色。</span></p><a class="text-link" href="https://github.com/rainbowyuyu?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-zh="更多 GitHub 项目" data-en="All GitHub projects">更多 GitHub 项目</span> ↗</a></div></section>
-<section class="section activity-section" id="activity" aria-labelledby="activity-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow"><span>02 /</span> ACTIVITY OBSERVATORY</p><h2 id="activity-title"><span data-zh="持续生长的轨迹" data-en="A practice, in motion">持续生长的轨迹</span><span class="title-dot">.</span></h2></div><p class="section-description"><span data-zh="贡献动画、编码统计与每日更新卡片，保留在这里。它们记录过程，不替代作品本身。" data-en="Contribution animations, coding statistics and daily cards live here. They document the process behind the work.">贡献动画、编码统计与每日更新卡片，保留在这里。它们记录过程，不替代作品本身。</span></p></div><div class="activity-toolbar"><span id="activity-status" class="activity-status" role="status"><span data-zh="正在读取卡片更新时间…" data-en="Loading card update status…">正在读取卡片更新时间…</span></span><a class="text-link" href="https://github.com/rainbowyuyu?tab=overview" target="_blank" rel="noopener noreferrer"><span data-zh="前往 GitHub 动态" data-en="Open GitHub activity">前往 GitHub 动态</span> ↗</a></div><div class="contribution-scene"><figure class="metric-card"><figcaption><span data-zh="三维贡献图景" data-en="Contributions in three dimensions">三维贡献图景</span></figcaption><img src="profile-3d-contrib/profile-night-rainbow.svg" alt="三维贡献图景" data-alt-zh="三维贡献图景" data-alt-en="Contributions in three dimensions" loading="lazy" decoding="async" class="animated-contribution" data-animated-src="profile-3d-contrib/profile-night-rainbow.svg" data-static-src="profile-3d-contrib/profile-night-static.svg" data-light-src="profile-3d-contrib/profile-season-animate.svg" data-light-static-src="profile-3d-contrib/profile-night-static.svg"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure></div><div class="snake-card"><figure class="metric-card"><figcaption><span data-zh="贡献贪吃蛇" data-en="Contribution snake">贡献贪吃蛇</span></figcaption><img src="profile-snake-contrib/github-contribution-grid-snake-dark.svg" alt="贡献贪吃蛇" data-alt-zh="贡献贪吃蛇" data-alt-en="Contribution snake" loading="lazy" decoding="async" class="animated-contribution" data-animated-src="profile-snake-contrib/github-contribution-grid-snake-dark.svg" data-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" data-light-src="profile-snake-contrib/github-contribution-grid-snake.svg" data-light-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure></div><div class="metrics-grid primary-metrics"><figure class="metric-card"><figcaption><span data-zh="GitHub 数据概览" data-en="GitHub at a glance">GitHub 数据概览</span></figcaption><img src="github-metrics/base.svg" alt="GitHub 数据概览" data-alt-zh="GitHub 数据概览" data-alt-en="GitHub at a glance" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="代码中的语言" data-en="Languages in the code">代码中的语言</span></figcaption><img src="github-metrics/languages.indepth.svg" alt="代码中的语言" data-alt-zh="代码中的语言" data-alt-en="Languages in the code" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure></div><details class="activity-more"><summary><span data-zh="展开更多每日卡片" data-en="More daily cards">展开更多每日卡片</span><span class="plus" aria-hidden="true"></span></summary><div class="metrics-grid"><figure class="metric-card"><figcaption><span data-zh="贡献连续记录" data-en="Contribution streak">贡献连续记录</span></figcaption><img src="github-metrics/streak.svg" alt="贡献连续记录" data-alt-zh="贡献连续记录" data-alt-en="Contribution streak" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="全年贡献日历" data-en="Full-year calendar">全年贡献日历</span></figcaption><img src="github-metrics/calendar.full.svg" alt="全年贡献日历" data-alt-zh="全年贡献日历" data-alt-en="Full-year calendar" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="编码习惯" data-en="Coding habits">编码习惯</span></figcaption><img src="github-metrics/habits.charts.svg" alt="编码习惯" data-alt-zh="编码习惯" data-alt-en="Coding habits" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="近 30 天公开活动" data-en="Public activity · Last 30 days">近 30 天公开活动</span></figcaption><img src="github-metrics/activity.svg" alt="近 30 天公开活动" data-alt-zh="近 30 天公开活动" data-alt-en="Public activity · Last 30 days" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="编码时间 · WakaTime" data-en="Coding time · WakaTime">编码时间 · WakaTime</span></figcaption><img src="github-metrics/wakatime.svg" alt="编码时间 · WakaTime" data-alt-zh="编码时间 · WakaTime" data-alt-en="Coding time · WakaTime" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p><p class="section-footnote"><span data-zh="基于最近 7 天的真实编码记录，具体时间以卡片及更新状态为准；更新失败时保留最近一次快照。" data-en="Based on real coding activity from the last 7 days. Refer to the card and update status for the reporting time; the latest snapshot is retained if a refresh fails.">基于最近 7 天的真实编码记录，具体时间以卡片及更新状态为准；更新失败时保留最近一次快照。</span></p></figure></div></details><details class="activity-more archive-cards"><summary><span data-zh="历史卡片档案" data-en="Archived card snapshots">历史卡片档案</span><span class="plus" aria-hidden="true"></span></summary><p class="activity-disclaimer"><span data-zh="保留旧版卡片作为历史快照。它们可能较旧，或显示当时的数据源错误；不代表实时状态。" data-en="These older cards are preserved as archived snapshots. They may be outdated or show past data-source errors; they do not represent live status.">保留旧版卡片作为历史快照。它们可能较旧，或显示当时的数据源错误；不代表实时状态。</span></p><div class="metrics-grid"><p class="archive-explanation"><span data-zh="旧里程碑卡片的数据源曾报错，原文件留存于仓库档案。" data-en="The old achievements source returned an error; the original file remains in the repository archive.">旧里程碑卡片的数据源曾报错，原文件留存于仓库档案。</span></p><figure class="metric-card"><figcaption><span data-zh="社区讨论" data-en="Discussions">社区讨论</span></figcaption><img src="github-metrics/discussions.svg" alt="社区讨论" data-alt-zh="社区讨论" data-alt-en="Discussions" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="议题与贡献跟进" data-en="Issues &amp; contributions">议题与贡献跟进</span></figcaption><img src="github-metrics/followup.indepth.svg" alt="议题与贡献跟进" data-alt-zh="议题与贡献跟进" data-alt-en="Issues & contributions" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="立体全年日历" data-en="Isometric calendar">立体全年日历</span></figcaption><img src="github-metrics/isocalendar.fullyear.svg" alt="立体全年日历" data-alt-zh="立体全年日历" data-alt-en="Isometric calendar" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="社区连接" data-en="Community connections">社区连接</span></figcaption><img src="github-metrics/people.followers.svg" alt="社区连接" data-alt-zh="社区连接" data-alt-en="Community connections" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="社区反馈" data-en="Reactions">社区反馈</span></figcaption><img src="github-metrics/reactions.svg" alt="社区反馈" data-alt-zh="社区反馈" data-alt-en="Reactions" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="置顶项目" data-en="Pinned repositories">置顶项目</span></figcaption><img src="github-metrics/repositories.pinned.svg" alt="置顶项目" data-alt-zh="置顶项目" data-alt-en="Pinned repositories" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="星标趋势" data-en="Stargazer trends">星标趋势</span></figcaption><img src="github-metrics/stargazers.chartist.svg" alt="星标趋势" data-alt-zh="星标趋势" data-alt-en="Stargazer trends" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure><figure class="metric-card"><figcaption><span data-zh="星标收藏" data-en="Starred repositories">星标收藏</span></figcaption><img src="github-metrics/stars.svg" alt="星标收藏" data-alt-zh="星标收藏" data-alt-en="Starred repositories" loading="lazy" decoding="async"><p class="image-unavailable" hidden><span data-zh="卡片暂不可用，等待下一次更新。" data-en="This card is unavailable; awaiting a future update.">卡片暂不可用，等待下一次更新。</span></p></figure></div></details><p class="section-footnote"><span data-zh="动效开关同时控制首页视觉、贡献动画；系统减少动态效果偏好会自动生效。" data-en="The motion control covers the hero visual and contribution animations. Your reduced-motion preference is respected.">动效开关同时控制首页视觉、贡献动画；系统减少动态效果偏好会自动生效。</span></p></div></section>
-<section class="section wrap about-section" id="about" aria-labelledby="about-title"><div class="about-copy"><p class="eyebrow"><span>03 /</span> A LITTLE ABOUT ME</p><h2 id="about-title"><span data-zh="保持好奇，追问下去" data-en="Stay curious. Ask further">保持好奇，追问下去</span><span class="title-dot">.</span></h2><p class="about-identity"><span data-zh="我是 rainbow鱼，浙江大学博士。" data-en="I’m rainbow鱼, a PhD researcher at Zhejiang University.">我是 rainbow鱼，浙江大学博士。</span></p><p><span data-zh="我感兴趣的是模型与世界相遇的地方：一次预测有没有物理依据，一个智能体能否把想法做出来，一段动画能否让复杂机制变得清楚。研究、写代码、做可视化，对我来说是相互连接的事。" data-en="I’m interested in where models meet the world: whether a prediction has a physical basis, whether an agent can turn an idea into something useful, and whether animation can make a complex mechanism clear. Research, code and visualization are connected parts of that work.">我感兴趣的是模型与世界相遇的地方：一次预测有没有物理依据，一个智能体能否把想法做出来，一段动画能否让复杂机制变得清楚。研究、写代码、做可视化，对我来说是相互连接的事。</span></p><div class="education-line"><span class="education-mark">ZJU</span><div><strong><span data-zh="浙江大学" data-en="Zhejiang University">浙江大学</span></strong><span><span data-zh="博士 · 科研与创作" data-en="PhD researcher · Research &amp; creation">博士 · 科研与创作</span></span></div></div></div><div class="focus-list"><article><span class="focus-number">01</span><div><span class="focus-label">PHYSICAL AI</span><h3><span data-zh="从观测，到可检验的预测" data-en="From observations to testable predictions">从观测，到可检验的预测</span></h3><p><span data-zh="物理约束、风场与世界模型。关注控制响应、稀疏观测与模型可靠性。" data-en="Physical constraints, wind fields and world models, with a focus on control responses, sparse observations and reliability.">物理约束、风场与世界模型。关注控制响应、稀疏观测与模型可靠性。</span></p><span class="focus-tools">Python · PyTorch · OpenFAST</span></div></article><article><span class="focus-number">02</span><div><span class="focus-label">AGENTIC ENGINEERING</span><h3><span data-zh="让工具完成真实的任务" data-en="Tools that do meaningful work">让工具完成真实的任务</span></h3><p><span data-zh="连接自然语言、建模与计算，保留过程，让结果有据可查。" data-en="Connecting natural language, modeling and computation while keeping results traceable to their process.">连接自然语言、建模与计算，保留过程，让结果有据可查。</span></p><span class="focus-tools">Agents · FEM · Optimization</span></div></article><article><span class="focus-number">03</span><div><span class="focus-label">VISUAL STORYTELLING</span><h3><span data-zh="让知识拥有可见的形状" data-en="Giving knowledge a visible form">让知识拥有可见的形状</span></h3><p><span data-zh="用数学动画、交互场景与科学影像，让抽象关系成为直观理解。" data-en="Using mathematical animation, interactive scenes and scientific imagery to make abstract relationships intuitive.">用数学动画、交互场景与科学影像，让抽象关系成为直观理解。</span></p><span class="focus-tools">Manim · Three.js · Remotion</span></div></article></div></section>
-<section class="section contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap"><p class="eyebrow"><span>04 /</span> KEEP THE CONVERSATION GOING</p><div class="contact-top"><h2 id="contact-title"><span data-zh="下一个好问题，一起探索" data-en="A good question is a good start">下一个好问题，一起探索</span><span class="title-dot">.</span></h2><p><span data-zh="物理 AI、工程智能体、数学可视化，或一个有趣的想法。欢迎来交流。" data-en="Physical AI, engineering agents, mathematical visualization, or an intriguing idea. Let’s talk.">物理 AI、工程智能体、数学可视化，或一个有趣的想法。欢迎来交流。</span></p></div><div class="contact-links"><a href="https://github.com/rainbowyuyu" target="_blank" rel="noopener noreferrer"><span class="contact-number">01</span><span><small>CODE & PROJECTS</small><strong>GitHub</strong></span><span class="contact-handle">@rainbowyuyu</span><span class="contact-arrow" aria-hidden="true">↗</span></a><a href="https://space.bilibili.com/343585138" target="_blank" rel="noopener noreferrer"><span class="contact-number">02</span><span><small>SCIENCE & STORIES</small><strong>Bilibili</strong></span><span class="contact-handle">rainbow鱼</span><span class="contact-arrow" aria-hidden="true">↗</span></a><a href="https://www.wiscomper.com/" target="_blank" rel="noopener noreferrer"><span class="contact-number">03</span><span><small>VISUAL MATHEMATICS</small><strong>Wiscomper</strong></span><span class="contact-handle"><span data-zh="智算视界" data-en="Visual mathematics">智算视界</span></span><span class="contact-arrow" aria-hidden="true">↗</span></a></div></div></section>
-</main><footer class="site-footer wrap"><div class="footer-top"><a class="brand" href="#top"><img src="assets/profile/rainbow-logo.svg" alt="" width="32" height="32"><span>rainbow鱼</span></a><span class="mono footer-motto">STAY CURIOUS. KEEP BUILDING.</span><a class="text-link" href="#top"><span data-zh="回到顶部" data-en="Back to top">回到顶部</span> ↑</a></div><div class="footer-bottom"><p>© <span id="copyright-year">2026</span> rainbow鱼</p><p><span data-zh="个人主页，非浙江大学官方网站。" data-en="Personal website; not an official Zhejiang University website.">个人主页，非浙江大学官方网站。</span></p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2025156088号</a></div></footer><dialog id="command-dialog" class="command-dialog" aria-labelledby="command-title"><div class="command-header"><h2 id="command-title"><span data-zh="快速前往" data-en="Jump to">快速前往</span></h2><button class="icon-button" id="command-close" type="button" aria-label="关闭快捷导航" data-label-zh="关闭快捷导航" data-label-en="Close quick navigation">×</button></div><label class="sr-only" for="command-search"><span data-zh="搜索项目或页面" data-en="Search projects or pages">搜索项目或页面</span></label><input id="command-search" type="search" placeholder="搜索项目或页面…" data-placeholder-zh="搜索项目或页面…" data-placeholder-en="Search projects or pages…" autocomplete="off"><div class="command-list" id="command-list"><a href="#projects" data-search="projects 作品 Work"><span data-zh="作品" data-en="Work">作品</span><span aria-hidden="true">↗</span></a><a href="#activity" data-search="activity 动态与统计 Activity & statistics"><span data-zh="动态与统计" data-en="Activity &amp; statistics">动态与统计</span><span aria-hidden="true">↗</span></a><a href="#about" data-search="about 关于 · 浙江大学博士 About · ZJU PhD researcher"><span data-zh="关于 · 浙江大学博士" data-en="About · ZJU PhD researcher">关于 · 浙江大学博士</span><span aria-hidden="true">↗</span></a><a href="#contact" data-search="contact 联系 Connect"><span data-zh="联系" data-en="Connect">联系</span><span aria-hidden="true">↗</span></a><a href="#physcast" data-search="physcast PhysCast PhysCast"><span data-zh="PhysCast" data-en="PhysCast">PhysCast</span><span aria-hidden="true">↗</span></a><a href="#omniforge" data-search="omniforge OmniForge · 万象工坊 OmniForge"><span data-zh="OmniForge · 万象工坊" data-en="OmniForge">OmniForge · 万象工坊</span><span aria-hidden="true">↗</span></a><a href="#wiscomper" data-search="wiscomper Wiscomper · 智算视界 Wiscomper"><span data-zh="Wiscomper · 智算视界" data-en="Wiscomper">Wiscomper · 智算视界</span><span aria-hidden="true">↗</span></a><a href="#ai-engineer" data-search="ai-engineer The AI Engineer The AI Engineer"><span data-zh="The AI Engineer" data-en="The AI Engineer">The AI Engineer</span><span aria-hidden="true">↗</span></a><a href="#ai-revolution" data-search="ai-revolution AI 进化史 The Evolution of AI"><span data-zh="AI 进化史" data-en="The Evolution of AI">AI 进化史</span><span aria-hidden="true">↗</span></a><a href="#science-studio" data-search="science-studio rainbow鱼科普工作台 rainbow鱼 Science Studio"><span data-zh="rainbow鱼科普工作台" data-en="rainbow鱼 Science Studio">rainbow鱼科普工作台</span><span aria-hidden="true">↗</span></a><a href="#manim" data-search="manim Manim Extend Rainbow Manim Extend Rainbow"><span data-zh="Manim Extend Rainbow" data-en="Manim Extend Rainbow">Manim Extend Rainbow</span><span aria-hidden="true">↗</span></a></div><p id="command-empty" class="command-empty" hidden><span data-zh="没有匹配结果，试试项目名称。" data-en="No matches. Try a project name.">没有匹配结果，试试项目名称。</span></p><p class="command-footer"><span data-zh="输入搜索 · 方向键选择 · Enter 前往 · Esc 关闭" data-en="Type to search · Arrows to select · Enter to go · Esc to close">输入搜索 · 方向键选择 · Enter 前往 · Esc 关闭</span></p></dialog></body></html>
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#090e13" name="theme-color"/>
+<meta content="dark light" name="color-scheme"/>
+<meta content="rainbow鱼，浙江大学博士。探索物理 AI、工程智能体与科学可视化。" name="description"/>
+<meta content="rainbow鱼 · 浙江大学博士" property="og:title"/>
+<meta content="把好奇心，做成看得见的作品。" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://rainbowyuyu.github.io/rainbowyuyu/assets/showcase/hero-atlas.webp" property="og:image"/>
+<title>
+   rainbow鱼 · 浙江大学博士 | Research. Build. Create.
+  </title>
+<link href="assets/profile/rainbow-logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<script defer="" src="script.js">
+</script>
+</head>
+<body>
+<div aria-hidden="true" class="scroll-progress">
+</div>
+<a class="skip-link" href="#main">
+<span data-en="Skip to main content" data-zh="跳转主要内容">
+    跳转主要内容
+   </span>
+</a>
+<header class="site-header">
+<div class="header-inner wrap">
+<a aria-label="rainbow鱼" class="brand" href="#top">
+<img alt="" height="34" src="assets/profile/rainbow-logo.svg" width="34"/>
+<span>rainbow<span class="brand-fish">鱼</span></span>
+</a>
+<nav aria-label="主导航" class="site-nav" data-label-en="Main navigation" data-label-zh="主导航">
+<a href="#projects">
+<span data-en="Work" data-zh="作品">
+       作品
+      </span>
+</a>
+<a href="#activity">
+<span data-en="Activity" data-zh="动态">
+       动态
+      </span>
+</a>
+<a href="#about">
+<span data-en="About" data-zh="关于">
+       关于
+      </span>
+</a>
+<a href="#contact">
+<span data-en="Connect" data-zh="联系">
+       联系
+      </span>
+</a>
+</nav>
+<div class="header-controls">
+<button aria-label="快捷导航" class="icon-button search-trigger" data-label-en="Quick navigation" data-label-zh="快捷导航" hidden="" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24" width="18">
+<circle cx="10.5" cy="10.5" r="6.5">
+</circle>
+<path d="m16 16 5 5">
+</path>
+</svg>
+<kbd>
+       ⌘ K
+      </kbd>
+</button>
+<button aria-label="切换主题" class="icon-button" hidden="" id="theme-toggle" type="button">
+      ☼
+     </button>
+<button aria-label="Switch to English" class="language-button" hidden="" id="language-toggle" type="button">
+      EN
+     </button>
+</div>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="hero-title" class="hero" id="top">
+<div aria-hidden="true" class="aurora-stage">
+<div class="aurora-fallback">
+</div>
+<canvas id="aurora-canvas">
+</canvas>
+<div class="hero-grain">
+</div>
+</div>
+<div class="hero-content wrap">
+<div class="hero-topline">
+<p class="university-badge">
+<span class="status-dot">
+</span>
+<span>
+        ZJU
+       </span>
+<span data-en="PhD researcher at Zhejiang University" data-zh="浙江大学博士">
+        浙江大学博士
+       </span>
+</p>
+<p class="hero-coordinate">
+       CHINA ·
+       <span class="local-clock">
+        UTC +08:00
+       </span>
+</p>
+</div>
+<div class="hero-heading">
+<p class="eyebrow">
+       RESEARCH. BUILD. CREATE.
+      </p>
+<h1 id="hero-title">rainbow<span class="hero-fish">鱼</span><span class="title-dot">.</span></h1>
+</div>
+<div class="hero-lower">
+<div class="hero-story">
+<h2>
+<span data-en="AI for the physical world." data-zh="让 AI 理解物理，">
+         让 AI 理解物理，
+        </span>
+<br/>
+<span data-en="Ideas you can see." data-zh="让知识看得见。">
+         让知识看得见。
+        </span>
+</h2>
+<p>
+<span data-en="Exploring physical worlds. Building engineering agents. Turning curiosity into code, visuals and stories in motion." data-zh="探索物理世界，构建工程智能体。用代码、图像与动态叙事，把好奇心变成作品。">
+         探索物理世界，构建工程智能体。用代码、图像与动态叙事，把好奇心变成作品。
+        </span>
+</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#projects">
+<span data-en="Explore my work" data-zh="探索我的作品">
+          探索我的作品
+         </span>
+<span aria-hidden="true" class="arrow">
+          ↗
+         </span>
+</a>
+<a class="button button-glass" href="https://github.com/rainbowyuyu" rel="noopener noreferrer" target="_blank">
+<span data-en="GitHub" data-zh="GitHub">
+          GitHub
+         </span>
+<span aria-hidden="true" class="arrow">
+          ↗
+         </span>
+</a>
+</div>
+</div>
+<div aria-label="精选项目预览" class="hero-showcase" data-label-en="Selected project previews" data-label-zh="精选项目预览">
+<a class="hero-tile tile-physics" href="#physcast">
+<img alt="PhysCast" fetchpriority="high" height="800" src="assets/showcase/physcast.webp" width="1600"/>
+<span>
+<b>
+          01
+         </b>
+         PhysCast
+         <i>
+          ↗
+         </i>
+</span>
+</a>
+<a class="hero-tile tile-agent" href="#omniforge">
+<img alt="OmniForge" height="800" src="assets/showcase/omniforge.webp" width="1600"/>
+<span>
+<b>
+          02
+         </b>
+         OmniForge
+         <i>
+          ↗
+         </i>
+</span>
+</a>
+<a class="hero-tile tile-visual" href="#wiscomper">
+<img alt="Wiscomper" height="800" src="assets/showcase/wiscomper.webp" width="1600"/>
+<span>
+<b>
+          03
+         </b>
+         Wiscomper
+         <i>
+          ↗
+         </i>
+</span>
+</a>
+<div aria-hidden="true" class="hero-orbit">
+</div>
+</div>
+</div>
+<div class="hero-bottom">
+<a class="scroll-link" href="#projects">
+<span class="scroll-disc">
+        ↓
+       </span>
+<span data-en="SCROLL TO DISCOVER" data-zh="向下发现更多">
+        向下发现更多
+       </span>
+</a>
+<div class="hero-topics">
+<a href="#physcast">
+        PHYSICAL AI
+       </a>
+<span>
+        ✳
+       </span>
+<a href="#omniforge">
+        ENGINEERING AGENTS
+       </a>
+<span>
+        ✳
+       </span>
+<a href="#wiscomper">
+        VISUAL LEARNING
+       </a>
+</div>
+<button aria-pressed="false" hidden="" id="motion-toggle" type="button">
+<span class="motion-icon">
+        Ⅱ
+       </span>
+<span class="motion-label">
+<span data-en="Pause motion" data-zh="暂停动效">
+         暂停动效
+        </span>
+</span>
+</button>
+</div>
+</div>
+</section>
+<section aria-labelledby="projects-title" class="section projects-section wrap" id="projects">
+<div class="section-heading">
+<div>
+<p class="eyebrow">
+       01 / SELECTED WORK
+      </p>
+<h2 id="projects-title">
+<span data-en="From an idea&lt;br&gt;to something real." data-zh="从想法，到作品。">
+        从想法，到作品。
+       </span>
+</h2>
+</div>
+<div class="section-aside">
+<p>
+<span data-en="Distinct projects. Connected questions.&lt;br&gt;Physics, engineering, and ways of understanding." data-zh="各自独立，又彼此连接。&lt;br&gt;关于物理、工程，以及知识的表达。">
+        各自独立，又彼此连接。
+        <br/>
+        关于物理、工程，以及知识的表达。
+       </span>
+</p>
+<div class="project-toolbar">
+<span class="mono">
+        07 PROJECTS
+       </span>
+<button aria-controls="project-list" hidden="" id="expand-projects" type="button">
+<span data-en="Expand all details" data-zh="展开全部介绍">
+         展开全部介绍
+        </span>
+        ＋
+       </button>
+</div>
+</div>
+</div>
+<div class="project-list" id="project-list">
+<article aria-labelledby="title-physcast" class="project-row project-physcast" id="physcast">
+<div class="project-visual">
+<a aria-label="查看 physcast 完整封面" class="artwork-link" data-label-en="View full physcast artwork" data-label-zh="查看 physcast 完整封面" href="assets/showcase/physcast.webp" rel="noopener noreferrer" target="_blank"><img alt="physcast project artwork" class="project-cover" data-alt-en="physcast project artwork" data-alt-zh="physcast 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/physcast.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
+<span aria-hidden="true" class="cover-number">
+        01
+       </span>
+<span class="cover-label">
+<span data-en="PHYSICAL AI · RESEARCH" data-zh="物理 AI · 研究平台">
+         物理 AI · 研究平台
+        </span>
+</span>
+</div>
+<div class="project-copy">
+<div class="project-kicker">
+<img alt="" height="40" loading="lazy" src="assets/projects/physcast.svg" width="40"/>
+<span>
+<span data-en="PHYSICAL AI · RESEARCH" data-zh="物理 AI · 研究平台">
+          物理 AI · 研究平台
+         </span>
+</span>
+</div>
+<h3 id="title-physcast">
+<span data-en="PhysCast" data-zh="PhysCast">
+         PhysCast
+        </span>
+</h3>
+<p class="project-oneline">
+<span data-en="Exploring physics-grounded wind forecasting from sparse observations." data-zh="从稀疏观测出发，探索有物理依据的风场预测。">
+         从稀疏观测出发，探索有物理依据的风场预测。
+        </span>
+</p>
+<div class="tags">
+<span>
+         Python
+        </span>
+<span>
+         PyTorch
+        </span>
+<span>
+         OpenFAST / FAST.Farm
+        </span>
+</div>
+<div class="project-actions">
+<span class="private-note">
+<span data-en="Private source" data-zh="源码私有">
+          源码私有
+         </span>
+</span>
+</div>
+<details class="project-details">
+<summary>
+<span data-en="Behind the project" data-zh="项目介绍">
+          项目介绍
+         </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="project-detail-body">
+<p class="project-status">
+<span data-en="Research in progress · Private source" data-zh="持续研究 · 源码私有">
+           持续研究 · 源码私有
+          </span>
+</p>
+<p>
+<span data-en="Connecting physical simulation, generative forecasting and independent validation to study wind-field responses to control interventions. Reliability and uncertainty matter as much as the prediction." data-zh="围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。">
+           围绕控制干预后的风场响应，将物理仿真、生成式预测与独立验证连接起来。关注模型在什么条件下可靠、何时应表达不确定性。
+          </span>
+</p>
+<ol class="project-steps">
+<li>
+<span class="step-no">
+            01
+           </span>
+<span data-en="Observe" data-zh="观测">
+            观测
+           </span>
+</li>
+<li>
+<span class="step-no">
+            02
+           </span>
+<span data-en="Constrain" data-zh="约束">
+            约束
+           </span>
+</li>
+<li>
+<span class="step-no">
+            03
+           </span>
+<span data-en="Forecast" data-zh="预测">
+            预测
+           </span>
+</li>
+<li>
+<span class="step-no">
+            04
+           </span>
+<span data-en="Validate" data-zh="验证">
+            验证
+           </span>
+</li>
+</ol>
+</div>
+</details>
+</div>
+</article>
+<article aria-labelledby="title-omniforge" class="project-row project-omniforge" id="omniforge">
+<div class="project-visual">
+<a aria-label="查看 omniforge 完整封面" class="artwork-link" data-label-en="View full omniforge artwork" data-label-zh="查看 omniforge 完整封面" href="assets/showcase/omniforge.webp" rel="noopener noreferrer" target="_blank"><img alt="omniforge project artwork" class="project-cover" data-alt-en="omniforge project artwork" data-alt-zh="omniforge 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/omniforge.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
+<span aria-hidden="true" class="cover-number">
+        02
+       </span>
+<span class="cover-label">
+<span data-en="ENGINEERING AGENTS · TOOLS" data-zh="工程智能体 · 工具构建">
+         工程智能体 · 工具构建
+        </span>
+</span>
+</div>
+<div class="project-copy">
+<div class="project-kicker">
+<img alt="" height="40" loading="lazy" src="assets/projects/omniforge.svg" width="40"/>
+<span>
+<span data-en="ENGINEERING AGENTS · TOOLS" data-zh="工程智能体 · 工具构建">
+          工程智能体 · 工具构建
+         </span>
+</span>
+</div>
+<h3 id="title-omniforge">
+<span data-en="OmniForge" data-zh="OmniForge · 万象工坊">
+         OmniForge · 万象工坊
+        </span>
+</h3>
+<p class="project-oneline">
+<span data-en="Turning engineering intent into work that can be inspected, iterated and delivered." data-zh="把工程意图转化为可以检查、迭代和交付的工作。">
+         把工程意图转化为可以检查、迭代和交付的工作。
+        </span>
+</p>
+<div class="tags">
+<span>
+         Adaptive Agents
+        </span>
+<span>
+         FEM
+        </span>
+<span>
+         Topology Optimization
+        </span>
+</div>
+<div class="project-actions">
+<span class="private-note">
+<span data-en="Private source" data-zh="源码私有">
+          源码私有
+         </span>
+</span>
+</div>
+<details class="project-details">
+<summary>
+<span data-en="Behind the project" data-zh="项目介绍">
+          项目介绍
+         </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="project-detail-body">
+<p class="project-status">
+<span data-en="In development · Private source" data-zh="开发中 · 源码私有">
+           开发中 · 源码私有
+          </span>
+</p>
+<p>
+<span data-en="An adaptive agent and tool workbench for modeling, computation and validation. Inputs, execution traces, results and reports remain connected, making the engineering process inspectable and reusable." data-zh="围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。">
+           围绕建模、计算与验证组织自适应智能体和工程工具。把输入、执行轨迹、结果与报告串在一起，让工程过程保留证据，让经验能够复用。
+          </span>
+</p>
+<ol class="project-steps">
+<li>
+<span class="step-no">
+            01
+           </span>
+<span data-en="Intent" data-zh="需求">
+            需求
+           </span>
+</li>
+<li>
+<span class="step-no">
+            02
+           </span>
+<span data-en="Model" data-zh="建模">
+            建模
+           </span>
+</li>
+<li>
+<span class="step-no">
+            03
+           </span>
+<span data-en="Solve" data-zh="求解">
+            求解
+           </span>
+</li>
+<li>
+<span class="step-no">
+            04
+           </span>
+<span data-en="Deliver" data-zh="交付">
+            交付
+           </span>
+</li>
+</ol>
+</div>
+</details>
+</div>
+</article>
+<article aria-labelledby="title-wiscomper" class="project-row project-wiscomper" id="wiscomper">
+<div class="project-visual">
+<a aria-label="查看 wiscomper 完整封面" class="artwork-link" data-label-en="View full wiscomper artwork" data-label-zh="查看 wiscomper 完整封面" href="assets/showcase/wiscomper.webp" rel="noopener noreferrer" target="_blank"><img alt="wiscomper project artwork" class="project-cover" data-alt-en="wiscomper project artwork" data-alt-zh="wiscomper 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/wiscomper.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
+<span aria-hidden="true" class="cover-number">
+        03
+       </span>
+<span class="cover-label">
+<span data-en="MULTIMODAL AI · VISUAL MATH" data-zh="多模态 AI · 数学可视化">
+         多模态 AI · 数学可视化
+        </span>
+</span>
+</div>
+<div class="project-copy">
+<div class="project-kicker">
+<img alt="" height="40" loading="lazy" src="assets/projects/wiscomper.png" width="40"/>
+<span>
+<span data-en="MULTIMODAL AI · VISUAL MATH" data-zh="多模态 AI · 数学可视化">
+          多模态 AI · 数学可视化
+         </span>
+</span>
+</div>
+<h3 id="title-wiscomper">
+<span data-en="Wiscomper" data-zh="Wiscomper · 智算视界">
+         Wiscomper · 智算视界
+        </span>
+</h3>
+<p class="project-oneline">
+<span data-en="From a formula to a mathematical explanation you can see." data-zh="从一道公式，到一段看得懂的数学动画。">
+         从一道公式，到一段看得懂的数学动画。
+        </span>
+</p>
+<div class="tags">
+<span>
+         Multimodal AI
+        </span>
+<span>
+         LaTeX
+        </span>
+<span>
+         Manim
+        </span>
+</div>
+<div class="project-actions">
+<a class="button button-small button-brand" href="https://www.wiscomper.com/" rel="noopener noreferrer" target="_blank">
+<span data-en="Visit Wiscomper" data-zh="打开智算视界">
+          打开智算视界
+         </span>
+         ↗
+        </a>
+<a class="button button-small" href="https://github.com/rainbowyuyu/Wisdom_Computing_Perspective" rel="noopener noreferrer" target="_blank">
+<span data-en="View source" data-zh="查看源码">
+          查看源码
+         </span>
+         ↗
+        </a>
+</div>
+<details class="project-details">
+<summary>
+<span data-en="Behind the project" data-zh="项目介绍">
+          项目介绍
+         </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="project-detail-body">
+<p class="project-status">
+<span data-en="Open source · Live website" data-zh="开源 · 在线体验">
+           开源 · 在线体验
+          </span>
+</p>
+<p>
+<span data-en="Connecting handwritten formula recognition, LaTeX, step-by-step reasoning and Manim animation. Multimodal recognition and tool orchestration make abstract mathematical processes visible and explorable." data-zh="连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。">
+           连接手写公式识别、LaTeX、分步骤推导与 Manim 动画。用多模态识别和工具编排，把抽象的数学过程变成可以观看、理解和探索的内容。
+          </span>
+</p>
+<ol class="project-steps">
+<li>
+<span class="step-no">
+            01
+           </span>
+<span data-en="Formula" data-zh="公式">
+            公式
+           </span>
+</li>
+<li>
+<span class="step-no">
+            02
+           </span>
+<span data-en="Recognize" data-zh="识别">
+            识别
+           </span>
+</li>
+<li>
+<span class="step-no">
+            03
+           </span>
+<span data-en="Reason" data-zh="推导">
+            推导
+           </span>
+</li>
+<li>
+<span class="step-no">
+            04
+           </span>
+<span data-en="Animate" data-zh="动画">
+            动画
+           </span>
+</li>
+</ol>
+</div>
+</details>
+</div>
+</article>
+<article aria-labelledby="title-ai-engineer" class="project-row project-ai-engineer" id="ai-engineer">
+<div class="project-visual">
+<a aria-label="查看 ai-engineer 完整封面" class="artwork-link" data-label-en="View full ai-engineer artwork" data-label-zh="查看 ai-engineer 完整封面" href="assets/showcase/ai-engineer.webp" rel="noopener noreferrer" target="_blank"><img alt="ai-engineer project artwork" class="project-cover" data-alt-en="ai-engineer project artwork" data-alt-zh="ai-engineer 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-engineer.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
+<span aria-hidden="true" class="cover-number">
+        04
+       </span>
+<span class="cover-label">
+<span data-en="INTELLIGENT DESIGN · COMPUTATION" data-zh="智能设计 · 工程计算">
+         智能设计 · 工程计算
+        </span>
+</span>
+</div>
+<div class="project-copy">
+<div class="project-kicker">
+<img alt="" height="40" loading="lazy" src="assets/projects/ai-engineer.svg" width="40"/>
+<span>
+<span data-en="INTELLIGENT DESIGN · COMPUTATION" data-zh="智能设计 · 工程计算">
+          智能设计 · 工程计算
+         </span>
+</span>
+</div>
+<h3 id="title-ai-engineer">
+<span data-en="The AI Engineer" data-zh="The AI Engineer">
+         The AI Engineer
+        </span>
+</h3>
+<p class="project-oneline">
+<span data-en="Connecting geometry, meshes, topology optimization and physics." data-zh="连接几何、网格、拓扑优化与物理计算。">
+         连接几何、网格、拓扑优化与物理计算。
+        </span>
+</p>
+<div class="tags">
+<span>
+         Geometry
+        </span>
+<span>
+         FEM
+        </span>
+<span>
+         Optimization
+        </span>
+</div>
+<div class="project-actions">
+<a class="button button-small" href="https://github.com/rainbowyuyu/ai_engineer" rel="noopener noreferrer" target="_blank">
+<span data-en="View source" data-zh="查看源码">
+          查看源码
+         </span>
+         ↗
+        </a>
+</div>
+<details class="project-details">
+<summary>
+<span data-en="Behind the project" data-zh="项目介绍">
+          项目介绍
+         </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="project-detail-body">
+<p class="project-status">
+<span data-en="Research code · Open source" data-zh="研究代码 · 开源">
+           研究代码 · 开源
+          </span>
+</p>
+<p>
+<span data-en="Exploring an engineering workflow from natural-language requirements to design deliverables. Geometry processing, finite-element computation and optimization are organized around traceable evidence." data-zh="探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。">
+           探索从自然语言需求到设计交付的工程流程。把几何处理、有限元计算和优化任务组织起来，以过程记录和计算结果支持设计判断。
+          </span>
+</p>
+<ol class="project-steps">
+<li>
+<span class="step-no">
+            01
+           </span>
+<span data-en="Intent" data-zh="意图">
+            意图
+           </span>
+</li>
+<li>
+<span class="step-no">
+            02
+           </span>
+<span data-en="Geometry" data-zh="几何">
+            几何
+           </span>
+</li>
+<li>
+<span class="step-no">
+            03
+           </span>
+<span data-en="Compute" data-zh="计算">
+            计算
+           </span>
+</li>
+<li>
+<span class="step-no">
+            04
+           </span>
+<span data-en="Optimize" data-zh="优化">
+            优化
+           </span>
+</li>
+</ol>
+</div>
+</details>
+</div>
+</article>
+<article aria-labelledby="title-ai-revolution" class="project-row project-ai-revolution" id="ai-revolution">
+<div class="project-visual">
+<a aria-label="查看 ai-revolution 完整封面" class="artwork-link" data-label-en="View full ai-revolution artwork" data-label-zh="查看 ai-revolution 完整封面" href="assets/showcase/ai-revolution.webp" rel="noopener noreferrer" target="_blank"><img alt="ai-revolution project artwork" class="project-cover" data-alt-en="ai-revolution project artwork" data-alt-zh="ai-revolution 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/ai-revolution.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
+<span aria-hidden="true" class="cover-number">
+        05
+       </span>
+<span class="cover-label">
+<span data-en="KNOWLEDGE · MOTION" data-zh="知识创作 · 动态演示">
+         知识创作 · 动态演示
+        </span>
+</span>
+</div>
+<div class="project-copy">
+<div class="project-kicker">
+<img alt="" height="40" loading="lazy" src="assets/projects/ai-revolution.svg" width="40"/>
+<span>
+<span data-en="KNOWLEDGE · MOTION" data-zh="知识创作 · 动态演示">
+          知识创作 · 动态演示
+         </span>
+</span>
+</div>
+<h3 id="title-ai-revolution">
+<span data-en="The Evolution of AI" data-zh="AI 进化史">
+         AI 进化史
+        </span>
+</h3>
+<p class="project-oneline">
+<span data-en="Following vision, generative models and agents through the evolution of AI." data-zh="沿着视觉、生成模型与智能体，理解 AI 如何演进。">
+         沿着视觉、生成模型与智能体，理解 AI 如何演进。
+        </span>
+</p>
+<div class="tags">
+<span>
+         AI Education
+        </span>
+<span>
+         Visual Narratives
+        </span>
+<span>
+         Experiments
+        </span>
+</div>
+<div class="project-actions">
+<a class="button button-small" href="https://github.com/rainbowyuyu/AI_revolution" rel="noopener noreferrer" target="_blank">
+<span data-en="View source" data-zh="查看源码">
+          查看源码
+         </span>
+         ↗
+        </a>
+</div>
+<details class="project-details">
+<summary>
+<span data-en="Behind the project" data-zh="项目介绍">
+          项目介绍
+         </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="project-detail-body">
+<p class="project-status">
+<span data-en="Ongoing series · Open source" data-zh="系列创作 · 开源">
+           系列创作 · 开源
+          </span>
+</p>
+<p>
+<span data-en="A six-chapter route through animated explanations, visual narratives and reproducible experiments. Materials for the first five chapters are organized; further work is ongoing." data-zh="以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。">
+           以六章路线组织动态演示、视觉叙事与可复现实验，让算法不只停留在名词上。前五章资料已整理，后续内容继续推进。
+          </span>
+</p>
+<ol class="project-steps">
+<li>
+<span class="step-no">
+            01
+           </span>
+<span data-en="Question" data-zh="问题">
+            问题
+           </span>
+</li>
+<li>
+<span class="step-no">
+            02
+           </span>
+<span data-en="Mechanism" data-zh="机制">
+            机制
+           </span>
+</li>
+<li>
+<span class="step-no">
+            03
+           </span>
+<span data-en="Experiment" data-zh="实验">
+            实验
+           </span>
+</li>
+<li>
+<span class="step-no">
+            04
+           </span>
+<span data-en="Explain" data-zh="表达">
+            表达
+           </span>
+</li>
+</ol>
+</div>
+</details>
+</div>
+</article>
+<article aria-labelledby="title-science-studio" class="project-row project-science-studio" id="science-studio">
+<div class="project-visual">
+<a aria-label="查看 science-studio 完整封面" class="artwork-link" data-label-en="View full science-studio artwork" data-label-zh="查看 science-studio 完整封面" href="assets/showcase/science-studio.webp" rel="noopener noreferrer" target="_blank"><img alt="science-studio project artwork" class="project-cover" data-alt-en="science-studio project artwork" data-alt-zh="science-studio 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/science-studio.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
+<span aria-hidden="true" class="cover-number">
+        06
+       </span>
+<span class="cover-label">
+<span data-en="SCIENCE STORIES · CREATIVE TOOLS" data-zh="科学叙事 · 创作工具">
+         科学叙事 · 创作工具
+        </span>
+</span>
+</div>
+<div class="project-copy">
+<div class="project-kicker">
+<img alt="" height="40" loading="lazy" src="assets/projects/science-studio.svg" width="40"/>
+<span>
+<span data-en="SCIENCE STORIES · CREATIVE TOOLS" data-zh="科学叙事 · 创作工具">
+          科学叙事 · 创作工具
+         </span>
+</span>
+</div>
+<h3 id="title-science-studio">
+<span data-en="rainbow鱼 Science Studio" data-zh="rainbow鱼科普工作台">
+         rainbow鱼科普工作台
+        </span>
+</h3>
+<p class="project-oneline">
+<span data-en="Turning questions into stories and scientific mechanisms into images." data-zh="把问题变成故事，把科学机制变成画面。">
+         把问题变成故事，把科学机制变成画面。
+        </span>
+</p>
+<div class="tags">
+<span>
+         Science Communication
+        </span>
+<span>
+         Video Tools
+        </span>
+<span>
+         Motion
+        </span>
+</div>
+<div class="project-actions">
+<a class="button button-small" href="https://github.com/rainbowyuyu/Popula_science_video" rel="noopener noreferrer" target="_blank">
+<span data-en="View source" data-zh="查看源码">
+          查看源码
+         </span>
+         ↗
+        </a>
+</div>
+<details class="project-details">
+<summary>
+<span data-en="Behind the project" data-zh="项目介绍">
+          项目介绍
+         </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="project-detail-body">
+<p class="project-status">
+<span data-en="Actively built · Open source" data-zh="持续构建 · 开源">
+           持续构建 · 开源
+          </span>
+</p>
+<p>
+<span data-en="A workspace for scientific imagery, AI video editing, storyboards and animation components. It brings research material and production together to explain complex knowledge clearly." data-zh="组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。">
+           组织科学影像、AI 视频编辑、分镜与动画组件。让选题、材料、画面和制作过程能够协作，让复杂知识有清晰、可信的表达。
+          </span>
+</p>
+<ol class="project-steps">
+<li>
+<span class="step-no">
+            01
+           </span>
+<span data-en="Question" data-zh="选题">
+            选题
+           </span>
+</li>
+<li>
+<span class="step-no">
+            02
+           </span>
+<span data-en="Script" data-zh="脚本">
+            脚本
+           </span>
+</li>
+<li>
+<span class="step-no">
+            03
+           </span>
+<span data-en="Visuals" data-zh="画面">
+            画面
+           </span>
+</li>
+<li>
+<span class="step-no">
+            04
+           </span>
+<span data-en="Produce" data-zh="制作">
+            制作
+           </span>
+</li>
+</ol>
+</div>
+</details>
+</div>
+</article>
+<article aria-labelledby="title-manim" class="project-row project-manim" id="manim">
+<div class="project-visual">
+<a aria-label="查看 manim 完整封面" class="artwork-link" data-label-en="View full manim artwork" data-label-zh="查看 manim 完整封面" href="assets/showcase/manim.webp" rel="noopener noreferrer" target="_blank"><img alt="manim project artwork" class="project-cover" data-alt-en="manim project artwork" data-alt-zh="manim 项目封面" decoding="async" height="800" loading="lazy" src="assets/showcase/manim.webp" width="1600"/><span aria-hidden="true" class="artwork-expand">↗</span></a>
+<span aria-hidden="true" class="cover-number">
+        07
+       </span>
+<span class="cover-label">
+<span data-en="MATH ANIMATION · COMPONENTS" data-zh="数学动画 · 可复用组件">
+         数学动画 · 可复用组件
+        </span>
+</span>
+</div>
+<div class="project-copy">
+<div class="project-kicker">
+<img alt="" height="40" loading="lazy" src="assets/projects/manim.svg" width="40"/>
+<span>
+<span data-en="MATH ANIMATION · COMPONENTS" data-zh="数学动画 · 可复用组件">
+          数学动画 · 可复用组件
+         </span>
+</span>
+</div>
+<h3 id="title-manim">
+<span data-en="Manim Extend Rainbow" data-zh="Manim Extend Rainbow">
+         Manim Extend Rainbow
+        </span>
+</h3>
+<p class="project-oneline">
+<span data-en="Turning carefully crafted mathematical animation into reusable tools." data-zh="把反复打磨的数学动画，沉淀为可复用工具。">
+         把反复打磨的数学动画，沉淀为可复用工具。
+        </span>
+</p>
+<div class="tags">
+<span>
+         Python
+        </span>
+<span>
+         Manim
+        </span>
+<span>
+         Creative Coding
+        </span>
+</div>
+<div class="project-actions">
+<a class="button button-small" href="https://github.com/rainbowyuyu/manim_extend_rainbow" rel="noopener noreferrer" target="_blank">
+<span data-en="View source" data-zh="查看源码">
+          查看源码
+         </span>
+         ↗
+        </a>
+</div>
+<details class="project-details">
+<summary>
+<span data-en="Behind the project" data-zh="项目介绍">
+          项目介绍
+         </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="project-detail-body">
+<p class="project-status">
+<span data-en="Animation extensions · Open source" data-zh="动画扩展 · 开源">
+           动画扩展 · 开源
+          </span>
+</p>
+<p>
+<span data-en="Manim extensions, animation components and examples for mathematics and science communication. Abstract relationships become visible motion, and each production informs the next." data-zh="为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。">
+           为数学和科普创作整理 Manim 扩展、动画组件与示例。让抽象关系拥有直观的运动，让制作经验成为下一次创作的起点。
+          </span>
+</p>
+<ol class="project-steps">
+<li>
+<span class="step-no">
+            01
+           </span>
+<span data-en="Abstract" data-zh="抽象">
+            抽象
+           </span>
+</li>
+<li>
+<span class="step-no">
+            02
+           </span>
+<span data-en="Compose" data-zh="构图">
+            构图
+           </span>
+</li>
+<li>
+<span class="step-no">
+            03
+           </span>
+<span data-en="Animate" data-zh="运动">
+            运动
+           </span>
+</li>
+<li>
+<span class="step-no">
+            04
+           </span>
+<span data-en="Reuse" data-zh="复用">
+            复用
+           </span>
+</li>
+</ol>
+</div>
+</details>
+</div>
+</article>
+</div>
+</section>
+<section aria-labelledby="activity-title" class="section activity-section" id="activity">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<p class="eyebrow">
+        02 / IN THE MAKING
+       </p>
+<h2 id="activity-title">
+<span data-en="A little further.&lt;br&gt;Every day." data-zh="每一天，都算数。">
+         每一天，都算数。
+        </span>
+</h2>
+</div>
+<p class="section-description">
+<span data-en="A record of code, craft and curiosity.&lt;br&gt;The original animations and daily cards live on." data-zh="代码、创作与持续探索的轨迹。&lt;br&gt;原有动图和每日更新卡，仍然都在。">
+        代码、创作与持续探索的轨迹。
+        <br/>
+        原有动图和每日更新卡，仍然都在。
+       </span>
+</p>
+</div>
+<div class="activity-toolbar">
+<span class="activity-status" id="activity-status" role="status">
+<span data-en="Loading card update status…" data-zh="正在读取卡片更新时间…">
+        正在读取卡片更新时间…
+       </span>
+</span>
+<a class="text-link" href="https://github.com/rainbowyuyu?tab=overview" rel="noopener noreferrer" target="_blank">
+<span data-en="Open GitHub activity" data-zh="前往 GitHub 动态">
+        前往 GitHub 动态
+       </span>
+       ↗
+      </a>
+</div>
+<div class="contribution-scene">
+<figure class="metric-card">
+<figcaption>
+<span data-en="Contributions in three dimensions" data-zh="三维贡献图景">
+         三维贡献图景
+        </span>
+</figcaption>
+<img alt="三维贡献图景" class="animated-contribution" data-alt-en="Contributions in three dimensions" data-alt-zh="三维贡献图景" data-animated-src="profile-3d-contrib/profile-night-rainbow.svg" data-light-src="profile-3d-contrib/profile-season-animate.svg" data-light-static-src="profile-3d-contrib/profile-night-static.svg" data-static-src="profile-3d-contrib/profile-night-static.svg" decoding="async" loading="lazy" src="profile-3d-contrib/profile-night-rainbow.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+         卡片暂不可用，等待下一次更新。
+        </span>
+</p>
+</figure>
+</div>
+<div class="snake-card">
+<figure class="metric-card">
+<figcaption>
+<span data-en="Contribution snake" data-zh="贡献贪吃蛇">
+         贡献贪吃蛇
+        </span>
+</figcaption>
+<img alt="贡献贪吃蛇" class="animated-contribution" data-alt-en="Contribution snake" data-alt-zh="贡献贪吃蛇" data-animated-src="profile-snake-contrib/github-contribution-grid-snake-dark.svg" data-light-src="profile-snake-contrib/github-contribution-grid-snake.svg" data-light-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" data-static-src="profile-snake-contrib/github-contribution-grid-snake-static.svg" decoding="async" loading="lazy" src="profile-snake-contrib/github-contribution-grid-snake-dark.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+         卡片暂不可用，等待下一次更新。
+        </span>
+</p>
+</figure>
+</div>
+<div class="metrics-grid primary-metrics">
+<figure class="metric-card">
+<figcaption>
+<span data-en="GitHub at a glance" data-zh="GitHub 数据概览">
+         GitHub 数据概览
+        </span>
+</figcaption>
+<img alt="GitHub 数据概览" data-alt-en="GitHub at a glance" data-alt-zh="GitHub 数据概览" decoding="async" loading="lazy" src="github-metrics/base.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+         卡片暂不可用，等待下一次更新。
+        </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Languages in the code" data-zh="代码中的语言">
+         代码中的语言
+        </span>
+</figcaption>
+<img alt="代码中的语言" data-alt-en="Languages in the code" data-alt-zh="代码中的语言" decoding="async" loading="lazy" src="github-metrics/languages.indepth.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+         卡片暂不可用，等待下一次更新。
+        </span>
+</p>
+</figure>
+</div>
+<details class="activity-more">
+<summary>
+<span data-en="More daily cards" data-zh="展开更多每日卡片">
+        展开更多每日卡片
+       </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<div class="metrics-grid">
+<figure class="metric-card">
+<figcaption>
+<span data-en="Contribution streak" data-zh="贡献连续记录">
+          贡献连续记录
+         </span>
+</figcaption>
+<img alt="贡献连续记录" data-alt-en="Contribution streak" data-alt-zh="贡献连续记录" decoding="async" loading="lazy" src="github-metrics/streak.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Full-year calendar" data-zh="全年贡献日历">
+          全年贡献日历
+         </span>
+</figcaption>
+<img alt="全年贡献日历" data-alt-en="Full-year calendar" data-alt-zh="全年贡献日历" decoding="async" loading="lazy" src="github-metrics/calendar.full.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Coding habits" data-zh="编码习惯">
+          编码习惯
+         </span>
+</figcaption>
+<img alt="编码习惯" data-alt-en="Coding habits" data-alt-zh="编码习惯" decoding="async" loading="lazy" src="github-metrics/habits.charts.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Public activity · Last 30 days" data-zh="近 30 天公开活动">
+          近 30 天公开活动
+         </span>
+</figcaption>
+<img alt="近 30 天公开活动" data-alt-en="Public activity · Last 30 days" data-alt-zh="近 30 天公开活动" decoding="async" loading="lazy" src="github-metrics/activity.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Coding time · WakaTime" data-zh="编码时间 · WakaTime">
+          编码时间 · WakaTime
+         </span>
+</figcaption>
+<img alt="编码时间 · WakaTime" data-alt-en="Coding time · WakaTime" data-alt-zh="编码时间 · WakaTime" decoding="async" loading="lazy" src="github-metrics/wakatime.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+<p class="section-footnote">
+<span data-en="Based on real coding activity from the last 7 days. Refer to the card and update status for the reporting time; the latest snapshot is retained if a refresh fails." data-zh="基于最近 7 天的真实编码记录，具体时间以卡片及更新状态为准；更新失败时保留最近一次快照。">
+          基于最近 7 天的真实编码记录，具体时间以卡片及更新状态为准；更新失败时保留最近一次快照。
+         </span>
+</p>
+</figure>
+</div>
+</details>
+<details class="activity-more archive-cards">
+<summary>
+<span data-en="Archived card snapshots" data-zh="历史卡片档案">
+        历史卡片档案
+       </span>
+<span aria-hidden="true" class="plus">
+</span>
+</summary>
+<p class="activity-disclaimer">
+<span data-en="These older cards are preserved as archived snapshots. They may be outdated or show past data-source errors; they do not represent live status." data-zh="保留旧版卡片作为历史快照。它们可能较旧，或显示当时的数据源错误；不代表实时状态。">
+        保留旧版卡片作为历史快照。它们可能较旧，或显示当时的数据源错误；不代表实时状态。
+       </span>
+</p>
+<div class="metrics-grid">
+<p class="archive-explanation">
+<span data-en="The old achievements source returned an error; the original file remains in the repository archive." data-zh="旧里程碑卡片的数据源曾报错，原文件留存于仓库档案。">
+         旧里程碑卡片的数据源曾报错，原文件留存于仓库档案。
+        </span>
+</p>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Discussions" data-zh="社区讨论">
+          社区讨论
+         </span>
+</figcaption>
+<img alt="社区讨论" data-alt-en="Discussions" data-alt-zh="社区讨论" decoding="async" loading="lazy" src="github-metrics/discussions.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Issues &amp; contributions" data-zh="议题与贡献跟进">
+          议题与贡献跟进
+         </span>
+</figcaption>
+<img alt="议题与贡献跟进" data-alt-en="Issues &amp; contributions" data-alt-zh="议题与贡献跟进" decoding="async" loading="lazy" src="github-metrics/followup.indepth.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Isometric calendar" data-zh="立体全年日历">
+          立体全年日历
+         </span>
+</figcaption>
+<img alt="立体全年日历" data-alt-en="Isometric calendar" data-alt-zh="立体全年日历" decoding="async" loading="lazy" src="github-metrics/isocalendar.fullyear.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Community connections" data-zh="社区连接">
+          社区连接
+         </span>
+</figcaption>
+<img alt="社区连接" data-alt-en="Community connections" data-alt-zh="社区连接" decoding="async" loading="lazy" src="github-metrics/people.followers.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Reactions" data-zh="社区反馈">
+          社区反馈
+         </span>
+</figcaption>
+<img alt="社区反馈" data-alt-en="Reactions" data-alt-zh="社区反馈" decoding="async" loading="lazy" src="github-metrics/reactions.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Pinned repositories" data-zh="置顶项目">
+          置顶项目
+         </span>
+</figcaption>
+<img alt="置顶项目" data-alt-en="Pinned repositories" data-alt-zh="置顶项目" decoding="async" loading="lazy" src="github-metrics/repositories.pinned.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Stargazer trends" data-zh="星标趋势">
+          星标趋势
+         </span>
+</figcaption>
+<img alt="星标趋势" data-alt-en="Stargazer trends" data-alt-zh="星标趋势" decoding="async" loading="lazy" src="github-metrics/stargazers.chartist.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+<figure class="metric-card">
+<figcaption>
+<span data-en="Starred repositories" data-zh="星标收藏">
+          星标收藏
+         </span>
+</figcaption>
+<img alt="星标收藏" data-alt-en="Starred repositories" data-alt-zh="星标收藏" decoding="async" loading="lazy" src="github-metrics/stars.svg"/>
+<p class="image-unavailable" hidden="">
+<span data-en="This card is unavailable; awaiting a future update." data-zh="卡片暂不可用，等待下一次更新。">
+          卡片暂不可用，等待下一次更新。
+         </span>
+</p>
+</figure>
+</div>
+</details>
+<p class="section-footnote">
+<span data-en="The motion control covers the hero visual and contribution animations. Your reduced-motion preference is respected." data-zh="动效开关同时控制首页视觉、贡献动画；系统减少动态效果偏好会自动生效。">
+       动效开关同时控制首页视觉、贡献动画；系统减少动态效果偏好会自动生效。
+      </span>
+</p>
+</div>
+</section>
+<section aria-labelledby="about-title" class="section about-section wrap" id="about">
+<div class="about-portrait">
+<img alt="rainbow鱼 logo" height="180" src="assets/profile/rainbow-logo.svg" width="180"/>
+<div class="orbit orbit-one">
+</div>
+<div class="orbit orbit-two">
+</div>
+<span class="portrait-label">
+      RESEARCHER / BUILDER / STORYTELLER
+     </span>
+</div>
+<div class="about-copy">
+<p class="eyebrow">
+      03 / ABOUT
+     </p>
+<h2 id="about-title">
+<span data-en="Between science&lt;br&gt;and imagination." data-zh="连接科学与想象。">
+       连接科学与想象。
+      </span>
+</h2>
+<p class="about-lead">
+<span data-en="I’m rainbow鱼, a PhD researcher at Zhejiang University." data-zh="我是 rainbow鱼，浙江大学博士。">
+       我是 rainbow鱼，浙江大学博士。
+      </span>
+</p>
+<p>
+<span data-en="I work across AI, physical simulation and engineering, and turn complex ideas into visual, interactive experiences. From a research question to something you can run, inspect and share." data-zh="我在 AI、物理仿真与工程之间探索，也把复杂的知识做成可视、可交互的作品。从一个研究问题出发，一直走到可以运行、可以验证、可以分享的东西。">
+       我在 AI、物理仿真与工程之间探索，也把复杂的知识做成可视、可交互的作品。从一个研究问题出发，一直走到可以运行、可以验证、可以分享的东西。
+      </span>
+</p>
+<div class="about-domains">
+<span>
+       Physical AI
+      </span>
+<span>
+       Engineering Agents
+      </span>
+<span>
+       Scientific Visualization
+      </span>
+</div>
+<div class="toolbox">
+<span>
+       Python
+      </span>
+<span>
+       PyTorch
+      </span>
+<span>
+       Three.js
+      </span>
+<span>
+       Manim
+      </span>
+<span>
+       Blender
+      </span>
+<span>
+       TypeScript
+      </span>
+</div>
+</div>
+</section>
+<section aria-labelledby="contact-title" class="contact-section" id="contact">
+<div class="wrap">
+<p class="eyebrow">
+      04 / SAY HELLO
+     </p>
+<div class="contact-top">
+<h2 id="contact-title">
+<span data-en="Let curiosity&lt;br&gt;take us further." data-zh="让好奇心&lt;br&gt;有下一站。">
+        让好奇心
+        <br/>
+        有下一站。
+       </span>
+</h2>
+<div class="contact-copy">
+<p>
+<span data-en="For research, engineering tools, scientific visualization — or an idea worth building." data-zh="关于研究、工程工具、科学可视化，或一个值得动手的想法。">
+         关于研究、工程工具、科学可视化，或一个值得动手的想法。
+        </span>
+</p>
+<a class="button button-primary" href="https://github.com/rainbowyuyu" rel="noopener noreferrer" target="_blank">
+<span data-en="Find me on GitHub" data-zh="在 GitHub 找到我">
+         在 GitHub 找到我
+        </span>
+<span aria-hidden="true" class="arrow">
+         ↗
+        </span>
+</a>
+</div>
+</div>
+<div class="contact-socials">
+<a class="social-link" href="https://github.com/rainbowyuyu" rel="noopener noreferrer" target="_blank">
+<span data-en="GitHub" data-zh="GitHub">
+        GitHub
+       </span>
+<span aria-hidden="true" class="arrow">
+        ↗
+       </span>
+</a>
+<a class="social-link" href="https://space.bilibili.com/343585138" rel="noopener noreferrer" target="_blank">
+<span data-en="Bilibili" data-zh="Bilibili">
+        Bilibili
+       </span>
+<span aria-hidden="true" class="arrow">
+        ↗
+       </span>
+</a>
+<a class="social-link" href="https://www.wiscomper.com/" rel="noopener noreferrer" target="_blank">
+<span data-en="Wiscomper" data-zh="Wiscomper">
+        Wiscomper
+       </span>
+<span aria-hidden="true" class="arrow">
+        ↗
+       </span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer wrap">
+<a class="footer-brand" href="#top">
+    rainbow鱼
+    <span>
+     ↗
+    </span>
+</a>
+<div class="footer-bottom">
+<p>
+     ©
+     <span id="copyright-year">
+      2026
+     </span>
+     rainbow鱼 ·
+     <span data-en="PhD researcher at Zhejiang University" data-zh="浙江大学博士">
+      浙江大学博士
+     </span>
+</p>
+<p>
+     RESEARCH. BUILD. CREATE.
+    </p>
+<a href="#top">
+<span data-en="Back to top" data-zh="回到顶部">
+      回到顶部
+     </span>
+     ↑
+    </a>
+</div>
+</footer>
+<dialog aria-labelledby="command-title" class="command-dialog" id="command-dialog">
+<div class="command-header">
+<h2 id="command-title">
+<span data-en="Jump to" data-zh="快速前往">
+      快速前往
+     </span>
+</h2>
+<button aria-label="关闭快捷导航" class="icon-button" data-label-en="Close quick navigation" data-label-zh="关闭快捷导航" id="command-close" type="button">
+     ×
+    </button>
+</div>
+<label class="sr-only" for="command-search">
+<span data-en="Search projects or pages" data-zh="搜索项目或页面">
+     搜索项目或页面
+    </span>
+</label>
+<input autocomplete="off" data-placeholder-en="Search projects or pages…" data-placeholder-zh="搜索项目或页面…" id="command-search" placeholder="搜索项目或页面…" type="search"/>
+<div class="command-list" id="command-list">
+<a data-search="projects 作品 Work" href="#projects">
+<span data-en="Work" data-zh="作品">
+      作品
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="activity 动态与统计 Activity &amp; statistics" href="#activity">
+<span data-en="Activity &amp; statistics" data-zh="动态与统计">
+      动态与统计
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="about 关于 · 浙江大学博士 About · ZJU PhD researcher" href="#about">
+<span data-en="About · ZJU PhD researcher" data-zh="关于 · 浙江大学博士">
+      关于 · 浙江大学博士
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="contact 联系 Connect" href="#contact">
+<span data-en="Connect" data-zh="联系">
+      联系
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="physcast PhysCast PhysCast" href="#physcast">
+<span data-en="PhysCast" data-zh="PhysCast">
+      PhysCast
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="omniforge OmniForge · 万象工坊 OmniForge" href="#omniforge">
+<span data-en="OmniForge" data-zh="OmniForge · 万象工坊">
+      OmniForge · 万象工坊
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="wiscomper Wiscomper · 智算视界 Wiscomper" href="#wiscomper">
+<span data-en="Wiscomper" data-zh="Wiscomper · 智算视界">
+      Wiscomper · 智算视界
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="ai-engineer The AI Engineer The AI Engineer" href="#ai-engineer">
+<span data-en="The AI Engineer" data-zh="The AI Engineer">
+      The AI Engineer
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="ai-revolution AI 进化史 The Evolution of AI" href="#ai-revolution">
+<span data-en="The Evolution of AI" data-zh="AI 进化史">
+      AI 进化史
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="science-studio rainbow鱼科普工作台 rainbow鱼 Science Studio" href="#science-studio">
+<span data-en="rainbow鱼 Science Studio" data-zh="rainbow鱼科普工作台">
+      rainbow鱼科普工作台
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+<a data-search="manim Manim Extend Rainbow Manim Extend Rainbow" href="#manim">
+<span data-en="Manim Extend Rainbow" data-zh="Manim Extend Rainbow">
+      Manim Extend Rainbow
+     </span>
+<span aria-hidden="true">
+      ↗
+     </span>
+</a>
+</div>
+<p class="command-empty" hidden="" id="command-empty">
+<span data-en="No matches. Try a project name." data-zh="没有匹配结果，试试项目名称。">
+     没有匹配结果，试试项目名称。
+    </span>
+</p>
+<p class="command-footer">
+<span data-en="Type to search · Arrows to select · Enter to go · Esc to close" data-zh="输入搜索 · 方向键选择 · Enter 前往 · Esc 关闭">
+     输入搜索 · 方向键选择 · Enter 前往 · Esc 关闭
+    </span>
+</p>
+</dialog>
+</body>
+</html>
