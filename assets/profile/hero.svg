@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
+  <title id="title">rainbowyuyu — Zhejiang University student</title>
+  <desc id="desc">A midnight blue identity banner with turquoise and violet wave fields. Ideas into tools. Science into sight.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#11253b"/><stop offset="1" stop-color="#0b192a"/></linearGradient>
+    <linearGradient id="wave" x1="0" x2="1"><stop stop-color="#68e1da"/><stop offset=".55" stop-color="#9e9cf7"/><stop offset="1" stop-color="#ffc17a"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#68e1da" stop-opacity=".13"/><stop offset="1" stop-color="#68e1da" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#edf2f2" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1200" height="410" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="410" rx="24" fill="url(#grid)"/>
+  <ellipse cx="1010" cy="160" rx="320" ry="250" fill="url(#glow)"/>
+  <path d="M0 1H1200" stroke="url(#wave)" stroke-width="3"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="58" y="48" width="342" height="34" rx="17" fill="#68e1da" fill-opacity=".09" stroke="#68e1da" stroke-opacity=".38"/>
+    <circle cx="77" cy="65" r="4" fill="#68e1da"/>
+    <text x="91" y="70" font-size="14" letter-spacing="1.1" font-weight="650" fill="#c2f6f0">ZHEJIANG UNIVERSITY · STUDENT</text>
+    <text x="56" y="158" font-size="65" letter-spacing="-2.7" font-weight="750" fill="#edf2f2">rainbowyuyu<tspan fill="#68e1da">.</tspan></text>
+    <text x="59" y="217" font-size="28" font-weight="520" fill="#edf2f2">Ideas into tools.</text>
+    <text x="59" y="255" font-size="28" font-weight="520" fill="#aabbd0">Science into sight.</text>
+    <path d="M59 294H655" stroke="#edf2f2" stroke-opacity=".12"/>
+    <text x="59" y="326" font-size="12" letter-spacing="1.15" font-weight="600" fill="#68e1da">PHYSICAL AI</text>
+    <circle cx="173" cy="322" r="2" fill="#597184"/>
+    <text x="190" y="326" font-size="12" letter-spacing="1.15" font-weight="600" fill="#aaa8fa">ENGINEERING AGENTS</text>
+    <circle cx="381" cy="322" r="2" fill="#597184"/>
+    <text x="398" y="326" font-size="12" letter-spacing="1.15" font-weight="600" fill="#ffc17a">SCIENTIFIC VISUALIZATION</text>
+    <text x="59" y="371" font-size="12" letter-spacing="1" fill="#71899f">RESEARCH · BUILD · EXPLAIN</text>
+  </g>
+  <g fill="none" stroke="url(#wave)" stroke-width="1.25">
+    <path d="M706 274C768 283 768 113 837 120S927 335 1000 276S1102 88 1197 124" opacity=".35"/>
+    <path d="M705 266C767 275 774 101 843 112S926 322 1000 267S1106 78 1198 117" opacity=".45"/>
+    <path d="M704 258C766 267 780 89 849 104S925 309 1000 258S1110 68 1199 110" opacity=".55"/>
+    <path d="M703 250C765 259 786 77 855 96S924 296 1000 249S1114 58 1200 103" opacity=".65"/>
+    <path d="M702 242C764 251 792 65 861 88S923 283 1000 240S1118 48 1201 96" opacity=".75"/>
+    <path d="M701 234C763 243 798 53 867 80S922 270 1000 231S1122 38 1202 89" opacity=".85"/>
+    <path d="M700 226C762 235 804 41 873 72S921 257 1000 222S1126 28 1203 82" opacity=".95"/>
+    <path d="M699 218C761 227 810 29 879 64S920 244 1000 213S1130 18 1204 75" opacity=".8"/>
+    <path d="M698 210C760 219 816 17 885 56S919 231 1000 204S1134 8 1205 68" opacity=".6"/>
+    <path d="M697 202C759 211 822 5 891 48S918 218 1000 195S1138 -2 1206 61" opacity=".4"/>
+  </g>
+  <g fill="none" stroke="#68e1da" stroke-opacity=".14">
+    <ellipse cx="972" cy="241" rx="171" ry="83" transform="rotate(-28 972 241)"/>
+    <ellipse cx="972" cy="241" rx="171" ry="83" transform="rotate(28 972 241)"/>
+    <ellipse cx="972" cy="241" rx="171" ry="83" transform="rotate(90 972 241)"/>
+  </g>
+  <circle cx="842" cy="113" r="5" fill="#68e1da"/>
+  <circle cx="1000" cy="240" r="5" fill="#9e9cf7"/>
+  <circle cx="1124" cy="91" r="4" fill="#ffc17a"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" letter-spacing="2" fill="#738da2">
+    <text x="1045" y="355">OPEN CURIOSITY</text>
+    <text x="1045" y="373">REAL-WORLD TOOLS</text>
+  </g>
+</svg>

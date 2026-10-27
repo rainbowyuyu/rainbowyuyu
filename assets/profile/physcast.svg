@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440" role="img" aria-labelledby="title desc">
+  <title id="title">PhysCast</title><desc id="desc">An abstract wind field flows across three wind turbines.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#142a3b"/><stop offset="1" stop-color="#0b192a"/></linearGradient><linearGradient id="flow"><stop stop-color="#68e1da" stop-opacity=".1"/><stop offset=".55" stop-color="#68e1da"/><stop offset="1" stop-color="#9e9cf7" stop-opacity=".25"/></linearGradient></defs>
+  <rect width="800" height="440" rx="20" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#flow)" stroke-width="2">
+    <path d="M0 74C143 38 215 120 340 96S566 33 800 90"/><path d="M0 92C143 56 215 138 340 114S566 51 800 108"/>
+    <path d="M0 110C143 74 215 156 340 132S566 69 800 126"/><path d="M0 128C143 92 215 174 340 150S566 87 800 144"/>
+    <path d="M0 146C143 110 215 192 340 168S566 105 800 162"/><path d="M0 164C143 128 215 210 340 186S566 123 800 180"/>
+    <path d="M0 182C143 146 215 228 340 204S566 141 800 198"/><path d="M0 200C143 164 215 246 340 222S566 159 800 216"/>
+    <path d="M0 218C143 182 215 264 340 240S566 177 800 234"/><path d="M0 236C143 200 215 282 340 258S566 195 800 252"/>
+  </g>
+  <path d="M0 290Q210 264 400 281T800 284" fill="none" stroke="#59778a" stroke-opacity=".35"/>
+  <g stroke="#edf2f2" stroke-linecap="round" fill="#edf2f2">
+    <path d="M271 161L268 282H276L273 161" stroke="none"/><circle cx="272" cy="150" r="7"/>
+    <path d="M272 150L269 81Q277 73 278 91L275 144M272 150L212 182Q202 181 214 174L266 147M272 150L319 196Q319 208 311 196L272 156" stroke-width="2"/>
+    <g opacity=".68"><path d="M480 183L478 286H484L482 183" stroke="none"/><circle cx="481" cy="175" r="5"/>
+    <path d="M481 175L479 120Q485 113 486 128L484 171M481 175L435 201Q426 200 436 195L477 172M481 175L517 214Q517 224 511 214L481 181" stroke-width="1.5"/></g>
+    <g opacity=".4"><path d="M636 194L634 288H639L638 194" stroke="none"/><circle cx="637" cy="187" r="4"/>
+    <path d="M637 187L636 143Q641 138 641 150L639 184M637 187L601 207Q594 207 602 202L634 185M637 187L666 218Q666 226 661 218L637 191" stroke-width="1.5"/></g>
+  </g>
+  <g fill="#68e1da"><circle cx="113" cy="148" r="3"/><circle cx="369" cy="129" r="3"/><circle cx="591" cy="165" r="3"/></g>
+  <rect y="319" width="800" height="121" fill="#0b192a"/><path d="M32 319H768" stroke="#68e1da" stroke-opacity=".25"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="34" y="366" fill="#edf2f2" font-size="32" font-weight="700">PhysCast</text><text x="35" y="399" fill="#9fb6c7" font-size="17">Physics-guided forecasting &amp; scientific exploration</text><text x="664" y="364" fill="#68e1da" font-size="11" letter-spacing="2">PHYSICAL AI</text></g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440" role="img" aria-labelledby="title desc">
+  <title id="title">OmniForge</title><desc id="desc">Connected agent nodes surround a translucent geometric cube.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#1b2344"/><stop offset="1" stop-color="#0b192a"/></linearGradient><linearGradient id="cube" x2="1" y2="1"><stop stop-color="#9e9cf7" stop-opacity=".22"/><stop offset="1" stop-color="#68e1da" stop-opacity=".04"/></linearGradient></defs>
+  <rect width="800" height="440" rx="20" fill="url(#bg)"/>
+  <g stroke="#9e9cf7" stroke-opacity=".22" fill="none"><path d="M172 100L317 118M179 242L317 202M400 40V70M483 118L630 83M483 202L635 245M400 251V291M172 100L179 242M630 83L635 245M172 100L400 40L630 83M179 242L400 291L635 245"/><ellipse cx="400" cy="165" rx="228" ry="114" stroke-dasharray="3 9"/></g>
+  <g fill="url(#cube)" stroke="#aaa8fa" stroke-width="2"><path d="M400 70L483 118V214L400 262L317 214V118Z"/><path d="M317 118L400 166L483 118M400 166V262"/></g>
+  <path d="M400 70V166L317 214M400 166L483 214" fill="none" stroke="#9e9cf7" stroke-opacity=".3" stroke-dasharray="4 5"/>
+  <g fill="#182b44" stroke="#9e9cf7" stroke-width="1.5"><circle cx="172" cy="100" r="20"/><circle cx="179" cy="242" r="20"/><circle cx="630" cy="83" r="20"/><circle cx="635" cy="245" r="20"/><circle cx="400" cy="40" r="13"/><circle cx="400" cy="291" r="13"/></g>
+  <g fill="#9e9cf7"><circle cx="172" cy="100" r="5"/><circle cx="179" cy="242" r="5"/><circle cx="630" cy="83" r="5"/><circle cx="635" cy="245" r="5"/></g>
+  <g fill="none" stroke="#68e1da" stroke-width="2"><path d="M364 159L382 148L400 159V180L382 191L364 180ZM400 159L418 148L436 159V180L418 191L400 180"/><path d="M382 148V129L400 118L418 129V148"/></g>
+  <g fill="#68e1da"><circle cx="263" cy="112" r="3"/><circle cx="551" cy="102" r="3"/><circle cx="560" cy="225" r="3"/></g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#7b8fae"><text x="133" y="144">REASON</text><text x="141" y="282">BUILD</text><text x="596" y="127">VERIFY</text><text x="598" y="286">ITERATE</text></g>
+  <rect y="319" width="800" height="121" fill="#0b192a"/><path d="M32 319H768" stroke="#9e9cf7" stroke-opacity=".35"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="34" y="366" fill="#edf2f2" font-size="32" font-weight="700">OmniForge</text><text x="35" y="399" fill="#9fb6c7" font-size="17">Tools, agents &amp; ideas working together</text><text x="690" y="364" fill="#aaa8fa" font-size="11" letter-spacing="2">AGENTS</text></g>
+</svg>

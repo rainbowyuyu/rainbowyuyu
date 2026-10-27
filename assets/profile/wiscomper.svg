@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440" role="img" aria-labelledby="title desc">
+  <title id="title">Wiscomper</title><desc id="desc">Mathematical curves and parametric geometry on a quiet coordinate field.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#132b34"/><stop offset="1" stop-color="#0b192a"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#68e1da" stroke-opacity=".07"/></pattern><linearGradient id="curve"><stop stop-color="#68e1da"/><stop offset="1" stop-color="#9e9cf7"/></linearGradient></defs>
+  <rect width="800" height="440" rx="20" fill="url(#bg)"/><rect x="40" y="26" width="720" height="268" fill="url(#grid)"/>
+  <g fill="none" stroke="#819bae" stroke-opacity=".4"><path d="M88 174H730M174 280V42"/><path d="M723 170L731 174L723 178M170 50L174 42L178 50"/></g>
+  <path d="M88 223C145 250 167 249 213 194S285 64 336 92S393 263 446 232S531 69 586 96S666 204 727 177" fill="none" stroke="url(#curve)" stroke-width="4"/>
+  <path d="M88 97C179 121 191 225 275 232S375 119 446 98S565 228 633 221S696 148 728 124" fill="none" stroke="#ffc17a" stroke-width="2" stroke-opacity=".65"/>
+  <g fill="none" stroke="#9e9cf7" stroke-width="1.2" opacity=".4"><ellipse cx="592" cy="166" rx="100" ry="45" transform="rotate(-30 592 166)"/><ellipse cx="592" cy="166" rx="100" ry="45" transform="rotate(30 592 166)"/><ellipse cx="592" cy="166" rx="100" ry="45" transform="rotate(90 592 166)"/></g>
+  <g fill="#68e1da"><circle cx="213" cy="194" r="5"/><circle cx="336" cy="92" r="5"/><circle cx="446" cy="232" r="5"/></g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#86a8b6"><text x="733" y="192">x</text><text x="186" y="49">y</text><text x="97" y="57" font-size="10" letter-spacing="2">MAKE IDEAS VISIBLE</text></g>
+  <rect y="319" width="800" height="121" fill="#0b192a"/><path d="M32 319H768" stroke="#68e1da" stroke-opacity=".3"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="34" y="366" fill="#edf2f2" font-size="32" font-weight="700">Wiscomper</text><text x="35" y="399" fill="#9fb6c7" font-size="17">Mathematics, computation &amp; visual intuition</text><text x="696" y="364" fill="#68e1da" font-size="11" letter-spacing="2">EXPLORE</text></g>
+</svg>
