@@ -76,15 +76,24 @@
       "updated_at": "2026-10-27T11:42:19Z"
     },
     "contributions3d": {
-      "status": "stale",
-      "updated_at": null,
-      "note": "Existing artwork retained; awaiting a verified scheduled refresh.",
+      "status": "fresh",
       "source": "yoshi389111/github-profile-3d-contrib",
       "assets": [
-        "profile-3d-contrib/profile-night-view.svg"
+        "profile-3d-contrib/profile-gitblock.svg",
+        "profile-3d-contrib/profile-green-animate.svg",
+        "profile-3d-contrib/profile-green.svg",
+        "profile-3d-contrib/profile-night-green.svg",
+        "profile-3d-contrib/profile-night-rainbow.svg",
+        "profile-3d-contrib/profile-night-static.svg",
+        "profile-3d-contrib/profile-night-view.svg",
+        "profile-3d-contrib/profile-season-animate.svg",
+        "profile-3d-contrib/profile-season.svg",
+        "profile-3d-contrib/profile-south-season-animate.svg",
+        "profile-3d-contrib/profile-south-season.svg"
       ],
-      "checked_at": "2026-10-27T11:27:29Z"
+      "checked_at": "2026-10-27T11:43:40Z",
+      "updated_at": "2026-10-27T11:43:40Z"
     }
   },
-  "updated_at": "2026-10-27T11:42:19Z"
+  "updated_at": "2026-10-27T11:43:40Z"
 }
