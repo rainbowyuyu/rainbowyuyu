@@ -24,7 +24,9 @@ def artwork(stem,alt,width=None,height=None):
     return picture(f'assets/readme/{stem}.svg',f'assets/readme/{stem}-light.svg',alt,width,height)
 
 def metric(stem,alt,width):
-    return picture(f'github-metrics/{stem}-dark.svg',f'github-metrics/{stem}-light.svg',alt,width)
+    # Bump only for a design migration; daily data keeps its existing asset paths.
+    version='?v=cards-v4' if stem in {'base','languages.indepth','habits.charts','wakatime','streak','calendar.full','activity'} else ''
+    return picture(f'github-metrics/{stem}-dark.svg{version}',f'github-metrics/{stem}-light.svg{version}',alt,width)
 
 def identity_artwork():
     source=(ROOT/'assets/profile/rainbow-logo.svg').read_text(encoding='utf-8')
