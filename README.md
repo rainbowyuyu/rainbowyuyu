@@ -36,7 +36,7 @@
 </td>
 <td width="50%" valign="top">
 <img src="assets/profile/omniforge.svg" width="100%" alt="OmniForge — Adaptive engineering agents"/>
-<h3>OmniForge · 万象工场</h3>
+<h3>OmniForge · 万象工坊</h3>
 <p><strong>从一个想法，到可检查的工程结果。</strong></p>
 <p>把自然语言需求、智能体协作、可视化建模、有限元与拓扑优化连接在同一工作台，保留执行轨迹与设计依据。</p>
 <p><sub>Agent Orchestration · Simulation · Engineering</sub></p>
@@ -63,7 +63,7 @@
 </tr>
 </table>
 
-<sub>项目状态更新于 2026-10-27。研究与开发持续进行；项目介绍不代表已发表论文、已授权专利或已完成实机验证。</sub>
+<sub>项目状态更新于 2026-10-27。研究与开发持续进行，详细功能与验证范围以各项目文档为准。</sub>
 
 ## Make knowledge visible / 也在创作
 
