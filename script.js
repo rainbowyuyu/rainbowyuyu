@@ -62,8 +62,8 @@ function setLanguage(next,writeURL=false){
  qa('[data-label-zh]').forEach(el=>el.setAttribute('aria-label',el.dataset[lang==='en'?'labelEn':'labelZh']));
  qa('[data-alt-zh]').forEach(el=>el.alt=el.dataset[lang==='en'?'altEn':'altZh']);
  qa('[data-placeholder-zh]').forEach(el=>el.placeholder=el.dataset[lang==='en'?'placeholderEn':'placeholderZh']);
- document.title=tr('rainbow鱼 · 浙江大学博士 | Research. Build. Create.','rainbow鱼 · PhD researcher at Zhejiang University');
- q('meta[name=description]').content=tr('rainbow鱼，浙江大学博士。探索物理 AI、工程智能体与科学可视化。精选项目：PhysCast、OmniForge、Wiscomper。','rainbow鱼, PhD researcher at Zhejiang University. Exploring physical AI, engineering agents and scientific visualization. Selected projects: PhysCast, OmniForge, Wiscomper.');
+ document.title=tr('rainbow鱼 · 浙江大学博士在读 | Research. Build. Create.','rainbow鱼 · PhD student at Zhejiang University');
+ q('meta[name=description]').content=tr('rainbow鱼，浙江大学博士在读。探索物理 AI、工程智能体与科学可视化。精选项目：PhysCast、OmniForge、Wiscomper。','rainbow鱼, PhD student at Zhejiang University. Exploring physical AI, engineering agents and scientific visualization. Selected projects: PhysCast, OmniForge, Wiscomper.');
  q('meta[property="og:title"]').content=document.title;
  q('meta[property="og:description"]').content=q('meta[name=description]').content;
  languageButton.textContent=lang==='en'?'中':'EN';languageButton.lang=lang==='en'?'zh-CN':'en';

@@ -32,4 +32,4 @@
 
 ## 内容边界
 
-公开名 rainbow鱼；身份为浙江大学博士 / PhD researcher at Zhejiang University。插画表达项目概念，不代表实验结果。PhysCast 与 OmniForge 继续标注源码私有。技能标签不附加未经核实的熟练度百分比。
+公开名 rainbow鱼；身份为浙江大学博士在读 / PhD student at Zhejiang University。插画表达项目概念，不代表实验结果。PhysCast 与 OmniForge 继续标注源码私有。技能标签不附加未经核实的熟练度百分比。

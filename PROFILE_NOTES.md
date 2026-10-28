@@ -25,7 +25,7 @@ The owner explicitly prefers expressive rainbow illustration for this profile; t
 - The portfolio needs no build step or external JavaScript. Preview: python -m http.server 8768 --bind 127.0.0.1.
 - GitHub Pages publishes main at https://rainbowyuyu.github.io/rainbowyuyu/. Existing assets remain in place.
 - PhysCast and OmniForge are described with the owner's permission; their source repositories stay private. Do not insert private memory, conversation exports, credentials or infrastructure details here.
-- The public identity is rainbow鱼, with the user-confirmed affiliation 浙江大学博士 / PhD researcher at Zhejiang University. Real names must not appear in public copy, metadata or generated cards. Department, graduation status, awards and publication claims are not inferred.
+- The public identity is rainbow鱼, with the user-confirmed affiliation 浙江大学博士在读 / PhD student at Zhejiang University. Real names must not appear in public copy, metadata or generated cards. The user confirmed current PhD enrollment on 2026-10-28. Department, year of study, awards and publication claims are not inferred.
 
 ## Reference sites and source repositories reviewed
 

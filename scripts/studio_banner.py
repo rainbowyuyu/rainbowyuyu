@@ -14,7 +14,7 @@ def banner(theme):
         (740,168,'#d6ac6f',8,0),(1256,75,'#dfb3a7',8,-1),
         (1350,349,'#9ccfbe',6,-2),(832,370,'#c7b3d6',5,-.5)])
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
-<title id="title">rainbow鱼 · 浙江大学博士</title><desc id="desc">PhD researcher at Zhejiang University. An illustrated journey through physical AI, engineering and science storytelling.</desc>
+<title id="title">rainbow鱼 · 浙江大学博士在读</title><desc id="desc">PhD student at Zhejiang University. An illustrated journey through physical AI, engineering and science storytelling.</desc>
 <defs><clipPath id="paper"><rect width="1440" height="720" rx="28"/></clipPath></defs><style>{MOTION}</style>
 <g clip-path="url(#paper)"><image width="1440" height="720" href="{image_uri('hero-'+theme+'.jpg')}"/>
 {stars}
@@ -23,8 +23,8 @@ def banner(theme):
 <text x="124" y="94" fill="{muted}" font-size="24" font-weight="600">Research. Build. Create.</text>
 <text x="56" y="274" fill="{ink}" font-size="112" letter-spacing="-5" font-weight="700">rainbow鱼</text>
 <path d="M63 302q190 -8 385 0l-8 9q-210 -6 -372 0Z" fill="{accent}" opacity=".5"/>
-<text x="62" y="377" fill="{ink}" font-size="36" font-weight="600">浙江大学博士</text>
-<text x="64" y="421" fill="{muted}" font-size="23">PhD researcher at Zhejiang University</text>
+<text x="62" y="377" fill="{ink}" font-size="36" font-weight="600">浙江大学博士在读</text>
+<text x="64" y="421" fill="{muted}" font-size="23">PhD student at Zhejiang University</text>
 <text x="62" y="503" fill="{ink}" font-size="28" font-weight="500">让 AI 理解物理，让知识看得见。</text>
 <text x="64" y="546" fill="{muted}" font-size="20">Physical AI · Engineering agents · Visual stories</text>
 <text x="64" y="642" fill="{accent}" font-size="20">保持好奇，持续创造。</text>
