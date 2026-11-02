@@ -8,8 +8,8 @@
       "assets": [
         "github-metrics/base.svg"
       ],
-      "checked_at": "2026-11-01T06:13:10Z",
-      "updated_at": "2026-11-01T06:13:10Z"
+      "checked_at": "2026-11-02T06:13:41Z",
+      "updated_at": "2026-11-02T06:13:41Z"
     },
     "languages": {
       "status": "fresh",
@@ -17,8 +17,8 @@
       "assets": [
         "github-metrics/languages.indepth.svg"
       ],
-      "checked_at": "2026-11-01T06:13:10Z",
-      "updated_at": "2026-11-01T06:13:10Z"
+      "checked_at": "2026-11-02T06:13:41Z",
+      "updated_at": "2026-11-02T06:13:41Z"
     },
     "calendar": {
       "status": "fresh",
@@ -26,8 +26,8 @@
       "assets": [
         "github-metrics/calendar.full.svg"
       ],
-      "checked_at": "2026-11-01T06:13:10Z",
-      "updated_at": "2026-11-01T06:13:10Z"
+      "checked_at": "2026-11-02T06:13:41Z",
+      "updated_at": "2026-11-02T06:13:41Z"
     },
     "streak": {
       "status": "fresh",
@@ -35,8 +35,8 @@
       "assets": [
         "github-metrics/streak.svg"
       ],
-      "checked_at": "2026-11-01T06:13:10Z",
-      "updated_at": "2026-11-01T06:13:10Z"
+      "checked_at": "2026-11-02T06:13:41Z",
+      "updated_at": "2026-11-02T06:13:41Z"
     },
     "habits": {
       "status": "fresh",
@@ -44,8 +44,8 @@
       "assets": [
         "github-metrics/habits.charts.svg"
       ],
-      "checked_at": "2026-11-01T06:13:10Z",
-      "updated_at": "2026-11-01T06:13:10Z"
+      "checked_at": "2026-11-02T06:13:41Z",
+      "updated_at": "2026-11-02T06:13:41Z"
     },
     "activity": {
       "status": "fresh",
@@ -53,17 +53,18 @@
       "assets": [
         "github-metrics/activity.svg"
       ],
-      "checked_at": "2026-11-01T06:13:10Z",
-      "updated_at": "2026-11-01T06:13:10Z"
+      "checked_at": "2026-11-02T06:13:41Z",
+      "updated_at": "2026-11-02T06:13:41Z"
     },
     "wakatime": {
-      "status": "fresh",
-      "source": "WakaTime last_7_days aggregate statistics",
+      "status": "stale",
+      "source": "WakaTime aggregate API",
       "assets": [
         "github-metrics/wakatime.svg"
       ],
-      "checked_at": "2026-11-01T06:13:10Z",
-      "updated_at": "2026-11-01T06:13:10Z"
+      "checked_at": "2026-11-02T06:13:41Z",
+      "updated_at": "2026-11-01T06:13:10Z",
+      "note": "Refresh unavailable; last stored snapshot retained. No fallback values invented."
     },
     "snake": {
       "status": "fresh",
@@ -100,5 +101,5 @@
       "updated_at": "2026-11-01T06:55:23Z"
     }
   },
-  "updated_at": "2026-11-01T06:55:23Z"
+  "updated_at": "2026-11-02T06:13:41Z"
 }
